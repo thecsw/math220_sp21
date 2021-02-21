@@ -13,9 +13,9 @@
 #+email: University of Kansas (ctu@ku.edu)
 * Chapter 1.1
 ** Problem 7
-<embed src="./7.pdf" />
+[[./7.jpg]]
 ** Problem 10
-[[./10.pdf]]
+[[./10.jpg]]
 ** Problem 15
    We can see that the direction field results in constant rate of change of
    zero at level where $y=0$ and $y=3$. Then we can also see that the direction
