@@ -13,10 +13,10 @@
 #+email: University of Kansas (ctu@ku.edu)
 * Chapter 1.1
 ** Problem 7
-   #+attr_html: :width 45% :align left
+   #+attr_html: :width 90%
    [[./7.jpg]]
 ** Problem 10
-   #+attr_html: :width 45% :align left
+   #+attr_html: :width 90%
    [[./10.jpg]]
 ** Problem 15
    We can see that the direction field results in constant rate of change of
@@ -85,7 +85,7 @@
     *c.* Plot your solution from part b and the solution (26) from Example 2 on
     the same axes.
 
-    #+attr_html: :width 45% :align left
+    #+attr_html: :width 95%
     [[./tanh.png]]
 
     *d.* Based on your plots in part *c*, compare the effect of a quadratic drag
