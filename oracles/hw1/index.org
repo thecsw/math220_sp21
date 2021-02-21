@@ -13,7 +13,7 @@
 #+email: University of Kansas (ctu@ku.edu)
 * Chapter 1.1
 ** Problem 7
-[[./7.pdf]]
+<embed src="./7.pdf" />
 ** Problem 10
 [[./10.pdf]]
 ** Problem 15
