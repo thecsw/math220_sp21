@@ -83,11 +83,7 @@
     *c.* Plot your solution from part b and the solution (26) from Example 2 on
     the same axes.
 
-    \begin{figure}[h]
-            \centering
-            \includegraphics[width=0.6\textwidth]{./tanh.png}
-            \caption{$v(t)=49\tanh(\frac{t}{5})$}
-    \end{figure}
+    [[./tanh.png]]
 
     *d.* Based on your plots in part *c*, compare the effect of a quadratic drag
     force with that of a linear drag force. 
