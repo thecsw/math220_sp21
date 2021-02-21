@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-02-21 Sun 17:09 -->
+<!-- 2021-02-21 Sun 17:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ordinary Differential Equations</title>
+<title>Homework 1 Oracle</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Sandy Urazayev" />
 <style type="text/css">
@@ -216,28 +216,275 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">Ordinary Differential Equations
-<br />
-<span class="subtitle">MATH 220 Spring 2021</span>
-</h1>
+<h1 class="title">Homework 1 Oracle</h1>
+<div id="outline-container-org39f9f78" class="outline-2">
+<h2 id="org39f9f78">Chapter 1.1</h2>
+<div class="outline-text-2" id="text-org39f9f78">
+</div>
+<div id="outline-container-orgea6b174" class="outline-3">
+<h3 id="orgea6b174">Problem 7</h3>
+<div class="outline-text-3" id="text-orgea6b174">
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./7.pdf}
+	\caption{$y' = y(4-y)$}
+\end{figure}
+</div>
+</div>
+<div id="outline-container-orgaf900bc" class="outline-3">
+<h3 id="orgaf900bc">Problem 10</h3>
+<div class="outline-text-3" id="text-orgaf900bc">
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./10.pdf}
+	\caption{$y' = y(y-2)^2$}
+\end{figure}
+</div>
+</div>
+<div id="outline-container-org91f1951" class="outline-3">
+<h3 id="org91f1951">Problem 15</h3>
+<div class="outline-text-3" id="text-org91f1951">
+<p>
+We can see that the direction field results in constant rate of change of
+zero at level where \(y=0\) and \(y=3\). Then we can also see that the direction
+of the graph decreases when \(y<0\) and \(y>3\), while also increasing in section
+of \(y>0\) and \(y<3\). That means, we are looking for a separate \(y\) to get
+constant change at \(0\) and \((3-y)\) term, so that the constraints above are
+satisfied. \(\therefore y' = y(3-y)\). Answer is <code>h</code>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org568a0ed" class="outline-2">
+<h2 id="org568a0ed">Chapter 1.2</h2>
+<div class="outline-text-2" id="text-org568a0ed">
+</div>
+<div id="outline-container-org50e436e" class="outline-3">
+<h3 id="org50e436e">Problem 7</h3>
+<div class="outline-text-3" id="text-org50e436e">
+<p>
+Our differential equation is as given
+</p>
+\begin{equation*}
+        \frac{dp}{dt} = \frac{p}{2} - 450
+\end{equation*}
 
-<div id="outline-container-org178e70a" class="outline-2">
-<h2 id="org178e70a">Homework Oracles</h2>
-<div class="outline-text-2" id="text-org178e70a">
-<ul class="org-ul">
-<li><a href="./oracles/hw1">Homework 1</a></li>
-</ul>
+<p>
+<b>a</b>. Find the time at which the population becomes extinct if \(p(0)=850\)
+</p>
+
+<p>
+We find that \(\mu(t) = e^{\int -\sfrac{1}{2} dt} = e^{-\sfrac{1}{2}t}\). Then
+</p>
+
+\begin{align*}
+        \frac{d}{dt}(\mu(t)p) = -450 \mu(t)                                                 \\
+        \implies p(t) & = \frac{\int -450\mu(t) dt}{\mu(t)}                                 \\
+                      & = \frac{\int -450 e^{-\sfrac{1}{2}t}dt}{e^{-\sfrac{1}{2}t}}         \\
+                      & = \frac{-450 \times (-2e^{-\sfrac{1}{2}t}) + C}{e^{-\sfrac{1}{2}t}} \\
+                      & = 900 + C e^{\sfrac{1}{2}t}
+\end{align*}
+
+<p>
+Then by using \(p(0)=850\), we find the constant \(C\) to be \(-50\). We need to
+find the time \(t_e\), at which \(p(t_e)=0\). We simply solve the equation
+\(0 = 900 - 50 e^{\sfrac{1}{2}t_e}\), where we find \(t_e = \ln(324) \approx 5.78\). 
+</p>
+
+<p>
+<b>b.</b> Find the time of extinction if \(p(0)=p_0\), where \(0<p_0<900\)
+</p>
+
+<p>
+Using the above, we find that \(t_e = 2 \ln(\frac{900}{900-p_0})\)
+</p>
+
+<p>
+<b>c.</b> Find the initial population \(p_0\) if the population is to become extinct in
+1 year.
+</p>
+
+<p>
+Recall from Example 1 that \(t\) is measured in months. So we simply solve
+</p>
+\begin{equation*}
+        0 = 900 - (900-p_0)e^{6} \implies p_0 = 900 - \frac{900}{e^6} \approx 897.77
+\end{equation*}
+</div>
+</div>
+<div id="outline-container-org23c2848" class="outline-3">
+<h3 id="org23c2848">Problem 9</h3>
+<div class="outline-text-3" id="text-org23c2848">
+<p>
+<b>a.</b> If the limiting velocity is 49m/s (the same as in Example 2), show that
+ the equation of motion can be written as
+</p>
+\begin{equation*}
+  \frac{dv}{dt} = \frac{1}{245}(49^2-v^2)
+\end{equation*}
+
+<p>
+Recall the base equation from Example 2, by using the given, we have
+</p>
+\begin{equation*}
+  0 = 9.8 - C (49^2) \implies C = \frac{9.8}{49^2} = \frac{1}{245}\\
+  \implies \frac{dv}{dt} = \frac{1}{245}(49^2-v^2)
+\end{equation*}
+
+<p>
+<b>b.</b> If \(v(0) = 0\), find an expression for \(v(t)\) at any time.
+</p>
+
+<p>
+We can view this problem as a first-order separable equation and rewrite it
+as
+</p>
+\begin{equation*}
+        \int{\frac{dv}{49^2-v^2}} = \int{\frac{dt}{245}}
+\end{equation*}
+<p>
+After some computations, the expression for \(v(t)\) is
+\(49\tanh(\sfrac{t}{5})\)
+</p>
+
+<p>
+<b>c.</b> Plot your solution from part b and the solution (26) from Example 2 on
+the same axes.
+</p>
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.6\textwidth]{./tanh.png}
+        \caption{$v(t)=49\tanh(\frac{t}{5})$}
+\end{figure}
+
+<p>
+<b>d.</b> Based on your plots in part <b>c</b>, compare the effect of a quadratic drag
+force with that of a linear drag force. 
+</p>
+
+<p>
+The quadratic drag damps the speed faster and has a bigger effect on the
+speed than the linear dependance.
+</p>
+
+<p>
+<b>e.</b> Find the distance \(x(t)\) that the object falls in time \(t\).
+</p>
+
+<p>
+We know that \(\frac{dx}{dt} = v(t) = 49\tanh(\frac{t}{5})\) so then
+\(x(t) = 245\ln(\cosh(\frac{t}{5})) + C\). If \(x(0) = 0\), then \(C = 0\).
+</p>
+
+<p>
+<b>f.</b> Find the time \(T\) it takes the object to fall 300m.
+</p>
+
+<p>
+Simply solve \(300 = 245 \ln(\cosh(\frac{t}{5}))\), it will be something like
+    \(t = 5\cosh^{-1}(e^{\frac{60}{49}}) \approx 9.477\)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d91383" class="outline-2">
+<h2 id="org9d91383">Chapter 1.3</h2>
+<div class="outline-text-2" id="text-org9d91383">
+</div>
+<div id="outline-container-orgf761d57" class="outline-3">
+<h3 id="orgf761d57">Problem 1</h3>
+<div class="outline-text-3" id="text-orgf761d57">
+<p>
+2nd order and linear.
+</p>
+</div>
+</div>
+<div id="outline-container-org31a0786" class="outline-3">
+<h3 id="org31a0786">Problem 3</h3>
+<div class="outline-text-3" id="text-org31a0786">
+<p>
+4th order and linear.
+</p>
+</div>
+</div>
+<div id="outline-container-orgacad6c2" class="outline-3">
+<h3 id="orgacad6c2">Problem 5</h3>
+<div class="outline-text-3" id="text-orgacad6c2">
+<p>
+Plug them both in. They are solutions.
+</p>
+</div>
+</div>
+<div id="outline-container-org9118d29" class="outline-3">
+<h3 id="org9118d29">Problem 9</h3>
+<div class="outline-text-3" id="text-org9118d29">
+<p>
+Plug them both in. They are solutions.
+</p>
+</div>
+</div>
+<div id="outline-container-org25ec36f" class="outline-3">
+<h3 id="org25ec36f">Problem 11</h3>
+<div class="outline-text-3" id="text-org25ec36f">
+<p>
+\(y'+2y=0\) form yields solutions for \(r=-2\). You can solve a characteristic
+polynomial of this equation to get it.
+<i>I guess you guys aren't ready for that yet. But your kids are gonna love it</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org23f4abc" class="outline-3">
+<h3 id="org23f4abc">Problem 16</h3>
+<div class="outline-text-3" id="text-org23f4abc">
+<p>
+\(u_{xx} + u_{yy} + u_{zz} = 0\) is linear and second order.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org534a6af" class="outline-3">
+<h3 id="org534a6af">Problem 20</h3>
+<div class="outline-text-3" id="text-org534a6af">
+<p>
+Plug them both in. They are solutions.
+</p>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 52; 12021 H.E.</p>
+<p class="date">Date: 44; 12021 H.E.</p>
 <p class="author">Author: Sandy Urazayev</p>
 <p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
-<p class="date">Created: 2021-02-21 Sun 17:09</p>
+<p class="date">Created: 2021-02-21 Sun 17:10</p>
 </div>
 </body>
 </html>
