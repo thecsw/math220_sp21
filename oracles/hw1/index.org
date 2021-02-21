@@ -13,17 +13,9 @@
 #+email: University of Kansas (ctu@ku.edu)
 * Chapter 1.1
 ** Problem 7
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.6\textwidth]{./7.pdf}
-	\caption{$y' = y(4-y)$}
-\end{figure}
+[[./7.pdf]]
 ** Problem 10
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.6\textwidth]{./10.pdf}
-	\caption{$y' = y(y-2)^2$}
-\end{figure}
+[[./10.pdf]]
 ** Problem 15
    We can see that the direction field results in constant rate of change of
    zero at level where $y=0$ and $y=3$. Then we can also see that the direction
@@ -40,19 +32,19 @@
 
    *a*. Find the time at which the population becomes extinct if $p(0)=850$
 
-   We find that $\mu(t) = e^{\int -\sfrac{1}{2} dt} = e^{-\sfrac{1}{2}t}$. Then
+   We find that $\mu(t) = e^{\int -\frac{1}{2} dt} = e^{-\frac{1}{2}t}$. Then
 
    \begin{align*}
            \frac{d}{dt}(\mu(t)p) = -450 \mu(t)                                                 \\
            \implies p(t) & = \frac{\int -450\mu(t) dt}{\mu(t)}                                 \\
-                         & = \frac{\int -450 e^{-\sfrac{1}{2}t}dt}{e^{-\sfrac{1}{2}t}}         \\
-                         & = \frac{-450 \times (-2e^{-\sfrac{1}{2}t}) + C}{e^{-\sfrac{1}{2}t}} \\
-                         & = 900 + C e^{\sfrac{1}{2}t}
+                         & = \frac{\int -450 e^{-\frac{1}{2}t}dt}{e^{-\frac{1}{2}t}}         \\
+                         & = \frac{-450 \times (-2e^{-\frac{1}{2}t}) + C}{e^{-\frac{1}{2}t}} \\
+                         & = 900 + C e^{\frac{1}{2}t}
    \end{align*}
 
    Then by using $p(0)=850$, we find the constant $C$ to be $-50$. We need to
    find the time $t_e$, at which $p(t_e)=0$. We simply solve the equation
-   $0 = 900 - 50 e^{\sfrac{1}{2}t_e}$, where we find $t_e = \ln(324) \approx 5.78$. 
+   $0 = 900 - 50 e^{\frac{1}{2}t_e}$, where we find $t_e = \ln(324) \approx 5.78$. 
    
    *b.* Find the time of extinction if $p(0)=p_0$, where $0<p_0<900$
 
@@ -86,7 +78,7 @@
             \int{\frac{dv}{49^2-v^2}} = \int{\frac{dt}{245}}
     \end{equation*}
     After some computations, the expression for $v(t)$ is
-    $49\tanh(\sfrac{t}{5})$
+    $49\tanh(\frac{t}{5})$
 
     *c.* Plot your solution from part b and the solution (26) from Example 2 on
     the same axes.
