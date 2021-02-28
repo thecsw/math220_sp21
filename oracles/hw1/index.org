@@ -18,7 +18,7 @@
 ** Problem 10
    #+attr_html: :width 90%
    [[./10.jpg]]
-** Problem 15
+** Problem 15 [FOR GRADING]
    We can see that the direction field results in constant rate of change of
    zero at level where $y=0$ and $y=3$. Then we can also see that the direction
    of the graph decreases when $y<0$ and $y>3$, while also increasing in section
@@ -26,7 +26,7 @@
    constant change at $0$ and $(3-y)$ term, so that the constraints above are
    satisfied. $\therefore y' = y(3-y)$. Answer is =h=.
 * Chapter 1.2
-** Problem 7
+** Problem 7 [FOR GRADING]
    Our differential equation is as given
    \begin{equation*}
            \frac{dp}{dt} = \frac{p}{2} - 450
@@ -113,7 +113,7 @@
    Plug them both in. They are solutions.
 ** Problem 9
    Plug them both in. They are solutions.
-** Problem 11
+** Problem 11 [FOR GRADING]
    $y'+2y=0$ form yields solutions for $r=-2$. You can solve a characteristic
    polynomial of this equation to get it.
    /I guess you guys aren't ready for that yet. But your kids are gonna love it/
