@@ -34,7 +34,7 @@
     \end{equation*}
 *** Part c
     $y$ oscillates for $a=a_0$
-** Problem 15
+** Problem 15 [FOR GRADE]
 *** Part a
     This is again, a first-order linear differential equation, so we do our
     $\mu$ and integration from both sides trick. Recognize that we have to
@@ -55,7 +55,7 @@
     We need $ea-1$ to be equal to zero, then $a_0 = \frac{1}{e}$
 *** Part c
     As $t \to 0$, then $y \to 0$. 
-** Problem 17
+** Problem 17 [FOR GRADE]
    Recall the solution to Problem 13. We need to swap the sign on $p(t)$ and
    update the initial value constant solution. We will get
    \begin{equation*}
@@ -121,7 +121,7 @@
       \end{equation*}
       $C$ is any constant, then $\ln(C)$ is also a constant.
       Finally, $y = Cx$
-** Problem 8
+** Problem 8 [FOR GRADE]
    \begin{equation*}
            \frac{dy}{dx} = \frac{-x}{y}
    \end{equation*}
