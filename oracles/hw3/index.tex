@@ -1,0 +1,136 @@
+% Created 2021-03-08 Mon 20:01
+% Intended LaTeX compiler: xelatex
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage[margin=1.25in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{epsf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{hyperref}
+\usepackage[adobe-utopia]{mathdesign}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{textgreek}
+\renewcommand*{\textgreekfontmap}{%
+{phv/*/*}{LGR/neohellenic/*/*}%
+{*/b/n}{LGR/artemisia/b/n}%
+{*/bx/n}{LGR/artemisia/bx/n}%
+{*/*/n}{LGR/artemisia/m/n}%
+{*/b/it}{LGR/artemisia/b/it}%
+{*/bx/it}{LGR/artemisia/bx/it}%
+{*/*/it}{LGR/artemisia/m/it}%
+{*/b/sl}{LGR/artemisia/b/sl}%
+{*/bx/sl}{LGR/artemisia/bx/sl}%
+{*/*/sl}{LGR/artemisia/m/sl}%
+{*/*/sc}{LGR/artemisia/m/sc}%
+{*/*/sco}{LGR/artemisia/m/sco}%
+}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+#1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\left\lVert}{\right\rVert}
+\DeclarePairedDelimiter{\ceil}{\left\lceil}{\right\rceil}
+\DeclarePairedDelimiter{\floor}{\left\lfloor}{\right\rfloor}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+\def\noi{\noindent}
+\onehalfspace
+\usemintedstyle{bw}
+\author{Sandy Urazayev\thanks{University of Kansas (ctu@ku.edu)}}
+\date{67; 12021 H.E.}
+\title{Homework 3 Oracle}
+\hypersetup{
+ pdfauthor={Sandy Urazayev},
+ pdftitle={Homework 3 Oracle},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.0.50 (Org mode 9.4.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\section*{Section 2.3}
+\label{sec:org74b13f4}
+\subsection*{Problem 1}
+\label{sec:orga4c6a4f}
+We model the tank problem the following way of
+\begin{equation*}
+  \frac{dx}{dt}=R_{in}-R_{out}
+\end{equation*}
+Then
+\begin{equation*}
+  \frac{dx}{dt}=-\frac{2x}{200}=-\frac{x}{100}
+\end{equation*}
+We know the original concentration of \(1g/L\), then apply the separable
+equations method
+\begin{equation*}
+  \int \frac{100}{x} dx = \int -1 dt
+\end{equation*}
+Solving it yields
+\begin{equation*}
+x = 200 e^{-\frac{t}{100}}
+\end{equation*}
+We need to find the time that will elapse before the concentration of dye in
+the tank reaches \(1\%\). So
+\begin{equation*}
+  \frac{x(t)}{x(0)} = 0.01 \implies 0.01 = e^{-\frac{t}{100}}
+\end{equation*}
+Solving for \(t\) returns that \(t = 100 \ln 100\) min \(\approx 460.5\) min. 
+\subsection*{Problem 4}
+\label{sec:org862d36c}
+\subsubsection*{Part (a)}
+\label{sec:orgb4c50bd}
+So our kinetic and potential energies are equal. Then
+\begin{equation*}
+  mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh}
+\end{equation*}
+\subsubsection*{Part (b)}
+\label{sec:org5781216}
+Recall 
+\begin{equation*}
+  \frac{dv}{dt} = A(h) \frac{dh}{dt} \quad\text{and}\quad \frac{dv}{dt} = av
+\end{equation*}
+So then because constant \(\alpha\) is contracting, the change is negative
+\begin{equation*}
+  A(h)\frac{dh}{dt} = -\alpha a \sqrt{2gh}
+\end{equation*}
+\subsection*{Problem 9}
+\label{sec:org2bffd57}
+\section*{Section 2.5}
+\label{sec:org3a63f7c}
+\subsection*{Problem 3}
+\label{sec:orga7dfd3f}
+\subsection*{Problem 5}
+\label{sec:orgb319bbc}
+\subsection*{Problem 9}
+\label{sec:org6625e4b}
+\subsection*{Problem 13}
+\label{sec:org7403f04}
+\end{document}
