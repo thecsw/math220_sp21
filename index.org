@@ -16,4 +16,4 @@
 * Homework Oracles
   - [[./oracles/hw1][Homework 1]]
   - [[./oracles/hw2][Homework 2]]
-
+  - [[./oracles/hw3][Homework 3]]
