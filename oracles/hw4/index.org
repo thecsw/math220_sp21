@@ -133,7 +133,7 @@ y)$ and therefore
    \end{align*}
    Now they're exact! 
 
-   So then just find that $F = \frac{x^2}{2} + \frac{y^{-2}}{-2}+\ln(y)$
+   So then just find that $F = \frac{x^2}{2} + \frac{1}{-2y^2}+\ln(y)$
    
 ** Problem 18
    \begin{align*}
