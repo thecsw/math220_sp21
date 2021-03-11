@@ -1,0 +1,151 @@
+#+latex_class: sandy-article
+#+latex_compiler: xelatex
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+options: email:t f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+options: tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t num:nil
+#+html_head: <link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
+#+language: en
+
+#+title: Homework 4 Oracle
+#+author: Sandy Urazayev
+#+date: 70; 12021 H.E.
+#+email: University of Kansas (ctu@ku.edu)
+* Section 2.4
+  
+** Problem 2
+   $\tan$ is discontinuous at odd multiples of $\frac{\pi}{2}$, since
+   $\frac{\pi}{2} < \pi < \frac{3\pi}{2}$, the interval is
+   $(\frac{\pi}{2}, \frac{3\pi}{2})$.
+   
+** Problem 4
+   Dividing both sides by $\ln(t)$ yields
+   \begin{equation*}
+     y' + \frac{y}{\ln(t)} = \frac{\cot(t)}{\ln(t)}
+   \end{equation*}
+   for $\ln(t) \neq 0 \iff t \neq 1$. $\cot(t)$ forces out $t$ to be in the
+   range $(0, \pi)$. By finding the intersection of those constraints, we get an
+   interval $(1, \pi)$.
+   
+** Problem 14
+   #+attr_html: :width 50%
+   [[./14.png]]
+
+   Based on the direction field and on the differential equation, for $y_0 < 0$,
+   the slopes eventually become negative, therefore tend to $-\infty$. If
+   $y_0=0$, then we get an equilibrium solution. Note that slopes are zero along
+   the curves $y=0$ and $ty = 3$.
+
+** Problem 16
+   #+attr_html: :width 50%
+   [[./16.png]]
+   
+   Solutions with $t_{0}<0$ all tend to $-\infty$. Solutions with initial
+   conditions $\left(t_{0}, y_{0}\right)$ to the right of the parabola
+   $t=1+y^{2}$ asymptotically approach the parabola as
+   $t \rightarrow \infty$.
+   Integral curves with initial conditions above the parabola (and
+   $\left.y_{0}>0\right)$ also approach the curve. The slopes for solutions with
+   initial conditions below the parabola (and $\left.y_{0}<0\right)$ are all
+   negative. These solutions tend to $-\infty$.
+   
+** Problem 27 [FOR GRADE]
+   The solution of the initial value problem
+   \begin{equation*}
+     y_1'+2y_1=0, \quad y_1(0) = 1
+   \end{equation*}
+   is $y_1(t) = e^{-2t}$. Therefore by approaching to $1$ from the left side
+   ($1^-$ notation), we get $y(1^-) = y_1(1) = e^{-2}$. On the interval $(1,
+   \infty)$, the differential equation is $y_2'+y_2=0$ with
+   $y_2(t)=ce^{-t}$. Therefore by approaching $1$ from the right side
+   (notationally $1^+$), we see $y(1^+)=y_2(1)=ce^{-1}$. Equating both the
+   limits of the function
+   \begin{align*}
+     y(1^-) = y(1^+) \iff c = e^{-1}
+   \end{align*}
+   Therefore the global solution is
+   \begin{equation*}
+     y(t) = 
+     \begin{cases}
+       e^{-2t}, \quad 0 \leq t \leq 1\\
+       e^{-1-t}, \quad t > 1
+     \end{cases}
+   \end{equation*}
+
+** Problem 28
+   The Eleventh Edition (latest) of the book doesn't have this problem.
+
+* Section 2.6
+
+** Problem 3 [FOR GRADE]
+   They have the form $M(x,y) + N(x,y) \frac{dy}{dx} = 0$. So
+   \begin{align*}
+     M(x,y) = 3x^2-2xy+2 \quad \text{and} \quad N(x,y) = 6y^2-x^2+3
+   \end{align*}
+   Then we see $\frac{\partial M}{\partial y} = -2x$ and $\frac{\partial
+   N}{\partial x} = -2x$. Therefore, our equation is of exact form. So our
+   solution $F_x = M \implies F = \int M dx = x^3 - x^2y + 2x + g(y)$.
+   Then
+   \begin{equation*}
+   F_y = -x^2+g'(y) = N \implies g'(y) = 6y^2+3 \implies g(y)=2y^3 + 3y
+   \end{equation*}
+   Finally,
+   \begin{equation*}
+     F = x^3 - x^2y + 2x +2y^3 + 3y = C
+   \end{equation*}
+
+** Problem 5
+   \begin{align*}
+     \frac{dy}{dx} = - \frac{ax-by}{bx-cy} \\
+     \iff (ax-by)dx + (bx-cy)dy = 0
+   \end{align*}
+   Now, $M = ax-by$ and $N = bx -cy$. See that
+   \begin{align*}
+     M_y = -b \neq N_x = b
+   \end{align*}
+   The differential equation is not exact.
+
+** Problem 13
+   Integrating $\psi_{y}=N$, while holding $x$ constant, yields $\psi(x, y)=\int
+N(x, y) d y+h(x)$ 
+   Taking the partial derivative with respect to
+   $x, \psi_{x}=\int \frac{\partial}{\partial x} N(x, y) d y+h^{\prime}(x)$ .
+   Now set $\psi_{x}=M(x,
+y)$ and therefore
+   $h^{\prime}(x)=M(x, y)-\int \frac{\partial}{\partial x} N(x,y) dy$.
+   Based on the fact that $M_{y}=N_{x}$, it follows that
+   $\frac{\partial}{\partial y}\left[h^{\prime}(x)\right]=0$. Hence the expression
+   for $h^{\prime}(x)$ can be integrated to obtain 
+   \begin{align*}
+   h(x)=\int M(x, y) d x-\int\left[\int \frac{\partial}{\partial x} N(x, y) d y\right] d x
+   \end{align*}
+   
+** Problem 15 [FOR GRADE]
+   \begin{align*}
+     M = x^2y^3,\quad \quad N = x(1+y^2)\\
+     \implies M_y = 3x^2y^2, \quad \quad N_x = 1+y^2
+   \end{align*} 
+   Trivially, not exact. Let $\mu(x,y) = \frac{1}{xy^3}$,
+   then
+   \begin{align*}
+     M\times\mu = x, \quad \quad N\times\mu = \frac{1+y^2}{y^3}
+     \implies (M\times\mu)_y = 0, \quad \quad (N\times\mu)_x = 0
+   \end{align*}
+   Now they're exact! 
+
+   So then just find that $F = \frac{x^2}{2} + \frac{y^{-2}}{-2}+\ln(y)$
+   
+** Problem 18
+   \begin{align*}
+     M = 3x^2y+2xy+y^3,\quad \quad N = x^2+y^2\\
+     \implies M_y = 3x^2+2x+3y^2, \quad \quad N_x = 2x
+   \end{align*} 
+   Let us find the integrating factor
+   \begin{align*}
+     \mu(y) &= \exp(\int \frac{M_y-N_x}{N} dx)\\
+            &= \exp(\int \frac{3x^2+2x+3y^2-2x}{x^2+y^2} dx)\\
+            &= \exp(\int 3 dx)\\
+            &= e^{3x}
+   \end{align*}
+   Simply confirm that $M\mu$ and $N\mu$ are now exact.
+   Find $F(x,y) = e^{3x}y(3x^2+y^2) = C$

@@ -6,7 +6,7 @@
 <!-- 2021-03-11 Thu 13:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Homework 3 Oracle</title>
+<title>Homework 4 Oracle</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Sandy Urazayev" />
 <style type="text/css">
@@ -241,186 +241,244 @@
 </head>
 <body>
 <div id="content">
-<h1 class="title">Homework 3 Oracle</h1>
-<div id="outline-container-orge9d460a" class="outline-2">
-<h2 id="orge9d460a">Section 2.3</h2>
-<div class="outline-text-2" id="text-orge9d460a">
+<h1 class="title">Homework 4 Oracle</h1>
+<div id="outline-container-orgd6e80d1" class="outline-2">
+<h2 id="orgd6e80d1">Section 2.4</h2>
+<div class="outline-text-2" id="text-orgd6e80d1">
 </div>
-<div id="outline-container-orge166106" class="outline-3">
-<h3 id="orge166106">Problem 1 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-orge166106">
+<div id="outline-container-orgb88fde4" class="outline-3">
+<h3 id="orgb88fde4">Problem 2</h3>
+<div class="outline-text-3" id="text-orgb88fde4">
 <p>
-We model the tank problem the following way of
+\(\tan\) is discontinuous at odd multiples of \(\frac{\pi}{2}\), since
+\(\frac{\pi}{2} < \pi < \frac{3\pi}{2}\), the interval is
+\((\frac{\pi}{2}, \frac{3\pi}{2})\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc573a31" class="outline-3">
+<h3 id="orgc573a31">Problem 4</h3>
+<div class="outline-text-3" id="text-orgc573a31">
+<p>
+Dividing both sides by \(\ln(t)\) yields
 </p>
 \begin{equation*}
-  \frac{dx}{dt}=R_{in}-R_{out}
+  y' + \frac{y}{\ln(t)} = \frac{\cot(t)}{\ln(t)}
 \end{equation*}
 <p>
+for \(\ln(t) \neq 0 \iff t \neq 1\). \(\cot(t)\) forces out \(t\) to be in the
+range \((0, \pi)\). By finding the intersection of those constraints, we get an
+interval \((1, \pi)\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4643a9" class="outline-3">
+<h3 id="orgc4643a9">Problem 14</h3>
+<div class="outline-text-3" id="text-orgc4643a9">
+
+<div id="orga2d3340" class="figure">
+<p><img src="./14.png" alt="14.png" width="50%" />
+</p>
+</div>
+
+<p>
+Based on the direction field and on the differential equation, for \(y_0 < 0\),
+the slopes eventually become negative, therefore tend to \(-\infty\). If
+\(y_0=0\), then we get an equilibrium solution. Note that slopes are zero along
+the curves \(y=0\) and \(ty = 3\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc5b9b4" class="outline-3">
+<h3 id="orgfc5b9b4">Problem 16</h3>
+<div class="outline-text-3" id="text-orgfc5b9b4">
+
+<div id="org1005902" class="figure">
+<p><img src="./16.png" alt="16.png" width="50%" />
+</p>
+</div>
+
+<p>
+Solutions with \(t_{0}<0\) all tend to \(-\infty\). Solutions with initial
+conditions \(\left(t_{0}, y_{0}\right)\) to the right of the parabola
+\(t=1+y^{2}\) asymptotically approach the parabola as
+\(t \rightarrow \infty\).
+Integral curves with initial conditions above the parabola (and
+\(\left.y_{0}>0\right)\) also approach the curve. The slopes for solutions with
+initial conditions below the parabola (and \(\left.y_{0}<0\right)\) are all
+negative. These solutions tend to \(-\infty\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge37d5f9" class="outline-3">
+<h3 id="orge37d5f9">Problem 27 [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-orge37d5f9">
+<p>
+The solution of the initial value problem
+</p>
+\begin{equation*}
+  y_1'+2y_1=0, \quad y_1(0) = 1
+\end{equation*}
+<p>
+is \(y_1(t) = e^{-2t}\). Therefore by approaching to \(1\) from the left side
+(\(1^-\) notation), we get \(y(1^-) = y_1(1) = e^{-2}\). On the interval \((1,
+   \infty)\), the differential equation is \(y_2'+y_2=0\) with
+\(y_2(t)=ce^{-t}\). Therefore by approaching \(1\) from the right side
+(notationally \(1^+\)), we see \(y(1^+)=y_2(1)=ce^{-1}\). Equating both the
+limits of the function
+</p>
+\begin{align*}
+  y(1^-) = y(1^+) \iff c = e^{-1}
+\end{align*}
+<p>
+Therefore the global solution is
+</p>
+\begin{equation*}
+  y(t) = 
+  \begin{cases}
+    e^{-2t}, \quad 0 \leq t \leq 1\\
+    e^{-1-t}, \quad t > 1
+  \end{cases}
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-org2033ed4" class="outline-3">
+<h3 id="org2033ed4">Problem 28</h3>
+<div class="outline-text-3" id="text-org2033ed4">
+<p>
+The Eleventh Edition (latest) of the book doesn't have this problem.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd72a1bb" class="outline-2">
+<h2 id="orgd72a1bb">Section 2.6</h2>
+<div class="outline-text-2" id="text-orgd72a1bb">
+</div>
+<div id="outline-container-orgf9d64d4" class="outline-3">
+<h3 id="orgf9d64d4">Problem 3 [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-orgf9d64d4">
+<p>
+They have the form \(M(x,y) + N(x,y) \frac{dy}{dx} = 0\). So
+</p>
+\begin{align*}
+  M(x,y) = 3x^2-2xy+2 \quad \text{and} \quad N(x,y) = 6y^2-x^2+3
+\end{align*}
+<p>
+Then we see \(\frac{\partial M}{\partial y} = -2x\) and \(\frac{\partial
+   N}{\partial x} = -2x\). Therefore, our equation is of exact form. So our
+solution \(F_x = M \implies F = \int M dx = x^3 - x^2y + 2x + g(y)\).
 Then
 </p>
 \begin{equation*}
-  \frac{dx}{dt}=-\frac{2x}{200}=-\frac{x}{100}
+F_y = -x^2+g'(y) = N \implies g'(y) = 6y^2+3 \implies g(y)=2y^3 + 3y
 \end{equation*}
 <p>
-We know the original concentration of \(1g/L\), then apply the separable
-equations method
+Finally,
 </p>
 \begin{equation*}
-  \int \frac{100}{x} dx = \int -1 dt
-\end{equation*}
-<p>
-Solving it yields
-</p>
-\begin{equation*}
-x = 200 e^{-\frac{t}{100}}
-\end{equation*}
-<p>
-We need to find the time that will elapse before the concentration of dye in
-the tank reaches \(1\%\). So
-</p>
-\begin{equation*}
-  \frac{x(t)}{x(0)} = 0.01 \implies 0.01 = e^{-\frac{t}{100}}
-\end{equation*}
-<p>
-Solving for \(t\) returns that \(t = 100 \ln 100\) min \(\approx 460.5\) min. 
-</p>
-</div>
-</div>
-<div id="outline-container-org5c17e2c" class="outline-3">
-<h3 id="org5c17e2c">Problem 4</h3>
-<div class="outline-text-3" id="text-org5c17e2c">
-</div>
-<div id="outline-container-orge03edee" class="outline-4">
-<h4 id="orge03edee">Part (a)</h4>
-<div class="outline-text-4" id="text-orge03edee">
-<p>
-So our kinetic and potential energies are equal. Then
-</p>
-\begin{equation*}
-  mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh}
+  F = x^3 - x^2y + 2x +2y^3 + 3y = C
 \end{equation*}
 </div>
 </div>
-<div id="outline-container-orgc44aaf2" class="outline-4">
-<h4 id="orgc44aaf2">Part (b)</h4>
-<div class="outline-text-4" id="text-orgc44aaf2">
-<p>
-Recall 
-</p>
-\begin{equation*}
-  \frac{dv}{dt} = A(h) \frac{dh}{dt} \quad\text{and}\quad \frac{dv}{dt} = av
-\end{equation*}
-<p>
-So then because constant \(\alpha\) is contracting, the change is negative
-</p>
-\begin{equation*}
-  A(h)\frac{dh}{dt} = -\alpha a \sqrt{2gh}
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-org2488ae1" class="outline-4">
-<h4 id="org2488ae1">Part (c)</h4>
-<div class="outline-text-4" id="text-org2488ae1">
-<p>
-Recall \(A(r) = \pi r^2\). Let \(h=3\) and \(\alpha = 0.6\). Then solving for
-radius of 1m and the circular outlet radius of 0.1m, we get an equation
-</p>
-\begin{equation*}
-  A(1)\frac{dh}{dt} = -(0.6) \times A(0.1) \sqrt{2gh}\\
-  \implies \pi\frac{dh}{dt} = -0.006 \pi \sqrt{2gh}\\
-  \implies \frac{dh}{dt} = -0.006 \sqrt{2gh}\\
-\end{equation*}
-<p>
-Solving for \(t\) yields \(\approx 130.41\). 
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-org55b8364" class="outline-3">
-<h3 id="org55b8364">Problem 9 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-org55b8364">
-</div>
-<div id="outline-container-org1a6ea42" class="outline-4">
-<h4 id="org1a6ea42">Part (a)</h4>
-<div class="outline-text-4" id="text-org1a6ea42">
-<p>
-See that
-</p>
-\begin{equation*}
-  \frac{Q(5730)}{Q_0} = 0.5\\
-  \implies \frac{Q_0 e^{-r(5730)}}{Q_0} = 0.5\\
-  \implies e^{-r(5730)} = 0.5\\
-\end{equation*}
-<p>
-Solve for \(r\) to get \(r = 0.00012097 yr^{-1}\) 
-</p>
-</div>
-</div>
-<div id="outline-container-org82b252f" class="outline-4">
-<h4 id="org82b252f">Part (b)</h4>
-<div class="outline-text-4" id="text-org82b252f">
-<p>
-Trivially, it would be \(Q_0 \exp{(-0.00012097t)}\), where \(t\) is measured in
-years. 
-</p>
-</div>
-</div>
-<div id="outline-container-orgb7dd337" class="outline-4">
-<h4 id="orgb7dd337">Part (c)</h4>
-<div class="outline-text-4" id="text-orgb7dd337">
-<p>
-Solve \(e^{-rt} = 0.2\) to get \(13,305yr\). 
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-org8fda16d" class="outline-2">
-<h2 id="org8fda16d">Section 2.5</h2>
-<div class="outline-text-2" id="text-org8fda16d">
-</div>
-<div id="outline-container-org8357fe7" class="outline-3">
-<h3 id="org8357fe7">Problem 3</h3>
-<div class="outline-text-3" id="text-org8357fe7">
 
-<div id="org49085f2" class="figure">
-<p><img src="./d3.png" alt="d3.png" width="90%" />
+<div id="outline-container-org4fe4c0b" class="outline-3">
+<h3 id="org4fe4c0b">Problem 5</h3>
+<div class="outline-text-3" id="text-org4fe4c0b">
+\begin{align*}
+  \frac{dy}{dx} = - \frac{ax-by}{bx-cy} \\
+  \iff (ax-by)dx + (bx-cy)dy = 0
+\end{align*}
+<p>
+Now, \(M = ax-by\) and \(N = bx -cy\). See that
+</p>
+\begin{align*}
+  M_y = -b \neq N_x = b
+\end{align*}
+<p>
+The differential equation is not exact.
 </p>
 </div>
 </div>
-</div>
-<div id="outline-container-orgcccc63a" class="outline-3">
-<h3 id="orgcccc63a">Problem 5</h3>
-<div class="outline-text-3" id="text-orgcccc63a">
 
-<div id="org2882cf2" class="figure">
-<p><img src="./d5.png" alt="d5.png" width="90%" />
+<div id="outline-container-org3aaacf2" class="outline-3">
+<h3 id="org3aaacf2">Problem 13</h3>
+<div class="outline-text-3" id="text-org3aaacf2">
+<p>
+Integrating \(\psi_{y}=N\), while holding \(x\) constant, yields \(\psi(x, y)=\int
+N(x, y) d y+h(x)\) 
+Taking the partial derivative with respect to
+\(x, \psi_{x}=\int \frac{\partial}{\partial x} N(x, y) d y+h^{\prime}(x)\) .
+Now set \(\psi_{x}=M(x,
+y)\) and therefore
+\(h^{\prime}(x)=M(x, y)-\int \frac{\partial}{\partial x} N(x,y) dy\).
+Based on the fact that \(M_{y}=N_{x}\), it follows that
+\(\frac{\partial}{\partial y}\left[h^{\prime}(x)\right]=0\). Hence the expression
+for \(h^{\prime}(x)\) can be integrated to obtain 
 </p>
+\begin{align*}
+h(x)=\int M(x, y) d x-\int\left[\int \frac{\partial}{\partial x} N(x, y) d y\right] d x
+\end{align*}
 </div>
 </div>
-</div>
-<div id="outline-container-org615ff6f" class="outline-3">
-<h3 id="org615ff6f">Problem 9 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-org615ff6f">
 
-<div id="org784a48c" class="figure">
-<p><img src="./d9.png" alt="d9.png" width="90%" />
+<div id="outline-container-orge566925" class="outline-3">
+<h3 id="orge566925">Problem 15 [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-orge566925">
+\begin{align*}
+  M = x^2y^3,\quad \quad N = x(1+y^2)\\
+  \implies M_y = 3x^2y^2, \quad \quad N_x = 1+y^2
+\end{align*} 
+<p>
+Trivially, not exact. Let \(\mu(x,y) = \frac{1}{xy^3}\),
+then
+</p>
+\begin{align*}
+  M\times\mu = x, \quad \quad N\times\mu = \frac{1+y^2}{y^3}
+  \implies (M\times\mu)_y = 0, \quad \quad (N\times\mu)_x = 0
+\end{align*}
+<p>
+Now they're exact! 
+</p>
+
+<p>
+So then just find that \(F = \frac{x^2}{2} + \frac{y^{-2}}{-2}+\ln(y)\)
 </p>
 </div>
 </div>
-</div>
-<div id="outline-container-orgeab8ca5" class="outline-3">
-<h3 id="orgeab8ca5">Problem 13</h3>
-<div class="outline-text-3" id="text-orgeab8ca5">
-\begin{equation*}
-  y_{1,2} = \frac{K + T \pm \sqrt{K^2 - KT + T^3}}{3}
-\end{equation*}
+
+<div id="outline-container-org54b643b" class="outline-3">
+<h3 id="org54b643b">Problem 18</h3>
+<div class="outline-text-3" id="text-org54b643b">
+\begin{align*}
+  M = 3x^2y+2xy+y^3,\quad \quad N = x^2+y^2\\
+  \implies M_y = 3x^2+2x+3y^2, \quad \quad N_x = 2x
+\end{align*} 
+<p>
+Let us find the integrating factor
+</p>
+\begin{align*}
+  \mu(y) &= \exp(\int \frac{M_y-N_x}{N} dx)\\
+         &= \exp(\int \frac{3x^2+2x+3y^2-2x}{x^2+y^2} dx)\\
+         &= \exp(\int 3 dx)\\
+         &= e^{3x}
+\end{align*}
+<p>
+Simply confirm that \(M\mu\) and \(N\mu\) are now exact.
+Find \(F(x,y) = e^{3x}y(3x^2+y^2) = C\)
+</p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 67; 12021 H.E.</p>
+<p class="date">Date: 70; 12021 H.E.</p>
 <p class="author">Author: Sandy Urazayev</p>
 <p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
 <p class="date">Created: 2021-03-11 Thu 13:47</p>
