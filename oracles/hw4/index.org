@@ -142,9 +142,9 @@ y)$ and therefore
    \end{align*} 
    Let us find the integrating factor
    \begin{align*}
-     \mu(y) &= \exp(\int \frac{M_y-N_x}{N} dx)\\
-            &= \exp(\int \frac{3x^2+2x+3y^2-2x}{x^2+y^2} dx)\\
-            &= \exp(\int 3 dx)\\
+     \mu(y) &= \exp\left(\int \frac{M_y-N_x}{N} dx\right)\\
+            &= \exp\left(\int \frac{3x^2+2x+3y^2-2x}{x^2+y^2} dx\right)\\
+            &= \exp\left(\int 3 dx\right)\\
             &= e^{3x}
    \end{align*}
    Simply confirm that $M\mu$ and $N\mu$ are now exact.
