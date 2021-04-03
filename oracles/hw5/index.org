@@ -152,17 +152,12 @@ a r^{2}+b r+c=0 \\
 \implies r=\frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a}
 \end{align*}
 *** Part (a)
-    For the roots to be real, different and negative, $b^2 - 4ac > 0$ and $b>0$
-    and $c>0$.
+    For the roots to be real, different and negative, $b>0$ and $0 < c < \frac{b^2}{4a}$.
 *** Part (b)
-    For the roots to be real with opposite signs, $b^2 - 4ac > 0$, $b = 0$.
+    For the roots to be real with opposite signs, $c < 0$.
 *** Part (c)
-    For the roots to be real, different and positive, $b^2-4ac>0$ and $b<0$.
-*** Note:
-    Here are the book's answers, which are also accepted
-    1) $b>0$ and $0 < c < \frac{b^2}{4a}$
-    2) $c<0$
-    3) $b<0$ and $0 < c < \frac{b^2}{4a}$
+    For the roots to be real, different and positive, $b<0$ and
+    $0 < c < \frac{b^2}{4a}$.
 * Section 3.2
 ** Problem 5
    The Wronskian of these two functions is
