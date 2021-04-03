@@ -55,7 +55,7 @@
      y(t) = -e^{-3t} - 1
    \end{equation*}
    This solution converges to $-1$ as $t \to \infty$.
-** Problem 13
+** Problem 13 [FOR GRADE]
    Find a differential equation whose general solution is
    \begin{equation*}
      y=c_{1} e^{2 t}+c_{2} e^{-3 t}
@@ -135,7 +135,7 @@
     $\beta=-1$.
 *** Part (b, c, d)
     See Professor Van Vleck's notes on this problem.
-** Problem 21
+** Problem 21 [FOR GRADE]
    \begin{align*}
      ay'' + by' + cy = 0,
    \end{align*}
@@ -155,9 +155,9 @@ a r^{2}+b r+c=0 \\
     For the roots to be real, different and negative, $b^2 - 4ac > 0$ and $b>0$
     and $c>0$.
 *** Part (b)
-    For the roots to be real with opposite signs, $c < 0$.
+    For the roots to be real with opposite signs, $b^2 - 4ac > 0$, $b = 0$.
 *** Part (c)
-    For the roots to be real, different and positive, $b^2-4ac>0$ and $b<0$ and $c>0$.
+    For the roots to be real, different and positive, $b^2-4ac>0$ and $b<0$.
 * Section 3.2
 ** Problem 5
    The Wronskian of these two functions is
@@ -177,7 +177,7 @@ W &=\left|\begin{array}{cc}
 &=0
 \end{align*}
 
-** Problem 22
+** Problem 22 [FOR GRADE]
    \begin{align*}
      y'' - y' - 2y = 0
    \end{align*}
