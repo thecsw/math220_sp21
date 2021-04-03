@@ -1,0 +1,259 @@
+% Created 2021-04-03 Sat 15:16
+% Intended LaTeX compiler: xelatex
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage[margin=1.25in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{epsf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{hyperref}
+\usepackage[adobe-utopia]{mathdesign}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{textgreek}
+\renewcommand*{\textgreekfontmap}{%
+{phv/*/*}{LGR/neohellenic/*/*}%
+{*/b/n}{LGR/artemisia/b/n}%
+{*/bx/n}{LGR/artemisia/bx/n}%
+{*/*/n}{LGR/artemisia/m/n}%
+{*/b/it}{LGR/artemisia/b/it}%
+{*/bx/it}{LGR/artemisia/bx/it}%
+{*/*/it}{LGR/artemisia/m/it}%
+{*/b/sl}{LGR/artemisia/b/sl}%
+{*/bx/sl}{LGR/artemisia/bx/sl}%
+{*/*/sl}{LGR/artemisia/m/sl}%
+{*/*/sc}{LGR/artemisia/m/sc}%
+{*/*/sco}{LGR/artemisia/m/sco}%
+}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+#1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\left\lVert}{\right\rVert}
+\DeclarePairedDelimiter{\ceil}{\left\lceil}{\right\rceil}
+\DeclarePairedDelimiter{\floor}{\left\lfloor}{\right\rfloor}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+\def\noi{\noindent}
+\onehalfspace
+\usemintedstyle{bw}
+\author{Sandy Urazayev\thanks{University of Kansas (ctu@ku.edu)}}
+\date{93; 12021 H.E.}
+\title{Homework 6 Oracle\\\medskip
+\large MATH 220 Spring 2021}
+\hypersetup{
+ pdfauthor={Sandy Urazayev},
+ pdftitle={Homework 6 Oracle},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.0.50 (Org mode 9.4.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\href{./index.pdf}{[View the PDF version]​}
+
+\section*{Section 3.3}
+\label{sec:orgc963e4a}
+\subsection*{Problem 7}
+\label{sec:org98c8e15}
+\begin{align*}
+  y'' + 2y' + 2y = 0
+\end{align*}
+Find that \(r = \{-1 - i, -1 + i\}\). Then
+\begin{align*}
+  y(t) = C_1 e^{-t} \cos (t) + C_2 e^{-t} \sin (t)
+\end{align*}
+\subsection*{Problem 13 [FOR GRADE]}
+\label{sec:org5d5b8b7}
+\begin{align*}
+  y'' - 2y' + 5y = 0, \quad y(\pi/2) = 0, \quad y'(\pi / 2) = 2
+\end{align*}
+Find that \(r = \{1+2i,1-2i\}\). Then
+\begin{align*}
+  y(t) = C_1 e^t \cos (2t) + C_2 e^t \sin (2t)
+\end{align*}
+Let us apply the initial conditions
+\begin{align*}
+  \begin{cases}
+    y(\pi/2)=0\\
+    y'(\pi/2)=2
+    \end{cases} \implies
+  \begin{cases}
+    C_1 = 0\\
+    C_2 = -\frac{1}{e^{\pi/2}}
+    \end{cases}
+\end{align*}
+Finally,
+\begin{align*}
+  y(t) = -\frac{1}{e^{\pi/2}} e^t \sin (2t)
+\end{align*}
+\subsection*{Problem 17}
+\label{sec:org0d4cdfe}
+\begin{align*}
+  5u'' + 2u' + 7u = 0, \quad u(0) = 2, \quad u'(0) = 1
+\end{align*}
+\subsubsection*{Part (a)}
+\label{sec:orgf3e38c7}
+Find that
+\(r = \{-\frac{1}{5} - i\frac{\sqrt{34}}{5}, -\frac{1}{5} +
+    i\frac{\sqrt{34}}{5}\}\). Then
+\begin{align*}
+  \begin{cases}
+    u(0) = 2\\
+    u'(0) = 1
+  \end{cases} \implies
+  \begin{cases}
+    C_1 = 2\\
+    C_2 = \frac{7}{\sqrt{34}}
+  \end{cases}
+\end{align*}
+Finally,
+\begin{align*}
+  u(t) = 2 e^{-t/5} \cos\left(\frac{\sqrt{34}t}{5}\right) + \frac{7}{\sqrt{34}} e^{-t/5} \sin\left(\frac{\sqrt{34}t}{5}\right)
+\end{align*}
+\subsubsection*{Part (b)}
+\label{sec:orgdfab1b2}
+\begin{align*}
+  T \approx 14.512
+\end{align*}
+\subsection*{Problem 19}
+\label{sec:org19ca75e}
+\begin{aligned} W\left(e^{\lambda t} \cos \mu t, e^{\lambda t} \sin \mu
+        t\right) & =\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t}
+                \sin \mu t                                   \\ \frac{d}{d t}\left(e^{\lambda t} \cos \mu t\right) & \frac{d}{d
+                        t}\left(e^{\lambda t} \sin \mu t\right)\end{array}\right|
+        \\ &=\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t} \sin \mu
+                t                                                     \\ \lambda e^{\lambda t} \cos \mu t-\mu e^{\lambda t} \sin \mu t \quad
+                \lambda e^{\lambda t} \sin \mu t+\mu e^{\lambda t} \cos \mu
+                t\end{array}\right| \\ &=e^{\lambda t} \cos \mu t\left(\lambda e^{\lambda t}
+        \sin \mu t+\mu e^{\lambda t} \cos \mu t\right)-e^{\lambda t} \sin \mu
+        t\left(\lambda e^{\lambda t} \cos \mu t-\mu e^{\lambda t} \sin \mu t\right)
+        \\ &=\lambda e^{2 \lambda t} \cos \mu t \sin \mu t+\mu e^{2
+                        \lambda t} \cos ^{2} \mu t\lambda e^{2 \lambda t} \cos \mu t
+        \sin \mu t+\mu e^{2 \lambda t} \sin ^{2} \mu t     \\ &=\mu e^{2 \lambda
+        t}\left(\cos ^{2} \mu t+\sin ^{2} \mu t\right)     \\ &=\mu e^{2 \lambda t}
+\end{aligned}
+
+\section*{Section 3.4}
+\label{sec:org0fa390f}
+\subsection*{Problem 1}
+\label{sec:orge590436}
+\begin{align*}
+  y'' - 2y' + y = 0
+\end{align*}
+Then
+\begin{align*}
+  r^2 - 2r + 1 = 0
+\end{align*}
+So \(r = 1\), finally
+\begin{align*}
+  y(t) = C_1 e^t + C_2 t e^t
+\end{align*}
+\subsection*{Problem 8 [FOR GRADE]}
+\label{sec:org678d89a}
+\begin{align*}
+  2y'' + 2y' + y = 0
+\end{align*}
+Then
+\begin{align*}
+  2r^2 + 2r + 1 = 0
+\end{align*}
+So \(r = \{-1/2 - 1/2i, -1/2 + 1/2i\}\). Finally,
+\begin{align*}
+  y(t) = C_1 e^{-t/2} \cos \left(\frac{1}{2}t\right) + C_2 e^{-t/2} \sin \left(\frac{1}{2}t\right)
+\end{align*}
+\subsection*{Problem 11}
+\label{sec:orgda0be98}
+\begin{align*}
+  y'' + 4y' + 4y = 0, \quad y(-1)=2, \quad y'(-1) = 1
+\end{align*}
+Then \(r=\{-2\}\). So
+\begin{align*}
+  y(t) = C_1 e^{-2t} + C_2 t e^{-2t}
+\end{align*}
+Taking the derivative
+\begin{align*}
+  y'(t) = C_1 e^{-2t} - 2 C_1t e^{-2t} - 2 C_2 e^{-2t}
+\end{align*}
+Applying the initial conditions
+\begin{align*}
+  \begin{cases}
+    y(-1) = -C_1e^2 + C_2 e^2 = 2\\
+    y'(-1) = C_1 e^2 + 2 C_1 e^2 - 2 C_2 e^2 = 1
+  \end{cases} \implies
+  \begin{cases}
+    C_1 = \frac{5}{e^2}\\
+    C_2 = \frac{7}{e^2}
+  \end{cases}
+\end{align*}
+Therefore
+\begin{align*}
+  y(t) = \frac{5}{e^2}te^{-2t} + \frac{7}{e^2}e^{-2t}
+\end{align*}
+As \(t \to \infty\), \(y \to 0\).
+\subsection*{Problem 18 [FOR GRADE]}
+\label{sec:orgd775d17}
+\begin{align*}
+  t^2 y'' - 4 t y' + 6 y = 0, \quad t > 0; \quad y_1(t) = t^2
+\end{align*}
+Let us apply the method of reduction
+Let the general solution be of the form
+\begin{align*}
+  y(t) = v(t) y_1(t) = t^2v(t)
+\end{align*}
+Let us find the derivatives
+\begin{align*}
+  y_2'(t) &= t^2v'(t) + 2tv(t)\\
+  y_2''(t) &= t^2v''(t) + 2tv'(t) + 2tv'(t) + 2v(t)
+\end{align*}
+Let us substitute the above into our original ODE
+\begin{align*}
+  t^2 (t^2v''(t) + 2tv'(t) + 2tv'(t) + 2v(t)) -4t (t^2v'(t) + 2tv(t)) + 6(t^2v(t)) = 0
+\end{align*}
+Simplifying yields
+\begin{align*}
+  t^4 v''(t) + 3t^3v'(t) + t^2v(t) - 4t^3v'(t) -8t^2v(t) + 6t^2v(t) = 0\\
+  t^4v''(t) = 0
+\end{align*}
+Then
+\begin{align*}
+  v''(t) = 0
+\end{align*}
+Integrate both sides
+\begin{align*}
+  v'(t) = C_1\\
+  v(t)  = C_1 t + C_2
+\end{align*}
+Finally, the general solution is
+\begin{align*}
+  y(t) = (C_1t + C_2)t^2 = C_1t^3 + C_2t^2 = C_1 y_1(t) + C_2 y_2(t)
+\end{align*}
+and the second solution is \(y_2(t) = t^3\).
+\end{document}

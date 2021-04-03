@@ -19,3 +19,4 @@
   - [[./oracles/hw3][Homework 3]]
   - [[./oracles/hw4][Homework 4]]
   - [[./oracles/hw5][Homework 5]]
+  - [[./oracles/hw6][Homework 6]]

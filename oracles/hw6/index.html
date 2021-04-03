@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-03 Sat 15:17 -->
+<!-- 2021-04-03 Sat 15:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ordinary Differential Equations</title>
+<title>Homework 6 Oracle</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Sandy Urazayev" />
 <style type="text/css">
@@ -216,33 +216,304 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">Ordinary Differential Equations
+<h1 class="title">Homework 6 Oracle
 <br />
 <span class="subtitle">MATH 220 Spring 2021</span>
 </h1>
+<p>
+<a href="./index.pdf">[View the PDF version]​</a>
+</p>
 
-<div id="outline-container-orgdefa290" class="outline-2">
-<h2 id="orgdefa290">Homework Oracles</h2>
-<div class="outline-text-2" id="text-orgdefa290">
-<ul class="org-ul">
-<li><a href="./oracles/hw1">Homework 1</a></li>
-<li><a href="./oracles/hw2">Homework 2</a></li>
-<li><a href="./oracles/hw3">Homework 3</a></li>
-<li><a href="./oracles/hw4">Homework 4</a></li>
-<li><a href="./oracles/hw5">Homework 5</a></li>
-<li><a href="./oracles/hw6">Homework 6</a></li>
-</ul>
+<div id="outline-container-org37d3aa3" class="outline-2">
+<h2 id="org37d3aa3">Section 3.3</h2>
+<div class="outline-text-2" id="text-org37d3aa3">
+</div>
+<div id="outline-container-orgee3130b" class="outline-3">
+<h3 id="orgee3130b">Problem 7</h3>
+<div class="outline-text-3" id="text-orgee3130b">
+\begin{align*}
+  y'' + 2y' + 2y = 0
+\end{align*}
+<p>
+Find that \(r = \{-1 - i, -1 + i\}\). Then
+</p>
+\begin{align*}
+  y(t) = C_1 e^{-t} \cos (t) + C_2 e^{-t} \sin (t)
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org33af64a" class="outline-3">
+<h3 id="org33af64a">Problem 13 [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-org33af64a">
+\begin{align*}
+  y'' - 2y' + 5y = 0, \quad y(\pi/2) = 0, \quad y'(\pi / 2) = 2
+\end{align*}
+<p>
+Find that \(r = \{1+2i,1-2i\}\). Then
+</p>
+\begin{align*}
+  y(t) = C_1 e^t \cos (2t) + C_2 e^t \sin (2t)
+\end{align*}
+<p>
+Let us apply the initial conditions
+</p>
+\begin{align*}
+  \begin{cases}
+    y(\pi/2)=0\\
+    y'(\pi/2)=2
+    \end{cases} \implies
+  \begin{cases}
+    C_1 = 0\\
+    C_2 = -\frac{1}{e^{\pi/2}}
+    \end{cases}
+\end{align*}
+<p>
+Finally,
+</p>
+\begin{align*}
+  y(t) = -\frac{1}{e^{\pi/2}} e^t \sin (2t)
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org7ea8827" class="outline-3">
+<h3 id="org7ea8827">Problem 17</h3>
+<div class="outline-text-3" id="text-org7ea8827">
+\begin{align*}
+  5u'' + 2u' + 7u = 0, \quad u(0) = 2, \quad u'(0) = 1
+\end{align*}
+</div>
+<div id="outline-container-org8ea8706" class="outline-4">
+<h4 id="org8ea8706">Part (a)</h4>
+<div class="outline-text-4" id="text-org8ea8706">
+<p>
+Find that
+\(r = \{-\frac{1}{5} - i\frac{\sqrt{34}}{5}, -\frac{1}{5} +
+    i\frac{\sqrt{34}}{5}\}\). Then
+</p>
+\begin{align*}
+  \begin{cases}
+    u(0) = 2\\
+    u'(0) = 1
+  \end{cases} \implies
+  \begin{cases}
+    C_1 = 2\\
+    C_2 = \frac{7}{\sqrt{34}}
+  \end{cases}
+\end{align*}
+<p>
+Finally,
+</p>
+\begin{align*}
+  u(t) = 2 e^{-t/5} \cos\left(\frac{\sqrt{34}t}{5}\right) + \frac{7}{\sqrt{34}} e^{-t/5} \sin\left(\frac{\sqrt{34}t}{5}\right)
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org2988025" class="outline-4">
+<h4 id="org2988025">Part (b)</h4>
+<div class="outline-text-4" id="text-org2988025">
+\begin{align*}
+  T \approx 14.512
+\end{align*}
+</div>
+</div>
+</div>
+<div id="outline-container-org563ad7f" class="outline-3">
+<h3 id="org563ad7f">Problem 19</h3>
+<div class="outline-text-3" id="text-org563ad7f">
+\begin{aligned} W\left(e^{\lambda t} \cos \mu t, e^{\lambda t} \sin \mu
+        t\right) & =\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t}
+                \sin \mu t                                   \\ \frac{d}{d t}\left(e^{\lambda t} \cos \mu t\right) & \frac{d}{d
+                        t}\left(e^{\lambda t} \sin \mu t\right)\end{array}\right|
+        \\ &=\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t} \sin \mu
+                t                                                     \\ \lambda e^{\lambda t} \cos \mu t-\mu e^{\lambda t} \sin \mu t \quad
+                \lambda e^{\lambda t} \sin \mu t+\mu e^{\lambda t} \cos \mu
+                t\end{array}\right| \\ &=e^{\lambda t} \cos \mu t\left(\lambda e^{\lambda t}
+        \sin \mu t+\mu e^{\lambda t} \cos \mu t\right)-e^{\lambda t} \sin \mu
+        t\left(\lambda e^{\lambda t} \cos \mu t-\mu e^{\lambda t} \sin \mu t\right)
+        \\ &=\lambda e^{2 \lambda t} \cos \mu t \sin \mu t+\mu e^{2
+                        \lambda t} \cos ^{2} \mu t\lambda e^{2 \lambda t} \cos \mu t
+        \sin \mu t+\mu e^{2 \lambda t} \sin ^{2} \mu t     \\ &=\mu e^{2 \lambda
+        t}\left(\cos ^{2} \mu t+\sin ^{2} \mu t\right)     \\ &=\mu e^{2 \lambda t}
+\end{aligned}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7c41f60" class="outline-2">
+<h2 id="org7c41f60">Section 3.4</h2>
+<div class="outline-text-2" id="text-org7c41f60">
+</div>
+<div id="outline-container-org60aebbc" class="outline-3">
+<h3 id="org60aebbc">Problem 1</h3>
+<div class="outline-text-3" id="text-org60aebbc">
+\begin{align*}
+  y'' - 2y' + y = 0
+\end{align*}
+<p>
+Then
+</p>
+\begin{align*}
+  r^2 - 2r + 1 = 0
+\end{align*}
+<p>
+So \(r = 1\), finally
+</p>
+\begin{align*}
+  y(t) = C_1 e^t + C_2 t e^t
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orge1865e1" class="outline-3">
+<h3 id="orge1865e1">Problem 8 [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-orge1865e1">
+\begin{align*}
+  2y'' + 2y' + y = 0
+\end{align*}
+<p>
+Then
+</p>
+\begin{align*}
+  2r^2 + 2r + 1 = 0
+\end{align*}
+<p>
+So \(r = \{-1/2 - 1/2i, -1/2 + 1/2i\}\). Finally,
+</p>
+\begin{align*}
+  y(t) = C_1 e^{-t/2} \cos \left(\frac{1}{2}t\right) + C_2 e^{-t/2} \sin \left(\frac{1}{2}t\right)
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org55e4142" class="outline-3">
+<h3 id="org55e4142">Problem 11</h3>
+<div class="outline-text-3" id="text-org55e4142">
+\begin{align*}
+  y'' + 4y' + 4y = 0, \quad y(-1)=2, \quad y'(-1) = 1
+\end{align*}
+<p>
+Then \(r=\{-2\}\). So
+</p>
+\begin{align*}
+  y(t) = C_1 e^{-2t} + C_2 t e^{-2t}
+\end{align*}
+<p>
+Taking the derivative
+</p>
+\begin{align*}
+  y'(t) = C_1 e^{-2t} - 2 C_1t e^{-2t} - 2 C_2 e^{-2t}
+\end{align*}
+<p>
+Applying the initial conditions
+</p>
+\begin{align*}
+  \begin{cases}
+    y(-1) = -C_1e^2 + C_2 e^2 = 2\\
+    y'(-1) = C_1 e^2 + 2 C_1 e^2 - 2 C_2 e^2 = 1
+  \end{cases} \implies
+  \begin{cases}
+    C_1 = \frac{5}{e^2}\\
+    C_2 = \frac{7}{e^2}
+  \end{cases}
+\end{align*}
+<p>
+Therefore
+</p>
+\begin{align*}
+  y(t) = \frac{5}{e^2}te^{-2t} + \frac{7}{e^2}e^{-2t}
+\end{align*}
+<p>
+As \(t \to \infty\), \(y \to 0\).
+</p>
+</div>
+</div>
+<div id="outline-container-org574760f" class="outline-3">
+<h3 id="org574760f">Problem 18 [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-org574760f">
+\begin{align*}
+  t^2 y'' - 4 t y' + 6 y = 0, \quad t > 0; \quad y_1(t) = t^2
+\end{align*}
+<p>
+Let us apply the method of reduction
+Let the general solution be of the form
+</p>
+\begin{align*}
+  y(t) = v(t) y_1(t) = t^2v(t)
+\end{align*}
+<p>
+Let us find the derivatives
+</p>
+\begin{align*}
+  y_2'(t) &= t^2v'(t) + 2tv(t)\\
+  y_2''(t) &= t^2v''(t) + 2tv'(t) + 2tv'(t) + 2v(t)
+\end{align*}
+<p>
+Let us substitute the above into our original ODE
+</p>
+\begin{align*}
+  t^2 (t^2v''(t) + 2tv'(t) + 2tv'(t) + 2v(t)) -4t (t^2v'(t) + 2tv(t)) + 6(t^2v(t)) = 0
+\end{align*}
+<p>
+Simplifying yields
+</p>
+\begin{align*}
+  t^4 v''(t) + 3t^3v'(t) + t^2v(t) - 4t^3v'(t) -8t^2v(t) + 6t^2v(t) = 0\\
+  t^4v''(t) = 0
+\end{align*}
+<p>
+Then
+</p>
+\begin{align*}
+  v''(t) = 0
+\end{align*}
+<p>
+Integrate both sides
+</p>
+\begin{align*}
+  v'(t) = C_1\\
+  v(t)  = C_1 t + C_2
+\end{align*}
+<p>
+Finally, the general solution is
+</p>
+\begin{align*}
+  y(t) = (C_1t + C_2)t^2 = C_1t^3 + C_2t^2 = C_1 y_1(t) + C_2 y_2(t)
+\end{align*}
+<p>
+and the second solution is \(y_2(t) = t^3\).
+</p>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 52; 12021 H.E.</p>
+<p class="date">Date: 93; 12021 H.E.</p>
 <p class="author">Author: Sandy Urazayev</p>
 <p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
-<p class="date">Created: 2021-04-03 Sat 15:17</p>
+<p class="date">Created: 2021-04-03 Sat 15:16</p>
 </div>
 </body>
 </html>
