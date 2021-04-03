@@ -7,15 +7,17 @@
 #+html_head: <link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
 #+language: en
 
-#+title: Ordinary Differential Equations
-#+subtitle: MATH 220 Spring 2021
+#+title: Homework 6 Oracle
 #+author: Sandy Urazayev
-#+date: 52; 12021 H.E.
+#+date: 93; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
-
-* Homework Oracles
-  - [[./oracles/hw1][Homework 1]]
-  - [[./oracles/hw2][Homework 2]]
-  - [[./oracles/hw3][Homework 3]]
-  - [[./oracles/hw4][Homework 4]]
-  - [[./oracles/hw5][Homework 5]]
+* Section 3.3
+** Problem 7
+** Problem 13
+** Problem 17
+** Problem 19
+* Section 3.4
+** Problem 1
+** Problem 8
+** Problem 11
+** Problem 18

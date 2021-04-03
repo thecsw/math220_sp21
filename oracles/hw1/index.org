@@ -8,9 +8,13 @@
 #+language: en
 
 #+title: Homework 1 Oracle
+#+subtitle: MATH 220 Spring 2021
 #+author: Sandy Urazayev
 #+date: 44; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
+
+[[./index.pdf][[View the PDF version]​]]
+
 * Chapter 1.1
 ** Problem 7
    #+attr_html: :width 90%

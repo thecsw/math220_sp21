@@ -1,4 +1,4 @@
-% Created 2021-03-08 Mon 20:01
+% Created 2021-04-03 Sat 12:06
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -65,21 +65,24 @@
 \usemintedstyle{bw}
 \author{Sandy Urazayev\thanks{University of Kansas (ctu@ku.edu)}}
 \date{67; 12021 H.E.}
-\title{Homework 3 Oracle}
+\title{Homework 3 Oracle\\\medskip
+\large MATH 220 Spring 2021}
 \hypersetup{
  pdfauthor={Sandy Urazayev},
  pdftitle={Homework 3 Oracle},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 28.0.50 (Org mode 9.4.4)}, 
+ pdfcreator={Emacs 28.0.50 (Org mode 9.4.5)}, 
  pdflang={English}}
 \begin{document}
 
 \maketitle
+\href{./index.pdf}{[View the PDF version]​}
+
 \section*{Section 2.3}
-\label{sec:org74b13f4}
-\subsection*{Problem 1}
-\label{sec:orga4c6a4f}
+\label{sec:org8fe0e82}
+\subsection*{Problem 1 [FOR GRADE]}
+\label{sec:org55159cc}
 We model the tank problem the following way of
 \begin{equation*}
   \frac{dx}{dt}=R_{in}-R_{out}
@@ -104,15 +107,15 @@ the tank reaches \(1\%\). So
 \end{equation*}
 Solving for \(t\) returns that \(t = 100 \ln 100\) min \(\approx 460.5\) min. 
 \subsection*{Problem 4}
-\label{sec:org862d36c}
+\label{sec:orgaefec70}
 \subsubsection*{Part (a)}
-\label{sec:orgb4c50bd}
+\label{sec:orgeb0237c}
 So our kinetic and potential energies are equal. Then
 \begin{equation*}
   mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh}
 \end{equation*}
 \subsubsection*{Part (b)}
-\label{sec:org5781216}
+\label{sec:org6ccc155}
 Recall 
 \begin{equation*}
   \frac{dv}{dt} = A(h) \frac{dh}{dt} \quad\text{and}\quad \frac{dv}{dt} = av
@@ -121,16 +124,54 @@ So then because constant \(\alpha\) is contracting, the change is negative
 \begin{equation*}
   A(h)\frac{dh}{dt} = -\alpha a \sqrt{2gh}
 \end{equation*}
-\subsection*{Problem 9}
-\label{sec:org2bffd57}
+\subsubsection*{Part (c)}
+\label{sec:org49121ab}
+Recall \(A(r) = \pi r^2\). Let \(h=3\) and \(\alpha = 0.6\). Then solving for
+radius of 1m and the circular outlet radius of 0.1m, we get an equation
+\begin{equation*}
+  A(1)\frac{dh}{dt} = -(0.6) \times A(0.1) \sqrt{2gh}\\
+  \implies \pi\frac{dh}{dt} = -0.006 \pi \sqrt{2gh}\\
+  \implies \frac{dh}{dt} = -0.006 \sqrt{2gh}\\
+\end{equation*}
+Solving for \(t\) yields \(\approx 130.41\). 
+\subsection*{Problem 9 [FOR GRADE]}
+\label{sec:org19e0849}
+\subsubsection*{Part (a)}
+\label{sec:org0864c17}
+See that
+\begin{equation*}
+  \frac{Q(5730)}{Q_0} = 0.5\\
+  \implies \frac{Q_0 e^{-r(5730)}}{Q_0} = 0.5\\
+  \implies e^{-r(5730)} = 0.5\\
+\end{equation*}
+Solve for \(r\) to get \(r = 0.00012097 yr^{-1}\) 
+\subsubsection*{Part (b)}
+\label{sec:orgff8c64d}
+Trivially, it would be \(Q_0 \exp{(-0.00012097t)}\), where \(t\) is measured in
+years. 
+\subsubsection*{Part (c)}
+\label{sec:org4576120}
+Solve \(e^{-rt} = 0.2\) to get \(13,305yr\). 
 \section*{Section 2.5}
-\label{sec:org3a63f7c}
+\label{sec:orge3228df}
 \subsection*{Problem 3}
-\label{sec:orga7dfd3f}
+\label{sec:org771ba94}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./d3.png}
+\end{center}
 \subsection*{Problem 5}
-\label{sec:orgb319bbc}
-\subsection*{Problem 9}
-\label{sec:org6625e4b}
+\label{sec:org81f6d32}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./d5.png}
+\end{center}
+\subsection*{Problem 9 [FOR GRADE]}
+\label{sec:orgdf4d808}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./d9.png}
+\end{center}
 \subsection*{Problem 13}
-\label{sec:org7403f04}
+\label{sec:orgb32e4ed}
+\begin{equation*}
+  y_{1,2} = \frac{K + T \pm \sqrt{K^2 - KT + T^3}}{3}
+\end{equation*}
 \end{document}

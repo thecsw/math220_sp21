@@ -1,0 +1,347 @@
+#+latex_class: sandy-article
+#+latex_compiler: xelatex
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+options: email:t f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+options: tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t num:nil
+#+html_head: <link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
+#+language: en
+
+#+title: Homework 5 Oracle
+#+subtitle: MATH 220 Spring 2021
+#+author: Sandy Urazayev
+#+date: 93; 12021 H.E.
+#+email: University of Kansas (ctu@ku.edu)
+
+[[./index.pdf][[View the PDF version]​]]
+
+* Section 3.1
+** Problem 9
+   \begin{equation*}
+     y'' + 3y' = 0, \quad y(0) = -2, \quad y'(0) = 3
+   \end{equation*}
+   Since this is a linear homogeneous constant-coefficient ODE, the solution is
+   of the form $y = e^{rt}$
+   \begin{equation*}
+     y=e^{rt} \quad \implies \quad y' = re^{rt} \quad \implies \quad y'' = r^2 e^{rt}
+   \end{equation*}
+   Substitute those expressions into the ODE
+   \begin{equation*}
+     r^2 e^{rt} + 3(re^{rt}) = 0
+   \end{equation*}
+   Divide both sides by $e^{rt}$
+   \begin{equation*}
+     r^2 + 3r = 0
+   \end{equation*}
+   Roots of this polynomial are $r_0 = -3$ and $r_1 = 0$. Two solutions to the
+   ODE are $y=e^{-3t}$ and $y=e^0=1$. Therefore, the general solution is
+   \begin{equation*}
+     y(t) = C_1 e^{-3t} + C_2
+   \end{equation*}
+   Differentiating $y$ gives us
+   \begin{equation*}
+     y'(t) = -3C_1 e^{-3t}
+   \end{equation*}
+   Now, we can determine our constants by applying the two initial conditions we
+   know
+   \begin{equation*}
+     \begin{cases}
+       y(0) = C_1 + C_2 = -2\\
+       y'(0) = -3C_1 = 3
+     \end{cases}
+   \end{equation*}
+   Therefore $C_1 = -1$ and $C_2 = -1$, therefore
+   \begin{equation*}
+     y(t) = -e^{-3t} - 1
+   \end{equation*}
+   This solution converges to $-1$ as $t \to \infty$.
+** Problem 13
+   Find a differential equation whose general solution is
+   \begin{equation*}
+     y=c_{1} e^{2 t}+c_{2} e^{-3 t}
+   \end{equation*}
+   We see the roots are $r_0 = -3$ and $r_1 = 2$. Alternatively, you can make a
+   set of solutions, and call it $r = \{-3,2\}$. So
+   \begin{align*}
+     (r+3)(r-2)&=0 \\
+     \implies r^2 + r - 6 &= 0
+   \end{align*}
+   Multiply both sides by $e^{rt}$
+   \begin{align*}
+     r^2e^{rt} + re^{rt} - 6e^{rt} = 0
+   \end{align*}
+   Therefore, the differential equation is
+   \begin{align*}
+     y'' + y' - 6y = 0
+   \end{align*}
+** Problem 16
+   This is a linear homogeneous constant-coefficient ODE, apply the same method
+   as in Problem 9. Find that $r = \{-1, 2\}$ and the general solution is
+   \begin{align*}
+     y(t) = C_1 e^{-t} + C_2 e^{2t}
+   \end{align*}
+   The derivative would be
+   \begin{align*}
+     y'(t) = -C_1 e^{-t} + 2 C_2 e^{2t}
+   \end{align*}
+   Let us solve the initial conditions
+      \begin{align*}
+        \begin{cases}
+          y(0) = C_1 + C_2 = \alpha\\
+          y'(0) = -C_1 + 2C_2 = 2
+        \end{cases}
+        \implies \begin{cases}
+          C_1 = \frac{2}{3}(\alpha -1)\\
+          C_2 = \frac{1}{3}(\alpha +2)
+        \end{cases}
+      \end{align*}
+      Therefore,
+      \begin{align*}
+        y(t) = \frac{2}{3}(\alpha -1)e^{-t} + \frac{1}{3}(\alpha +2)e^{2t}
+      \end{align*}
+      We can see that if $t \to \infty$, then $y \to \infty$. Therefore, set
+      $\alpha = -2$.
+** Problem 19
+   \begin{align*}
+     y'' + 5y' + 6y = 9, \quad y(0) = 2, \quad y'(0) = \beta,
+   \end{align*}
+   where $\beta > 0$.
+*** Part (a)
+    This is a linear homogeneous constant-coefficient ODE, find that
+    $r = {-\frac{1}{2}, \frac{1}{2}}$. The two solutions are
+    \begin{align*}
+      y(t) = C_1 e^{-\frac{t}{2}} + C_2 e^{\frac{t}{2}}
+    \end{align*}
+    Then
+    \begin{align*}
+      y'(t) = -\frac{C_1}{2} e^{-\frac{t}{2}} + \frac{C_2}{2} e^{\frac{t}{2}}
+    \end{align*}
+    Solve
+    \begin{align*}
+      \begin{cases}
+        y(0) = C_1 + C_2 = 2\\
+        y'(0) = -\frac{C_1}{2} + \frac{C_2}{2} = \beta
+      \end{cases} \implies
+      \begin{cases}
+        C_1 = 1 - \beta\\
+        C_2 = 1 + \beta
+      \end{cases}
+    \end{align*}
+    Finally,
+    \begin{align*}
+      y(t) = (1 - \beta)e^{-\frac{t}{2}} + (1+\beta)e^{\frac{t}{2}}
+    \end{align*}
+    To prevent the solution from going to the infinity and beyond, set
+    $\beta=-1$.
+*** Part (b, c, d)
+    See Professor Van Vleck's notes on this problem.
+** Problem 21
+   \begin{align*}
+     ay'' + by' + cy = 0,
+   \end{align*}
+   where $a, b, c \in \mathbb{R}$ and $a > 0$.
+
+   This is yet again another linear homogeneous constant-coefficient ODE. Find
+   that
+  \begin{align*}
+a\left(r^{2} e^{r t}\right)+b\left(r e^{r t}\right)+c\left(e^{r t}\right)=0
+\end{align*}
+Divide both sides by $e^{r t}$
+\begin{align*}
+a r^{2}+b r+c=0 \\
+\implies r=\frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a}
+\end{align*}
+*** Part (a)
+    For the roots to be real, different and negative, $b^2 - 4ac > 0$ and $b>0$
+    and $c>0$.
+*** Part (b)
+    For the roots to be real with opposite signs, $c < 0$.
+*** Part (c)
+    For the roots to be real, different and positive, $b^2-4ac>0$ and $b<0$ and $c>0$.
+* Section 3.2
+** Problem 5
+   The Wronskian of these two functions is
+\begin{align*}
+W &=\left|\begin{array}{cc}
+\cos ^{2} \theta & 1+\cos 2 \theta \\
+\frac{d}{d \theta}\left(\cos ^{2} \theta\right) & \frac{d}{d \theta}(1+\cos 2 \theta)
+\end{array}\right| \\
+&=\left|\begin{array}{cc}
+\cos ^{2} \theta & 1+\cos 2 \theta \\
+2 \cos \theta(-\sin \theta) & -2 \sin 2 \theta
+\end{array}\right| \\
+&=\cos ^{2} \theta(-2 \sin 2 \theta)-(1+\cos 2 \theta)[2 \cos \theta(-\sin \theta)] \\
+&=-2 \cos ^{2} \theta \sin 2 \theta+2 \sin \theta \cos \theta(1+\cos 2 \theta) \\
+&=-2 \cos ^{2} \theta(2 \sin \theta \cos \theta)+2 \sin \theta \cos \theta\left(1+2 \cos ^{2} \theta-1\right) \\
+&=-4 \cos ^{2} \theta \sin \theta \cos \theta+4 \sin \theta \cos \theta \cos ^{2} \theta \\
+&=0
+\end{align*}
+
+** Problem 22
+   \begin{align*}
+     y'' - y' - 2y = 0
+   \end{align*}
+
+   *Note:* Solutions for this problem are based on Jock's solutions.
+   
+*** Part (a)
+    Calculate $W\left(y_{1}, y_{2}\right)$ the Wronskian of $y_{1}$ and
+    $y_{2}$.
+
+\begin{align*}
+W\left(y_{1}, y_{2}\right) &=\left|\begin{array}{ll}
+y_{1} & y_{2} \\
+y_{1}^{\prime} & y_{2}^{\prime}
+\end{array}\right| \\
+&=\left|\begin{array}{cc}
+e^{-t} & e^{2 t} \\
+-e^{-t} & 2 e^{2 t}
+\end{array}\right| \\
+&=e^{-t}\left(2 e^{2 t}\right)-e^{2 t}\left(-e^{-t}\right) \\
+&=2 e^{t}+e^{t} \\
+&=3 e^{t}
+\end{align*}
+
+Since $W\left(y_{1}, y_{2}\right) \neq 0, y_{1}$ and $y_{2}$ form a fundamental
+set of solutions.
+
+*** Part (b)
+
+    Check that $y_{3}$ is a solution of the ODE.
+    
+\begin{array}{c}
+y_{3}^{\prime \prime}-y_{3}^{\prime}-2 y_{3} \stackrel{?}{=} 0 \\
+\frac{d^{2}}{d t^{2}}\left(-2 e^{2 t}\right)-\frac{d}{d t}\left(-2 e^{2 t}\right)-2\left(-2 e^{2 t}\right) \stackrel{?}{=} 0 \\
+\left(-8 e^{2 t}\right)-\left(-4 e^{2 t}\right)-2\left(-2 e^{2 t}\right) \stackrel{?}{=} 0 \\
+-8 e^{2 t}+4 e^{2 t}+4 e^{2 t} \stackrel{?}{=} 0 \\
+0=0
+\end{array}
+
+Now check that $y_{4}=e^{-t}+2 e^{2 t}$ is a solution of the ODE.
+
+\begin{array}{c}
+y_{4}^{\prime \prime}-y_{4}^{\prime}-2 y_{4} \stackrel{?}{=} 0 \\
+\frac{d^{2}}{d t^{2}}\left(e^{-t}+2 e^{2 t}\right)-\frac{d}{d t}\left(e^{-t}+2 e^{2 t}\right)-2\left(e^{-t}+2 e^{2 t}\right) \stackrel{?}{=} 0 \\
+\left(e^{-t}+8 e^{2 t}\right)-\left(-e^{-t}+4 e^{2 t}\right)-2\left(e^{-t}+2 e^{2 t}\right) \stackrel{?}{=} 0 \\
+e^{-^{\ell}}+8 e^{2 t}+e^{-}-4 e^{2 t}-2 e^{-}-4 e^{2 t} \stackrel{?}{=} 0 \\
+0=0
+\end{array}
+
+Now check that $y_{5}=2 y_{1}(t)-2 y_{3}(t)=2 e^{-t}-2\left(-2 e^{2 t}\right)=2
+e^{-t}+4 e^{2 t}$ is a solution of the ODE. 
+
+\begin{array}{c}
+y_{5}^{\prime \prime}-y_{5}^{\prime}-2 y_{5} \stackrel{?}{=} 0 \\
+\frac{d^{2}}{d t^{2}}\left(2 e^{-t}+4 e^{2 t}\right)-\frac{d}{d t}\left(2 e^{-t}+4 e^{2 t}\right)-2\left(2 e^{-t}+4 e^{2 t}\right) \stackrel{?}{=} 0 \\
+\left(2 e^{-t}+16 e^{2 t}\right)-\left(-2 e^{-t}+8 e^{2 t}\right)-2\left(2 e^{-t}+4 e^{2 t}\right) \stackrel{?}{=} 0 \\
+2 e^{-}+16 e^{2 t}+2 e^{-}-8 e^{2 t}-4 e^{-}-8 e^{2 t} \stackrel{?}{=} 0 \\
+0=0
+\end{array}
+
+*** Part (c)
+
+    Calculate $W\left(y_{1}, y_{3}\right)$, the Wronskian of $y_{1}$ and $y_{3}$.
+
+\begin{aligned}
+W\left(y_{1}, y_{3}\right) &=\left|\begin{array}{ll}
+y_{1} & y_{3} \\
+y_{1}^{\prime} & y_{3}^{\prime}
+\end{array}\right| \\
+&=\left|\begin{array}{cc}
+e^{-t} & -2 e^{2 t} \\
+-e^{-t} & -4 e^{2 t}
+\end{array}\right| \\
+&=e^{-t}\left(-4 e^{2 t}\right)-\left(-2 e^{2 t}\right)\left(-e^{-t}\right) \\
+&=-4 e^{t}-2 e^{t} \\
+&=-6 e^{t}
+\end{aligned}
+
+Since $W\left(y_{1}, y_{3}\right) \neq 0, y_{1}$ and $y_{3}$ form a fundamental set of solutions.
+
+Now calculate $W\left(y_{2}, y_{3}\right)$, the Wronskian of $y_{2}$ and $y_{3}$
+
+\begin{aligned}
+W\left(y_{2}, y_{3}\right) &=\left|\begin{array}{ll}
+y_{2} & y_{3} \\
+y_{2}^{\prime} & y_{3}^{\prime}
+\end{array}\right| \\
+&=\left|\begin{array}{cc}
+e^{2 t} & -2 e^{2 t} \\
+2 e^{2 t} & -4 e^{2 t}
+\end{array}\right| \\
+&=e^{2 t}\left(-4 e^{2 t}\right)-\left(-2 e^{2 t}\right)\left(2 e^{2 t}\right) \\
+&=-4 e^{4 t}+4 e^{4 t} \\
+&=0
+\end{aligned}
+
+Since $W\left(y_{2}, y_{3}\right)=0, y_{2}$ and $y_{3}$ do not form a
+fundamental set of solutions. Now calculate $W\left(y_{1}, y_{4}\right)$, the
+Wronskian of $y_{1}$ and $y_{4}$ 
+
+\begin{aligned}
+W\left(y_{1}, y_{4}\right) &=\left|\begin{array}{ll}
+y_{1} & y_{4} \\
+y_{1}^{\prime} & y_{4}^{\prime}
+\end{array}\right| \\
+&=\left|\begin{array}{cc}
+e^{-t} & e^{-t}+2 e^{2 t} \\
+-e^{-t} & -e^{-t}+4 e^{2 t}
+\end{array}\right| \\
+&=e^{-t}\left(-e^{-t}+4 e^{2 t}\right)-\left(e^{-t}+2 e^{2 t}\right)\left(-e^{-t}\right) \\
+&=-e^{-2 t}+4 e^{t}+e^{-2 t}+2 e^{t} \\
+&=6 e^{t}
+\end{aligned}
+
+Since $W\left(y_{1}, y_{4}\right) \neq 0, y_{1}$ and $y_{4}$ form a fundamental
+set of solutions. Now calculate $W\left(y_{4}, y_{5}\right)$, the Wronskian of
+$y_{4}$ and $y_{5}$. 
+
+\begin{aligned}
+W\left(y_{4}, y_{5}\right) &=\left|\begin{array}{ll}
+y_{4} & y_{5} \\
+y_{4}^{\prime} & y_{5}^{\prime}
+\end{array}\right| \\
+&=\left|\begin{array}{cc}
+e^{-t}+2 e^{2 t} & 2 e^{-t}+4 e^{2 t} \\
+-e^{-t}+4 e^{2 t} & -2 e^{-t}+8 e^{2 t}
+\end{array}\right| \\
+&=\left(e^{-t}+2 e^{2 t}\right)\left(-2 e^{-t}+8 e^{2 t}\right)-\left(2 e^{-t}+4 e^{2 t}\right)\left(-e^{-t}+4 e^{2 t}\right) \\
+&=-2 e^{-2 t}+8 e^{t}-4 e^{t}+16 e^{4 t}-\left(-2 e^{-2 t}+8 e^{t}-4 e^{t}+16 e^{4 t}\right) \\
+&=0
+\end{aligned}
+
+Since $W\left(y_{4}, y_{5}\right)=0, y_{4}$ and $y_{5}$ do not form a fundamental set of solutions.
+** Problem 24
+   \begin{align*}
+     (\cos t)y'' +(\sin t)y' -ty = 0
+   \end{align*}
+   Then
+   \begin{align*}
+     y'' + \frac{\sin t}{\cos t} - \frac{t}{\cos t}y = 0
+   \end{align*}
+   so
+   \begin{align*}
+     p(t) = \tan t
+   \end{align*}
+   Then
+   \begin{align*}
+     W = C \exp\left(-\int \tan t dt \right)
+   \end{align*}
+   By Abel's Theorem
+   \begin{align*}
+     W = C \exp \left( \ln (cos t) \right) \implies W = C\times \cos t
+   \end{align*}
+** Problem 31
+   The equation
+   \begin{align*}
+           P(x) y^{\prime \prime}+Q(x) y^{\prime}+R(x) y=0
+   \end{align*}
+   is said to be exact if it can be written in the form
+\begin{align*}
+	\left(P(x) y^{\prime}\right)^{\prime}+(f(x) y)^{\prime}=0
+\end{align*}
+where $f(x)$ is to be determined in terms of $P(x), Q(x),$ and $R(x)$ The latter equation can be integrated once immediately, resulting in a first-order linear equation for $y$ that can be solved as in Section 2.1. By equating the coefficients of the preceding equations and then eliminating $f(x)$, show that a necessary condition for exactness is
+\begin{align*}
+	P^{\prime \prime}(x)-Q^{\prime}(x)+R(x)=0
+\end{align*}
+It can be shown that this is also a sufficient condition.

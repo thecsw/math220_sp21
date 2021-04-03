@@ -8,9 +8,13 @@
 #+language: en
 
 #+title: Homework 3 Oracle
+#+subtitle: MATH 220 Spring 2021
 #+author: Sandy Urazayev
 #+date: 67; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
+
+[[./index.pdf][[View the PDF version]​]]
+
 * Section 2.3
 ** Problem 1 [FOR GRADE]
    We model the tank problem the following way of
