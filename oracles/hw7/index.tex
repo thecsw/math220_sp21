@@ -1,0 +1,267 @@
+% Created 2021-04-17 Sat 16:25
+% Intended LaTeX compiler: xelatex
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage[margin=1.25in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{epsf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{hyperref}
+\usepackage[adobe-utopia]{mathdesign}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{textgreek}
+\renewcommand*{\textgreekfontmap}{%
+{phv/*/*}{LGR/neohellenic/*/*}%
+{*/b/n}{LGR/artemisia/b/n}%
+{*/bx/n}{LGR/artemisia/bx/n}%
+{*/*/n}{LGR/artemisia/m/n}%
+{*/b/it}{LGR/artemisia/b/it}%
+{*/bx/it}{LGR/artemisia/bx/it}%
+{*/*/it}{LGR/artemisia/m/it}%
+{*/b/sl}{LGR/artemisia/b/sl}%
+{*/bx/sl}{LGR/artemisia/bx/sl}%
+{*/*/sl}{LGR/artemisia/m/sl}%
+{*/*/sc}{LGR/artemisia/m/sc}%
+{*/*/sco}{LGR/artemisia/m/sco}%
+}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+#1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\left\lVert}{\right\rVert}
+\DeclarePairedDelimiter{\ceil}{\left\lceil}{\right\rceil}
+\DeclarePairedDelimiter{\floor}{\left\lfloor}{\right\rfloor}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+\def\noi{\noindent}
+\onehalfspace
+\usemintedstyle{bw}
+\author{Sandy Urazayev\thanks{University of Kansas (ctu@ku.edu)}}
+\date{107; 12021 H.E.}
+\title{Homework 7 Oracle\\\medskip
+\large MATH 220 Spring 2021}
+\hypersetup{
+ pdfauthor={Sandy Urazayev},
+ pdftitle={Homework 7 Oracle},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.0.50 (Org mode 9.4.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\href{./index.pdf}{[View the PDF version]​}
+\section*{Section 3.7}
+\label{sec:orga9f0469}
+\subsection*{Problem 1 [FOR GRADE]}
+\label{sec:orgd53d755}
+We wish to write the two sinusoidal terms as one.
+\begin{align*}
+	3 \cos 2 t+4 \sin 2 t & =R \cos \left(\omega_{0} t-\delta\right)                                   \\
+	                      & =R\left[\cos \omega_{0} t \cos \delta+\sin \omega_{0} t \sin \delta\right] \\
+	                      & =(R \cos \delta) \cos \omega_{0} t+(R \sin \delta) \sin \omega_{0} t
+\end{align*}
+
+Matching the coefficients, we obtain the following system of equations for
+\(\omega_{0}, R\), and \(\delta\).
+
+\begin{array}{r}
+R \cos \delta=3 \quad \quad \quad (1)\\
+\omega_{0}=2 \quad \quad \quad (2)\\
+R \sin \delta=4 \quad \quad \quad (3)
+\end{array}
+
+Square both sides of the first and third equations
+
+\begin{array}{l}
+R^{2} \cos ^{2} \delta=9 \\
+R^{2} \sin ^{2} \delta=16
+\end{array}
+
+and add their respective sides.
+
+\begin{array}{c}
+R^{2} \cos ^{2} \delta+R^{2} \sin ^{2} \delta=9+16 \\
+R^{2}\left(\cos ^{2} \delta+\sin ^{2} \delta\right)=25 \\
+R^{2}=25 \\
+R=5
+\end{array}
+
+Divide the respective sides of equations (1) and (3).
+
+\begin{equation*}
+\frac{R \sin \delta}{R \cos \delta}=\frac{4}{3} \quad \rightarrow \quad \tan \delta=\frac{4}{3} \quad \rightarrow \quad \delta=\tan ^{-1} \frac{4}{3}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+3 \cos 2 t+4 \sin 2 t=5 \cos \left(2 t-\tan ^{-1} \frac{4}{3}\right)
+\end{equation*}
+
+\subsection*{Problem 5}
+\label{sec:org1a39d3b}
+\begin{align*}
+  20 u'' + 400 u' + 3920u &= 0\\
+  20r^2 + 400r + 3920 &= 0
+\end{align*}
+then
+\begin{align*}
+  r = -10 \pm 4 \sqrt{6} i
+\end{align*}
+We see that
+\begin{align*}
+        u(t) =  & C_1 e^{-10t}\cos(4\sqrt{6}t) + C_2 e^{-10t}\sin(4\sqrt{6}t)                   \\
+        u'(t) = & 4\sqrt{6}C_1e^{-10t}\sin(4\sqrt{6}t) - 10 C_1 e^{-10t} \cos(4\sqrt{6}t)       \\
+                & + 4\sqrt{6} C_2 e^{-10t} \cos(4\sqrt{6}t) - 10 C_2 e^{-10t} \sin (4\sqrt{6}t)
+\end{align*}
+By knowing that \(u(0)=2\) and \(u'(0)=2\), we find that \(C_1=2\) and
+\(C_2=\frac{5}{\sqrt{6}}\). Finally,
+\begin{align*}
+  u(t) = 2 e^{-10t} \cos(4\sqrt{6}t) + \frac{5}{\sqrt{6}} e^{-10t} \sin(4\sqrt{6}t)
+\end{align*}
+Therefore
+\begin{align*}
+  \text{Quasi-frequency} &: 4\sqrt{6}\\
+  \text{Quasi-period}    &: \frac{\pi}{2\sqrt{6}}
+\end{align*}
+\section*{Section 7.1}
+\label{sec:orgb5c61b6}
+\subsection*{Problem 1 [FOR GRADE]}
+\label{sec:org28ad445}
+   Let \(u=x_{1}\).
+$$
+x_{1}^{\prime \prime}+0.5 x_{1}^{\prime}+2 x_{1}=0
+$$
+Finally, let \(x_{2}=x_{1}^{\prime}\).
+$$
+x_{2}^{\prime}+0.5 x_{2}+2 x_{1}=0
+$$
+By making these substitutions, the original second-order ODE has become a system of first-order ODEs.
+$$
+\left\{\begin{array}{l}
+x_{1}^{\prime}=x_{2} \\
+x_{2}^{\prime}=-2 x_{1}-0.5 x_{2}
+\end{array}\right.
+$$
+\subsection*{Problem 5}
+\label{sec:org291fa6f}
+   Let \(u=x_{1}\).
+$$
+x_{1}^{\prime \prime}+p(t) x_{1}^{\prime}+q(t) x_{1}=g(t), \quad x_{1}(0)=u_{0}, \quad x_{1}^{\prime}(0)=u_{0}^{\prime}
+$$
+Finally, let \(x_{2}=x_{1}^{\prime}\).
+$$
+x_{2}^{\prime}+p(t) x_{2}+q(t) x_{1}=g(t), \quad x_{1}(0)=u_{0}, \quad x_{2}(0)=u_{0}^{\prime}
+$$
+By making these substitutions, the original initial value problem has become a system of first-order ODEs,
+$$
+\left\{\begin{array}{l}
+x_{1}^{\prime}=x_{2} \\
+x_{2}^{\prime}=-q(t) x_{1}-p(t) x_{2}+g(t)
+\end{array}\right.
+$$
+subject to the initial conditions,
+$$
+x_{1}(0)=u_{0} \quad \text { and } \quad x_{2}(0)=u_{0}^{\prime} .
+$$
+\section*{Section 7.2}
+\label{sec:orge6ed281}
+\subsection*{Problem 4}
+\label{sec:org33b63c8}
+   \(\mathbf{A}^{T}\) is the transpose of \(\mathbf{A}, \overline{\mathbf{A}}\) is
+the complex conjugate of \(\mathbf{A}\), and
+\(\mathbf{A}^{*}=\overline{\mathbf{A}}^{T}\) is the adjoint of \(\mathbf{A}\). 
+
+\begin{equation*}
+\mathbf{A}^{T}=\left(\begin{array}{cc}
+3-2 i & 2-i \\
+1+i & -2+3 i
+\end{array}\right)
+\end{equation*}
+
+\begin{equation*}
+\overline{\mathbf{A}}=\left(\begin{array}{cc}
+3+2 i & 1-i \\
+2+i & -2-3 i
+\end{array}\right)
+\end{equation*}
+
+\begin{equation*}
+\mathbf{A}^{*}=\left(\begin{array}{cc}
+3+2 i & 2+i \\
+1-i & -2-3 i
+\end{array}\right)
+\end{equation*}
+\subsection*{Problem 8 [FOR GRADE]}
+\label{sec:orgc38b003}
+   Start by calculating the determinant.
+$$
+\operatorname{det}\left(\begin{array}{rr}
+1 & 4 \\
+-2 & 3
+\end{array}\right)=(1)(3)-(4)(-2)=11
+$$
+Since it's not zero, an inverse for the given matrix exists.
+$$
+\left(\begin{array}{rr|rr}
+1 & 4 & 1 & 0 \\
+-2 & 3 & 0 & 1
+\end{array}\right)
+$$
+The aim is to make the left side of the augmented matrix 1's and 0 's as the right side is now. Since the top left entry is 1 already, we move on to the bottom left entry. To make it zero, multiply both sides of the first row by 2 and add it to the second row.
+$$
+\left(\begin{array}{cc|cc}
+1 & 4 & 1 & 0 \\
+0 & 11 & 2 & 1
+\end{array}\right)
+$$
+To make the bottom right entry 1 , divide the bottom row by 11 .
+$$
+\left(\begin{array}{ll|ll}
+1 & 4 & 1 & 0 \\
+0 & 1 & \frac{2}{11} & \frac{1}{11}
+\end{array}\right)
+$$
+To make the top right entry 0 , multiply the bottom row by \(-4\) and add it to the first row.
+$$
+\left(\begin{array}{cc|cc}
+1 & 0 & \frac{3}{11} & -\frac{4}{11} \\
+0 & 1 & \frac{2}{11} & \frac{1}{11}
+\end{array}\right)
+$$
+Therefore, the inverse matrix is
+$$
+\left(\begin{array}{cc}
+\frac{3}{11} & -\frac{4}{11} \\
+\frac{2}{11} & \frac{1}{11}
+\end{array}\right) .
+$$
+\end{document}

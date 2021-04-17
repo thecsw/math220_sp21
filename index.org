@@ -26,3 +26,4 @@ grader, Sandy Urazayev to provide solution sets for homework assignments.
   - [[./oracles/hw4][Homework 4]]
   - [[./oracles/hw5][Homework 5]]
   - [[./oracles/hw6][Homework 6]]
+  - [[./oracles/hw7][Homework 7]]
