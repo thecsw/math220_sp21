@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-04-17 Sat 17:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 8 Oracle</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Sandy Urazayev" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Homework 8 Oracle
+<br />
+<span class="subtitle">MATH 220 Spring 2021</span>
+</h1>
+<p>
+<a href="./index.pdf">[View the PDF version]​</a>
+</p>
+
+<div id="outline-container-org411086a" class="outline-2">
+<h2 id="org411086a">Section 7.3</h2>
+<div class="outline-text-2" id="text-org411086a">
+</div>
+<div id="outline-container-orgef91808" class="outline-3">
+<h3 id="orgef91808">Problem 7</h3>
+<div class="outline-text-3" id="text-orgef91808">
+<p>
+   The three vectors are linearly dependent if there exists a nontrivial solution to
+\[
+c_{1} \mathbf{x}^{(1)}+c_{2} \mathbf{x}^{(2)}+c_{3} \mathbf{x}^{(3)}=\mathbf{0}
+\]
+for \(c_{1}, c_{2}\), and \(c_{3}\). Rewrite this equation.
+</p>
+
+\begin{equation*}
+	\begin{array}{l}
+		c_{1}\left(\begin{array}{l}
+				2 \\
+				1 \\
+
+			\end{array}\right)+c_{2}\left(\begin{array}{l}
+				0 \\
+				1 \\
+
+			\end{array}\right)+c_{3}\left(\begin{array}{r}
+				-1 \\
+				2  \\
+
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+				0 \\
+
+			\end{array}\right) \\
+		\left(\begin{array}{llr}
+				2 & 0 & -1 \\
+				1 & 1 & 2  \\
+				0 & 0 & 0
+			\end{array}\right)\left(\begin{array}{l}
+				c_{1} \\
+				c_{2} \\
+				c_{3}
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+				0 \\
+
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+<p>
+Calculate the determinant of the coefficient matrix.
+\[
+	\operatorname{det}\left(\begin{array}{rrr}
+			2 & 0 & -1 \\
+			1 & 1 & 2  \\
+			0 & 0 & 0
+		\end{array}\right)=0\left(\begin{array}{rr}
+			0 & -1 \\
+			1 & 2
+		\end{array}\right)-0\left(\begin{array}{rr}
+			2 & -1 \\
+			1 & 2
+		\end{array}\right)+0\left(\begin{array}{ll}
+			2 & 0 \\
+			1 & 1
+		\end{array}\right)=0
+\]
+</p>
+
+<p>
+Since it's zero, there are infinitely many solutions for \(c_{1}, c_{2}\), and \(c_{3}\).
+</p>
+
+\begin{array}{r}
+2 c_{1}-c_{3}=0 \\
+c_{1}+c_{2}+2 c_{3}=0
+\end{array}
+
+<p>
+Solve this first equation for \(c_{3}\)
+\[
+c_{3}=2 c_{1}
+\]
+</p>
+
+<p>
+and plug it into the second one.
+</p>
+
+<p>
+\[
+c_{1}+c_{2}+2\left(2 c_{1}\right)=0
+\]
+</p>
+
+<p>
+Solve for \(c_{2}\)
+\[
+c_{2}=-5 c_{1}
+\]
+In terms of the free variable \(c_{1}\), the solution to the system of equations is
+\[
+\left\{c_{1},-5 c_{1}, 2 c_{1}\right\}
+\]
+For example, choose \(c_{1}=1\). Then
+\[
+\mathbf{x}^{(1)}-5 \mathbf{x}^{(2)}+2 \mathbf{x}^{(3)}=\mathbf{0}
+\]
+Therefore, the three given vectors are linearly dependent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9ce8b8f" class="outline-3">
+<h3 id="org9ce8b8f">Problem 16 [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-org9ce8b8f">
+<p>
+   The aim is to solve the eigenvalue problem,
+\[
+\mathbf{A} \mathbf{x}=\lambda \mathbf{x}
+\]
+where \(\mathbf{A}\) is the given matrix. Bring \(\lambda \mathbf{x}\) to the left side and combine the terms.
+\[
+(\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0}
+\]
+The eigenvalues satisfy
+\[
+\operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0
+\]
+Evaluate the determinant and solve for \(\lambda\).
+</p>
+\begin{equation*}
+	\begin{array}{c}
+		\operatorname{det}\left(\begin{array}{cc}
+				-2-\lambda & 1          \\
+				1          & -2-\lambda
+			\end{array}\right)=0 \\
+		(-2-\lambda)(-2-\lambda)-1=0                               \\
+		\lambda^{2}+4 \lambda+3=0                                  \\
+		(\lambda+3)(\lambda+1)=0                                   \\
+		\lambda=\{-3,-1\}
+	\end{array}
+\end{equation*}
+<p>
+Therefore, the eigenvalues are
+</p>
+\begin{equation*}
+\lambda_{1}=-3 \text { and } \quad \lambda_{2}=-1
+\end{equation*}
+<p>
+Substitute \(\lambda_{1}\) and \(\lambda_{2}\) back into equation (1) to determine
+the corresponding eigenvectors, \(\mathbf{x}_{1}\) and \(\mathbf{x}_{2}\)
+</p>
+\begin{equation*}
+	\begin{array}{r}
+		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            & \left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0}                                            \\
+		\left(\begin{array}{ll}
+				1 & 1 \\
+				1 & 1
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2}
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+
+			\end{array}\right) & \left(\begin{array}{cc}
+				-1 & 1  \\
+				1  & -1
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2}
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+
+			\end{array}\right) \\
+		x_{1}+x_{2}=0                                                                                                       & -x_{1}+x_{2}=0                                                                                                      \\
+		\left.x_{1}+x_{2}=0\right\}                                                                                         & x_{1}-x_{2}=0                                                                                                       \\
+		x_{2}=-x_{1}                                                                                                        & x_{2}=x_{1}                                                                                                         \\
+		\mathbf{x}_{1}=\left(\begin{array}{c}
+				x_{1} \\
+				-x_{1}
+			\end{array}\right)=x_{1}\left(\begin{array}{c}
+				1 \\
+				-1
+			\end{array}\right)                   & \mathbf{x}_{2}=\left(\begin{array}{l}
+				x_{1} \\
+				x_{1}
+			\end{array}\right)=x_{1}\left(\begin{array}{l}
+				1 \\
+				1
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+<p>
+Note that \(x_{1}\) is a free variable, or arbitrary constant.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdef63d2" class="outline-3">
+<h3 id="orgdef63d2">Problem 17</h3>
+<div class="outline-text-3" id="text-orgdef63d2">
+<p>
+   The aim is to solve the eigenvalue problem,
+\[
+\mathbf{A x}=\lambda \mathbf{x}
+\]
+where \(\mathbf{A}\) is the given matrix. Bring \(\lambda \mathbf{x}\) to the left side and combine the terms.
+\[
+(\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0}
+\]
+The eigenvalues satisfy
+\[
+\operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0
+\]
+Evaluate the determinant and solve for \(\lambda\).
+</p>
+\begin{equation*}
+  \begin{array}{c}
+    \operatorname{det}\left(\begin{array}{cc}
+                              1-\lambda & \sqrt{3} \\
+                              \sqrt{3} & -1-\lambda
+                            \end{array}\right)=0 \\
+    (1-\lambda)(-1-\lambda)-3=0 \\
+    \lambda^{2}-4=0 \\
+    (\lambda+2)(\lambda-2)=0 \\
+    \lambda=\{-2,2\}
+  \end{array}
+\end{equation*}
+<p>
+Therefore, the eigenvalues are
+</p>
+\begin{equation*}
+\lambda_{1}=-2 \text { and } \quad \lambda_{2}=2
+\end{equation*}
+<p>
+Substitute \(\lambda_{1}\) and \(\lambda_{2}\) back into equation (1) to determine
+the corresponding eigenvectors, \(\mathbf{x}_{1}\) and \(\mathbf{x}_{2}\)
+</p>
+
+\begin{equation*}
+	\begin{array}{c}
+		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0} \\
+		\left(\begin{array}{cc}
+				3        & \sqrt{3} \\
+				\sqrt{3} & 1
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2}
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\left.\begin{array}{r}
+		3 x_{1}+\sqrt{3} x_{2}=0 \\
+		\sqrt{3} x_{1}+x_{2}=0
+	\end{array}\right\}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{r}
+		x_{2}=-\sqrt{3} x_{1} \\
+		\mathbf{x}_{1}=\left(\begin{array}{c}
+				x_{1} \\
+				-\sqrt{3} x_{1}
+			\end{array}\right)=x_{1}\left(\begin{array}{c}
+				1 \\
+				-\sqrt{3}
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+<p>
+and
+</p>
+
+\begin{equation*}
+	\begin{array}{c}
+		\left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0} \\
+		\left(\begin{array}{ll}
+				-1       & \sqrt{3} \\
+				\sqrt{3} & -3
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2}
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+\begin{equation*}
+	\left.\begin{array}{r}
+		-x_{1}+\sqrt{3} x_{2}=0 \\
+		\sqrt{3} x_{1}-3 x_{2}=0
+	\end{array}\right\}
+\end{equation*}
+
+\begin{equation*}
+	\begin{array}{c}
+		x_{2}=\frac{1}{\sqrt{3}} x_{1} \\
+		\mathbf{x}_{2}=\left(\begin{array}{c}
+				x_{1} \\
+				\frac{1}{\sqrt{3}} x_{1}
+			\end{array}\right)=x_{1}\left(\begin{array}{c}
+				1 \\
+				\frac{1}{\sqrt{3}}
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+<p>
+Note that \(x_{1}\) is a free variable, or arbitrary constant.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd593147" class="outline-3">
+<h3 id="orgd593147">Problem 18</h3>
+<div class="outline-text-3" id="text-orgd593147">
+<p>
+   The aim is to solve the eigenvalue problem,
+\[
+\mathbf{A} \mathbf{x}=\lambda \mathbf{x}
+\]
+where \(\mathbf{A}\) is the given matrix. Bring \(\lambda \mathbf{x}\) to the left side and combine the terms.
+\[
+(\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0}
+\]
+The eigenvalues satisfy
+\[
+\operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0
+\]
+Evaluate the determinant and solve for \(\lambda\).
+</p>
+\begin{equation*}
+	\begin{array}{c}
+		\operatorname{det}\left(\begin{array}{ccc}
+				1-\lambda & 0         & 0         \\
+				2         & 1-\lambda & -2        \\
+				3         & 2         & 1-\lambda
+			\end{array}\right)=0     \\
+		(1-\lambda)\left|\begin{array}{cc}
+			1-\lambda & -2        \\
+			2         & 1-\lambda
+		\end{array}\right|=0            \\
+		(1-\lambda)[(1-\lambda)(1-\lambda)+4]=0                        \\
+		1-\lambda=0 \quad \text { or } \quad \lambda^{2}-2 \lambda+5=0 \\
+		\quad 5-7 \lambda+3 \lambda^{2}-\lambda^{3}=0                  \\
+		(1-\lambda)\left(\lambda^{2}-2 \lambda+5\right)=0              \\
+		\lambda=1 \quad \text { or } \quad \lambda=\frac{2 \pm \sqrt{4-20}}{2}=1 \pm 2 i
+	\end{array}
+\end{equation*}
+
+<p>
+Therefore, the eigenvalues are
+</p>
+
+\begin{array}{|l|l|l|l|}
+\hline \lambda_{1}=1 & \text { and } & \lambda_{2}=1-2 i & \text { and } & \lambda_{3}=1+2 i
+\end{array}
+
+<p>
+Substitute \(\lambda_{1}\) back into equation (1) to determine the corresponding
+eigenvector \(\mathbf{x}_{1}\). 
+</p>
+
+\begin{equation*}
+	\begin{array}{c}
+		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            \\
+		\left(\begin{array}{ccc}
+				1-(1) & 0     & 0     \\
+				2     & 1-(1) & -2    \\
+				3     & 2     & 1-(1)
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2} \\
+				x_{3}
+			\end{array}\right)=\left(\begin{array}{c}
+				0 \\
+				0 \\
+
+			\end{array}\right) \\
+		\left(\begin{array}{ccc}
+				0 & 0 & 0  \\
+				2 & 0 & -2 \\
+				3 & 2 & 0
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2} \\
+				x_{3}
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+				0 \\
+
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+<p>
+Write the implied system of equations.
+</p>
+
+\begin{equation*}
+	\left.\begin{array}{l}
+		2 x_{1}-2 x_{3}=0 \\
+		3 x_{1}+2 x_{2}=0
+	\end{array}\right\}
+\end{equation*}
+
+<p>
+Solve for \(x_{2}\) and \(x_{3}\) in terms of the free variable \(x_{1}\).
+</p>
+
+\begin{array}{l}
+x_{3}=x_{1} \\
+x_{2}=-\frac{3}{2} x_{1}
+\end{array}
+
+<p>
+This means
+</p>
+
+\begin{equation*}
+\mathbf{x}_{1}=\left(\begin{array}{l}
+x_{1} \\
+x_{2} \\
+x_{3}
+\end{array}\right)=\left(\begin{array}{c}
+x_{1} \\
+-\frac{3}{2} x_{1} \\
+x_{1}
+\end{array}\right)=x_{1}\left(\begin{array}{c}
+1 \\
+-\frac{3}{2} \\
+1
+\end{array}\right)
+\end{equation*}
+
+<p>
+Since \(x_1\) is arbitrary, the eigenvector can be multiplied by 2 to get rid of the
+fraction. 
+</p>
+
+\begin{equation*}
+	\mathbf{x}_{1}=x_{1}^{\prime}\left(\begin{array}{c}
+			2  \\
+			-3 \\
+			2
+		\end{array}\right)
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-org10d0bb1" class="outline-3">
+<h3 id="org10d0bb1">Problem 20 [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-org10d0bb1">
+<p>
+   The aim is to solve the eigenvalue problem,
+\[
+\mathbf{A} \mathbf{x}=\lambda \mathbf{x}
+\]
+where \(\mathbf{A}\) is the given matrix. Bring \(\lambda \mathbf{x}\) to the left
+side and combine the terms. 
+\[
+(\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0}
+\]
+The eigenvalues satisfy
+\[
+\operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0
+\]
+Evaluate the determinant and solve for \(\lambda\).
+</p>
+
+\begin{equation*}
+	\begin{array}{c}
+		\operatorname{det}\left(\begin{array}{ccc}
+				11 / 9-\lambda & -2 / 9        & 8 / 9         \\
+				-2 / 9         & 2 / 9-\lambda & 10 / 9        \\
+				8 / 9          & 10 / 9        & 5 / 9-\lambda
+			\end{array}\right)=0                                                                                            \\
+		(11 / 9-\lambda)[(2 / 9-\lambda)(5 / 9-\lambda)-100 / 81]+(2 / 9)[(-2 / 9)(5 / 9-\lambda)-80 / 81]                                                    \\
+		\quad+(8 / 9)[-20 / 81-(8 / 9)(2 / 9-\lambda)]=0                                                                                                      \\
+		(11 / 9-\lambda)\left|\begin{array}{cc}
+			2 / 9-\lambda & 10 / 9        \\
+			10 / 9        & 5 / 9-\lambda
+		\end{array}\right|-(-2 / 9)\left|\begin{array}{cc}
+			-2 / 9 & 10 / 9        \\
+			8 / 9  & 5 / 9-\lambda
+		\end{array}\right|+(8 / 9)\left|\begin{array}{cc}
+			-2 / 9 & 2 / 9-\lambda \\
+			8 / 9  & 10 / 9
+		\end{array}\right|=0 \\
+		-2+\lambda+2 \lambda^{2}-\lambda^{3}=0                                                                                                                \\
+		(\lambda+1)(\lambda-1)(2-\lambda)=0
+	\end{array}
+\end{equation*}
+
+<p>
+Therefore, the eigenvalues are
+</p>
+
+\begin{equation*}
+	\begin{array}{|l|l|l|}
+		\hline \lambda_{1}=1 & \text { and } & \lambda_{2}=2 & \text { and } & \lambda_{3}=-1
+	\end{array}
+\end{equation*}
+
+<p>
+Substitute \(\lambda_{1}\) back into equation (1) to determine the corresponding
+eigenvector \(\mathbf{x}_{1}\). 
+</p>
+
+\begin{equation*}
+	\begin{array}{c}
+		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            \\
+		\left(\begin{array}{ccc}
+				11 / 9-(1) & -2 / 9    & 8 / 9     \\
+				-2 / 9     & 2 / 9-(1) & 10 / 9    \\
+				8 / 9      & 10 / 9    & 5 / 9-(1)
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2} \\
+				x_{3}
+			\end{array}\right)=\left(\begin{array}{c}
+				0 \\
+				0 \\
+
+			\end{array}\right) \\
+		\left(\begin{array}{ccc}
+				2 / 9  & -2 / 9 & 8 / 9  \\
+				-2 / 9 & -7 / 9 & 10 / 9 \\
+				8 / 9  & 10 / 9 & -4 / 9
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2} \\
+				x_{3}
+			\end{array}\right)=\left(\begin{array}{c}
+				0 \\
+				0 \\
+
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+<p>
+Write the augmented matrix.
+\[
+\left(\begin{array}{rrr|r}
+2 / 9 & -2 / 9 & 8 / 9 & 0 \\
+-2 / 9 & -7 / 9 & 10 / 9 & 0 \\
+8 / 9 & 10 / 9 & -4 / 9 & 0
+\end{array}\right)
+\]
+Multiply each row by \(9\)
+\[
+\left(\begin{array}{rrr|r}
+2 & -2 & 8 & 0 \\
+-2 & -7 & 10 & 0 \\
+8 & 10 & -4 & 0
+\end{array}\right)
+\]
+Multiply the first row by \(-4\) and add it to the third row.
+\[
+\left(\begin{array}{rrr|r}
+2 & -2 & 8 & 0 \\
+-2 & -7 & 10 & 0 \\
+0 & 18 & -36 & 0
+\end{array}\right)
+\]
+Add the first row to the second row.
+\[
+\left(\begin{array}{rrr|r}
+2 & -2 & 8 & 0 \\
+0 & -9 & 18 & 0 \\
+0 & 18 & -36 & 0
+\end{array}\right)
+\]
+</p>
+
+<p>
+Write the implied system of equations and solve for \(x_{1}\) and \(x_{2}\) in terms
+of the free variable \(x_{3}\) 
+\[
+\left.\begin{array}{r}
+2 x_{1}-2 x_{2}+8 x_{3}=0 \\
+-9 x_{2}+18 x_{3}=0 \\
+18 x_{2}-36 x_{3}=0
+\end{array}\right\} \quad \rightarrow \quad \begin{array}{l}
+x_{1}=-2 x_{3} \\
+x_{2}=2 x_{3}
+\end{array}
+\]
+This means
+\[
+\mathbf{x}_{1}=\left(\begin{array}{l}
+x_{1} \\
+x_{2} \\
+x_{3}
+\end{array}\right)=\left(\begin{array}{c}
+-2 x_{3} \\
+2 x_{3} \\
+x_{3}
+\end{array}\right)
+\]
+Therefore,
+\[
+\mathbf{x}_{1}=x_{3}\left(\begin{array}{c}
+-2 \\
+2 \\
+1
+\end{array}\right)
+\]
+Substitute \(\lambda_{2}\) back into equation (1) to determine the corresponding eigenvector \(\mathbf{x}_{2}\).
+</p>
+
+\begin{equation*}
+	\begin{array}{c}
+		\left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0}                                            \\
+		\left(\begin{array}{ccc}
+				11 / 9-(2) & -2 / 9    & 8 / 9     \\
+				-2 / 9     & 2 / 9-(2) & 10 / 9    \\
+				8 / 9      & 10 / 9    & 5 / 9-(2)
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2} \\
+				x_{3}
+			\end{array}\right)=\left(\begin{array}{c}
+				0 \\
+				0 \\
+
+			\end{array}\right) \\
+		\left(\begin{array}{ccc}
+				-7 / 9 & -2 / 9  & 8 / 9   \\
+				-2 / 9 & -16 / 9 & 10 / 9  \\
+				8 / 9  & 10 / 9  & -13 / 9
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2} \\
+				x_{3}
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+				0 \\
+
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+<p>
+Write the augmented matrix.
+\[
+\left(\begin{array}{rrr|r}
+-7 / 9 & -2 / 9 & 8 / 9 & 0 \\
+-2 / 9 & -16 / 9 & 10 / 9 & 0 \\
+8 / 9 & 10 / 9 & -13 / 9 & 0
+\end{array}\right)
+\]
+Multiply each row by \(9\)
+\[
+\left(\begin{array}{rrr|r}
+-7 & -2 & 8 & 0 \\
+-2 & -16 & 10 & 0 \\
+8 & 10 & -13 & 0
+\end{array}\right)
+\]
+Multiply the second row by 4 and add it to the third row.
+\[
+\left(\begin{array}{rrr|r}
+-7 & -2 & 8 & 0 \\
+-2 & -16 & 10 & 0 \\
+0 & -54 & 27 & 0
+\end{array}\right)
+\]
+Multiply the first row by \(-8\) and add it to the second row.
+\[
+\left(\begin{array}{rrr|r}
+-7 & -2 & 8 & 0 \\
+54 & 0 & -54 & 0 \\
+0 & -54 & 27 & 0
+\end{array}\right)
+\]
+</p>
+
+<p>
+Write the implied system of equations and
+solve for \(x_1\) and \(x_2\) in terms of the free variable \(x_3\)
+</p>
+
+\begin{equation*}
+\left.\begin{array}{r}
+-7 x_{1}-2 x_{2}+8 x_{3}=0 \\
+54 x_{1}-54 x_{3}=0 \\
+-54 x_{2}+27 x_{3}=0
+\end{array}\right\} \quad \rightarrow \quad \begin{aligned}
+& x_{1}=x_{3} \\
+& x_{2}=\frac{1}{2} x_{3}
+\end{aligned}
+\end{equation*}
+
+<p>
+This means
+</p>
+
+\begin{equation*}
+	\mathbf{x}_{2}=\left(\begin{array}{l}
+			x_{1} \\
+			x_{2} \\
+			x_{3}
+		\end{array}\right)=\left(\begin{array}{c}
+			x_{3}             \\
+			\frac{1}{2} x_{3} \\
+			x_{3}
+		\end{array}\right)=x_{3}\left(\begin{array}{c}
+			1           \\
+			\frac{1}{2} \\
+			1
+		\end{array}\right)
+\end{equation*}
+
+<p>
+Since \(x_{3}\) is arbitrary, the eigenvector can be multiplied by 2 to get rid of
+the fraction. 
+\(\mathbf{x}_{2}=x_{3}^{\prime}\left(\begin{array}{l}2 \\ 1 \\ 2\end{array}\right)\)
+</p>
+
+<p>
+Substitute \(\lambda_{3}\) back into equation (1) to determine the corresponding
+eigenvector \(\mathbf{x}_{3}\).
+</p>
+
+\begin{equation*}
+	\begin{array}{c}
+		\left(\mathbf{A}-\lambda_{3} \mathbf{I}\right) \mathbf{x}_{3}=\mathbf{0}                                            \\
+		\left(\begin{array}{ccc}
+				11 / 9-(-1) & -2 / 9     & 8 / 9      \\
+				-2 / 9      & 2 / 9-(-1) & 10 / 9     \\
+				8 / 9       & 10 / 9     & 5 / 9-(-1)
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2} \\
+				x_{3}
+			\end{array}\right)=\left(\begin{array}{l}
+				0 \\
+				0 \\
+
+			\end{array}\right) \\
+		\left(\begin{array}{ccc}
+				20 / 9 & -2 / 9 & 8 / 9  \\
+				-2 / 9 & 11 / 9 & 10 / 9 \\
+				8 / 9  & 10 / 9 & 14 / 9
+			\end{array}\right)\left(\begin{array}{l}
+				x_{1} \\
+				x_{2} \\
+				x_{3}
+			\end{array}\right)=\left(\begin{array}{c}
+				0 \\
+				0 \\
+
+			\end{array}\right)
+	\end{array}
+\end{equation*}
+
+<p>
+Write the augmented matrix.
+\[
+\left(\begin{array}{rrr|r}
+20 / 9 & -2 / 9 & 8 / 9 & 0 \\
+-2 / 9 & 11 / 9 & 10 / 9 & 0 \\
+8 / 9 & 10 / 9 & 14 / 9 & 0
+\end{array}\right)
+\]
+Multiply each row by \(9\)
+\[
+\left(\begin{array}{rrr|r}
+20 & -2 & 8 & 0 \\
+-2 & 11 & 10 & 0 \\
+8 & 10 & 14 & 0
+\end{array}\right)
+\]
+Multiply the second row by 4 and add it to the third row.
+\[
+\left(\begin{array}{rrr|r}
+20 & -2 & 8 & 0 \\
+-2 & 11 & 10 & 0 \\
+0 & 54 & 54 & 0
+\end{array}\right)
+\]
+Multiply the second row by 10 and add it to the first row.
+\[
+\left(\begin{array}{rrr|r}
+0 & 108 & 108 & 0 \\
+-2 & 11 & 10 & 0 \\
+0 & 54 & 54 & 0
+\end{array}\right)
+\]
+</p>
+
+<p>
+Write the implied system of equations and solve for \(x_{1}\) and \(x_{3}\) in terms
+of the free variable \(x_{2}\) 
+\[
+\left.\begin{array}{r}
+108 x_{2}+108 x_{3}=0 \\
+-2 x_{1}+11 x_{2}+10 x_{3}=0 \\
+54 x_{2}+54 x_{3}=0
+\end{array}\right\} \quad \rightarrow \quad \begin{array}{l}
+x_{1}=\frac{1}{2} x_{2} \\
+x_{3}=-x_{2}
+\end{array}
+\]
+This means
+\[
+\mathbf{x}_{3}=\left(\begin{array}{l}
+x_{1} \\
+x_{2} \\
+x_{3}
+\end{array}\right)=\left(\begin{array}{c}
+\frac{1}{2} x_{2} \\
+x_{2} \\
+-x_{2}
+\end{array}\right)=x_{2}\left(\begin{array}{c}
+\frac{1}{2} \\
+1 \\
+-1
+\end{array}\right)
+\]
+</p>
+
+<p>
+Since \(x_{2}\) is arbitrary, the eigenvector can be multiplied by 2 to get rid of
+the fraction. 
+\[
+\mathbf{x}_{3}=x_{2}^{\prime}\left(\begin{array}{c}
+1 \\
+2 \\
+-2
+\end{array}\right)
+\]
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org25137a6" class="outline-2">
+<h2 id="org25137a6">Section 7.4</h2>
+<div class="outline-text-2" id="text-org25137a6">
+</div>
+<div id="outline-container-org496f638" class="outline-3">
+<h3 id="org496f638">Problem 5(a)</h3>
+<div class="outline-text-3" id="text-org496f638">
+\begin{align*}
+        t \begin{pmatrix}
+                1 \\
+                1
+        \end{pmatrix} =
+        \begin{pmatrix}
+                2 & -1 \\
+                3 & -2
+        \end{pmatrix}
+        \begin{pmatrix}
+                t \\
+                t
+        \end{pmatrix}
+        = \begin{pmatrix}
+                2t-t \\
+                3t-2t
+        \end{pmatrix} =
+        \begin{pmatrix}
+                t \\
+                t
+        \end{pmatrix}
+\end{align*}
+
+\begin{align*}
+        t \begin{pmatrix}
+                -t^{-2} \\
+                -3t^{-2}
+        \end{pmatrix} =
+        \begin{pmatrix}
+                2 & -1 \\
+                3 & -2
+        \end{pmatrix}
+        \begin{pmatrix}
+                t^{-1} \\
+                3t^{-1}
+        \end{pmatrix}
+        = \begin{pmatrix}
+                2t^{-1}-3t^{-1} \\
+                3t^{-1}-6t^{-1}
+        \end{pmatrix} =
+        \begin{pmatrix}
+                -t^{-1} \\
+                -3t^{-1}
+        \end{pmatrix}
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgb302586" class="outline-3">
+<h3 id="orgb302586">Problem 6(a) [FOR GRADE]</h3>
+<div class="outline-text-3" id="text-orgb302586">
+\begin{align*}
+        t \begin{pmatrix}
+                -t^{-2} \\
+                -2t^{-2}
+        \end{pmatrix} =
+        \begin{pmatrix}
+                3 & -2 \\
+                2 & -2
+        \end{pmatrix}
+        \begin{pmatrix}
+                t^{-1} \\
+                2t^{-1}
+        \end{pmatrix}
+        = \begin{pmatrix}
+                3t^{-1}-4t^{-1} \\
+                2t^{-1}-4t^{-1}
+        \end{pmatrix} =
+        \begin{pmatrix}
+                -t^{-1} \\
+                -2t^{-1}
+        \end{pmatrix}
+\end{align*}
+
+   \begin{align*}
+        t \begin{pmatrix}
+                4t \\
+                2t
+        \end{pmatrix} =
+        \begin{pmatrix}
+                3 & -2 \\
+                2 & -2
+        \end{pmatrix}
+        \begin{pmatrix}
+                2t^2 \\
+                t^2
+        \end{pmatrix}
+        = \begin{pmatrix}
+          6t^2 - 2t^2\\
+          4t^2 - 2t^2
+        \end{pmatrix} =
+        \begin{pmatrix}
+          4t^2\\
+          2t^2
+        \end{pmatrix}
+\end{align*}
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 107; 12021 H.E.</p>
+<p class="author">Author: Sandy Urazayev</p>
+<p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
+<p class="date">Created: 2021-04-17 Sat 17:43</p>
+</div>
+</body>
+</html>
