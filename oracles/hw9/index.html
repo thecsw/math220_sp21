@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-19 Mon 21:44 -->
+<!-- 2021-04-19 Mon 21:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ordinary Differential Equations</title>
+<title>Homework 9 Oracle</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Sandy Urazayev" />
 <style type="text/css">
@@ -216,54 +216,227 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">Ordinary Differential Equations
+<h1 class="title">Homework 9 Oracle
 <br />
 <span class="subtitle">MATH 220 Spring 2021</span>
 </h1>
+<p>
+<a href="./index.pdf">[View the PDF version]​</a>
+</p>
 
-<div id="outline-container-org2d34808" class="outline-2">
-<h2 id="org2d34808">Course Description</h2>
-<div class="outline-text-2" id="text-org2d34808">
+<div id="outline-container-orgbe88c78" class="outline-2">
+<h2 id="orgbe88c78">Section 7.5</h2>
+<div class="outline-text-2" id="text-orgbe88c78">
+</div>
+<div id="outline-container-orgf7146f8" class="outline-3">
+<h3 id="orgf7146f8">Problem 9 (this is graded)</h3>
+<div class="outline-text-3" id="text-orgf7146f8">
 <p>
-Taught by <a href="https://erikvv.ku.edu">Professor Van Vleck</a>. This webpage is created for the course by its
-grader, Sandy Urazayev to provide solution sets for homework assignments. 
+Let us solve the following system of ODEs
+</p>
+\begin{align*}
+        \mathbf{x}' =
+        \begin{pmatrix}
+                1 & -1 & 4  \\
+                3 & 2  & -1 \\
+                2 & 1  & -1
+        \end{pmatrix} \mathbf{x}
+\end{align*}
+
+<p>
+<span class="underline">Solution</span>
+Let \(\mathbf{A}\) be the matrix above, so let us find the characteristic
+polynomial of our system
+</p>
+\begin{align*}
+        \det (\mathbf{A} - \lambda \mathbf{I}_3) =
+        \det \begin{pmatrix}
+                1 - \lambda & -1          & 4            \\
+                3           & 2 - \lambda & -1           \\
+                2           & 1           & -1 - \lambda
+        \end{pmatrix} & =
+        - \lambda^3 + 2 \lambda^2 + 5\lambda -6 = 0                                                                                        \\
+                                       & \implies \lambda_1 = 1 \quad \text{and} \quad \lambda_2 = -2 \quad \text{and} \quad \lambda_3 = 3
+\end{align*}
+<p>
+Substitute the eigenvalues above to find the corresponding eigenvectors
+\(\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}\)
+</p>
+\begin{align*}
+        \lambda = \lambda_1
+        \implies
+        \begin{pmatrix}
+                1 - \lambda_1 & -1            & 4              \\
+                3             & 2 - \lambda_1 & -1             \\
+                2             & 1             & -1 - \lambda_1
+        \end{pmatrix} \mathbf{v}_1
+        \implies
+        \mathbf{v}_1 =
+        \begin{pmatrix}
+                -1 \\ 4 \\ 1
+        \end{pmatrix}
+\end{align*}
+\begin{align*}
+        \lambda = \lambda_2
+        \implies
+        \begin{pmatrix}
+                1 - \lambda_2 & -1            & 4              \\
+                3             & 2 - \lambda_2 & -1             \\
+                2             & 1             & -1 - \lambda_2
+        \end{pmatrix} \mathbf{v}_2
+        \implies
+        \mathbf{v}_2 =
+        \begin{pmatrix}
+                -1 \\ 1 \\ 1
+        \end{pmatrix}
+\end{align*}
+ \begin{align*}
+        \lambda = \lambda_3
+        \implies
+        \begin{pmatrix}
+                1 - \lambda_3 & -1            & 4              \\
+                3             & 2 - \lambda_3 & -1             \\
+                2             & 1             & -1 - \lambda_3
+        \end{pmatrix} \mathbf{v}_3
+        \implies
+        \mathbf{v}_3 =
+        \begin{pmatrix}
+                1 \\ 2 \\ 1
+        \end{pmatrix}
+\end{align*}
+<p>
+Therefore the final solution has the form
+</p>
+\begin{align*}
+        \mathbf{x}(t) & = C_1 e^{\lambda_1 t} \mathbf{v_1} + C_2 e^{\lambda_2 t} \mathbf{v_2} + C_3 e^{\lambda_3 t} \mathbf{v_3}\\
+                   & = C_1 e^{t} \begin{pmatrix}
+                -1 \\ 4 \\ 1
+        \end{pmatrix}
+        + C_2 e^{-2t} \begin{pmatrix}
+                -1 \\ 1 \\ 1
+        \end{pmatrix}
+        + C_3 e^{3t} \begin{pmatrix}
+                1 \\ 2 \\ 1
+        \end{pmatrix}
+\end{align*}
+<p>
+where \(C_1\) and \(C_2\) and \(C_3\) are arbitrary constants.
 </p>
 </div>
 </div>
-<div id="outline-container-org2ff7a2d" class="outline-2">
-<h2 id="org2ff7a2d">Book</h2>
-<div class="outline-text-2" id="text-org2ff7a2d">
+<div id="outline-container-org47493f0" class="outline-3">
+<h3 id="org47493f0">Problem 10</h3>
+<div class="outline-text-3" id="text-org47493f0">
 <p>
-<i>Elementary Differential Equations and Boundary Value Problems</i> by Boyce,
-DiPrima, and Meade <b>(11th Edition)</b>.
+The solution strategy is the same as <b>Problem 9</b>. We find that eigenvalues are
+\(\lambda_1 = 4\) and \(\lambda_2 = 2\) with their corresponding eigenvectors
+\(\mathbf{v}_1 = \begin{pmatrix}1 \\ 1 \end{pmatrix}\) and
+\(\mathbf{v}_2 = \begin{pmatrix}1 \\ 3 \end{pmatrix}\), such that the solution
+is
+</p>
+\begin{align*}
+        \mathbf{x}(t) = C_1 e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +
+        C_2 e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
+\end{align*}
+<p>
+By knowing the initial value
+\(\mathbf{x}(0) = \begin{pmatrix} 2 \\ -1 \end{pmatrix}\), we solve the system
+</p>
+\begin{align*}
+        \begin{cases}
+                C_1 + C_2 = 2 \\
+                C_1 + 3 C_2 = -1
+        \end{cases}
+        \implies
+        \begin{cases}
+                C_1 = \frac{7}{2} \\
+                C_2 = -\frac{3}{2}
+        \end{cases}
+\end{align*}
+<p>
+Finally, the solution to the initial value problem is
+</p>
+\begin{align*}
+        \mathbf{x}(t) = \frac{7}{2} e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +
+        - \frac{3}{2} e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgba1ebc1" class="outline-3">
+<h3 id="orgba1ebc1">Problem 15 (this is graded)</h3>
+<div class="outline-text-3" id="text-orgba1ebc1">
+<p>
+Recall the eigenvalues and their eigenvectors we found in <b>Problem
+10</b>. Applying <b>Problem 13</b>, the solution is
+</p>
+\begin{align*}
+        \mathbf{x}(t) = C_1 t^4 \begin{pmatrix} 1\\ 1\end{pmatrix}
+        + C_2 t^2 \begin{pmatrix} 1\\ 3\end{pmatrix}
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgec2e9d0" class="outline-3">
+<h3 id="orgec2e9d0">Problem 16</h3>
+<div class="outline-text-3" id="text-orgec2e9d0">
+<p>
+Similarly to all problems above, we find eigenvalues
+\(\lambda_1 = 0\) and \(\lambda_2 = -2\), where their respective eigenvectors are
+\(\mathbf{v}_1 = \begin{pmatrix} 3 \\ 4\end{pmatrix}\) and
+\(\mathbf{v}_2 = \begin{pmatrix} 1 \\ 2\end{pmatrix}\). Applying <b>Problem 13</b>, we
+have the solution
+</p>
+\begin{align*}
+        \mathbf{x}(t) = C_1 \begin{pmatrix} 3\\ 4\end{pmatrix} +
+        C_2 t^{-2} \begin{pmatrix} 1\\ 2\end{pmatrix}
+\end{align*}
+</div>
+</div>
+</div>
+<div id="outline-container-org3d97762" class="outline-2">
+<h2 id="org3d97762">Section 7.6</h2>
+<div class="outline-text-2" id="text-org3d97762">
+</div>
+<div id="outline-container-org19159f0" class="outline-3">
+<h3 id="org19159f0">Problem 9 and 10</h3>
+<div class="outline-text-3" id="text-org19159f0">
+<p>
+Solutions are omitted for the sake of expediting the grading before Midterm
+II. 
 </p>
 </div>
-</div>
-<div id="outline-container-orgfe6f9df" class="outline-2">
-<h2 id="orgfe6f9df">Homework Oracles</h2>
-<div class="outline-text-2" id="text-orgfe6f9df">
-<ul class="org-ul">
-<li><a href="./oracles/hw1">Homework 1</a></li>
-<li><a href="./oracles/hw2">Homework 2</a></li>
-<li><a href="./oracles/hw3">Homework 3</a></li>
-<li><a href="./oracles/hw4">Homework 4</a></li>
-<li><a href="./oracles/hw5">Homework 5</a></li>
-<li><a href="./oracles/hw6">Homework 6</a></li>
-<li><a href="./oracles/hw7">Homework 7</a></li>
-<li><a href="./oracles/hw8">Homework 8</a></li>
-<li><a href="./oracles/hw9">Homework 9</a></li>
-</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Date: 52; 12021 H.E.</p>
+<p class="date">Date: 109; 12021 H.E.</p>
 <p class="author">Author: Sandy Urazayev</p>
 <p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
-<p class="date">Created: 2021-04-19 Mon 21:44</p>
+<p class="date">Created: 2021-04-19 Mon 21:42</p>
 </div>
 </body>
 </html>

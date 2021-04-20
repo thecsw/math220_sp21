@@ -13,9 +13,9 @@
 #+date: 52; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
-Taught by [[https://erikvv.ku.edu][Professor Van Vleck]]. This webpage is created for the course by its
-grader, Sandy Urazayev to provide solution sets for homework assignments. 
-
+* Course Description
+  Taught by [[https://erikvv.ku.edu][Professor Van Vleck]]. This webpage is created for the course by its
+  grader, Sandy Urazayev to provide solution sets for homework assignments. 
 * Book
   /Elementary Differential Equations and Boundary Value Problems/ by Boyce,
   DiPrima, and Meade *(11th Edition)*.
@@ -28,3 +28,4 @@ grader, Sandy Urazayev to provide solution sets for homework assignments.
   - [[./oracles/hw6][Homework 6]]
   - [[./oracles/hw7][Homework 7]]
   - [[./oracles/hw8][Homework 8]]
+  - [[./oracles/hw9][Homework 9]]

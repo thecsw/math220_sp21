@@ -1,0 +1,223 @@
+% Created 2021-04-19 Mon 21:42
+% Intended LaTeX compiler: xelatex
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage[margin=1in]{geometry}
+\usepackage{marginnote}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{epsf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{hyperref}
+
+\usepackage{concmath}
+\usepackage[OT1]{fontenc}
+
+\usepackage{textgreek}
+\renewcommand*{\textgreekfontmap}{%
+{phv/*/*}{LGR/neohellenic/*/*}%
+{*/b/n}{LGR/artemisia/b/n}%
+{*/bx/n}{LGR/artemisia/bx/n}%
+{*/*/n}{LGR/artemisia/m/n}%
+{*/b/it}{LGR/artemisia/b/it}%
+{*/bx/it}{LGR/artemisia/bx/it}%
+{*/*/it}{LGR/artemisia/m/it}%
+{*/b/sl}{LGR/artemisia/b/sl}%
+{*/bx/sl}{LGR/artemisia/bx/sl}%
+{*/*/sl}{LGR/artemisia/m/sl}%
+{*/*/sc}{LGR/artemisia/m/sc}%
+{*/*/sco}{LGR/artemisia/m/sco}%
+}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+#1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\left\lVert}{\right\rVert}
+\DeclarePairedDelimiter{\ceil}{\left\lceil}{\right\rceil}
+\DeclarePairedDelimiter{\floor}{\left\lfloor}{\right\rfloor}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+\def\noi{\noindent}
+\onehalfspace
+\usemintedstyle{bw}
+\author{Sandy Urazayev\thanks{University of Kansas (ctu@ku.edu)}}
+\date{109; 12021 H.E.}
+\title{Homework 9 Oracle\\\medskip
+\large MATH 220 Spring 2021}
+\hypersetup{
+ pdfauthor={Sandy Urazayev},
+ pdftitle={Homework 9 Oracle},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.0.50 (Org mode 9.4.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\href{./index.pdf}{[View the PDF version]​}
+
+\section*{Section 7.5}
+\label{sec:org38917ce}
+\subsection*{Problem 9 (this is graded)}
+\label{sec:org3e35be9}
+Let us solve the following system of ODEs
+\begin{align*}
+        \mathbf{x}' =
+        \begin{pmatrix}
+                1 & -1 & 4  \\
+                3 & 2  & -1 \\
+                2 & 1  & -1
+        \end{pmatrix} \mathbf{x}
+\end{align*}
+
+\uline{Solution}
+Let \(\mathbf{A}\) be the matrix above, so let us find the characteristic
+polynomial of our system
+\begin{align*}
+        \det (\mathbf{A} - \lambda \mathbf{I}_3) =
+        \det \begin{pmatrix}
+                1 - \lambda & -1          & 4            \\
+                3           & 2 - \lambda & -1           \\
+                2           & 1           & -1 - \lambda
+        \end{pmatrix} & =
+        - \lambda^3 + 2 \lambda^2 + 5\lambda -6 = 0                                                                                        \\
+                                       & \implies \lambda_1 = 1 \quad \text{and} \quad \lambda_2 = -2 \quad \text{and} \quad \lambda_3 = 3
+\end{align*}
+Substitute the eigenvalues above to find the corresponding eigenvectors
+\(\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}\)
+\begin{align*}
+        \lambda = \lambda_1
+        \implies
+        \begin{pmatrix}
+                1 - \lambda_1 & -1            & 4              \\
+                3             & 2 - \lambda_1 & -1             \\
+                2             & 1             & -1 - \lambda_1
+        \end{pmatrix} \mathbf{v}_1
+        \implies
+        \mathbf{v}_1 =
+        \begin{pmatrix}
+                -1 \\ 4 \\ 1
+        \end{pmatrix}
+\end{align*}
+\begin{align*}
+        \lambda = \lambda_2
+        \implies
+        \begin{pmatrix}
+                1 - \lambda_2 & -1            & 4              \\
+                3             & 2 - \lambda_2 & -1             \\
+                2             & 1             & -1 - \lambda_2
+        \end{pmatrix} \mathbf{v}_2
+        \implies
+        \mathbf{v}_2 =
+        \begin{pmatrix}
+                -1 \\ 1 \\ 1
+        \end{pmatrix}
+\end{align*}
+ \begin{align*}
+        \lambda = \lambda_3
+        \implies
+        \begin{pmatrix}
+                1 - \lambda_3 & -1            & 4              \\
+                3             & 2 - \lambda_3 & -1             \\
+                2             & 1             & -1 - \lambda_3
+        \end{pmatrix} \mathbf{v}_3
+        \implies
+        \mathbf{v}_3 =
+        \begin{pmatrix}
+                1 \\ 2 \\ 1
+        \end{pmatrix}
+\end{align*}
+Therefore the final solution has the form
+\begin{align*}
+        \mathbf{x}(t) & = C_1 e^{\lambda_1 t} \mathbf{v_1} + C_2 e^{\lambda_2 t} \mathbf{v_2} + C_3 e^{\lambda_3 t} \mathbf{v_3}\\
+                   & = C_1 e^{t} \begin{pmatrix}
+                -1 \\ 4 \\ 1
+        \end{pmatrix}
+        + C_2 e^{-2t} \begin{pmatrix}
+                -1 \\ 1 \\ 1
+        \end{pmatrix}
+        + C_3 e^{3t} \begin{pmatrix}
+                1 \\ 2 \\ 1
+        \end{pmatrix}
+\end{align*}
+where \(C_1\) and \(C_2\) and \(C_3\) are arbitrary constants.
+\subsection*{Problem 10}
+\label{sec:org0826278}
+The solution strategy is the same as \textbf{Problem 9}. We find that eigenvalues are
+\(\lambda_1 = 4\) and \(\lambda_2 = 2\) with their corresponding eigenvectors
+\(\mathbf{v}_1 = \begin{pmatrix}1 \\ 1 \end{pmatrix}\) and
+\(\mathbf{v}_2 = \begin{pmatrix}1 \\ 3 \end{pmatrix}\), such that the solution
+is
+\begin{align*}
+        \mathbf{x}(t) = C_1 e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +
+        C_2 e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
+\end{align*}
+By knowing the initial value
+\(\mathbf{x}(0) = \begin{pmatrix} 2 \\ -1 \end{pmatrix}\), we solve the system
+\begin{align*}
+        \begin{cases}
+                C_1 + C_2 = 2 \\
+                C_1 + 3 C_2 = -1
+        \end{cases}
+        \implies
+        \begin{cases}
+                C_1 = \frac{7}{2} \\
+                C_2 = -\frac{3}{2}
+        \end{cases}
+\end{align*}
+Finally, the solution to the initial value problem is
+\begin{align*}
+        \mathbf{x}(t) = \frac{7}{2} e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +
+        - \frac{3}{2} e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
+\end{align*}
+\subsection*{Problem 15 (this is graded)}
+\label{sec:org2a1ebc4}
+Recall the eigenvalues and their eigenvectors we found in \textbf{Problem
+10}. Applying \textbf{Problem 13}, the solution is
+\begin{align*}
+        \mathbf{x}(t) = C_1 t^4 \begin{pmatrix} 1\\ 1\end{pmatrix}
+        + C_2 t^2 \begin{pmatrix} 1\\ 3\end{pmatrix}
+\end{align*}
+\subsection*{Problem 16}
+\label{sec:org05c00a8}
+Similarly to all problems above, we find eigenvalues
+\(\lambda_1 = 0\) and \(\lambda_2 = -2\), where their respective eigenvectors are
+\(\mathbf{v}_1 = \begin{pmatrix} 3 \\ 4\end{pmatrix}\) and
+\(\mathbf{v}_2 = \begin{pmatrix} 1 \\ 2\end{pmatrix}\). Applying \textbf{Problem 13}, we
+have the solution
+\begin{align*}
+        \mathbf{x}(t) = C_1 \begin{pmatrix} 3\\ 4\end{pmatrix} +
+        C_2 t^{-2} \begin{pmatrix} 1\\ 2\end{pmatrix}
+\end{align*}
+\section*{Section 7.6}
+\label{sec:orgf6210bf}
+\subsection*{Problem 9 and 10}
+\label{sec:orgf005e04}
+Solutions are omitted for the sake of expediting the grading before Midterm
+II. 
+\end{document}
