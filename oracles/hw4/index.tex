@@ -1,4 +1,4 @@
-% Created 2021-04-03 Sat 12:06
+% Created 2021-04-19 Mon 20:12
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -19,7 +19,7 @@
 \usepackage{subcaption}
 \usepackage{mathtools}
 \usepackage{xfrac}
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{epsf}
@@ -27,9 +27,10 @@
 \usepackage{graphicx}
 \usepackage{pslatex}
 \usepackage{hyperref}
-\usepackage[adobe-utopia]{mathdesign}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{concmath}
+\usepackage[OT1]{fontenc}
+
 \usepackage{textgreek}
 \renewcommand*{\textgreekfontmap}{%
 {phv/*/*}{LGR/neohellenic/*/*}%
@@ -80,16 +81,16 @@
 \href{./index.pdf}{[View the PDF version]​}
 
 \section*{Section 2.4}
-\label{sec:orgc0cd296}
+\label{sec:orgc0c9113}
 
 \subsection*{Problem 2}
-\label{sec:org3432a47}
+\label{sec:orgb79d827}
 \(\tan\) is discontinuous at odd multiples of \(\frac{\pi}{2}\), since
 \(\frac{\pi}{2} < \pi < \frac{3\pi}{2}\), the interval is
 \((\frac{\pi}{2}, \frac{3\pi}{2})\).
 
 \subsection*{Problem 4}
-\label{sec:org267966b}
+\label{sec:orga655d7a}
 Dividing both sides by \(\ln(t)\) yields
 \begin{equation*}
   y' + \frac{y}{\ln(t)} = \frac{\cot(t)}{\ln(t)}
@@ -99,7 +100,7 @@ range \((0, \pi)\). By finding the intersection of those constraints, we get an
 interval \((1, \pi)\).
 
 \subsection*{Problem 14}
-\label{sec:org08452c0}
+\label{sec:org6c946b7}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./14.png}
 \end{center}
@@ -110,7 +111,7 @@ the slopes eventually become negative, therefore tend to \(-\infty\). If
 the curves \(y=0\) and \(ty = 3\).
 
 \subsection*{Problem 16}
-\label{sec:orgb4aeb73}
+\label{sec:org67369ad}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./16.png}
 \end{center}
@@ -125,7 +126,7 @@ initial conditions below the parabola (and \(\left.y_{0}<0\right)\) are all
 negative. These solutions tend to \(-\infty\).
 
 \subsection*{Problem 27 [FOR GRADE]}
-\label{sec:org5e729c5}
+\label{sec:org110f314}
 The solution of the initial value problem
 \begin{equation*}
   y_1'+2y_1=0, \quad y_1(0) = 1
@@ -149,14 +150,14 @@ Therefore the global solution is
 \end{equation*}
 
 \subsection*{Problem 28}
-\label{sec:orgc8535b3}
+\label{sec:org35b9e24}
 The Eleventh Edition (latest) of the book doesn't have this problem.
 
 \section*{Section 2.6}
-\label{sec:orgfc6c781}
+\label{sec:orgc4ed847}
 
 \subsection*{Problem 3 [FOR GRADE]}
-\label{sec:orgffab0be}
+\label{sec:org6b2309f}
 They have the form \(M(x,y) + N(x,y) \frac{dy}{dx} = 0\). So
 \begin{align*}
   M(x,y) = 3x^2-2xy+2 \quad \text{and} \quad N(x,y) = 6y^2-x^2+3
@@ -174,7 +175,7 @@ Finally,
 \end{equation*}
 
 \subsection*{Problem 5}
-\label{sec:org86ae609}
+\label{sec:org0f96b84}
 \begin{align*}
   \frac{dy}{dx} = - \frac{ax-by}{bx-cy} \\
   \iff (ax-by)dx + (bx-cy)dy = 0
@@ -186,7 +187,7 @@ Now, \(M = ax-by\) and \(N = bx -cy\). See that
 The differential equation is not exact.
 
 \subsection*{Problem 13}
-\label{sec:org83e6735}
+\label{sec:org9f7a159}
 Integrating \(\psi_{y}=N\), while holding \(x\) constant, yields \(\psi(x, y)=\int
 N(x, y) d y+h(x)\) 
 Taking the partial derivative with respect to
@@ -202,7 +203,7 @@ h(x)=\int M(x, y) d x-\int\left[\int \frac{\partial}{\partial x} N(x, y) d y\rig
 \end{align*}
 
 \subsection*{Problem 15 [FOR GRADE]}
-\label{sec:org190af1c}
+\label{sec:org4a885a5}
 \begin{align*}
   M = x^2y^3,\quad \quad N = x(1+y^2)\\
   \implies M_y = 3x^2y^2, \quad \quad N_x = 1+y^2
@@ -218,7 +219,7 @@ Now they're exact!
 So then just find that \(F = \frac{x^2}{2} - \frac{1}{2y^2}+\ln(y)\)
 
 \subsection*{Problem 18}
-\label{sec:org00085a0}
+\label{sec:orgcef5e34}
 \begin{align*}
   M = 3x^2y+2xy+y^3,\quad \quad N = x^2+y^2\\
   \implies M_y = 3x^2+2x+3y^2, \quad \quad N_x = 2x

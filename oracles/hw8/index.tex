@@ -1,4 +1,4 @@
-% Created 2021-04-17 Sat 17:43
+% Created 2021-04-19 Mon 20:17
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -19,7 +19,7 @@
 \usepackage{subcaption}
 \usepackage{mathtools}
 \usepackage{xfrac}
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{epsf}
@@ -27,9 +27,10 @@
 \usepackage{graphicx}
 \usepackage{pslatex}
 \usepackage{hyperref}
-\usepackage[adobe-utopia]{mathdesign}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{concmath}
+\usepackage[OT1]{fontenc}
+
 \usepackage{textgreek}
 \renewcommand*{\textgreekfontmap}{%
 {phv/*/*}{LGR/neohellenic/*/*}%
@@ -80,9 +81,9 @@
 \href{./index.pdf}{[View the PDF version]​}
 
 \section*{Section 7.3}
-\label{sec:orgd1f8445}
+\label{sec:org09b0b98}
 \subsection*{Problem 7}
-\label{sec:orgeaa2749}
+\label{sec:orgd488459}
    The three vectors are linearly dependent if there exists a nontrivial solution to
 $$
 c_{1} \mathbf{x}^{(1)}+c_{2} \mathbf{x}^{(2)}+c_{3} \mathbf{x}^{(3)}=\mathbf{0}
@@ -175,7 +176,7 @@ $$
 Therefore, the three given vectors are linearly dependent.
 
 \subsection*{Problem 16 [FOR GRADE]}
-\label{sec:org855d63b}
+\label{sec:org6ac19d1}
    The aim is to solve the eigenvalue problem,
 $$
 \mathbf{A} \mathbf{x}=\lambda \mathbf{x}
@@ -249,7 +250,7 @@ the corresponding eigenvectors, \(\mathbf{x}_{1}\) and \(\mathbf{x}_{2}\)
 \end{equation*}
 Note that \(x_{1}\) is a free variable, or arbitrary constant.
 \subsection*{Problem 17}
-\label{sec:orgbeca0f1}
+\label{sec:org76d0975}
    The aim is to solve the eigenvalue problem,
 $$
 \mathbf{A x}=\lambda \mathbf{x}
@@ -358,7 +359,7 @@ and
 
 Note that \(x_{1}\) is a free variable, or arbitrary constant.
 \subsection*{Problem 18}
-\label{sec:org68ee77a}
+\label{sec:org6b68ad9}
    The aim is to solve the eigenvalue problem,
 $$
 \mathbf{A} \mathbf{x}=\lambda \mathbf{x}
@@ -393,9 +394,11 @@ Evaluate the determinant and solve for \(\lambda\).
 
 Therefore, the eigenvalues are
 
+\begin{align*}
 \begin{array}{|l|l|l|l|}
-\hline \lambda_{1}=1 & \text { and } & \lambda_{2}=1-2 i & \text { and } & \lambda_{3}=1+2 i
+\hline \lambda_{1}=1 & \lambda_{2}=1-2 i & \lambda_{3}=1+2 i
 \end{array}
+\end{align*}
 
 Substitute \(\lambda_{1}\) back into equation (1) to determine the corresponding
 eigenvector \(\mathbf{x}_{1}\). 
@@ -478,7 +481,7 @@ fraction.
 \end{equation*}
 
 \subsection*{Problem 20 [FOR GRADE]}
-\label{sec:org8ee37eb}
+\label{sec:orga3e8ee3}
    The aim is to solve the eigenvalue problem,
 $$
 \mathbf{A} \mathbf{x}=\lambda \mathbf{x}
@@ -522,7 +525,7 @@ Therefore, the eigenvalues are
 
 \begin{equation*}
 	\begin{array}{|l|l|l|}
-		\hline \lambda_{1}=1 & \text { and } & \lambda_{2}=2 & \text { and } & \lambda_{3}=-1
+		\hline \lambda_{1}=1 & \lambda_{2}=2 & \lambda_{3}=-1
 	\end{array}
 \end{equation*}
 
@@ -837,9 +840,9 @@ $$
 $$
 
 \section*{Section 7.4}
-\label{sec:org14fb483}
+\label{sec:orga60514f}
 \subsection*{Problem 5(a)}
-\label{sec:org4911621}
+\label{sec:org9c75e7d}
 \begin{align*}
         t \begin{pmatrix}
                 1 \\
@@ -886,7 +889,7 @@ $$
         \end{pmatrix}
 \end{align*}
 \subsection*{Problem 6(a) [FOR GRADE]}
-\label{sec:org2e181a2}
+\label{sec:org8df20a7}
 \begin{align*}
         t \begin{pmatrix}
                 -t^{-2} \\

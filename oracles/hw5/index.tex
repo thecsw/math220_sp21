@@ -1,4 +1,4 @@
-% Created 2021-04-03 Sat 15:50
+% Created 2021-04-19 Mon 20:13
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -19,7 +19,7 @@
 \usepackage{subcaption}
 \usepackage{mathtools}
 \usepackage{xfrac}
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{epsf}
@@ -27,9 +27,10 @@
 \usepackage{graphicx}
 \usepackage{pslatex}
 \usepackage{hyperref}
-\usepackage[adobe-utopia]{mathdesign}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{concmath}
+\usepackage[OT1]{fontenc}
+
 \usepackage{textgreek}
 \renewcommand*{\textgreekfontmap}{%
 {phv/*/*}{LGR/neohellenic/*/*}%
@@ -80,9 +81,9 @@
 \href{./index.pdf}{[View the PDF version]​}
 
 \section*{Section 3.1}
-\label{sec:org4d1e1c0}
+\label{sec:orga730354}
 \subsection*{Problem 9}
-\label{sec:org15f5e6f}
+\label{sec:org8a2702f}
 \begin{equation*}
   y'' + 3y' = 0, \quad y(0) = -2, \quad y'(0) = 3
 \end{equation*}
@@ -122,7 +123,7 @@ Therefore \(C_1 = -1\) and \(C_2 = -1\), therefore
 \end{equation*}
 This solution converges to \(-1\) as \(t \to \infty\).
 \subsection*{Problem 13 [FOR GRADE]}
-\label{sec:org1eaf722}
+\label{sec:org901e35e}
 Find a differential equation whose general solution is
 \begin{equation*}
   y=c_{1} e^{2 t}+c_{2} e^{-3 t}
@@ -142,7 +143,7 @@ Therefore, the differential equation is
   y'' + y' - 6y = 0
 \end{align*}
 \subsection*{Problem 16}
-\label{sec:org5a51e06}
+\label{sec:orga604cd2}
 This is a linear homogeneous constant-coefficient ODE, apply the same method
 as in Problem 9. Find that \(r = \{-1, 2\}\) and the general solution is
 \begin{align*}
@@ -170,13 +171,13 @@ Therefore,
 We can see that if \(t \to \infty\), then \(y \to \infty\). Therefore, set
 \(\alpha = -2\).
 \subsection*{Problem 19}
-\label{sec:org5b1c6e0}
+\label{sec:org3716464}
 \begin{align*}
   y'' + 5y' + 6y = 9, \quad y(0) = 2, \quad y'(0) = \beta,
 \end{align*}
 where \(\beta > 0\).
 \subsubsection*{Part (a)}
-\label{sec:orge2b3650}
+\label{sec:org9b24bfc}
 This is a linear homogeneous constant-coefficient ODE, find that
 \(r = {-\frac{1}{2}, \frac{1}{2}}\). The two solutions are
 \begin{align*}
@@ -204,10 +205,10 @@ Finally,
 To prevent the solution from going to the infinity and beyond, set
 \(\beta=-1\).
 \subsubsection*{Part (b, c, d)}
-\label{sec:org33bef11}
+\label{sec:org9427665}
 See Professor Van Vleck's notes on this problem.
 \subsection*{Problem 21 [FOR GRADE]}
-\label{sec:orgcff0a99}
+\label{sec:org9d17c3d}
 \begin{align*}
   ay'' + by' + cy = 0,
 \end{align*}
@@ -224,19 +225,19 @@ a r^{2}+b r+c=0 \\
 \implies r=\frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a}
 \end{align*}
 \subsubsection*{Part (a)}
-\label{sec:orgd6ecd3e}
+\label{sec:org17de46e}
 For the roots to be real, different and negative, \(b>0\) and \(0 < c < \frac{b^2}{4a}\).
 \subsubsection*{Part (b)}
-\label{sec:org7f9c066}
+\label{sec:org8c1fb50}
 For the roots to be real with opposite signs, \(c < 0\).
 \subsubsection*{Part (c)}
-\label{sec:org447d4c4}
+\label{sec:orge4ed651}
 For the roots to be real, different and positive, \(b<0\) and
 \(0 < c < \frac{b^2}{4a}\).
 \section*{Section 3.2}
-\label{sec:org5f36297}
+\label{sec:org25d57ae}
 \subsection*{Problem 5}
-\label{sec:orgeec7399}
+\label{sec:orgae0b392}
 The Wronskian of these two functions is
 \begin{align*}
 W &=\left|\begin{array}{cc}
@@ -255,7 +256,7 @@ W &=\left|\begin{array}{cc}
 \end{align*}
 
 \subsection*{Problem 22 [FOR GRADE]}
-\label{sec:orgb0b486b}
+\label{sec:orgbbb5ea7}
 \begin{align*}
   y'' - y' - 2y = 0
 \end{align*}
@@ -263,7 +264,7 @@ W &=\left|\begin{array}{cc}
 \textbf{Note:} Solutions for this problem are based on Jock's solutions.
 
 \subsubsection*{Part (a)}
-\label{sec:org5c11bcf}
+\label{sec:org80dd270}
 Calculate \(W\left(y_{1}, y_{2}\right)\) the Wronskian of \(y_{1}\) and
 \(y_{2}\).
 
@@ -285,7 +286,7 @@ Since \(W\left(y_{1}, y_{2}\right) \neq 0, y_{1}\) and \(y_{2}\) form a fundamen
 set of solutions.
 
 \subsubsection*{Part (b)}
-\label{sec:org965f35b}
+\label{sec:org36c72d7}
 
 Check that \(y_{3}\) is a solution of the ODE.
 
@@ -319,7 +320,7 @@ y_{5}^{\prime \prime}-y_{5}^{\prime}-2 y_{5} \stackrel{?}{=} 0 \\
 \end{array}
 
 \subsubsection*{Part (c)}
-\label{sec:org70f4c13}
+\label{sec:org1d352ea}
 
 Calculate \(W\left(y_{1}, y_{3}\right)\), the Wronskian of \(y_{1}\) and \(y_{3}\).
 
@@ -393,7 +394,7 @@ e^{-t}+2 e^{2 t} & 2 e^{-t}+4 e^{2 t} \\
 
 Since \(W\left(y_{4}, y_{5}\right)=0, y_{4}\) and \(y_{5}\) do not form a fundamental set of solutions.
 \subsection*{Problem 24}
-\label{sec:orgcb798c0}
+\label{sec:org6ad14aa}
 \begin{align*}
   (\cos t)y'' +(\sin t)y' -ty = 0
 \end{align*}
@@ -414,7 +415,7 @@ By Abel's Theorem
   W = C \exp \left( \ln (cos t) \right) \implies W = C\times \cos t
 \end{align*}
 \subsection*{Problem 31}
-\label{sec:org7a3b128}
+\label{sec:orgfdd0246}
 The equation
 \begin{align*}
         P(x) y^{\prime \prime}+Q(x) y^{\prime}+R(x) y=0

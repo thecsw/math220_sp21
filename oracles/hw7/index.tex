@@ -1,4 +1,4 @@
-% Created 2021-04-17 Sat 16:25
+% Created 2021-04-19 Mon 20:14
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -19,7 +19,7 @@
 \usepackage{subcaption}
 \usepackage{mathtools}
 \usepackage{xfrac}
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{epsf}
@@ -27,9 +27,10 @@
 \usepackage{graphicx}
 \usepackage{pslatex}
 \usepackage{hyperref}
-\usepackage[adobe-utopia]{mathdesign}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{concmath}
+\usepackage[OT1]{fontenc}
+
 \usepackage{textgreek}
 \renewcommand*{\textgreekfontmap}{%
 {phv/*/*}{LGR/neohellenic/*/*}%
@@ -79,9 +80,9 @@
 \maketitle
 \href{./index.pdf}{[View the PDF version]​}
 \section*{Section 3.7}
-\label{sec:orga9f0469}
+\label{sec:org39d6e9f}
 \subsection*{Problem 1 [FOR GRADE]}
-\label{sec:orgd53d755}
+\label{sec:org5ef4a4e}
 We wish to write the two sinusoidal terms as one.
 \begin{align*}
 	3 \cos 2 t+4 \sin 2 t & =R \cos \left(\omega_{0} t-\delta\right)                                   \\
@@ -92,27 +93,27 @@ We wish to write the two sinusoidal terms as one.
 Matching the coefficients, we obtain the following system of equations for
 \(\omega_{0}, R\), and \(\delta\).
 
-\begin{array}{r}
+\begin{align*}
 R \cos \delta=3 \quad \quad \quad (1)\\
 \omega_{0}=2 \quad \quad \quad (2)\\
 R \sin \delta=4 \quad \quad \quad (3)
-\end{array}
+\end{align*}
 
 Square both sides of the first and third equations
 
-\begin{array}{l}
+\begin{align*}
 R^{2} \cos ^{2} \delta=9 \\
 R^{2} \sin ^{2} \delta=16
-\end{array}
+\end{align*}
 
 and add their respective sides.
 
-\begin{array}{c}
+\begin{align*}
 R^{2} \cos ^{2} \delta+R^{2} \sin ^{2} \delta=9+16 \\
 R^{2}\left(\cos ^{2} \delta+\sin ^{2} \delta\right)=25 \\
 R^{2}=25 \\
 R=5
-\end{array}
+\end{align*}
 
 Divide the respective sides of equations (1) and (3).
 
@@ -127,7 +128,7 @@ Therefore,
 \end{equation*}
 
 \subsection*{Problem 5}
-\label{sec:org1a39d3b}
+\label{sec:org27eaa6e}
 \begin{align*}
   20 u'' + 400 u' + 3920u &= 0\\
   20r^2 + 400r + 3920 &= 0
@@ -153,9 +154,9 @@ Therefore
   \text{Quasi-period}    &: \frac{\pi}{2\sqrt{6}}
 \end{align*}
 \section*{Section 7.1}
-\label{sec:orgb5c61b6}
+\label{sec:orgde5cdc9}
 \subsection*{Problem 1 [FOR GRADE]}
-\label{sec:org28ad445}
+\label{sec:org85c806e}
    Let \(u=x_{1}\).
 $$
 x_{1}^{\prime \prime}+0.5 x_{1}^{\prime}+2 x_{1}=0
@@ -172,7 +173,7 @@ x_{2}^{\prime}=-2 x_{1}-0.5 x_{2}
 \end{array}\right.
 $$
 \subsection*{Problem 5}
-\label{sec:org291fa6f}
+\label{sec:org5df325f}
    Let \(u=x_{1}\).
 $$
 x_{1}^{\prime \prime}+p(t) x_{1}^{\prime}+q(t) x_{1}=g(t), \quad x_{1}(0)=u_{0}, \quad x_{1}^{\prime}(0)=u_{0}^{\prime}
@@ -193,9 +194,9 @@ $$
 x_{1}(0)=u_{0} \quad \text { and } \quad x_{2}(0)=u_{0}^{\prime} .
 $$
 \section*{Section 7.2}
-\label{sec:orge6ed281}
+\label{sec:org7c442a7}
 \subsection*{Problem 4}
-\label{sec:org33b63c8}
+\label{sec:orgf6064eb}
    \(\mathbf{A}^{T}\) is the transpose of \(\mathbf{A}, \overline{\mathbf{A}}\) is
 the complex conjugate of \(\mathbf{A}\), and
 \(\mathbf{A}^{*}=\overline{\mathbf{A}}^{T}\) is the adjoint of \(\mathbf{A}\). 
@@ -221,7 +222,7 @@ the complex conjugate of \(\mathbf{A}\), and
 \end{array}\right)
 \end{equation*}
 \subsection*{Problem 8 [FOR GRADE]}
-\label{sec:orgc38b003}
+\label{sec:orgb89d6be}
    Start by calculating the determinant.
 $$
 \operatorname{det}\left(\begin{array}{rr}

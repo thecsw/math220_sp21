@@ -324,9 +324,11 @@ Evaluate the determinant and solve for $\lambda$.
 
 Therefore, the eigenvalues are
 
+\begin{align*}
 \begin{array}{|l|l|l|l|}
-\hline \lambda_{1}=1 & \text { and } & \lambda_{2}=1-2 i & \text { and } & \lambda_{3}=1+2 i
+\hline \lambda_{1}=1 & \lambda_{2}=1-2 i & \lambda_{3}=1+2 i
 \end{array}
+\end{align*}
 
 Substitute $\lambda_{1}$ back into equation (1) to determine the corresponding
 eigenvector $\mathbf{x}_{1}$. 
@@ -452,7 +454,7 @@ Therefore, the eigenvalues are
 
 \begin{equation*}
 	\begin{array}{|l|l|l|}
-		\hline \lambda_{1}=1 & \text { and } & \lambda_{2}=2 & \text { and } & \lambda_{3}=-1
+		\hline \lambda_{1}=1 & \lambda_{2}=2 & \lambda_{3}=-1
 	\end{array}
 \end{equation*}
 

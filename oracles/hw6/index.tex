@@ -1,4 +1,4 @@
-% Created 2021-04-03 Sat 15:16
+% Created 2021-04-19 Mon 20:13
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -19,7 +19,7 @@
 \usepackage{subcaption}
 \usepackage{mathtools}
 \usepackage{xfrac}
-\usepackage[margin=1.25in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{epsf}
@@ -27,9 +27,10 @@
 \usepackage{graphicx}
 \usepackage{pslatex}
 \usepackage{hyperref}
-\usepackage[adobe-utopia]{mathdesign}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{concmath}
+\usepackage[OT1]{fontenc}
+
 \usepackage{textgreek}
 \renewcommand*{\textgreekfontmap}{%
 {phv/*/*}{LGR/neohellenic/*/*}%
@@ -80,9 +81,9 @@
 \href{./index.pdf}{[View the PDF version]​}
 
 \section*{Section 3.3}
-\label{sec:orgc963e4a}
+\label{sec:orgcb3d3c0}
 \subsection*{Problem 7}
-\label{sec:org98c8e15}
+\label{sec:orgc86e220}
 \begin{align*}
   y'' + 2y' + 2y = 0
 \end{align*}
@@ -91,7 +92,7 @@ Find that \(r = \{-1 - i, -1 + i\}\). Then
   y(t) = C_1 e^{-t} \cos (t) + C_2 e^{-t} \sin (t)
 \end{align*}
 \subsection*{Problem 13 [FOR GRADE]}
-\label{sec:org5d5b8b7}
+\label{sec:org07070c8}
 \begin{align*}
   y'' - 2y' + 5y = 0, \quad y(\pi/2) = 0, \quad y'(\pi / 2) = 2
 \end{align*}
@@ -115,12 +116,12 @@ Finally,
   y(t) = -\frac{1}{e^{\pi/2}} e^t \sin (2t)
 \end{align*}
 \subsection*{Problem 17}
-\label{sec:org0d4cdfe}
+\label{sec:orgcefefe8}
 \begin{align*}
   5u'' + 2u' + 7u = 0, \quad u(0) = 2, \quad u'(0) = 1
 \end{align*}
 \subsubsection*{Part (a)}
-\label{sec:orgf3e38c7}
+\label{sec:org7162ec6}
 Find that
 \(r = \{-\frac{1}{5} - i\frac{\sqrt{34}}{5}, -\frac{1}{5} +
     i\frac{\sqrt{34}}{5}\}\). Then
@@ -139,12 +140,12 @@ Finally,
   u(t) = 2 e^{-t/5} \cos\left(\frac{\sqrt{34}t}{5}\right) + \frac{7}{\sqrt{34}} e^{-t/5} \sin\left(\frac{\sqrt{34}t}{5}\right)
 \end{align*}
 \subsubsection*{Part (b)}
-\label{sec:orgdfab1b2}
+\label{sec:orgbd4dafb}
 \begin{align*}
   T \approx 14.512
 \end{align*}
 \subsection*{Problem 19}
-\label{sec:org19ca75e}
+\label{sec:org18719d7}
 \begin{aligned} W\left(e^{\lambda t} \cos \mu t, e^{\lambda t} \sin \mu
         t\right) & =\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t}
                 \sin \mu t                                   \\ \frac{d}{d t}\left(e^{\lambda t} \cos \mu t\right) & \frac{d}{d
@@ -162,9 +163,9 @@ Finally,
 \end{aligned}
 
 \section*{Section 3.4}
-\label{sec:org0fa390f}
+\label{sec:org7286a7b}
 \subsection*{Problem 1}
-\label{sec:orge590436}
+\label{sec:orgf694a22}
 \begin{align*}
   y'' - 2y' + y = 0
 \end{align*}
@@ -177,7 +178,7 @@ So \(r = 1\), finally
   y(t) = C_1 e^t + C_2 t e^t
 \end{align*}
 \subsection*{Problem 8 [FOR GRADE]}
-\label{sec:org678d89a}
+\label{sec:orgcca848a}
 \begin{align*}
   2y'' + 2y' + y = 0
 \end{align*}
@@ -190,7 +191,7 @@ So \(r = \{-1/2 - 1/2i, -1/2 + 1/2i\}\). Finally,
   y(t) = C_1 e^{-t/2} \cos \left(\frac{1}{2}t\right) + C_2 e^{-t/2} \sin \left(\frac{1}{2}t\right)
 \end{align*}
 \subsection*{Problem 11}
-\label{sec:orgda0be98}
+\label{sec:orgdf88ddd}
 \begin{align*}
   y'' + 4y' + 4y = 0, \quad y(-1)=2, \quad y'(-1) = 1
 \end{align*}
@@ -219,7 +220,7 @@ Therefore
 \end{align*}
 As \(t \to \infty\), \(y \to 0\).
 \subsection*{Problem 18 [FOR GRADE]}
-\label{sec:orgd775d17}
+\label{sec:orgcdc539e}
 \begin{align*}
   t^2 y'' - 4 t y' + 6 y = 0, \quad t > 0; \quad y_1(t) = t^2
 \end{align*}

@@ -26,27 +26,27 @@
 Matching the coefficients, we obtain the following system of equations for
 $\omega_{0}, R$, and $\delta$.
 
-\begin{array}{r}
+\begin{align*}
 R \cos \delta=3 \quad \quad \quad (1)\\
 \omega_{0}=2 \quad \quad \quad (2)\\
 R \sin \delta=4 \quad \quad \quad (3)
-\end{array}
+\end{align*}
 
 Square both sides of the first and third equations
 
-\begin{array}{l}
+\begin{align*}
 R^{2} \cos ^{2} \delta=9 \\
 R^{2} \sin ^{2} \delta=16
-\end{array}
+\end{align*}
 
 and add their respective sides.
 
-\begin{array}{c}
+\begin{align*}
 R^{2} \cos ^{2} \delta+R^{2} \sin ^{2} \delta=9+16 \\
 R^{2}\left(\cos ^{2} \delta+\sin ^{2} \delta\right)=25 \\
 R^{2}=25 \\
 R=5
-\end{array}
+\end{align*}
 
 Divide the respective sides of equations (1) and (3).
 
