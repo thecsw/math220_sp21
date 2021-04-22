@@ -1,4 +1,4 @@
-% Created 2021-04-19 Mon 20:13
+% Created 2021-04-21 Wed 20:59
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -20,6 +20,7 @@
 \usepackage{mathtools}
 \usepackage{xfrac}
 \usepackage[margin=1in]{geometry}
+\usepackage{marginnote}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{epsf}
@@ -28,7 +29,8 @@
 \usepackage{pslatex}
 \usepackage{hyperref}
 
-\usepackage{concmath}
+\usepackage{beton}
+\usepackage{euler}
 \usepackage[OT1]{fontenc}
 
 \usepackage{textgreek}
@@ -81,9 +83,9 @@
 \href{./index.pdf}{[View the PDF version]​}
 
 \section*{Section 3.3}
-\label{sec:orgcb3d3c0}
+\label{sec:orgb309973}
 \subsection*{Problem 7}
-\label{sec:orgc86e220}
+\label{sec:org634be96}
 \begin{align*}
   y'' + 2y' + 2y = 0
 \end{align*}
@@ -92,7 +94,7 @@ Find that \(r = \{-1 - i, -1 + i\}\). Then
   y(t) = C_1 e^{-t} \cos (t) + C_2 e^{-t} \sin (t)
 \end{align*}
 \subsection*{Problem 13 [FOR GRADE]}
-\label{sec:org07070c8}
+\label{sec:org918d984}
 \begin{align*}
   y'' - 2y' + 5y = 0, \quad y(\pi/2) = 0, \quad y'(\pi / 2) = 2
 \end{align*}
@@ -116,12 +118,12 @@ Finally,
   y(t) = -\frac{1}{e^{\pi/2}} e^t \sin (2t)
 \end{align*}
 \subsection*{Problem 17}
-\label{sec:orgcefefe8}
+\label{sec:org8503826}
 \begin{align*}
   5u'' + 2u' + 7u = 0, \quad u(0) = 2, \quad u'(0) = 1
 \end{align*}
 \subsubsection*{Part (a)}
-\label{sec:org7162ec6}
+\label{sec:org11ba0f1}
 Find that
 \(r = \{-\frac{1}{5} - i\frac{\sqrt{34}}{5}, -\frac{1}{5} +
     i\frac{\sqrt{34}}{5}\}\). Then
@@ -140,12 +142,12 @@ Finally,
   u(t) = 2 e^{-t/5} \cos\left(\frac{\sqrt{34}t}{5}\right) + \frac{7}{\sqrt{34}} e^{-t/5} \sin\left(\frac{\sqrt{34}t}{5}\right)
 \end{align*}
 \subsubsection*{Part (b)}
-\label{sec:orgbd4dafb}
+\label{sec:org3b9d47e}
 \begin{align*}
   T \approx 14.512
 \end{align*}
 \subsection*{Problem 19}
-\label{sec:org18719d7}
+\label{sec:org49c54e7}
 \begin{aligned} W\left(e^{\lambda t} \cos \mu t, e^{\lambda t} \sin \mu
         t\right) & =\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t}
                 \sin \mu t                                   \\ \frac{d}{d t}\left(e^{\lambda t} \cos \mu t\right) & \frac{d}{d
@@ -163,9 +165,9 @@ Finally,
 \end{aligned}
 
 \section*{Section 3.4}
-\label{sec:org7286a7b}
+\label{sec:orgb54aea4}
 \subsection*{Problem 1}
-\label{sec:orgf694a22}
+\label{sec:orga6c2ee2}
 \begin{align*}
   y'' - 2y' + y = 0
 \end{align*}
@@ -178,7 +180,7 @@ So \(r = 1\), finally
   y(t) = C_1 e^t + C_2 t e^t
 \end{align*}
 \subsection*{Problem 8 [FOR GRADE]}
-\label{sec:orgcca848a}
+\label{sec:org3c43c16}
 \begin{align*}
   2y'' + 2y' + y = 0
 \end{align*}
@@ -191,7 +193,7 @@ So \(r = \{-1/2 - 1/2i, -1/2 + 1/2i\}\). Finally,
   y(t) = C_1 e^{-t/2} \cos \left(\frac{1}{2}t\right) + C_2 e^{-t/2} \sin \left(\frac{1}{2}t\right)
 \end{align*}
 \subsection*{Problem 11}
-\label{sec:orgdf88ddd}
+\label{sec:org2b91e5c}
 \begin{align*}
   y'' + 4y' + 4y = 0, \quad y(-1)=2, \quad y'(-1) = 1
 \end{align*}
@@ -220,7 +222,7 @@ Therefore
 \end{align*}
 As \(t \to \infty\), \(y \to 0\).
 \subsection*{Problem 18 [FOR GRADE]}
-\label{sec:orgcdc539e}
+\label{sec:orgf9a36c5}
 \begin{align*}
   t^2 y'' - 4 t y' + 6 y = 0, \quad t > 0; \quad y_1(t) = t^2
 \end{align*}

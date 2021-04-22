@@ -1,4 +1,4 @@
-% Created 2021-04-19 Mon 20:11
+% Created 2021-04-21 Wed 21:00
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -20,6 +20,7 @@
 \usepackage{mathtools}
 \usepackage{xfrac}
 \usepackage[margin=1in]{geometry}
+\usepackage{marginnote}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{epsf}
@@ -28,7 +29,8 @@
 \usepackage{pslatex}
 \usepackage{hyperref}
 
-\usepackage{concmath}
+\usepackage{beton}
+\usepackage{euler}
 \usepackage[OT1]{fontenc}
 
 \usepackage{textgreek}
@@ -81,9 +83,9 @@
 \href{./index.pdf}{[View the PDF version]​}
 
 \section*{Section 2.3}
-\label{sec:org07f8d55}
+\label{sec:org30d5c92}
 \subsection*{Problem 1 [FOR GRADE]}
-\label{sec:org3c474f2}
+\label{sec:org8ccfe48}
 We model the tank problem the following way of
 \begin{equation*}
   \frac{dx}{dt}=R_{in}-R_{out}
@@ -108,15 +110,15 @@ the tank reaches \(1\%\). So
 \end{equation*}
 Solving for \(t\) returns that \(t = 100 \ln 100\) min \(\approx 460.5\) min. 
 \subsection*{Problem 4}
-\label{sec:org5655e6d}
+\label{sec:orgd535dc6}
 \subsubsection*{Part (a)}
-\label{sec:orgbf13faa}
+\label{sec:org5c5fa9a}
 So our kinetic and potential energies are equal. Then
 \begin{equation*}
   mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh}
 \end{equation*}
 \subsubsection*{Part (b)}
-\label{sec:org2b96b26}
+\label{sec:org29b5076}
 Recall 
 \begin{equation*}
   \frac{dv}{dt} = A(h) \frac{dh}{dt} \quad\text{and}\quad \frac{dv}{dt} = av
@@ -126,7 +128,7 @@ So then because constant \(\alpha\) is contracting, the change is negative
   A(h)\frac{dh}{dt} = -\alpha a \sqrt{2gh}
 \end{equation*}
 \subsubsection*{Part (c)}
-\label{sec:orge5dbffb}
+\label{sec:org444f789}
 Recall \(A(r) = \pi r^2\). Let \(h=3\) and \(\alpha = 0.6\). Then solving for
 radius of 1m and the circular outlet radius of 0.1m, we get an equation
 \begin{equation*}
@@ -136,9 +138,9 @@ radius of 1m and the circular outlet radius of 0.1m, we get an equation
 \end{equation*}
 Solving for \(t\) yields \(\approx 130.41\). 
 \subsection*{Problem 9 [FOR GRADE]}
-\label{sec:org29e7b7d}
+\label{sec:orgf1dee81}
 \subsubsection*{Part (a)}
-\label{sec:org91e0813}
+\label{sec:org77b8378}
 See that
 \begin{equation*}
   \frac{Q(5730)}{Q_0} = 0.5\\
@@ -147,31 +149,31 @@ See that
 \end{equation*}
 Solve for \(r\) to get \(r = 0.00012097 yr^{-1}\) 
 \subsubsection*{Part (b)}
-\label{sec:orgf695cd7}
+\label{sec:org152372c}
 Trivially, it would be \(Q_0 \exp{(-0.00012097t)}\), where \(t\) is measured in
 years. 
 \subsubsection*{Part (c)}
-\label{sec:org9ced380}
+\label{sec:orgc28cd72}
 Solve \(e^{-rt} = 0.2\) to get \(13,305yr\). 
 \section*{Section 2.5}
-\label{sec:orgb48316a}
+\label{sec:org1b87d5b}
 \subsection*{Problem 3}
-\label{sec:orgc281070}
+\label{sec:orgf146454}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./d3.png}
 \end{center}
 \subsection*{Problem 5}
-\label{sec:org6803b70}
+\label{sec:org5f8cb39}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./d5.png}
 \end{center}
 \subsection*{Problem 9 [FOR GRADE]}
-\label{sec:orgf43f0a9}
+\label{sec:org0d49c64}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./d9.png}
 \end{center}
 \subsection*{Problem 13}
-\label{sec:org83cd5c3}
+\label{sec:org8fd962a}
 \begin{equation*}
   y_{1,2} = \frac{K + T \pm \sqrt{K^2 - KT + T^3}}{3}
 \end{equation*}

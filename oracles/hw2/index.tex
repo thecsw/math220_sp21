@@ -1,4 +1,4 @@
-% Created 2021-04-19 Mon 20:11
+% Created 2021-04-21 Wed 21:00
 % Intended LaTeX compiler: xelatex
 \documentclass[12pt]{article}
 \usepackage{graphicx}
@@ -20,6 +20,7 @@
 \usepackage{mathtools}
 \usepackage{xfrac}
 \usepackage[margin=1in]{geometry}
+\usepackage{marginnote}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{epsf}
@@ -28,7 +29,8 @@
 \usepackage{pslatex}
 \usepackage{hyperref}
 
-\usepackage{concmath}
+\usepackage{beton}
+\usepackage{euler}
 \usepackage[OT1]{fontenc}
 
 \usepackage{textgreek}
@@ -81,20 +83,20 @@
 \href{./index.pdf}{[View the PDF version]​}
 
 \section*{Chapter 2.1}
-\label{sec:org6e10566}
+\label{sec:orgf7e8d8b}
 \subsection*{Problem 13}
-\label{sec:org359c126}
+\label{sec:org9997627}
 \begin{center}
 \includegraphics[width=.9\linewidth]{./13.png}
 \end{center}
 \subsubsection*{Part a}
-\label{sec:org1e8ff51}
+\label{sec:org69d6c57}
 As \(t\) gets infinitely large, it simply oscillates in an inverse cosine
 fashion. \(a\) does give the function an initial starting point, to which it
 starts oscillating from. That would probably be \(a + \pi\) because
 \(2cos(t)\) changes its behaviour every \(\pi\) revolution.
 \subsubsection*{Part b}
-\label{sec:org86bb9e3}
+\label{sec:orgae3c71a}
 This is a first-order linear differential equation
 of the form \(y' + p(t) y = q(t)\). Find
 \(\mu(t) = e^{\int{-\frac{1}{2}}}\) and then solve \(\frac{d}{dt}(\mu(t)y) = q(t) \mu(t)\)
@@ -107,12 +109,12 @@ Then solving for \(y(0)\) and \(c\), we have the full solution to be
         y(t) = (a+\frac{4}{5}e^{t/2})+\frac{8}{5}\sin(t)-\frac{4}{5}\cos(t)
 \end{equation*}
 \subsubsection*{Part c}
-\label{sec:org70a1956}
+\label{sec:orgc69bae0}
 \(y\) oscillates for \(a=a_0\)
 \subsection*{Problem 15 [FOR GRADE]}
-\label{sec:org3ff955d}
+\label{sec:orgd44cab6}
 \subsubsection*{Part a}
-\label{sec:orgc9e6eac}
+\label{sec:org3f465b1}
 This is again, a first-order linear differential equation, so we do our
 \(\mu\) and integration from both sides trick. Recognize that we have to
 divide everything by \(t\), so that our lead \(y'\) doesn't have a coefficient
@@ -131,10 +133,10 @@ Applying \(y(1) = a\), then we get
 \end{equation*}
 We need \(ea-1\) to be equal to zero, then \(a_0 = \frac{1}{e}\)
 \subsubsection*{Part c}
-\label{sec:orgf7308b8}
+\label{sec:orge9f4557}
 As \(t \to 0\), then \(y \to 0\). 
 \subsection*{Problem 17 [FOR GRADE]}
-\label{sec:org94e62ca}
+\label{sec:orgdc7fddf}
 Recall the solution to Problem 13. We need to swap the sign on \(p(t)\) and
 update the initial value constant solution. We will get
 \begin{equation*}
@@ -148,7 +150,7 @@ You can check the nature of the point by taking \(y''\). Finally, we find that
 the local maximum is at \((t, y) = (1.36, 0.82)\). Better approximated values
 are accepted.
 \subsection*{Problem 20}
-\label{sec:orgd28dce1}
+\label{sec:orgb0b228a}
 The solution process is similar to the problem of 17, you should get a
 general solution for \(y\):
 \begin{equation*}
@@ -157,9 +159,9 @@ general solution for \(y\):
 where \(C\) is a constant. Solving \(y(0) = y_0\) for \(y_0\) yields that
 \(C = y_0 + \frac{5}{2}\) so then the solution is \(y_0 = -\frac{5}{2}\).
 \subsection*{Problem 28}
-\label{sec:orgcb0e6aa}
+\label{sec:orgd983ec4}
 \subsubsection*{Part a}
-\label{sec:org28ef6d1}
+\label{sec:orge45e7f5}
 Recall the form \(y' + p(t) y = g(t)\) and solution form of 
 \begin{equation*}
         \frac{d}{dt}(\mu(t)y) = g(t) \mu(t)
@@ -167,19 +169,19 @@ Recall the form \(y' + p(t) y = g(t)\) and solution form of
 Then if \(g(t)=0\), solution
 is \(y = A e^{-\int{p(t)dt}}\)
 \subsubsection*{Part b}
-\label{sec:orgb22d66d}
+\label{sec:org007d8ad}
 Simply substitute (50) into (48), perform some trivial Chain Rule and
 confirm that
 \begin{equation*}
         A'(t) = g(t) \exp\left(\int p(t) dt\right)
 \end{equation*}
 \subsubsection*{Part c}
-\label{sec:orga44ffd8}
+\label{sec:orgf326370}
 Substitution is mechanical. Prove that variation of parameters works.
 \section*{Chapter 2.2}
-\label{sec:orga5588ff}
+\label{sec:orgc1623fe}
 \subsection*{Problem 1}
-\label{sec:org3a89acd}
+\label{sec:orgb6ae5db}
 \begin{equation*}
         \frac{dy}{dx} = \frac{x^2}{y}
 \end{equation*}
@@ -194,7 +196,7 @@ So the solution is
 It's OK to leave the solution implicitly here, otherwise, the explicit
 solution for \(y\) can be very nasty.
 \subsection*{Problem 7}
-\label{sec:orge0ff1d4}
+\label{sec:org20d7cfb}
 \begin{equation*}
   \frac{dy}{dx} = \frac{y}{x}
 \end{equation*}
@@ -209,7 +211,7 @@ Then
 \(C\) is any constant, then \(\ln(C)\) is also a constant.
 Finally, \(y = Cx\)
 \subsection*{Problem 8 [FOR GRADE]}
-\label{sec:orgc44a6e2}
+\label{sec:org6f61524}
 \begin{equation*}
         \frac{dy}{dx} = \frac{-x}{y}
 \end{equation*}
@@ -223,15 +225,15 @@ Therefore
 \end{equation*}
 It's fine if you wrote \(y = \pm \sqrt{C - x^2}\)
 \subsection*{Problem 21}
-\label{sec:orgdf99fce}
+\label{sec:orgbc4d76d}
 \begin{equation*}
         y' = \frac{ty(4-y)}{3}, \quad y(0) = y_0
 \end{equation*}
 \subsubsection*{Part a}
-\label{sec:org61764e1}
+\label{sec:org4c3e447}
 As \(t \to \infty\), then \(y \to 4\)
 \subsubsection*{Part b}
-\label{sec:org01a445f}
+\label{sec:orge61fe28}
 First, you will have to solve the system, which is a first-order separable
 ordinary differential equation.  The implicit solution is
 \begin{equation*}
@@ -245,32 +247,32 @@ Solve for \(t\), so
 \end{equation*}
 Use \(y = 3.98\) and \(y_0 = 0.5\), then \(t \approx 3.29527\).
 \subsection*{Problem 25}
-\label{sec:org06c73bc}
+\label{sec:orgeb34c07}
 \subsubsection*{Part a}
-\label{sec:orgb73231a}
+\label{sec:orgfa077cb}
 Simple divide both the numerator and the denominator by \(x\).
 \subsubsection*{Part b}
-\label{sec:org13291ed}
+\label{sec:org1f71def}
 You should get
 \begin{equation*}
         \frac{dy}{dx} = v + x \frac{dv}{dx}
 \end{equation*}
 \subsubsection*{Part c}
-\label{sec:org71ae3e6}
+\label{sec:org011aaef}
 This is simply to show.
 \subsubsection*{Part d}
-\label{sec:org6f29013}
+\label{sec:orgec3ba91}
 Yet another separable equation, you should get the implicit solution
 \begin{equation*}
   x^4 \left| 2 - v \right| \left| v + 2 \right|^3 = C
 \end{equation*}
 \subsubsection*{Part e}
-\label{sec:org49109f6}
+\label{sec:org0b10f56}
 Rearrange to get
 \begin{equation*}
         |y+2x|^3 |2x-y| = C
 \end{equation*}
 \subsubsection*{Part f}
-\label{sec:orgb0bc0e7}
+\label{sec:org31a1245}
 It's like a 1/x star. 
 \end{document}
