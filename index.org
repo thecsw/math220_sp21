@@ -13,6 +13,8 @@
 #+date: 52; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+Go to [[https://sandyuraz.com][Sandy's Website 🚀]]
+
 * Course Description
   Taught by [[https://erikvv.ku.edu][Professor Van Vleck]]. This webpage is created for the course by its
   grader, Sandy Urazayev to provide solution sets for homework assignments. 
