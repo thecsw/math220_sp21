@@ -1,0 +1,525 @@
+% Created 2021-05-08 Sat 22:02
+% Intended LaTeX compiler: xelatex
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage[margin=1in]{geometry}
+\usepackage{marginnote}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{epsf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{hyperref}
+
+\usepackage{beton}
+\usepackage{euler}
+\usepackage[OT1]{fontenc}
+
+\usepackage{textgreek}
+\renewcommand*{\textgreekfontmap}{%
+{phv/*/*}{LGR/neohellenic/*/*}%
+{*/b/n}{LGR/artemisia/b/n}%
+{*/bx/n}{LGR/artemisia/bx/n}%
+{*/*/n}{LGR/artemisia/m/n}%
+{*/b/it}{LGR/artemisia/b/it}%
+{*/bx/it}{LGR/artemisia/bx/it}%
+{*/*/it}{LGR/artemisia/m/it}%
+{*/b/sl}{LGR/artemisia/b/sl}%
+{*/bx/sl}{LGR/artemisia/bx/sl}%
+{*/*/sl}{LGR/artemisia/m/sl}%
+{*/*/sc}{LGR/artemisia/m/sc}%
+{*/*/sco}{LGR/artemisia/m/sco}%
+}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+#1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\left\lVert}{\right\rVert}
+\DeclarePairedDelimiter{\ceil}{\left\lceil}{\right\rceil}
+\DeclarePairedDelimiter{\floor}{\left\lfloor}{\right\rfloor}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+\def\noi{\noindent}
+\onehalfspace
+\usemintedstyle{bw}
+\author{Sandy Urazayev\thanks{University of Kansas (ctu@ku.edu)}}
+\date{128; 12021 H.E.}
+\title{Homework 11 Oracle\\\medskip
+\large MATH 220 Spring 2021}
+\hypersetup{
+ pdfauthor={Sandy Urazayev},
+ pdftitle={Homework 11 Oracle},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.0.50 (Org mode 9.4.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\href{./index.pdf}{[View the PDF version]​}
+
+Solution to these problems are provided by STEM Jock.
+
+\section*{Section 6.2}
+\label{sec:org7d2a14c}
+
+\subsection*{Problem 3}
+\label{sec:org90253ae}
+
+\subsubsection*{Statement}
+\label{sec:org6e3a9c0}
+   \begin{equation*}
+F(s)=\frac{2}{s^{2}+3 s-4}
+\end{equation*}
+
+\subsubsection*{Solution}
+\label{sec:orgcc875f9}
+Factor the denominator.
+
+    \begin{aligned}
+F(s) &=\frac{2}{s^{2}+3 s-4} \\
+&=\frac{2}{(s+4)(s-1)} \\
+&=\frac{2 / 5}{s-1}-\frac{2 / 5}{s+4}
+\end{aligned}
+
+Take the inverse Laplace transform now to get \(f(t)\).
+
+$$
+f(t)=\frac{2}{5} e^{t}-\frac{2}{5} e^{-4 t}
+$$
+
+\subsection*{Problem 11}
+\label{sec:org0165227}
+
+\subsubsection*{Statement}
+\label{sec:org3f2fa20}
+$$
+    y^{\prime \prime}-2 y^{\prime}+4 y=0 ; \quad y(0)=2, \quad y^{\prime}(0)=0
+ $$
+
+\subsubsection*{Solution}
+\label{sec:org4770a33}
+    Because the ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function \(y(t)\) is defined here as
+$$
+Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t
+$$
+Consequently, the first and second derivatives transform as follows.
+
+
+\begin{aligned}
+\mathcal{L}\left\{\frac{d y}{d t}\right\} &=s Y(s)-y(0) \\
+\mathcal{L}\left\{\frac{d^{2} y}{d t^{2}}\right\} &=s^{2} Y(s)-s y(0)-y^{\prime}(0)
+\end{aligned}
+
+
+Apply the Laplace transform to both sides of the ODE.
+$$
+\mathcal{L}\left\{y^{\prime \prime}-2 y^{\prime}+4 y\right\}=\mathcal{L}\{0\}
+$$
+Use the fact that the transform is a linear operator.
+
+\begin{array}{c}
+\mathcal{L}\left\{y^{\prime \prime}\right\}-2 \mathcal{L}\left\{y^{\prime}\right\}+4 \mathcal{L}\{y\}=0 \\
+{\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]-2[s Y(s)-y(0)]+4 Y(s)=0}
+\end{array}
+
+Plug in the initial conditions, \(y(0)=2\) and \(y^{\prime}(0)=0\).
+
+$$
+\left[s^{2} Y(s)-2 s\right]-2[s Y(s)-2]+4 Y(s)=0
+$$
+
+As a result of applying the Laplace transform, the ODE has reduced to an algebraic equation for
+  Solution \(Y\) , the transformed solution.
+
+  \begin{equation*}
+\begin{array}{c}
+s^{2} Y(s)-2 s Y(s)+4 Y(s)-2 s+4=0 \\
+\left(s^{2}-2 s+4\right) Y(s)=2 s-4
+\end{array}
+\end{equation*}
+
+\begin{aligned}
+Y(s) &=\frac{2 s-4}{s^{2}-2 s+4} \\
+&=\frac{2 s-4}{s^{2}-2 s+1+4-1} \\
+&=\frac{2 s-4}{(s-1)^{2}+3} \\
+&=\frac{2 s-2-4+2}{(s-1)^{2}+3} \\
+&=\frac{2(s-1)-2}{(s-1)^{2}+3} \\
+&=2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{(s-1)^{2}+3} \\
+&=2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{\sqrt{3}} \frac{\sqrt{3}}{(s-1)^{2}+3}
+\end{aligned}
+
+Take the inverse Laplace transform of \(Y(s)\) now to recover \(y(t)\).
+
+\begin{aligned}
+y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
+&=\mathcal{L}^{-1}\left\{2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{\sqrt{3}} \frac{\sqrt{3}}{(s-1)^{2}+3}\right\} \\
+&=2 \mathcal{L}^{-1}\left\{\frac{s-1}{(s-1)^{2}+3}\right\}-\frac{2}{\sqrt{3}} \mathcal{L}^{-1}\left\{\frac{\sqrt{3}}{(s-1)^{2}+3}\right\} \\
+&=2 e^{t} \cos \sqrt{3} t-\frac{2}{\sqrt{3}} e^{t} \sin \sqrt{3} t
+\end{aligned}
+
+\subsection*{Problem 19}
+\label{sec:org7d295c4}
+
+\subsubsection*{Statement}
+\label{sec:org53b2b43}
+    \begin{equation*}
+y^{\prime \prime}+y=\left\{\begin{array}{ll}
+t, & 0 \leq t<1 \\
+2-t, & 1 \leq t<2, \\
+0, & 2 \leq t<\infty
+\end{array} \quad y(0)=0, \quad y^{\prime}(0)=0\right.
+\end{equation*}
+
+\subsubsection*{Solution}
+\label{sec:org1724030}
+    Let \(f(t)\) represent the piecewise function on the right side.
+$$
+y^{\prime \prime}+y=f(t)=\left\{\begin{array}{ll}
+t, & 0 \leq t<1 \\
+2-t, & 1 \leq t<2 \\
+0, & 2 \leq t<\infty
+\end{array}\right.
+$$
+Because this ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function \(y(t)\) is defined here as
+$$
+Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t .
+$$
+Consequently, the first and second derivatives transform as follows.
+
+\begin{aligned}
+\mathcal{L}\left\{\frac{d y}{d t}\right\} &=s Y(s)-y(0) \\
+\mathcal{L}\left\{\frac{d^{2} y}{d t^{2}}\right\} &=s^{2} Y(s)-s y(0)-y^{\prime}(0)
+\end{aligned}
+
+Apply the Laplace transform to both sides of the ODE.
+
+$$
+\mathcal{L}\left\{y^{\prime \prime}+y\right\}=\mathcal{L}\{f(t)\}
+$$
+
+Use the fact that the transform is a linear operator.
+
+\begin{array}{c}
+\mathcal{L}\left\{y^{\prime \prime}\right\}+\mathcal{L}\{y\}=\mathcal{L}\{f(t)\} \\
+{\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]+Y(s)=\int_{0}^{\infty} e^{-s t} f(t) d t}
+\end{array}
+
+Plug in the initial conditions, \(y(0)=0\) and \(y^{\prime}(0)=0\), and \(f(t)\).
+
+\begin{aligned}
+\left[s^{2} Y(s)\right] &+Y(s)=\int_{0}^{1} e^{-s t}(t) d t+\int_{1}^{2} e^{-s t}(2-t) d t+\int_{2}^{\infty} e^{-s t}(0) d t \\
+\left(s^{2}+1\right) Y(s) &=\int_{0}^{1} t e^{-s t} d t+2 \int_{1}^{2} e^{-s t} d t-\int_{1}^{2} t e^{-s t} d t \\
+&=\frac{1-(s+1) e^{-s}}{s^{2}}+2 \frac{e^{-s}-e^{-2 s}}{s}-\frac{-e^{-2 s}-2 s e^{-2 s}+(s+1) e^{-s}}{s^{2}} \\
+&=\frac{1}{s^{2}}+\frac{e^{-2 s}}{s^{2}}-\frac{2 e^{-s}}{s^{2}}
+\end{aligned}
+
+Divide both sides by \(s^{2}+1\).
+
+\begin{aligned}
+Y(s) &=\frac{1}{s^{2}\left(s^{2}+1\right)}+\frac{e^{-2 s}}{s^{2}\left(s^{2}+1\right)}-\frac{2 e^{-s}}{s^{2}\left(s^{2}+1\right)} \\
+&=\frac{1}{s^{2}}-\frac{1}{s^{2}+1}+\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}-2\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}
+\end{aligned}
+
+Take the inverse Laplace transform of \(Y(s)\) now to recover \(y(t)\). Note that \(H(t)\) is the Heaviside function, which is defined to be 1 if \(t>0\) and 0 if \(t<0\).
+
+\begin{aligned}
+y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
+&=\mathcal{L}^{-1}\left\{\frac{1}{s^{2}}-\frac{1}{s^{2}+1}+\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}-2\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}\right\} \\
+&=\mathcal{L}^{-1}\left\{\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right\}+\mathcal{L}^{-1}\left\{\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}\right\}-2 \mathcal{L}^{-1}\left\{\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}\right\} \\
+&=(t-\sin t)+[(t-2)-\sin (t-2)] H(t-2)-2[(t-1)-\sin (t-1)] H(t-1)
+\end{aligned}
+
+\subsection*{Problem 22}
+\label{sec:org8f83004}
+
+\subsubsection*{Statement}
+\label{sec:org9b4242a}
+    \begin{equation}
+f(t)=t e^{a t}
+\end{equation}
+
+\subsubsection*{Solution}
+\label{sec:org796b262}
+The Laplace transform of a function \(f(t)\) is defined here as
+$$
+F(s)=\mathcal{L}\{f(t)\}=\int_{0}^{\infty} e^{-s t} f(t) d t
+$$
+
+Substitute the given function and evaluate the integral.
+
+\begin{aligned}
+F(s) &=\int_{0}^{\infty} e^{-s t} t e^{a t} d t \\
+&=\int_{0}^{\infty}\left(-\frac{\partial}{\partial s} e^{-s t}\right) e^{a t} d t \\
+&=-\frac{d}{d s} \int_{0}^{\infty} e^{-s t} e^{a t} d t \\
+&=-\frac{d}{d s} \int_{0}^{\infty} e^{(a-s) t} d t \\
+&=-\frac{d}{d s}\left[\left.\frac{1}{a-s} e^{(a-s) t}\right|_{0} ^{\infty}\right] \\
+&=-\frac{d}{d s}\left(\frac{1}{s-a}\right) \\
+&=-\left[-\frac{1}{(s-a)^{2}}\right] \\
+&=\frac{1}{(s-a)^{2}}
+\end{aligned}
+
+\section*{Section 6.3}
+\label{sec:orgb756aa9}
+
+\subsection*{Problem 7}
+\label{sec:orgba2494b}
+
+\subsubsection*{Statement}
+\label{sec:org33454a8}
+   \begin{equation*}
+f(t)=\left\{\begin{array}{ll}
+1, & 0 \leq t<2 \\
+e^{-(t-2)}, & t \geq 2
+\end{array}\right.
+\end{equation*}
+
+\subsubsection*{Solution}
+\label{sec:orgbe64809}
+Write \(f(t)\) in terms of the Heaviside function, \(H(t)\), which is defined to be 1 if \(t>0\) and 0 if \(t<0\).
+
+\begin{aligned}
+f(t) &=1[H(t)-H(t-2)]+e^{-(t-2)} H(t-2) \\
+&=H(t)+\left[e^{-(t-2)}-1\right] H(t-2) \\
+&=u_{0}(t)+\left[e^{-(t-2)}-1\right] u_{2}(t)
+\end{aligned}
+
+\subsection*{Problem 13}
+\label{sec:org891e599}
+
+\subsubsection*{Statement}
+\label{sec:org56c2633}
+    \begin{equation*}
+F(s)=\frac{3 !}{(s-2)^{4}}
+\end{equation*}
+
+\subsubsection*{Solution}
+\label{sec:org525da65}
+    Apply the two transforms,
+$$
+\mathcal{L}\left\{t^{n}\right\}=\frac{n !}{s^{n+1}} \quad \text { and } \quad \mathcal{L}\left\{e^{c t} f(t)\right\}=F(s-c),
+$$
+together to solve this problem.
+
+\begin{aligned}
+f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
+&=\mathcal{L}^{-1}\left\{\frac{3 !}{(s-2)^{4}}\right\} \\
+&=t^{3} e^{2 t}
+\end{aligned}
+
+\subsection*{Problem 16}
+\label{sec:orge4fc172}
+
+\subsubsection*{Statement}
+\label{sec:org6e17d24}
+    \begin{equation*}
+F(s)=\frac{e^{-s}+e^{-2 s}-e^{-3 s}-e^{-4 s}}{s}
+\end{equation*}
+
+\subsubsection*{Solution}
+\label{sec:orgd35ece9}
+    Apply the two transforms,
+$$
+\mathcal{L}\left\{t^{n}\right\}=\frac{n !}{s^{n+1}} \quad \text { and } \quad \mathcal{L}\{f(t-c) H(t-c)\}=F(s) e^{-c s}
+$$
+together to solve this problem.
+
+\begin{aligned}
+f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
+&=\mathcal{L}^{-1}\left\{\frac{e^{-s}+e^{-2 s}-e^{-3 s}-e^{-4 s}}{s}\right\} \\
+&=\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-s}\right\}+\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-2 s}\right\}-\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-3 s}\right\}-\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-4 s}\right\} \\
+&=(t-1)^{0} H(t-1)+(t-2)^{0} H(t-2)-(t-3)^{0} H(t-3)-(t-4)^{0} H(t-4) \\
+&=H(t-1)+H(t-2)-H(t-3)-H(t-4) \\
+&=u_{1}(t)+u_{2}(t)-u_{3}(t)-u_{4}(t)
+\end{aligned}
+
+\subsection*{Problem 20}
+\label{sec:orgdf632e1}
+
+\subsubsection*{Statement}
+\label{sec:org04e6331}
+    \begin{equation*}
+F(s)=\frac{1}{9 s^{2}-12 s+3}
+\end{equation*}
+
+\subsubsection*{Solution}
+\label{sec:org41a911d}
+    Observe that the denominator can be written in terms of \(3 s\).
+$$
+F(s)=\frac{1}{(3 s)^{2}-4(3 s)+3}
+$$
+Factor the denominator.
+$$
+F(s)=\frac{1}{[(3 s)-1][(3 s)-3]}
+$$
+Partially decompose the fraction.
+$$
+F(s)=\frac{-\frac{1}{2}}{(3 s)-1}+\frac{\frac{1}{2}}{(3 s)-3}
+$$
+Apply the two transforms,
+$$
+\mathcal{L}\left\{e^{a t}\right\}=\frac{1}{s-a} \quad \text { and } \quad F(k s)=\mathcal{L}\left\{\frac{1}{k} f\left(\frac{t}{k}\right)\right\},
+$$
+together to get \(f(t)\)
+
+\begin{aligned}
+f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
+&=-\frac{1}{2}\left(\frac{1}{3} e^{t / 3}\right)+\frac{1}{2}\left(\frac{1}{3} e^{3 t / 3}\right) \\
+&=-\frac{1}{6} e^{t / 3}+\frac{1}{6} e^{t} \\
+&=\frac{1}{6}\left(e^{t}-e^{t / 3}\right)
+\end{aligned}
+
+\section*{Section 6.4}
+\label{sec:org23d19bf}
+
+\subsection*{Problem 1}
+\label{sec:org947316c}
+
+\subsubsection*{Statement}
+\label{sec:org5f411db}
+    \begin{equation*}
+y^{\prime \prime}+y=f(t) ; \quad y(0)=0, \quad y^{\prime}(0)=1 ; \quad f(t)=\left\{\begin{array}{ll}
+1, & 0 \leq t<3 \pi \\
+0, & 3 \pi \leq t<\infty
+\end{array}\right.
+\end{equation*}
+
+\subsubsection*{Solution}
+\label{sec:orgc4cd403}
+    Because the ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function \(y(t)\) is defined here as
+$$
+Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t
+$$
+Consequently, the first and second derivatives transform as follows.
+Apply the Laplace transform to both sides of the ODE.
+$$
+\mathcal{L}\left\{y^{\prime \prime}+y\right\}=\mathcal{L}\{f(t)\}
+$$
+Use the fact that the transform is a linear operator.
+
+\begin{array}{c}
+\mathcal{L}\left\{y^{\prime \prime}\right\}+\mathcal{L}\{y\}=\mathcal{L}\{f(t)\} \\
+{\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]+Y(s)=\int_{0}^{3 \pi} e^{-s t}(1) d t+\int_{3 \pi}^{\infty} e^{-s t}(0) d t}
+\end{array}
+
+Plug in the initial conditions, \(y(0)=0\) and \(y^{\prime}(0)=1\).
+$$
+\left[s^{2} Y(s)-1\right]+Y(s)=\int_{0}^{3 \pi} e^{-s t} d t
+$$
+
+As a result of applying the Laplace transform, the ODE has reduced to an algebraic equation for \(Y\), the transformed solution.
+
+\begin{array}{c}
+\left(s^{2}+1\right) Y(s)-1=\left.\left(-\frac{1}{s} e^{-s t}\right)\right|_{0} ^{3 \pi} \\
+\left(s^{2}+1\right) Y(s)=\frac{1}{s}-\frac{1}{s} e^{-3 \pi s}+1 \\
+Y(s)=\frac{1}{s\left(s^{2}+1\right)}-\frac{1}{s\left(s^{2}+1\right)} e^{-3 \pi s}+\frac{1}{s^{2}+1} \\
+=\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right)-\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right) e^{-3 \pi s}+\frac{1}{s^{2}+1}
+\end{array}
+
+Take the inverse Laplace transform of \(Y(s)\) now to get \(y(t)\).
+
+\begin{aligned}
+y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
+&=\mathcal{L}^{-1}\left\{\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right)-\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right) e^{-3 \pi s}+\frac{1}{s^{2}+1}\right\} \\
+&=(1-\cos t)-[1-\cos (t-3 \pi)] H(t-3 \pi)+\sin t \\
+&=1+\sin t-\cos t-[1-\cos (t-\pi)] H(t-3 \pi) \\
+&=1+\sin t-\cos t-(1+\cos t) H(t-3 \pi) \\
+&=1+\sin t-\cos t-(1+\cos t) u_{3 \pi}(t)
+\end{aligned}
+
+
+
+\subsection*{Problem 2}
+\label{sec:orgbd8c5be}
+
+\subsubsection*{Solution}
+\label{sec:org1b6b00a}
+
+Evaluate the inverse Laplace transforms.
+
+In order to write \(Y(s)\) in terms of known transforms, use partial fraction decomposition.
+$$
+\frac{1}{s\left(s^{2}+2 s+2\right)}=\frac{A}{s}+\frac{B s+C}{s^{2}+2 s+2}
+$$
+Multiply both sides by \(s\left(s^{2}+2 s+2\right)\).
+$$
+1=A\left(s^{2}+2 s+2\right)+(B s+C) s
+$$
+Plug in three random values of \(s\) to get a system of three equations for \(A, B\), and \$C .\$
+
+\begin{array}{ll}
+s=0: & 1=2 A \\
+s=1: & 1=5 A+B+C \\
+s=2: & 1=10 A+4 B+2 C
+\end{array}
+
+Solving this system yields \(A=1 / 2, B=-1 / 2\), and \(C=-1\).
+$$
+Y(s)=\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+2}\right) e^{-\pi s}-\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+2}\right) e^{-2 \pi s}+\frac{1}{s^{2}+2 s+2}
+$$
+Complete the square in the denominators.
+
+\begin{aligned}
+Y(s) &=\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+1+2-1}\right) e^{-\pi s}-\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+1+2-1}\right) e^{-2 \pi s}+\frac{1}{s^{2}+2 s+1+2-1} \\
+&=\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{(s+1)^{2}+1}\right] e^{-\pi s}-\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}
+\end{aligned}
+
+Make it so that \(s+1\) appears in the numerators.
+
+\begin{aligned}
+Y(s)=&\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2}(s+1)-\frac{1}{2}}{(s+1)^{2}+1}\right] e^{-\pi s}-\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2}(s+1)-\frac{1}{2}}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1} \\
+=&\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s} \\
+&-\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}
+\end{aligned}
+
+Take the inverse Laplace transform of \(Y(s)\) now to get \(y(t)\).
+$$
+y(t)=\mathcal{L}^{-1}\{Y(s)\}
+$$
+
+
+\begin{aligned}
+=\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}\right.\right.&\left.-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s} \\
+&\left.-\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}\right\} \\
+=\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}-\right.\right.&\left.\left.\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s}\right\} \\
+&-\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}\right\}+\mathcal{L}^{-1}\left\{\frac{1}{(s+1)^{2}+1}\right\}
+\end{aligned}
+
+\begin{aligned}
+y(t)=&\left[\frac{1}{2}-\frac{1}{2} e^{-(t-\pi)} \cos (t-\pi)-\frac{1}{2} e^{-(t-\pi)} \sin (t-\pi)\right] H(t-\pi) \\
+-\left[\frac{1}{2}-\frac{1}{2} e^{-(t-2 \pi)} \cos (t-2 \pi)-\frac{1}{2} e^{-(t-2 \pi)} \sin (t-2 \pi)\right] H(t-2 \pi)+e^{-t} \sin t \\
+=&\left(\frac{1}{2}+\frac{1}{2} e^{\pi-t} \cos t+\frac{1}{2} e^{\pi-t} \sin t\right) H(t-\pi) \\
+\quad-\left(\frac{1}{2}-\frac{1}{2} e^{2 \pi-t} \cos t-\frac{1}{2} e^{2 \pi-t} \sin t\right) H(t-2 \pi)+e^{-t} \sin t \\
+=\frac{1}{2}\left(1+e^{\pi-t} \cos t+e^{\pi-t} \sin t\right) H(t-\pi) \\
+-\frac{1}{2}\left(1-e^{2 \pi-t} \cos t-e^{2 \pi-t} \sin t\right) H(t-2 \pi)+e^{-t} \sin t
+\end{aligned}
+
+Therefore,
+$$
+y(t)=\frac{1}{2}\left(1+e^{\pi-t} \cos t+e^{\pi-t} \sin t\right) u_{\pi}(t)-\frac{1}{2}\left(1-e^{2 \pi-t} \cos t-e^{2 \pi-t} \sin t\right) u_{2 \pi}(t)+e^{-t} \sin t
+$$  
+\end{document}
