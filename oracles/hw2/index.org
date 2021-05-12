@@ -13,6 +13,8 @@
 #+date: 52; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+Go back to the [[../../][home page]]
+
 [[./index.pdf][[View the PDF version]​]]
 
 * Chapter 2.1

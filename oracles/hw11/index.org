@@ -13,6 +13,8 @@
 #+date: 128; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+Go back to the [[../../][home page]]
+
 [[./index.pdf][[View the PDF version]​]]
 
 Solution to these problems are provided by STEM Jock.
