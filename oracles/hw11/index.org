@@ -43,7 +43,7 @@ $$
 f(t)=\frac{2}{5} e^{t}-\frac{2}{5} e^{-4 t}
 $$
 
-** Problem 11
+** Problem 11 [FOR GRADE]
    
 *** Statement
  $$
@@ -226,7 +226,7 @@ f(t) &=1[H(t)-H(t-2)]+e^{-(t-2)} H(t-2) \\
 &=u_{0}(t)+\left[e^{-(t-2)}-1\right] u_{2}(t)
 \end{aligned}
 
-** Problem 13
+** Problem 13 [FOR GRADE]
    
 *** Statement
     \begin{equation*}
@@ -304,7 +304,7 @@ f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
 
 * Section 6.4
   
-** Problem 1
+** Problem 1 [FOR GRADE]
 
 *** Statement
     \begin{equation*}
