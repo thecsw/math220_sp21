@@ -342,7 +342,7 @@ Since $W\left(y_{4}, y_{5}\right)=0, y_{4}$ and $y_{5}$ do not form a fundamenta
 \begin{align*}
 	\left(P(x) y^{\prime}\right)^{\prime}+(f(x) y)^{\prime}=0
 \end{align*}
-where $f(x)$ is to be determined in terms of $P(x), Q(x),$ and $R(x)$ The latter equation can be integrated once immediately, resulting in a first-order linear equation for $y$ that can be solved as in Section 2.1. By equating the coefficients of the preceding equations and then eliminating $f(x)$, show that a necessary condition for exactness is
+where $f(x)$ is to be determined in terms of $P(x), Q(x)$, and $R(x)$ The latter equation can be integrated once immediately, resulting in a first-order linear equation for $y$ that can be solved as in Section 2.1. By equating the coefficients of the preceding equations and then eliminating $f(x)$, show that a necessary condition for exactness is
 \begin{align*}
 	P^{\prime \prime}(x)-Q^{\prime}(x)+R(x)=0
 \end{align*}
