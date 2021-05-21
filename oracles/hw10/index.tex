@@ -1,0 +1,274 @@
+% Created 2021-05-20 Thu 22:11
+% Intended LaTeX compiler: xelatex
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage[margin=1in]{geometry}
+\usepackage{marginnote}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{epsf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{hyperref}
+
+\usepackage{beton}
+\usepackage{euler}
+\usepackage[OT1]{fontenc}
+
+\usepackage{textgreek}
+\renewcommand*{\textgreekfontmap}{%
+{phv/*/*}{LGR/neohellenic/*/*}%
+{*/b/n}{LGR/artemisia/b/n}%
+{*/bx/n}{LGR/artemisia/bx/n}%
+{*/*/n}{LGR/artemisia/m/n}%
+{*/b/it}{LGR/artemisia/b/it}%
+{*/bx/it}{LGR/artemisia/bx/it}%
+{*/*/it}{LGR/artemisia/m/it}%
+{*/b/sl}{LGR/artemisia/b/sl}%
+{*/bx/sl}{LGR/artemisia/bx/sl}%
+{*/*/sl}{LGR/artemisia/m/sl}%
+{*/*/sc}{LGR/artemisia/m/sc}%
+{*/*/sco}{LGR/artemisia/m/sco}%
+}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+#1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\left\lVert}{\right\rVert}
+\DeclarePairedDelimiter{\ceil}{\left\lceil}{\right\rceil}
+\DeclarePairedDelimiter{\floor}{\left\lfloor}{\right\rfloor}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+\def\noi{\noindent}
+\onehalfspace
+\usemintedstyle{bw}
+\author{Sandy Urazayev\thanks{University of Kansas (ctu@ku.edu)}}
+\date{140; 12021 H.E.}
+\title{Homework 10 Oracle\\\medskip
+\large MATH 220 Spring 2021}
+\hypersetup{
+ pdfauthor={Sandy Urazayev},
+ pdftitle={Homework 10 Oracle},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.0.50 (Org mode 9.4.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+Go back to the \href{../../}{home page}
+
+\href{./index.pdf}{[View the PDF version]​}
+
+Hi, this is the last oracle published (homework 11 was published first because
+it had material used in the final exam). Instead of detailed solutions, we shall
+limit ourselves to just answers in this oracle. Thanks
+
+\section*{Section 7.8}
+\label{sec:orgb1869a7}
+\subsection*{Problem 1}
+\label{sec:orgcef2791}
+\subsubsection*{Statement}
+\label{sec:org7f08198}
+   \begin{equation*}
+\mathbf{x}^{\prime}=\left(\begin{array}{ll}
+3 & -4 \\
+1 & -1
+\end{array}\right) \mathbf{x}
+\end{equation*}
+\subsubsection*{Answer}
+\label{sec:orge091854}
+    \begin{equation*}
+\mathbf{x}=c_{1}\left(\begin{array}{l}
+2 \\
+1
+\end{array}\right) e^{t}+c_{2}\left(\left(\begin{array}{l}
+2 \\
+1
+\end{array}\right) t e^{t}+\left(\begin{array}{l}
+1 \\
+0
+\end{array}\right) e^{t}\right)
+\end{equation*}
+\subsection*{Problem 3}
+\label{sec:orgad8a7a7}
+\subsubsection*{Statement}
+\label{sec:org3c9cc27}
+    \begin{equation*}
+\mathbf{x}^{\prime}=\left(\begin{array}{rr}
+-\frac{3}{2} & 1 \\
+-\frac{1}{4} & -\frac{1}{2}
+\end{array}\right) \mathbf{x}
+\end{equation*}
+\subsubsection*{Answer}
+\label{sec:orgbbc0841}
+    \begin{equation*}
+\mathbf{x}=c_{1}\left(\begin{array}{l}
+2 \\
+1
+\end{array}\right) e^{-t}+c_{2}\left(\left(\begin{array}{l}
+2 \\
+1
+\end{array}\right) t e^{-t}+\left(\begin{array}{l}
+0 \\
+2
+\end{array}\right) e^{-t}\right)
+\end{equation*}
+\subsection*{Problem 8 (this is graded)}
+\label{sec:orgc904d2e}
+\subsubsection*{Statement}
+\label{sec:org36a043d}
+    \begin{equation*}
+\mathbf{x}^{\prime}=\left(\begin{array}{rr}
+3 & 9 \\
+-1 & -3
+\end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{l}
+2 \\
+4
+\end{array}\right)
+\end{equation*}
+\subsubsection*{Answer}
+\label{sec:orgc9fc5c5}
+    \begin{equation*}
+\mathbf{x}=2\left(\begin{array}{l}
+1 \\
+2
+\end{array}\right)+14\left(\begin{array}{r}
+3 \\
+-1
+\end{array}\right) t
+\end{equation*}
+\subsection*{Problem 9(a)}
+\label{sec:org2212a7d}
+\subsubsection*{Statement}
+\label{sec:org08252c5}
+    \begin{equation*}
+\mathbf{x}^{\prime}=\left(\begin{array}{rrr}
+1 & 0 & 0 \\
+-4 & 1 & 0 \\
+3 & 6 & 2
+\end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{r}
+-1 \\
+2 \\
+-30
+\end{array}\right)
+\end{equation*}
+\subsubsection*{Answer}
+\label{sec:org52c5962}
+    \begin{equation*}
+\mathbf{x}=\left(\begin{array}{r}
+-1 \\
+2 \\
+-33
+\end{array}\right) e^{t}+4\left(\begin{array}{r}
+0 \\
+1 \\
+-6
+\end{array}\right) t e^{t}+3\left(\begin{array}{l}
+0 \\
+0 \\
+1
+\end{array}\right) e^{2 t}
+\end{equation*}
+\subsection*{Problem 10(a)}
+\label{sec:orgb35580f}
+\subsubsection*{Statement}
+\label{sec:org879ca54}
+    \begin{equation*}
+\mathbf{x}^{\prime}=\left(\begin{array}{rrr}
+-\frac{5}{2} & 1 & 1 \\
+1 & -\frac{5}{2} & 1 \\
+1 & 1 & -\frac{5}{2}
+\end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{r}
+2 \\
+3 \\
+-1
+\end{array}\right)
+\end{equation*}
+\subsubsection*{Answer}
+\label{sec:orgec5e0a7}
+\begin{equation*}
+\mathbf{x}=\frac{4}{3}\left(\begin{array}{l}
+1 \\
+1 \\
+1
+\end{array}\right) e^{-t / 2}+\frac{1}{3}\left(\begin{array}{r}
+2 \\
+5 \\
+-7
+\end{array}\right) e^{-7 t / 2}
+\end{equation*}
+\section*{Section 6.1}
+\label{sec:orgf00a6b1}
+\subsection*{Problem 5}
+\label{sec:org8b20d24}
+\subsubsection*{Statement}
+\label{sec:org2226b4a}
+Find the Laplace transform of \(f(t)=\cos (a t)\), where \(a\) is a real
+constant.
+Recall that
+\begin{equation*}
+\cosh (b t)=\frac{1}{2}\left(e^{b t}+e^{-b t}\right) \text { and } \sinh (b t)=\frac{1}{2}\left(e^{b t}-e^{-b t}\right)
+\end{equation*}
+\subsubsection*{Answer}
+\label{sec:org88fe813}
+    \begin{equation*}
+F(s)=\frac{s}{s^{2}+a^{2}}, \quad s>0
+\end{equation*}
+\subsection*{Problem 7 (this is graded)}
+\label{sec:org2af9fd1}
+\subsubsection*{Statement}
+\label{sec:org80e0e8e}
+In each of Problems 6 through 7, use the linearity of the Laplace transform to
+find the Laplace transform of the given function; \(a\) and \(b\) are real
+constants. 
+
+    \begin{equation*}
+f(t)=\sinh (b t)
+\end{equation*}
+\subsubsection*{Answer}
+\label{sec:org795b8fd}
+    \begin{equation*}
+F(s)=\frac{b}{s^{2}-b^{2}}, \quad s>|b|
+\end{equation*}
+\subsection*{Problem 12}
+\label{sec:org27c5a6e}
+\subsubsection*{Statement}
+\label{sec:org78b8dfc}
+In each of Problems 12 through 15, use integration by parts to find the Laplace
+transform of the given function; \(n\) is a positive integer and \(a\) is a real
+constant 
+
+    \begin{equation*}
+f(t)=t e^{a t}
+\end{equation*}
+\subsubsection*{Answer}
+\label{sec:org5cac3a9}
+    \begin{equation*}
+F(s)=\frac{1}{(s-a)^{2}}, \quad s>a
+\end{equation*}
+\end{document}
