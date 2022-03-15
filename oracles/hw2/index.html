@@ -92,136 +92,80 @@
 <div class="sectionbody"></div>
 <div class="sect2">
 <h3 id="_problem_13">Problem 13</h3>
-<div class="sectionbody">
-<hr>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="./13.png"><img src="./13.png" alt="image"></a>
-</div>
-<div class="title">image</div>
-</div>
-<hr></div>
+<div class="sectionbody"></div>
 <div class="sect3">
 <h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As $t$ gets infinitely large, it simply oscillates in an inverse cosine fashion. $a$ does give the function an initial starting point, to which it starts oscillating from. That would probably be $a + \pi$ because $2cos(t)$ changes its behaviour every $\pi$ revolution. </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_b">Part b</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This is a first-order linear differential equation of the form $y’ + p(t) y = q(t)$. Find $\mu(t) = e^{\int{-\frac{1}{2}}}$ and then solve $\frac{d}{dt}(\mu(t)y) = q(t) \mu(t)$ $\implies y = \frac{\int q(t) \mu(t) dt}{\mu(t)}$. You should get \begin{equation*} y(t) = ce^{t/2}+\frac{8}{5}\sin(t)-\frac{4}{5}\cos(t) \end{equation*} Then solving for $y(0)$ and $c$, we have the full solution to be \begin{equation*} y(t) = (a+\frac{4}{5}e^{t/2})+\frac{8}{5}\sin(t)-\frac{4}{5}\cos(t) \end{equation*} </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_c">Part c</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>$y$ oscillates for $a=a_0$ </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect2">
 <h3 id="_problem_15__for_grade_">Problem 15 [FOR GRADE]</h3>
 <div class="sectionbody"></div>
 <div class="sect3">
 <h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This is again, a first-order linear differential equation, so we do our $\mu$ and integration from both sides trick. Recognize that we have to divide everything by $t$, so that our lead $y’$ doesn’t have a coefficient and the method for solving this type of equations is applicable. \begin{equation*} ty’+(t+1)y = 2 t e^{-t} \iff y’ + (\frac{t+1}{t})y = 2 e^{-t} \end{equation*} After cleaning it up, the actual solution process becomes more or less trivial, $\mu(t) = e^{\int{\frac{t+1}{t}}} = te^t$. Then we find for $t&gt;0$ \begin{equation*} y(t) = \frac{ce^{-t}}{t} + e^{-t}t \end{equation*} Applying $y(1) = a$, then we get \begin{equation*} y(t) = te^{-t} + \frac{(ea-1)e^{-t}}{t} \end{equation*} We need $ea-1$ to be equal to zero, then $a_0 = \frac{1}{e}$ </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_c">Part c</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As $t \to 0$, then $y \to 0$. </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect2">
 <h3 id="_problem_17__for_grade_">Problem 17 [FOR GRADE]</h3>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Recall the solution to Problem 13. We need to swap the sign on $p(t)$ and update the initial value constant solution. We will get \begin{equation*} y(t) = -\frac{9}{5}e^{t/2}+\frac{8}{5}\sin(t)+\frac{4}{5}\cos(t) \end{equation*} Set the derivative of $y$ to $0$ and solve for $t$. \begin{equation*} 0 = -\frac{9}{5}\times (-\frac{1}{2}) \times e^{t/2}+\frac{8}{5}\cos(t)-\frac{4}{5}\sin(t) \end{equation*} You can check the nature of the point by taking $y’’$. Finally, we find that the local maximum is at $(t, y) = (1.36, 0.82)$. Better approximated values are accepted. </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect2">
 <h3 id="_problem_20">Problem 20</h3>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The solution process is similar to the problem of 17, you should get a general solution for $y$: \begin{equation*} y = -1 - \frac{3}{2}(\sin t + \cos t) + C e^t \end{equation*} where $C$ is a constant. Solving $y(0) = y_0$ for $y_0$ yields that $C = y_0 + \frac{5}{2}$ so then the solution is $y_0 = -\frac{5}{2}$. </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect2">
 <h3 id="_problem_28">Problem 28</h3>
 <div class="sectionbody"></div>
 <div class="sect3">
 <h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Recall the form $y’ + p(t) y = g(t)$ and solution form of \begin{equation*} \frac{d}{dt}(\mu(t)y) = g(t) \mu(t) \end{equation*} Then if $g(t)=0$, solution is $y = A e^{-\int{p(t)dt}}$ </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_b">Part b</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Simply substitute (50) into (48), perform some trivial Chain Rule and confirm that \begin{equation*} A’(t) = g(t) \exp\left(\int p(t) dt\right) \end{equation*} </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_c">Part c</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Substitution is mechanical. Prove that variation of parameters works. </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect1">
 <h2 id="_chapter_2_2">Chapter 2.2</h2>
 <div class="sectionbody"></div>
 <div class="sect2">
 <h3 id="_problem_1">Problem 1</h3>
-<div class="sectionbody">
-<div class="paragraph">
-<p>\begin{equation*} \frac{dy}{dx} = \frac{x^2}{y} \end{equation*} then \begin{equation*} \int y dy = \int x^2 dx \end{equation*} So the solution is \begin{equation*} 3y^2-2x^3=C \end{equation*} It’s OK to leave the solution implicitly here, otherwise, the explicit solution for $y$ can be very nasty. </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect2">
 <h3 id="_problem_7">Problem 7</h3>
-<div class="sectionbody">
-<div class="paragraph">
-<p>\begin{equation*} \frac{dy}{dx} = \frac{y}{x} \end{equation*} then \begin{equation*} \int \frac{dy}{y} = \int \frac{dx}{x} \end{equation*} Then \begin{equation*} \ln(y) = ln(x) + ln(C) = ln(C\times x) \end{equation*} $C$ is any constant, then $\ln(C)$ is also a constant. Finally, $y = Cx$ </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect2">
 <h3 id="_problem_8__for_grade_">Problem 8 [FOR GRADE]</h3>
-<div class="sectionbody">
-<div class="paragraph">
-<p>\begin{equation*} \frac{dy}{dx} = \frac{-x}{y} \end{equation*} then \begin{equation*} \int y dy = - \int x dx \end{equation*} Therefore \begin{equation*} y^2 + x^2 = C \end{equation*} It’s fine if you wrote $y = \pm \sqrt{C - x^2}$ </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect2">
 <h3 id="_problem_21">Problem 21</h3>
-<div class="sectionbody">
-<div class="paragraph">
-<p>\begin{equation*} y’ = \frac{ty(4-y)}{3}, \quad y(0) = y_0 \end{equation*} </p>
-</div></div>
+<div class="sectionbody"></div>
 <div class="sect3">
 <h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As $t \to \infty$, then $y \to 4$ </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_b">Part b</h4>
 <div class="sectionbody">
 <div class="paragraph">
 <p>First, you will have to solve the system, which is a first-order separable ordinary differential equation.  The implicit solution is \begin{equation*} \frac{3}{4} \ln(\frac{4}{4-5}) = \frac{t^2}{2} + C \end{equation*} where $C = \frac{3}{4} \ln(\frac{y_0}{4-y_0})$. </p>
-</div>
-<div class="paragraph">
-<p>Solve for $t$, so \begin{equation*} t = \sqrt{\frac{3}{2} \ln\left(\frac{y(4-y_0)}{y_0(4-y)}\right)} \end{equation*} Use $y = 3.98$ and $y_0 = 0.5$, then $t \approx 3.29527$. </p>
 </div></div>
 </div>
 <div class="sect2">
@@ -229,38 +173,23 @@
 <div class="sectionbody"></div>
 <div class="sect3">
 <h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Simple divide both the numerator and the denominator by $x$. </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_b">Part b</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You should get \begin{equation*} \frac{dy}{dx} = v + x \frac{dv}{dx} \end{equation*} </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_c">Part c</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This is simply to show. </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_d">Part d</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Yet another separable equation, you should get the implicit solution \begin{equation*} x^4 \left| 2 - v \right| \left| v + 2 \right|^3 = C \end{equation*} </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_e">Part e</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Rearrange to get \begin{equation*} |y+2x|^3 |2x-y| = C \end{equation*} </p>
-</div></div>
+<div class="sectionbody"></div>
 </div>
 <div class="sect3">
 <h4 id="_part_f">Part f</h4>
