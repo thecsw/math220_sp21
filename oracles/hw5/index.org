@@ -233,7 +233,6 @@ y_{4}^{\prime \prime}-y_{4}^{\prime}-2 y_{4} \stackrel{?}{=} 0 \\
 e^{-^{\ell}}+8 e^{2 t}+e^{-}-4 e^{2 t}-2 e^{-}-4 e^{2 t} \stackrel{?}{=} 0 \\
 0=0
 \end{array}
-
   \end{align*}
 
 Now check that $y_{5}=2 y_{1}(t)-2 y_{3}(t)=2 e^{-t}-2\left(-2 e^{2 t}\right)=2
