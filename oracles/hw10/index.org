@@ -13,24 +13,26 @@
 #+date: 140; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+* Homework 10 Oracle
+
 Go back to the [[../../][home page]]
 
-[[./index.pdf][[View the PDF version]​]]
+[[./index.pdf][View the PDF version​]]
 
 Hi, this is the last oracle published (homework 11 was published first because
 it had material used in the final exam). Instead of detailed solutions, we shall
 limit ourselves to just answers in this oracle. Thanks
 
-* Section 7.8
-** Problem 1
-*** Statement
+** Section 7.8
+*** Problem 1
+**** Statement
     \begin{equation*}
  \mathbf{x}^{\prime}=\left(\begin{array}{ll}
  3 & -4 \\
  1 & -1
  \end{array}\right) \mathbf{x}
  \end{equation*}
-*** Answer
+**** Answer
     \begin{equation*}
 \mathbf{x}=c_{1}\left(\begin{array}{l}
 2 \\
@@ -43,15 +45,15 @@ limit ourselves to just answers in this oracle. Thanks
 0
 \end{array}\right) e^{t}\right)
 \end{equation*}
-** Problem 3
-*** Statement
+*** Problem 3
+**** Statement
     \begin{equation*}
 \mathbf{x}^{\prime}=\left(\begin{array}{rr}
 -\frac{3}{2} & 1 \\
 -\frac{1}{4} & -\frac{1}{2}
 \end{array}\right) \mathbf{x}
 \end{equation*}
-*** Answer
+**** Answer
     \begin{equation*}
 \mathbf{x}=c_{1}\left(\begin{array}{l}
 2 \\
@@ -64,8 +66,8 @@ limit ourselves to just answers in this oracle. Thanks
 2
 \end{array}\right) e^{-t}\right)
 \end{equation*}
-** Problem 8 (this is graded)
-*** Statement
+*** Problem 8 (this is graded)
+**** Statement
     \begin{equation*}
 \mathbf{x}^{\prime}=\left(\begin{array}{rr}
 3 & 9 \\
@@ -75,7 +77,7 @@ limit ourselves to just answers in this oracle. Thanks
 4
 \end{array}\right)
 \end{equation*}
-*** Answer
+**** Answer
     \begin{equation*}
 \mathbf{x}=2\left(\begin{array}{l}
 1 \\
@@ -85,8 +87,8 @@ limit ourselves to just answers in this oracle. Thanks
 -1
 \end{array}\right) t
 \end{equation*}
-** Problem 9(a)
-*** Statement
+*** Problem 9(a)
+**** Statement
     \begin{equation*}
 \mathbf{x}^{\prime}=\left(\begin{array}{rrr}
 1 & 0 & 0 \\
@@ -98,7 +100,7 @@ limit ourselves to just answers in this oracle. Thanks
 -30
 \end{array}\right)
 \end{equation*}
-*** Answer
+**** Answer
     \begin{equation*}
 \mathbf{x}=\left(\begin{array}{r}
 -1 \\
@@ -114,8 +116,8 @@ limit ourselves to just answers in this oracle. Thanks
 1
 \end{array}\right) e^{2 t}
 \end{equation*}
-** Problem 10(a)
-*** Statement
+*** Problem 10(a)
+**** Statement
     \begin{equation*}
 \mathbf{x}^{\prime}=\left(\begin{array}{rrr}
 -\frac{5}{2} & 1 & 1 \\
@@ -127,7 +129,7 @@ limit ourselves to just answers in this oracle. Thanks
 -1
 \end{array}\right)
 \end{equation*}
-*** Answer
+**** Answer
 \begin{equation*}
 \mathbf{x}=\frac{4}{3}\left(\begin{array}{l}
 1 \\
@@ -139,21 +141,21 @@ limit ourselves to just answers in this oracle. Thanks
 -7
 \end{array}\right) e^{-7 t / 2}
 \end{equation*}
-* Section 6.1
-** Problem 5
-*** Statement
+** Section 6.1
+*** Problem 5
+**** Statement
 Find the Laplace transform of $f(t)=\cos (a t)$, where $a$ is a real
 constant.
 Recall that
 \begin{equation*}
 \cosh (b t)=\frac{1}{2}\left(e^{b t}+e^{-b t}\right) \text { and } \sinh (b t)=\frac{1}{2}\left(e^{b t}-e^{-b t}\right)
 \end{equation*}
-*** Answer
+**** Answer
     \begin{equation*}
 F(s)=\frac{s}{s^{2}+a^{2}}, \quad s>0
 \end{equation*}
-** Problem 7 (this is graded)
-*** Statement
+*** Problem 7 (this is graded)
+**** Statement
 In each of Problems 6 through 7, use the linearity of the Laplace transform to
 find the Laplace transform of the given function; $a$ and $b$ are real
 constants. 
@@ -161,12 +163,12 @@ constants.
     \begin{equation*}
 f(t)=\sinh (b t)
 \end{equation*}
-*** Answer
+**** Answer
     \begin{equation*}
 F(s)=\frac{b}{s^{2}-b^{2}}, \quad s>|b|
 \end{equation*}
-** Problem 12
-*** Statement
+*** Problem 12
+**** Statement
 In each of Problems 12 through 15, use integration by parts to find the Laplace
 transform of the given function; $n$ is a positive integer and $a$ is a real
 constant 
@@ -174,7 +176,7 @@ constant
     \begin{equation*}
 f(t)=t e^{a t}
 \end{equation*}
-*** Answer
+**** Answer
     \begin{equation*}
 F(s)=\frac{1}{(s-a)^{2}}, \quad s>a
 \end{equation*}

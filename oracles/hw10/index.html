@@ -1,537 +1,245 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2021-05-20 Thu 22:11 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://sandyuraz.com/math220_sp21/oracles/hw10" type=""/>
+<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type=""/>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" property="generator" content="Darkness">
+<meta name="author" property="author" content="email">
+<meta name="theme-color" property="theme-color" content="#fffff4">
+<meta name="description" property="description" content="Go back to the [[../../][home page]]...">
+<meta name="og:title" property="og:title" content="Homework 10 Oracle">
+<meta name="og:site_name" property="og:site_name" content="Ordinary Differential Equations">
+<meta name="og:url" property="og:url" content="https://sandyuraz.com/math220_sp21/oracles/hw10">
+<meta name="og:locale" property="og:locale" content="en_GB">
+<meta name="og:type" property="og:type" content="website">
+<meta name="og:image" property="og:image" content="https://sandyuraz.com/math220_sp21/oracles/hw10/preview.png">
+<meta name="og:image:alt" property="og:image:alt" content="Preview">
+<meta name="og:image:type" property="og:image:type" content="image/png">
+<meta name="og:image:width" property="og:image:width" content="1280">
+<meta name="og:image:height" property="og:image:height" content="640">
+<meta name="og:description" property="og:description" content="Go back to the [[../../][home page]]...">
+<meta name="twitter:card" property="twitter:card" content="summary_large_image">
+<meta name="twitter:site" property="twitter:site" content="Ordinary Differential Equations">
+<meta name="twitter:creator" property="twitter:creator" content="@sandyuraz">
+<meta name="twitter:image:src" property="twitter:image:src" content="https://sandyuraz.com/math220_sp21/oracles/hw10/preview.png">
+<meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw10">
+<meta name="twitter:title" property="twitter:title" content="Homework 10 Oracle">
+<meta name="twitter:description" property="twitter:description" content="Go back to the [[../../][home page]]...">
+
+<script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
+<script async src="https://sandyuraz.com/scripts/time.js"></script>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: true},
+              {left: '\\[', right: '\\]', display: false},
+              {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+              {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+              {left: "\\begin{align}", right: "\\end{align}", display: true},
+              {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+              {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+              {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+              {left: "\\begin{CD}", right: "\\end{CD}", display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
 <title>Homework 10 Oracle</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Sandy Urazayev" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
-<body>
+<link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/web.css">
+
+<body class="article">
+
+<div id="header">
+<h1><img id="myface" src="https://sandyuraz.com/math220_sp21/rei.png" width="112" height="112">Homework 10 Oracle</h1>
+<div class="details">
+<span id="author" class="author">email</span><br>
+<span id="email" class="email">ctu [at] ku [dot] edu</span><br>
+<span id="revdate">
+<a href="https://sandyuraz.com/math220_sp21/">Home 🏠</a></span>
+</div>
+<div id="hetime" class="details"></div>
+</div>
 <div id="content">
-<h1 class="title">Homework 10 Oracle
-<br />
-<span class="subtitle">MATH 220 Spring 2021</span>
-</h1>
-<p>
-Go back to the <a href="../../">home page</a>
-</p>
 
-<p>
-<a href="./index.pdf">[View the PDF version]​</a>
-</p>
+<div class="paragraph">
+<p>Go back to the <a href="../../">home page</a> </p>
+</div>
+<a href="./index.pdf">View the PDF version​</a>
+<div class="paragraph">
+<p>Hi, this is the last oracle published (homework 11 was published first because it had material used in the final exam). Instead of detailed solutions, we shall limit ourselves to just answers in this oracle. Thanks </p>
+</div>
+<div class="sect1">
+<h2 id="_section_7_8">Section 7.8</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_1">Problem 1</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}^{\prime}=\left(\begin{array}{ll} 3 &amp; -4 \\ 1 &amp; -1 \end{array}\right) \mathbf{x} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_answer">Answer</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}=c_{1}\left(\begin{array}{l} 2 \\ 1 \end{array}\right) e^{t}+c_{2}\left(\left(\begin{array}{l} 2 \\ 1 \end{array}\right) t e^{t}+\left(\begin{array}{l} 1 \\ 0 \end{array}\right) e^{t}\right) \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_3">Problem 3</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}^{\prime}=\left(\begin{array}{rr} -\frac{3}{2} &amp; 1 \\ -\frac{1}{4} &amp; -\frac{1}{2} \end{array}\right) \mathbf{x} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_answer">Answer</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}=c_{1}\left(\begin{array}{l} 2 \\ 1 \end{array}\right) e^{-t}+c_{2}\left(\left(\begin{array}{l} 2 \\ 1 \end{array}\right) t e^{-t}+\left(\begin{array}{l} 0 \\ 2 \end{array}\right) e^{-t}\right) \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_8__this_is_graded_">Problem 8 (this is graded)</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}^{\prime}=\left(\begin{array}{rr} 3 &amp; 9 \\ -1 &amp; -3 \end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{l} 2 \\ 4 \end{array}\right) \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_answer">Answer</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}=2\left(\begin{array}{l} 1 \\ 2 \end{array}\right)+14\left(\begin{array}{r} 3 \\ -1 \end{array}\right) t \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_9_a_">Problem 9(a)</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}^{\prime}=\left(\begin{array}{rrr} 1 &amp; 0 &amp; 0 \\ -4 &amp; 1 &amp; 0 \\ 3 &amp; 6 &amp; 2 \end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{r} -1 \\ 2 \\ -30 \end{array}\right) \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_answer">Answer</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}=\left(\begin{array}{r} -1 \\ 2 \\ -33 \end{array}\right) e^{t}+4\left(\begin{array}{r} 0 \\ 1 \\ -6 \end{array}\right) t e^{t}+3\left(\begin{array}{l} 0 \\ 0 \\ 1 \end{array}\right) e^{2 t} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_10_a_">Problem 10(a)</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}^{\prime}=\left(\begin{array}{rrr} -\frac{5}{2} &amp; 1 &amp; 1 \\ 1 &amp; -\frac{5}{2} &amp; 1 \\ 1 &amp; 1 &amp; -\frac{5}{2} \end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{r} 2 \\ 3 \\ -1 \end{array}\right) \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_answer">Answer</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} \mathbf{x}=\frac{4}{3}\left(\begin{array}{l} 1 \\ 1 \\ 1 \end{array}\right) e^{-t / 2}+\frac{1}{3}\left(\begin{array}{r} 2 \\ 5 \\ -7 \end{array}\right) e^{-7 t / 2} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect1">
+<h2 id="_section_6_1">Section 6.1</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_5">Problem 5</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Find the Laplace transform of $f(t)=\cos (a t)$, where $a$ is a real constant. Recall that \begin{equation*} \cosh (b t)=\frac{1}{2}\left(e^{b t}+e^{-b t}\right) \text { and } \sinh (b t)=\frac{1}{2}\left(e^{b t}-e^{-b t}\right) \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_answer">Answer</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} F(s)=\frac{s}{s^{2}+a^{2}}, \quad s&gt;0 \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_7__this_is_graded_">Problem 7 (this is graded)</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In each of Problems 6 through 7, use the linearity of the Laplace transform to find the Laplace transform of the given function; $a$ and $b$ are real constants. </p>
+</div>
+<div class="paragraph">
+<p>\begin{equation*} f(t)=\sinh (b t) \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_answer">Answer</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} F(s)=\frac{b}{s^{2}-b^{2}}, \quad s&gt;|b| \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_12">Problem 12</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In each of Problems 12 through 15, use integration by parts to find the Laplace transform of the given function; $n$ is a positive integer and $a$ is a real constant </p>
+</div>
+<div class="paragraph">
+<p>\begin{equation*} f(t)=t e^{a t} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_answer">Answer</h4>
+<div class="sectionbody">
+</div>
+<div class="paragraph">
+<p>\begin{equation*} F(s)=\frac{1}{(s-a)^{2}}, \quad s&gt;a \end{equation*} </p>
+</div>
+</div>
+</div>
 
-<p>
-Hi, this is the last oracle published (homework 11 was published first because
-it had material used in the final exam). Instead of detailed solutions, we shall
-limit ourselves to just answers in this oracle. Thanks
-</p>
-
-<div id="outline-container-org77a5ec1" class="outline-2">
-<h2 id="org77a5ec1">Section 7.8</h2>
-<div class="outline-text-2" id="text-org77a5ec1">
-</div>
-<div id="outline-container-orgebb2b4e" class="outline-3">
-<h3 id="orgebb2b4e">Problem 1</h3>
-<div class="outline-text-3" id="text-orgebb2b4e">
-</div>
-<div id="outline-container-orgf3c7568" class="outline-4">
-<h4 id="orgf3c7568">Statement</h4>
-<div class="outline-text-4" id="text-orgf3c7568">
-   \begin{equation*}
-\mathbf{x}^{\prime}=\left(\begin{array}{ll}
-3 & -4 \\
-1 & -1
-\end{array}\right) \mathbf{x}
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-org8896b09" class="outline-4">
-<h4 id="org8896b09">Answer</h4>
-<div class="outline-text-4" id="text-org8896b09">
-    \begin{equation*}
-\mathbf{x}=c_{1}\left(\begin{array}{l}
-2 \\
-1
-\end{array}\right) e^{t}+c_{2}\left(\left(\begin{array}{l}
-2 \\
-1
-\end{array}\right) t e^{t}+\left(\begin{array}{l}
-1 \\
-0
-\end{array}\right) e^{t}\right)
-\end{equation*}
-</div>
-</div>
-</div>
-<div id="outline-container-orgcb27863" class="outline-3">
-<h3 id="orgcb27863">Problem 3</h3>
-<div class="outline-text-3" id="text-orgcb27863">
-</div>
-<div id="outline-container-orgbbde2b4" class="outline-4">
-<h4 id="orgbbde2b4">Statement</h4>
-<div class="outline-text-4" id="text-orgbbde2b4">
-    \begin{equation*}
-\mathbf{x}^{\prime}=\left(\begin{array}{rr}
--\frac{3}{2} & 1 \\
--\frac{1}{4} & -\frac{1}{2}
-\end{array}\right) \mathbf{x}
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-orgd476872" class="outline-4">
-<h4 id="orgd476872">Answer</h4>
-<div class="outline-text-4" id="text-orgd476872">
-    \begin{equation*}
-\mathbf{x}=c_{1}\left(\begin{array}{l}
-2 \\
-1
-\end{array}\right) e^{-t}+c_{2}\left(\left(\begin{array}{l}
-2 \\
-1
-\end{array}\right) t e^{-t}+\left(\begin{array}{l}
-0 \\
-2
-\end{array}\right) e^{-t}\right)
-\end{equation*}
-</div>
-</div>
-</div>
-<div id="outline-container-orge60cc2d" class="outline-3">
-<h3 id="orge60cc2d">Problem 8 (this is graded)</h3>
-<div class="outline-text-3" id="text-orge60cc2d">
-</div>
-<div id="outline-container-orgab6c9b1" class="outline-4">
-<h4 id="orgab6c9b1">Statement</h4>
-<div class="outline-text-4" id="text-orgab6c9b1">
-    \begin{equation*}
-\mathbf{x}^{\prime}=\left(\begin{array}{rr}
-3 & 9 \\
--1 & -3
-\end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{l}
-2 \\
-4
-\end{array}\right)
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-org33e5311" class="outline-4">
-<h4 id="org33e5311">Answer</h4>
-<div class="outline-text-4" id="text-org33e5311">
-    \begin{equation*}
-\mathbf{x}=2\left(\begin{array}{l}
-1 \\
-2
-\end{array}\right)+14\left(\begin{array}{r}
-3 \\
--1
-\end{array}\right) t
-\end{equation*}
-</div>
-</div>
-</div>
-<div id="outline-container-orgbf6f993" class="outline-3">
-<h3 id="orgbf6f993">Problem 9(a)</h3>
-<div class="outline-text-3" id="text-orgbf6f993">
-</div>
-<div id="outline-container-org0ceea1a" class="outline-4">
-<h4 id="org0ceea1a">Statement</h4>
-<div class="outline-text-4" id="text-org0ceea1a">
-    \begin{equation*}
-\mathbf{x}^{\prime}=\left(\begin{array}{rrr}
-1 & 0 & 0 \\
--4 & 1 & 0 \\
-3 & 6 & 2
-\end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{r}
--1 \\
-2 \\
--30
-\end{array}\right)
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-org4f688e3" class="outline-4">
-<h4 id="org4f688e3">Answer</h4>
-<div class="outline-text-4" id="text-org4f688e3">
-    \begin{equation*}
-\mathbf{x}=\left(\begin{array}{r}
--1 \\
-2 \\
--33
-\end{array}\right) e^{t}+4\left(\begin{array}{r}
-0 \\
-1 \\
--6
-\end{array}\right) t e^{t}+3\left(\begin{array}{l}
-0 \\
-0 \\
-1
-\end{array}\right) e^{2 t}
-\end{equation*}
-</div>
-</div>
-</div>
-<div id="outline-container-org7612c2f" class="outline-3">
-<h3 id="org7612c2f">Problem 10(a)</h3>
-<div class="outline-text-3" id="text-org7612c2f">
-</div>
-<div id="outline-container-org2af6eab" class="outline-4">
-<h4 id="org2af6eab">Statement</h4>
-<div class="outline-text-4" id="text-org2af6eab">
-    \begin{equation*}
-\mathbf{x}^{\prime}=\left(\begin{array}{rrr}
--\frac{5}{2} & 1 & 1 \\
-1 & -\frac{5}{2} & 1 \\
-1 & 1 & -\frac{5}{2}
-\end{array}\right) \mathbf{x}, \quad \mathbf{x}(0)=\left(\begin{array}{r}
-2 \\
-3 \\
--1
-\end{array}\right)
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-org039f63f" class="outline-4">
-<h4 id="org039f63f">Answer</h4>
-<div class="outline-text-4" id="text-org039f63f">
-\begin{equation*}
-\mathbf{x}=\frac{4}{3}\left(\begin{array}{l}
-1 \\
-1 \\
-1
-\end{array}\right) e^{-t / 2}+\frac{1}{3}\left(\begin{array}{r}
-2 \\
-5 \\
--7
-\end{array}\right) e^{-7 t / 2}
-\end{equation*}
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-org863938b" class="outline-2">
-<h2 id="org863938b">Section 6.1</h2>
-<div class="outline-text-2" id="text-org863938b">
-</div>
-<div id="outline-container-org0848093" class="outline-3">
-<h3 id="org0848093">Problem 5</h3>
-<div class="outline-text-3" id="text-org0848093">
-</div>
-<div id="outline-container-org4e950a5" class="outline-4">
-<h4 id="org4e950a5">Statement</h4>
-<div class="outline-text-4" id="text-org4e950a5">
-<p>
-Find the Laplace transform of \(f(t)=\cos (a t)\), where \(a\) is a real
-constant.
-Recall that
-</p>
-\begin{equation*}
-\cosh (b t)=\frac{1}{2}\left(e^{b t}+e^{-b t}\right) \text { and } \sinh (b t)=\frac{1}{2}\left(e^{b t}-e^{-b t}\right)
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-org15ebb02" class="outline-4">
-<h4 id="org15ebb02">Answer</h4>
-<div class="outline-text-4" id="text-org15ebb02">
-    \begin{equation*}
-F(s)=\frac{s}{s^{2}+a^{2}}, \quad s>0
-\end{equation*}
-</div>
-</div>
-</div>
-<div id="outline-container-org8e43d06" class="outline-3">
-<h3 id="org8e43d06">Problem 7 (this is graded)</h3>
-<div class="outline-text-3" id="text-org8e43d06">
-</div>
-<div id="outline-container-org8ab8de9" class="outline-4">
-<h4 id="org8ab8de9">Statement</h4>
-<div class="outline-text-4" id="text-org8ab8de9">
-<p>
-In each of Problems 6 through 7, use the linearity of the Laplace transform to
-find the Laplace transform of the given function; \(a\) and \(b\) are real
-constants. 
-</p>
-
-    \begin{equation*}
-f(t)=\sinh (b t)
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-org3f5e6b9" class="outline-4">
-<h4 id="org3f5e6b9">Answer</h4>
-<div class="outline-text-4" id="text-org3f5e6b9">
-    \begin{equation*}
-F(s)=\frac{b}{s^{2}-b^{2}}, \quad s>|b|
-\end{equation*}
-</div>
-</div>
-</div>
-<div id="outline-container-org6b7e2b2" class="outline-3">
-<h3 id="org6b7e2b2">Problem 12</h3>
-<div class="outline-text-3" id="text-org6b7e2b2">
-</div>
-<div id="outline-container-org9b35588" class="outline-4">
-<h4 id="org9b35588">Statement</h4>
-<div class="outline-text-4" id="text-org9b35588">
-<p>
-In each of Problems 12 through 15, use integration by parts to find the Laplace
-transform of the given function; \(n\) is a positive integer and \(a\) is a real
-constant 
-</p>
-
-    \begin{equation*}
-f(t)=t e^{a t}
-\end{equation*}
-</div>
-</div>
-<div id="outline-container-org48bc48a" class="outline-4">
-<h4 id="org48bc48a">Answer</h4>
-<div class="outline-text-4" id="text-org48bc48a">
-    \begin{equation*}
-F(s)=\frac{1}{(s-a)^{2}}, \quad s>a
-\end{equation*}
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Date: 140; 12021 H.E.</p>
-<p class="author">Author: Sandy Urazayev</p>
-<p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
-<p class="date">Created: 2021-05-20 Thu 22:11</p>
-</div>
 </body>
 </html>

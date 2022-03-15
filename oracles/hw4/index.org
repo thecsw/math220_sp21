@@ -13,18 +13,20 @@
 #+date: 70; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+* Homework 4 Oracle
+
 Go back to the [[../../][home page]]
 
-[[./index.pdf][[View the PDF version]​]]
+[[./index.pdf][View the PDF version​]]
 
-* Section 2.4
+** Section 2.4
   
-** Problem 2
+*** Problem 2
    $\tan$ is discontinuous at odd multiples of $\frac{\pi}{2}$, since
    $\frac{\pi}{2} < \pi < \frac{3\pi}{2}$, the interval is
    $(\frac{\pi}{2}, \frac{3\pi}{2})$.
    
-** Problem 4
+*** Problem 4
    Dividing both sides by $\ln(t)$ yields
    \begin{equation*}
      y' + \frac{y}{\ln(t)} = \frac{\cot(t)}{\ln(t)}
@@ -33,18 +35,18 @@ Go back to the [[../../][home page]]
    range $(0, \pi)$. By finding the intersection of those constraints, we get an
    interval $(1, \pi)$.
    
-** Problem 14
+*** Problem 14
    #+attr_html: :width 50%
-   [[./14.png]]
+   [[./14.png][image]]
 
    Based on the direction field and on the differential equation, for $y_0 < 0$,
    the slopes eventually become negative, therefore tend to $-\infty$. If
    $y_0=0$, then we get an equilibrium solution. Note that slopes are zero along
    the curves $y=0$ and $ty = 3$.
 
-** Problem 16
+*** Problem 16
    #+attr_html: :width 50%
-   [[./16.png]]
+   [[./16.png][image]]
    
    Solutions with $t_{0}<0$ all tend to $-\infty$. Solutions with initial
    conditions $\left(t_{0}, y_{0}\right)$ to the right of the parabola
@@ -55,7 +57,7 @@ Go back to the [[../../][home page]]
    initial conditions below the parabola (and $\left.y_{0}<0\right)$ are all
    negative. These solutions tend to $-\infty$.
    
-** Problem 27 [FOR GRADE]
+*** Problem 27 [FOR GRADE]
    The solution of the initial value problem
    \begin{equation*}
      y_1'+2y_1=0, \quad y_1(0) = 1
@@ -78,12 +80,12 @@ Go back to the [[../../][home page]]
      \end{cases}
    \end{equation*}
 
-** Problem 28
+*** Problem 28
    The Eleventh Edition (latest) of the book doesn't have this problem.
 
-* Section 2.6
+** Section 2.6
 
-** Problem 3 [FOR GRADE]
+*** Problem 3 [FOR GRADE]
    They have the form $M(x,y) + N(x,y) \frac{dy}{dx} = 0$. So
    \begin{align*}
      M(x,y) = 3x^2-2xy+2 \quad \text{and} \quad N(x,y) = 6y^2-x^2+3
@@ -100,7 +102,7 @@ Go back to the [[../../][home page]]
      F = x^3 - x^2y + 2x +2y^3 + 3y = C
    \end{equation*}
 
-** Problem 5
+*** Problem 5
    \begin{align*}
      \frac{dy}{dx} = - \frac{ax-by}{bx-cy} \\
      \iff (ax-by)dx + (bx-cy)dy = 0
@@ -111,7 +113,7 @@ Go back to the [[../../][home page]]
    \end{align*}
    The differential equation is not exact.
 
-** Problem 13
+*** Problem 13
    Integrating $\psi_{y}=N$, while holding $x$ constant, yields $\psi(x, y)=\int
 N(x, y) d y+h(x)$ 
    Taking the partial derivative with respect to
@@ -126,7 +128,7 @@ y)$ and therefore
    h(x)=\int M(x, y) d x-\int\left[\int \frac{\partial}{\partial x} N(x, y) d y\right] d x
    \end{align*}
    
-** Problem 15 [FOR GRADE]
+*** Problem 15 [FOR GRADE]
    \begin{align*}
      M = x^2y^3,\quad \quad N = x(1+y^2)\\
      \implies M_y = 3x^2y^2, \quad \quad N_x = 1+y^2
@@ -141,7 +143,7 @@ y)$ and therefore
 
    So then just find that $F = \frac{x^2}{2} - \frac{1}{2y^2}+\ln(y)$
    
-** Problem 18
+*** Problem 18
    \begin{align*}
      M = 3x^2y+2xy+y^3,\quad \quad N = x^2+y^2\\
      \implies M_y = 3x^2+2x+3y^2, \quad \quad N_x = 2x

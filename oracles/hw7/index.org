@@ -13,11 +13,13 @@
 #+date: 107; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+* Homework 7 Oracle
+
 Go back to the [[../../][home page]]
 
-[[./index.pdf][[View the PDF version]​]]
-* Section 3.7
-** Problem 1 [FOR GRADE]
+[[./index.pdf][View the PDF version​]]
+** Section 3.7
+*** Problem 1 [FOR GRADE]
    We wish to write the two sinusoidal terms as one.
 \begin{align*}
 	3 \cos 2 t+4 \sin 2 t & =R \cos \left(\omega_{0} t-\delta\right)                                   \\
@@ -62,7 +64,7 @@ Therefore,
 3 \cos 2 t+4 \sin 2 t=5 \cos \left(2 t-\tan ^{-1} \frac{4}{3}\right)
 \end{equation*}
 
-** Problem 5
+*** Problem 5
    \begin{align*}
      20 u'' + 400 u' + 3920u &= 0\\
      20r^2 + 400r + 3920 &= 0
@@ -87,8 +89,8 @@ Therefore,
      \text{Quasi-frequency} &: 4\sqrt{6}\\
      \text{Quasi-period}    &: \frac{\pi}{2\sqrt{6}}
    \end{align*}
-* Section 7.1
-** Problem 1 [FOR GRADE]
+** Section 7.1
+*** Problem 1 [FOR GRADE]
    Let $u=x_{1}$.
 $$
 x_{1}^{\prime \prime}+0.5 x_{1}^{\prime}+2 x_{1}=0
@@ -104,7 +106,7 @@ x_{1}^{\prime}=x_{2} \\
 x_{2}^{\prime}=-2 x_{1}-0.5 x_{2}
 \end{array}\right.
 $$
-** Problem 5
+*** Problem 5
    Let $u=x_{1}$.
 $$
 x_{1}^{\prime \prime}+p(t) x_{1}^{\prime}+q(t) x_{1}=g(t), \quad x_{1}(0)=u_{0}, \quad x_{1}^{\prime}(0)=u_{0}^{\prime}
@@ -124,8 +126,8 @@ subject to the initial conditions,
 $$
 x_{1}(0)=u_{0} \quad \text { and } \quad x_{2}(0)=u_{0}^{\prime} .
 $$
-* Section 7.2
-** Problem 4
+** Section 7.2
+*** Problem 4
    $\mathbf{A}^{T}$ is the transpose of $\mathbf{A}, \overline{\mathbf{A}}$ is
 the complex conjugate of $\mathbf{A}$, and
 $\mathbf{A}^{*}=\overline{\mathbf{A}}^{T}$ is the adjoint of $\mathbf{A}$. 
@@ -150,7 +152,7 @@ $\mathbf{A}^{*}=\overline{\mathbf{A}}^{T}$ is the adjoint of $\mathbf{A}$.
 1-i & -2-3 i
 \end{array}\right)
 \end{equation*}
-** Problem 8 [FOR GRADE]
+*** Problem 8 [FOR GRADE]
    Start by calculating the determinant.
 $$
 \operatorname{det}\left(\begin{array}{rr}

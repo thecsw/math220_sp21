@@ -1,854 +1,407 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2021-05-16 Sun 20:54 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://sandyuraz.com/math220_sp21/oracles/hw11" type=""/>
+<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type=""/>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" property="generator" content="Darkness">
+<meta name="author" property="author" content="email">
+<meta name="theme-color" property="theme-color" content="#fffff4">
+<meta name="description" property="description" content="Go back to the [[../../][home page]]...">
+<meta name="og:title" property="og:title" content="Homework 11 Oracle">
+<meta name="og:site_name" property="og:site_name" content="Ordinary Differential Equations">
+<meta name="og:url" property="og:url" content="https://sandyuraz.com/math220_sp21/oracles/hw11">
+<meta name="og:locale" property="og:locale" content="en_GB">
+<meta name="og:type" property="og:type" content="website">
+<meta name="og:image" property="og:image" content="https://sandyuraz.com/math220_sp21/oracles/hw11/preview.png">
+<meta name="og:image:alt" property="og:image:alt" content="Preview">
+<meta name="og:image:type" property="og:image:type" content="image/png">
+<meta name="og:image:width" property="og:image:width" content="1280">
+<meta name="og:image:height" property="og:image:height" content="640">
+<meta name="og:description" property="og:description" content="Go back to the [[../../][home page]]...">
+<meta name="twitter:card" property="twitter:card" content="summary_large_image">
+<meta name="twitter:site" property="twitter:site" content="Ordinary Differential Equations">
+<meta name="twitter:creator" property="twitter:creator" content="@sandyuraz">
+<meta name="twitter:image:src" property="twitter:image:src" content="https://sandyuraz.com/math220_sp21/oracles/hw11/preview.png">
+<meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw11">
+<meta name="twitter:title" property="twitter:title" content="Homework 11 Oracle">
+<meta name="twitter:description" property="twitter:description" content="Go back to the [[../../][home page]]...">
+
+<script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
+<script async src="https://sandyuraz.com/scripts/time.js"></script>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: true},
+              {left: '\\[', right: '\\]', display: false},
+              {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+              {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+              {left: "\\begin{align}", right: "\\end{align}", display: true},
+              {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+              {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+              {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+              {left: "\\begin{CD}", right: "\\end{CD}", display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
 <title>Homework 11 Oracle</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Sandy Urazayev" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
-<body>
+<link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/web.css">
+
+<body class="article">
+
+<div id="header">
+<h1><img id="myface" src="https://sandyuraz.com/math220_sp21/rei.png" width="112" height="112">Homework 11 Oracle</h1>
+<div class="details">
+<span id="author" class="author">email</span><br>
+<span id="email" class="email">ctu [at] ku [dot] edu</span><br>
+<span id="revdate">
+<a href="https://sandyuraz.com/math220_sp21/">Home 🏠</a></span>
+</div>
+<div id="hetime" class="details"></div>
+</div>
 <div id="content">
-<h1 class="title">Homework 11 Oracle
-<br />
-<span class="subtitle">MATH 220 Spring 2021</span>
-</h1>
-<p>
-Go back to the <a href="../../">home page</a>
-</p>
 
-<p>
-<a href="./index.pdf">[View the PDF version]​</a>
-</p>
-
-<p>
-Solution to these problems are provided by STEM Jock.
-</p>
-
-<div id="outline-container-orga8f4b79" class="outline-2">
-<h2 id="orga8f4b79">Section 6.2</h2>
-<div class="outline-text-2" id="text-orga8f4b79">
-</div>
-<div id="outline-container-org1104353" class="outline-3">
-<h3 id="org1104353">Problem 3</h3>
-<div class="outline-text-3" id="text-org1104353">
-</div>
-<div id="outline-container-orgbd1ca18" class="outline-4">
-<h4 id="orgbd1ca18">Statement</h4>
-<div class="outline-text-4" id="text-orgbd1ca18">
-   \begin{equation*}
-F(s)=\frac{2}{s^{2}+3 s-4}
-\end{equation*}
-</div>
-</div>
-
-<div id="outline-container-org08cc0df" class="outline-4">
-<h4 id="org08cc0df">Solution</h4>
-<div class="outline-text-4" id="text-org08cc0df">
-<p>
-Factor the denominator.
-</p>
-
-    \begin{aligned}
-F(s) &=\frac{2}{s^{2}+3 s-4} \\
-&=\frac{2}{(s+4)(s-1)} \\
-&=\frac{2 / 5}{s-1}-\frac{2 / 5}{s+4}
-\end{aligned}
-
-<p>
-Take the inverse Laplace transform now to get \(f(t)\).
-</p>
-
-<p>
-\[
-f(t)=\frac{2}{5} e^{t}-\frac{2}{5} e^{-4 t}
-\]
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgb272a27" class="outline-3">
-<h3 id="orgb272a27">Problem 11 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-orgb272a27">
-</div>
-<div id="outline-container-org71b30c1" class="outline-4">
-<h4 id="org71b30c1">Statement</h4>
-<div class="outline-text-4" id="text-org71b30c1">
-<p>
-\[
-    y^{\prime \prime}-2 y^{\prime}+4 y=0 ; \quad y(0)=2, \quad y^{\prime}(0)=0
- \]
-</p>
-</div>
-</div>
-
-<div id="outline-container-org783e641" class="outline-4">
-<h4 id="org783e641">Solution</h4>
-<div class="outline-text-4" id="text-org783e641">
-<p>
-    Because the ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function \(y(t)\) is defined here as
-\[
-Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t
-\]
-Consequently, the first and second derivatives transform as follows.
-</p>
-
-
-\begin{aligned}
-\mathcal{L}\left\{\frac{d y}{d t}\right\} &=s Y(s)-y(0) \\
-\mathcal{L}\left\{\frac{d^{2} y}{d t^{2}}\right\} &=s^{2} Y(s)-s y(0)-y^{\prime}(0)
-\end{aligned}
-
-
-<p>
-Apply the Laplace transform to both sides of the ODE.
-\[
-\mathcal{L}\left\{y^{\prime \prime}-2 y^{\prime}+4 y\right\}=\mathcal{L}\{0\}
-\]
-Use the fact that the transform is a linear operator.
-</p>
-
-\begin{array}{c}
-\mathcal{L}\left\{y^{\prime \prime}\right\}-2 \mathcal{L}\left\{y^{\prime}\right\}+4 \mathcal{L}\{y\}=0 \\
-{\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]-2[s Y(s)-y(0)]+4 Y(s)=0}
-\end{array}
-
-<p>
-Plug in the initial conditions, \(y(0)=2\) and \(y^{\prime}(0)=0\).
-</p>
-
-<p>
-\[
-\left[s^{2} Y(s)-2 s\right]-2[s Y(s)-2]+4 Y(s)=0
-\]
-</p>
-
-<p>
-As a result of applying the Laplace transform, the ODE has reduced to an algebraic equation for
-  Solution \(Y\) , the transformed solution.
-</p>
-
-  \begin{equation*}
-\begin{array}{c}
-s^{2} Y(s)-2 s Y(s)+4 Y(s)-2 s+4=0 \\
-\left(s^{2}-2 s+4\right) Y(s)=2 s-4
-\end{array}
-\end{equation*}
-
-\begin{aligned}
-Y(s) &=\frac{2 s-4}{s^{2}-2 s+4} \\
-&=\frac{2 s-4}{s^{2}-2 s+1+4-1} \\
-&=\frac{2 s-4}{(s-1)^{2}+3} \\
-&=\frac{2 s-2-4+2}{(s-1)^{2}+3} \\
-&=\frac{2(s-1)-2}{(s-1)^{2}+3} \\
-&=2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{(s-1)^{2}+3} \\
-&=2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{\sqrt{3}} \frac{\sqrt{3}}{(s-1)^{2}+3}
-\end{aligned}
-
-<p>
-Take the inverse Laplace transform of \(Y(s)\) now to recover \(y(t)\).
-</p>
-
-\begin{aligned}
-y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
-&=\mathcal{L}^{-1}\left\{2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{\sqrt{3}} \frac{\sqrt{3}}{(s-1)^{2}+3}\right\} \\
-&=2 \mathcal{L}^{-1}\left\{\frac{s-1}{(s-1)^{2}+3}\right\}-\frac{2}{\sqrt{3}} \mathcal{L}^{-1}\left\{\frac{\sqrt{3}}{(s-1)^{2}+3}\right\} \\
-&=2 e^{t} \cos \sqrt{3} t-\frac{2}{\sqrt{3}} e^{t} \sin \sqrt{3} t
-\end{aligned}
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgc30974a" class="outline-3">
-<h3 id="orgc30974a">Problem 19</h3>
-<div class="outline-text-3" id="text-orgc30974a">
-</div>
-<div id="outline-container-orgab69138" class="outline-4">
-<h4 id="orgab69138">Statement</h4>
-<div class="outline-text-4" id="text-orgab69138">
-    \begin{equation*}
-y^{\prime \prime}+y=\left\{\begin{array}{ll}
-t, & 0 \leq t<1 \\
-2-t, & 1 \leq t<2, \\
-0, & 2 \leq t<\infty
-\end{array} \quad y(0)=0, \quad y^{\prime}(0)=0\right.
-\end{equation*}
-</div>
-</div>
-
-<div id="outline-container-orgf600ab5" class="outline-4">
-<h4 id="orgf600ab5">Solution</h4>
-<div class="outline-text-4" id="text-orgf600ab5">
-<p>
-    Let \(f(t)\) represent the piecewise function on the right side.
-\[
-y^{\prime \prime}+y=f(t)=\left\{\begin{array}{ll}
-t, & 0 \leq t<1 \\
-2-t, & 1 \leq t<2 \\
-0, & 2 \leq t<\infty
-\end{array}\right.
-\]
-Because this ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function \(y(t)\) is defined here as
-\[
-Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t .
-\]
-Consequently, the first and second derivatives transform as follows.
-</p>
-
-\begin{aligned}
-\mathcal{L}\left\{\frac{d y}{d t}\right\} &=s Y(s)-y(0) \\
-\mathcal{L}\left\{\frac{d^{2} y}{d t^{2}}\right\} &=s^{2} Y(s)-s y(0)-y^{\prime}(0)
-\end{aligned}
-
-<p>
-Apply the Laplace transform to both sides of the ODE.
-</p>
-
-<p>
-\[
-\mathcal{L}\left\{y^{\prime \prime}+y\right\}=\mathcal{L}\{f(t)\}
-\]
-</p>
-
-<p>
-Use the fact that the transform is a linear operator.
-</p>
-
-\begin{array}{c}
-\mathcal{L}\left\{y^{\prime \prime}\right\}+\mathcal{L}\{y\}=\mathcal{L}\{f(t)\} \\
-{\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]+Y(s)=\int_{0}^{\infty} e^{-s t} f(t) d t}
-\end{array}
-
-<p>
-Plug in the initial conditions, \(y(0)=0\) and \(y^{\prime}(0)=0\), and \(f(t)\).
-</p>
-
-\begin{aligned}
-\left[s^{2} Y(s)\right] &+Y(s)=\int_{0}^{1} e^{-s t}(t) d t+\int_{1}^{2} e^{-s t}(2-t) d t+\int_{2}^{\infty} e^{-s t}(0) d t \\
-\left(s^{2}+1\right) Y(s) &=\int_{0}^{1} t e^{-s t} d t+2 \int_{1}^{2} e^{-s t} d t-\int_{1}^{2} t e^{-s t} d t \\
-&=\frac{1-(s+1) e^{-s}}{s^{2}}+2 \frac{e^{-s}-e^{-2 s}}{s}-\frac{-e^{-2 s}-2 s e^{-2 s}+(s+1) e^{-s}}{s^{2}} \\
-&=\frac{1}{s^{2}}+\frac{e^{-2 s}}{s^{2}}-\frac{2 e^{-s}}{s^{2}}
-\end{aligned}
-
-<p>
-Divide both sides by \(s^{2}+1\).
-</p>
-
-\begin{aligned}
-Y(s) &=\frac{1}{s^{2}\left(s^{2}+1\right)}+\frac{e^{-2 s}}{s^{2}\left(s^{2}+1\right)}-\frac{2 e^{-s}}{s^{2}\left(s^{2}+1\right)} \\
-&=\frac{1}{s^{2}}-\frac{1}{s^{2}+1}+\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}-2\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}
-\end{aligned}
-
-<p>
-Take the inverse Laplace transform of \(Y(s)\) now to recover \(y(t)\). Note that \(H(t)\) is the Heaviside function, which is defined to be 1 if \(t>0\) and 0 if \(t<0\).
-</p>
-
-\begin{aligned}
-y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
-&=\mathcal{L}^{-1}\left\{\frac{1}{s^{2}}-\frac{1}{s^{2}+1}+\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}-2\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}\right\} \\
-&=\mathcal{L}^{-1}\left\{\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right\}+\mathcal{L}^{-1}\left\{\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}\right\}-2 \mathcal{L}^{-1}\left\{\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}\right\} \\
-&=(t-\sin t)+[(t-2)-\sin (t-2)] H(t-2)-2[(t-1)-\sin (t-1)] H(t-1)
-\end{aligned}
-</div>
-</div>
-</div>
-
-<div id="outline-container-org73884c8" class="outline-3">
-<h3 id="org73884c8">Problem 22</h3>
-<div class="outline-text-3" id="text-org73884c8">
-</div>
-<div id="outline-container-org53f096c" class="outline-4">
-<h4 id="org53f096c">Statement</h4>
-<div class="outline-text-4" id="text-org53f096c">
-    \begin{equation}
-f(t)=t e^{a t}
-\end{equation}
-</div>
-</div>
-
-<div id="outline-container-orga48106e" class="outline-4">
-<h4 id="orga48106e">Solution</h4>
-<div class="outline-text-4" id="text-orga48106e">
-<p>
-The Laplace transform of a function \(f(t)\) is defined here as
-\[
-F(s)=\mathcal{L}\{f(t)\}=\int_{0}^{\infty} e^{-s t} f(t) d t
-\]
-</p>
-
-<p>
-Substitute the given function and evaluate the integral.
-</p>
-
-\begin{aligned}
-F(s) &=\int_{0}^{\infty} e^{-s t} t e^{a t} d t \\
-&=\int_{0}^{\infty}\left(-\frac{\partial}{\partial s} e^{-s t}\right) e^{a t} d t \\
-&=-\frac{d}{d s} \int_{0}^{\infty} e^{-s t} e^{a t} d t \\
-&=-\frac{d}{d s} \int_{0}^{\infty} e^{(a-s) t} d t \\
-&=-\frac{d}{d s}\left[\left.\frac{1}{a-s} e^{(a-s) t}\right|_{0} ^{\infty}\right] \\
-&=-\frac{d}{d s}\left(\frac{1}{s-a}\right) \\
-&=-\left[-\frac{1}{(s-a)^{2}}\right] \\
-&=\frac{1}{(s-a)^{2}}
-\end{aligned}
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org9eba0c7" class="outline-2">
-<h2 id="org9eba0c7">Section 6.3</h2>
-<div class="outline-text-2" id="text-org9eba0c7">
-</div>
-<div id="outline-container-orgcca2d9a" class="outline-3">
-<h3 id="orgcca2d9a">Problem 7</h3>
-<div class="outline-text-3" id="text-orgcca2d9a">
-</div>
-<div id="outline-container-orgca2e99b" class="outline-4">
-<h4 id="orgca2e99b">Statement</h4>
-<div class="outline-text-4" id="text-orgca2e99b">
-   \begin{equation*}
-f(t)=\left\{\begin{array}{ll}
-1, & 0 \leq t<2 \\
-e^{-(t-2)}, & t \geq 2
-\end{array}\right.
-\end{equation*}
-</div>
+<div class="paragraph">
+<p>Go back to the <a href="../../">home page</a> </p>
+</div>
+<a href="./index.pdf">View the PDF version​</a>
+<div class="paragraph">
+<p>Solution to these problems are provided by STEM Jock. </p>
+</div>
+<div class="sect1">
+<h2 id="_section_6_2">Section 6.2</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_3">Problem 3</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} F(s)=\frac{2}{s^{2}+3 s-4} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Factor the denominator. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} F(s) &amp;=\frac{2}{s^{2}+3 s-4} \\ &amp;=\frac{2}{(s+4)(s-1)} \\ &amp;=\frac{2 / 5}{s-1}-\frac{2 / 5}{s+4} \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Take the inverse Laplace transform now to get $f(t)$. </p>
+</div>
+<div class="paragraph">
+<p>$$ f(t)=\frac{2}{5} e^{t}-\frac{2}{5} e^{-4 t} $$ </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_11__for_grade_">Problem 11 [FOR GRADE]</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>$$ y^{\prime \prime}-2 y^{\prime}+4 y=0 ; \quad y(0)=2, \quad y^{\prime}(0)=0 $$ </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Because the ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function $y(t)$ is defined here as $$ Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t $$ Consequently, the first and second derivatives transform as follows. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} \mathcal{L}\left\{\frac{d y}{d t}\right\} &amp;=s Y(s)-y(0) \\ \mathcal{L}\left\{\frac{d^{2} y}{d t^{2}}\right\} &amp;=s^{2} Y(s)-s y(0)-y^{\prime}(0) \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Apply the Laplace transform to both sides of the ODE. $$ \mathcal{L}\left\{y^{\prime \prime}-2 y^{\prime}+4 y\right\}=\mathcal{L}\{0\} $$ Use the fact that the transform is a linear operator. </p>
+</div>
+<div class="paragraph">
+<p>\begin{array}{c} \mathcal{L}\left\{y^{\prime \prime}\right\}-2 \mathcal{L}\left\{y^{\prime}\right\}+4 \mathcal{L}\{y\}=0 \\ {\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]-2[s Y(s)-y(0)]+4 Y(s)=0} \end{array} </p>
+</div>
+<div class="paragraph">
+<p>Plug in the initial conditions, $y(0)=2$ and $y^{\prime}(0)=0$. </p>
+</div>
+<div class="paragraph">
+<p>$$ \left[s^{2} Y(s)-2 s\right]-2[s Y(s)-2]+4 Y(s)=0 $$ </p>
+</div>
+<div class="paragraph">
+<p>As a result of applying the Laplace transform, the ODE has reduced to an algebraic equation for Solution $Y$ , the transformed solution. </p>
+</div>
+<div class="paragraph">
+<p>\begin{equation*} \begin{array}{c} s^{2} Y(s)-2 s Y(s)+4 Y(s)-2 s+4=0 \\ \left(s^{2}-2 s+4\right) Y(s)=2 s-4 \end{array} \end{equation*} </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} Y(s) &amp;=\frac{2 s-4}{s^{2}-2 s+4} \\ &amp;=\frac{2 s-4}{s^{2}-2 s+1+4-1} \\ &amp;=\frac{2 s-4}{(s-1)^{2}+3} \\ &amp;=\frac{2 s-2-4+2}{(s-1)^{2}+3} \\ &amp;=\frac{2(s-1)-2}{(s-1)^{2}+3} \\ &amp;=2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{(s-1)^{2}+3} \\ &amp;=2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{\sqrt{3}} \frac{\sqrt{3}}{(s-1)^{2}+3} \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Take the inverse Laplace transform of $Y(s)$ now to recover $y(t)$. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} y(t) &amp;=\mathcal{L}^{-1}\{Y(s)\} \\ &amp;=\mathcal{L}^{-1}\left\{2 \frac{s-1}{(s-1)^{2}+3}-\frac{2}{\sqrt{3}} \frac{\sqrt{3}}{(s-1)^{2}+3}\right\} \\ &amp;=2 \mathcal{L}^{-1}\left\{\frac{s-1}{(s-1)^{2}+3}\right\}-\frac{2}{\sqrt{3}} \mathcal{L}^{-1}\left\{\frac{\sqrt{3}}{(s-1)^{2}+3}\right\} \\ &amp;=2 e^{t} \cos \sqrt{3} t-\frac{2}{\sqrt{3}} e^{t} \sin \sqrt{3} t \end{aligned} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_19">Problem 19</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} y^{\prime \prime}+y=\left\{\begin{array}{ll} t, &amp; 0 \leq t&lt;1 \\ 2-t, &amp; 1 \leq t&lt;2, \\ 0, &amp; 2 \leq t&lt;\infty \end{array} \quad y(0)=0, \quad y^{\prime}(0)=0\right. \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let $f(t)$ represent the piecewise function on the right side. $$ y^{\prime \prime}+y=f(t)=\left\{\begin{array}{ll} t, &amp; 0 \leq t&lt;1 \\ 2-t, &amp; 1 \leq t&lt;2 \\ 0, &amp; 2 \leq t&lt;\infty \end{array}\right. $$ Because this ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function $y(t)$ is defined here as $$ Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t . $$ Consequently, the first and second derivatives transform as follows. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} \mathcal{L}\left\{\frac{d y}{d t}\right\} &amp;=s Y(s)-y(0) \\ \mathcal{L}\left\{\frac{d^{2} y}{d t^{2}}\right\} &amp;=s^{2} Y(s)-s y(0)-y^{\prime}(0) \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Apply the Laplace transform to both sides of the ODE. </p>
+</div>
+<div class="paragraph">
+<p>$$ \mathcal{L}\left\{y^{\prime \prime}+y\right\}=\mathcal{L}\{f(t)\} $$ </p>
+</div>
+<div class="paragraph">
+<p>Use the fact that the transform is a linear operator. </p>
+</div>
+<div class="paragraph">
+<p>\begin{array}{c} \mathcal{L}\left\{y^{\prime \prime}\right\}+\mathcal{L}\{y\}=\mathcal{L}\{f(t)\} \\ {\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]+Y(s)=\int_{0}^{\infty} e^{-s t} f(t) d t} \end{array} </p>
+</div>
+<div class="paragraph">
+<p>Plug in the initial conditions, $y(0)=0$ and $y^{\prime}(0)=0$, and $f(t)$. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} \left[s^{2} Y(s)\right] &amp;+Y(s)=\int_{0}^{1} e^{-s t}(t) d t+\int_{1}^{2} e^{-s t}(2-t) d t+\int_{2}^{\infty} e^{-s t}(0) d t \\ \left(s^{2}+1\right) Y(s) &amp;=\int_{0}^{1} t e^{-s t} d t+2 \int_{1}^{2} e^{-s t} d t-\int_{1}^{2} t e^{-s t} d t \\ &amp;=\frac{1-(s+1) e^{-s}}{s^{2}}+2 \frac{e^{-s}-e^{-2 s}}{s}-\frac{-e^{-2 s}-2 s e^{-2 s}+(s+1) e^{-s}}{s^{2}} \\ &amp;=\frac{1}{s^{2}}+\frac{e^{-2 s}}{s^{2}}-\frac{2 e^{-s}}{s^{2}} \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Divide both sides by $s^{2}+1$. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} Y(s) &amp;=\frac{1}{s^{2}\left(s^{2}+1\right)}+\frac{e^{-2 s}}{s^{2}\left(s^{2}+1\right)}-\frac{2 e^{-s}}{s^{2}\left(s^{2}+1\right)} \\ &amp;=\frac{1}{s^{2}}-\frac{1}{s^{2}+1}+\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}-2\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s} \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Take the inverse Laplace transform of $Y(s)$ now to recover $y(t)$. Note that $H(t)$ is the Heaviside function, which is defined to be 1 if $t&gt;0$ and 0 if $t&lt;0$. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} y(t) &amp;=\mathcal{L}^{-1}\{Y(s)\} \\ &amp;=\mathcal{L}^{-1}\left\{\frac{1}{s^{2}}-\frac{1}{s^{2}+1}+\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}-2\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}\right\} \\ &amp;=\mathcal{L}^{-1}\left\{\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right\}+\mathcal{L}^{-1}\left\{\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}\right\}-2 \mathcal{L}^{-1}\left\{\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}\right\} \\ &amp;=(t-\sin t)+[(t-2)-\sin (t-2)] H(t-2)-2[(t-1)-\sin (t-1)] H(t-1) \end{aligned} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_22">Problem 22</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation} f(t)=t e^{a t} \end{equation} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Laplace transform of a function $f(t)$ is defined here as $$ F(s)=\mathcal{L}\{f(t)\}=\int_{0}^{\infty} e^{-s t} f(t) d t $$ </p>
+</div>
+<div class="paragraph">
+<p>Substitute the given function and evaluate the integral. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} F(s) &amp;=\int_{0}^{\infty} e^{-s t} t e^{a t} d t \\ &amp;=\int_{0}^{\infty}\left(-\frac{\partial}{\partial s} e^{-s t}\right) e^{a t} d t \\ &amp;=-\frac{d}{d s} \int_{0}^{\infty} e^{-s t} e^{a t} d t \\ &amp;=-\frac{d}{d s} \int_{0}^{\infty} e^{(a-s) t} d t \\ &amp;=-\frac{d}{d s}\left[\left.\frac{1}{a-s} e^{(a-s) t}\right|_{0} ^{\infty}\right] \\ &amp;=-\frac{d}{d s}\left(\frac{1}{s-a}\right) \\ &amp;=-\left[-\frac{1}{(s-a)^{2}}\right] \\ &amp;=\frac{1}{(s-a)^{2}} \end{aligned} </p>
+</div></div>
+</div>
+<div class="sect1">
+<h2 id="_section_6_3">Section 6.3</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_7">Problem 7</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} f(t)=\left\{\begin{array}{ll} 1, &amp; 0 \leq t&lt;2 \\ e^{-(t-2)}, &amp; t \geq 2 \end{array}\right. \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Write $f(t)$ in terms of the Heaviside function, $H(t)$, which is defined to be 1 if $t&gt;0$ and 0 if $t&lt;0$. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} f(t) &amp;=1[H(t)-H(t-2)]+e^{-(t-2)} H(t-2) \\ &amp;=H(t)+\left[e^{-(t-2)}-1\right] H(t-2) \\ &amp;=u_{0}(t)+\left[e^{-(t-2)}-1\right] u_{2}(t) \end{aligned} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_13__for_grade_">Problem 13 [FOR GRADE]</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} F(s)=\frac{3 !}{(s-2)^{4}} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Apply the two transforms, $$ \mathcal{L}\left\{t^{n}\right\}=\frac{n !}{s^{n+1}} \quad \text { and } \quad \mathcal{L}\left\{e^{c t} f(t)\right\}=F(s-c), $$ together to solve this problem. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} f(t) &amp;=\mathcal{L}^{-1}\{F(s)\} \\ &amp;=\mathcal{L}^{-1}\left\{\frac{3 !}{(s-2)^{4}}\right\} \\ &amp;=t^{3} e^{2 t} \end{aligned} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_16">Problem 16</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} F(s)=\frac{e^{-s}+e^{-2 s}-e^{-3 s}-e^{-4 s}}{s} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Apply the two transforms, $$ \mathcal{L}\left\{t^{n}\right\}=\frac{n !}{s^{n+1}} \quad \text { and } \quad \mathcal{L}\{f(t-c) H(t-c)\}=F(s) e^{-c s} $$ together to solve this problem. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} f(t) &amp;=\mathcal{L}^{-1}\{F(s)\} \\ &amp;=\mathcal{L}^{-1}\left\{\frac{e^{-s}+e^{-2 s}-e^{-3 s}-e^{-4 s}}{s}\right\} \\ &amp;=\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-s}\right\}+\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-2 s}\right\}-\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-3 s}\right\}-\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-4 s}\right\} \\ &amp;=(t-1)^{0} H(t-1)+(t-2)^{0} H(t-2)-(t-3)^{0} H(t-3)-(t-4)^{0} H(t-4) \\ &amp;=H(t-1)+H(t-2)-H(t-3)-H(t-4) \\ &amp;=u_{1}(t)+u_{2}(t)-u_{3}(t)-u_{4}(t) \end{aligned} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_20">Problem 20</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} F(s)=\frac{1}{9 s^{2}-12 s+3} \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Observe that the denominator can be written in terms of $3 s$. $$ F(s)=\frac{1}{(3 s)^{2}-4(3 s)+3} $$ Factor the denominator. $$ F(s)=\frac{1}{[(3 s)-1][(3 s)-3]} $$ Partially decompose the fraction. $$ F(s)=\frac{-\frac{1}{2}}{(3 s)-1}+\frac{\frac{1}{2}}{(3 s)-3} $$ Apply the two transforms, $$ \mathcal{L}\left\{e^{a t}\right\}=\frac{1}{s-a} \quad \text { and } \quad F(k s)=\mathcal{L}\left\{\frac{1}{k} f\left(\frac{t}{k}\right)\right\}, $$ together to get $f(t)$ </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} f(t) &amp;=\mathcal{L}^{-1}\{F(s)\} \\ &amp;=-\frac{1}{2}\left(\frac{1}{3} e^{t / 3}\right)+\frac{1}{2}\left(\frac{1}{3} e^{3 t / 3}\right) \\ &amp;=-\frac{1}{6} e^{t / 3}+\frac{1}{6} e^{t} \\ &amp;=\frac{1}{6}\left(e^{t}-e^{t / 3}\right) \end{aligned} </p>
+</div></div>
+</div>
+<div class="sect1">
+<h2 id="_section_6_4">Section 6.4</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_1__for_grade_">Problem 1 [FOR GRADE]</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_statement">Statement</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{equation*} y^{\prime \prime}+y=f(t) ; \quad y(0)=0, \quad y^{\prime}(0)=1 ; \quad f(t)=\left\{\begin{array}{ll} 1, &amp; 0 \leq t&lt;3 \pi \\ 0, &amp; 3 \pi \leq t&lt;\infty \end{array}\right. \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Because the ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function $y(t)$ is defined here as $$ Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t $$ Consequently, the first and second derivatives transform as follows. Apply the Laplace transform to both sides of the ODE. $$ \mathcal{L}\left\{y^{\prime \prime}+y\right\}=\mathcal{L}\{f(t)\} $$ Use the fact that the transform is a linear operator. </p>
+</div>
+<div class="paragraph">
+<p>\begin{array}{c} \mathcal{L}\left\{y^{\prime \prime}\right\}+\mathcal{L}\{y\}=\mathcal{L}\{f(t)\} \\ {\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]+Y(s)=\int_{0}^{3 \pi} e^{-s t}(1) d t+\int_{3 \pi}^{\infty} e^{-s t}(0) d t} \end{array} </p>
+</div>
+<div class="paragraph">
+<p>Plug in the initial conditions, $y(0)=0$ and $y^{\prime}(0)=1$. $$ \left[s^{2} Y(s)-1\right]+Y(s)=\int_{0}^{3 \pi} e^{-s t} d t $$ </p>
+</div>
+<div class="paragraph">
+<p>As a result of applying the Laplace transform, the ODE has reduced to an algebraic equation for $Y$, the transformed solution. </p>
+</div>
+<div class="paragraph">
+<p>\begin{array}{c} \left(s^{2}+1\right) Y(s)-1=\left.\left(-\frac{1}{s} e^{-s t}\right)\right|_{0} ^{3 \pi} \\ \left(s^{2}+1\right) Y(s)=\frac{1}{s}-\frac{1}{s} e^{-3 \pi s}+1 \\ Y(s)=\frac{1}{s\left(s^{2}+1\right)}-\frac{1}{s\left(s^{2}+1\right)} e^{-3 \pi s}+\frac{1}{s^{2}+1} \\ =\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right)-\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right) e^{-3 \pi s}+\frac{1}{s^{2}+1} \end{array} </p>
+</div>
+<div class="paragraph">
+<p>Take the inverse Laplace transform of $Y(s)$ now to get $y(t)$. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} y(t) &amp;=\mathcal{L}^{-1}\{Y(s)\} \\ &amp;=\mathcal{L}^{-1}\left\{\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right)-\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right) e^{-3 \pi s}+\frac{1}{s^{2}+1}\right\} \\ &amp;=(1-\cos t)-[1-\cos (t-3 \pi)] H(t-3 \pi)+\sin t \\ &amp;=1+\sin t-\cos t-[1-\cos (t-\pi)] H(t-3 \pi) \\ &amp;=1+\sin t-\cos t-(1+\cos t) H(t-3 \pi) \\ &amp;=1+\sin t-\cos t-(1+\cos t) u_{3 \pi}(t) \end{aligned} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_2">Problem 2</h3>
+<div class="sectionbody"></div>
+<div class="sect3">
+<h4 id="_solution">Solution</h4>
+<div class="sectionbody">
+</div>
+<div class="paragraph">
+<p>Evaluate the inverse Laplace transforms. </p>
+</div>
+<div class="paragraph">
+<p>In order to write $Y(s)$ in terms of known transforms, use partial fraction decomposition. $$ \frac{1}{s\left(s^{2}+2 s+2\right)}=\frac{A}{s}+\frac{B s+C}{s^{2}+2 s+2} $$ Multiply both sides by $s\left(s^{2}+2 s+2\right)$. $$ 1=A\left(s^{2}+2 s+2\right)+(B s+C) s $$ Plug in three random values of $s$ to get a system of three equations for $A, B$, and $C .$ </p>
+</div>
+<div class="paragraph">
+<p>\begin{array}{ll} s=0: &amp; 1=2 A \\ s=1: &amp; 1=5 A+B+C \\ s=2: &amp; 1=10 A+4 B+2 C \end{array} </p>
+</div>
+<div class="paragraph">
+<p>Solving this system yields $A=1 / 2, B=-1 / 2$, and $C=-1$. $$ Y(s)=\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+2}\right) e^{-\pi s}-\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+2}\right) e^{-2 \pi s}+\frac{1}{s^{2}+2 s+2} $$ Complete the square in the denominators. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} Y(s) &amp;=\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+1+2-1}\right) e^{-\pi s}-\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+1+2-1}\right) e^{-2 \pi s}+\frac{1}{s^{2}+2 s+1+2-1} \\ &amp;=\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{(s+1)^{2}+1}\right] e^{-\pi s}-\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1} \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Make it so that $s+1$ appears in the numerators. </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} Y(s)=&amp;\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2}(s+1)-\frac{1}{2}}{(s+1)^{2}+1}\right] e^{-\pi s}-\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2}(s+1)-\frac{1}{2}}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1} \\ =&amp;\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s} \\ &amp;-\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1} \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Take the inverse Laplace transform of $Y(s)$ now to get $y(t)$. $$ y(t)=\mathcal{L}^{-1}\{Y(s)\} $$ </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} =\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}\right.\right.&amp;\left.-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s} \\ &amp;\left.-\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}\right\} \\ =\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}-\right.\right.&amp;\left.\left.\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s}\right\} \\ &amp;-\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}\right\}+\mathcal{L}^{-1}\left\{\frac{1}{(s+1)^{2}+1}\right\} \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>\begin{aligned} y(t)=&amp;\left[\frac{1}{2}-\frac{1}{2} e^{-(t-\pi)} \cos (t-\pi)-\frac{1}{2} e^{-(t-\pi)} \sin (t-\pi)\right] H(t-\pi) \\ -\left[\frac{1}{2}-\frac{1}{2} e^{-(t-2 \pi)} \cos (t-2 \pi)-\frac{1}{2} e^{-(t-2 \pi)} \sin (t-2 \pi)\right] H(t-2 \pi)+e^{-t} \sin t \\ =&amp;\left(\frac{1}{2}+\frac{1}{2} e^{\pi-t} \cos t+\frac{1}{2} e^{\pi-t} \sin t\right) H(t-\pi) \\ \quad-\left(\frac{1}{2}-\frac{1}{2} e^{2 \pi-t} \cos t-\frac{1}{2} e^{2 \pi-t} \sin t\right) H(t-2 \pi)+e^{-t} \sin t \\ =\frac{1}{2}\left(1+e^{\pi-t} \cos t+e^{\pi-t} \sin t\right) H(t-\pi) \\ -\frac{1}{2}\left(1-e^{2 \pi-t} \cos t-e^{2 \pi-t} \sin t\right) H(t-2 \pi)+e^{-t} \sin t \end{aligned} </p>
+</div>
+<div class="paragraph">
+<p>Therefore, $$ y(t)=\frac{1}{2}\left(1+e^{\pi-t} \cos t+e^{\pi-t} \sin t\right) u_{\pi}(t)-\frac{1}{2}\left(1-e^{2 \pi-t} \cos t-e^{2 \pi-t} \sin t\right) u_{2 \pi}(t)+e^{-t} \sin t $$ </p>
 </div>
-
-<div id="outline-container-org5b09abb" class="outline-4">
-<h4 id="org5b09abb">Solution</h4>
-<div class="outline-text-4" id="text-org5b09abb">
-<p>
-Write \(f(t)\) in terms of the Heaviside function, \(H(t)\), which is defined to be 1 if \(t>0\) and 0 if \(t<0\).
-</p>
-
-\begin{aligned}
-f(t) &=1[H(t)-H(t-2)]+e^{-(t-2)} H(t-2) \\
-&=H(t)+\left[e^{-(t-2)}-1\right] H(t-2) \\
-&=u_{0}(t)+\left[e^{-(t-2)}-1\right] u_{2}(t)
-\end{aligned}
-</div>
-</div>
-</div>
-
-<div id="outline-container-orge95fe00" class="outline-3">
-<h3 id="orge95fe00">Problem 13 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-orge95fe00">
-</div>
-<div id="outline-container-orga7c3829" class="outline-4">
-<h4 id="orga7c3829">Statement</h4>
-<div class="outline-text-4" id="text-orga7c3829">
-    \begin{equation*}
-F(s)=\frac{3 !}{(s-2)^{4}}
-\end{equation*}
-</div>
-</div>
-
-<div id="outline-container-orgf1b1616" class="outline-4">
-<h4 id="orgf1b1616">Solution</h4>
-<div class="outline-text-4" id="text-orgf1b1616">
-<p>
-    Apply the two transforms,
-\[
-\mathcal{L}\left\{t^{n}\right\}=\frac{n !}{s^{n+1}} \quad \text { and } \quad \mathcal{L}\left\{e^{c t} f(t)\right\}=F(s-c),
-\]
-together to solve this problem.
-</p>
-
-\begin{aligned}
-f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
-&=\mathcal{L}^{-1}\left\{\frac{3 !}{(s-2)^{4}}\right\} \\
-&=t^{3} e^{2 t}
-\end{aligned}
-</div>
-</div>
-</div>
-
-<div id="outline-container-org9d0c012" class="outline-3">
-<h3 id="org9d0c012">Problem 16</h3>
-<div class="outline-text-3" id="text-org9d0c012">
-</div>
-<div id="outline-container-org9ea7f0b" class="outline-4">
-<h4 id="org9ea7f0b">Statement</h4>
-<div class="outline-text-4" id="text-org9ea7f0b">
-    \begin{equation*}
-F(s)=\frac{e^{-s}+e^{-2 s}-e^{-3 s}-e^{-4 s}}{s}
-\end{equation*}
-</div>
-</div>
-
-<div id="outline-container-orgafa198a" class="outline-4">
-<h4 id="orgafa198a">Solution</h4>
-<div class="outline-text-4" id="text-orgafa198a">
-<p>
-    Apply the two transforms,
-\[
-\mathcal{L}\left\{t^{n}\right\}=\frac{n !}{s^{n+1}} \quad \text { and } \quad \mathcal{L}\{f(t-c) H(t-c)\}=F(s) e^{-c s}
-\]
-together to solve this problem.
-</p>
-
-\begin{aligned}
-f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
-&=\mathcal{L}^{-1}\left\{\frac{e^{-s}+e^{-2 s}-e^{-3 s}-e^{-4 s}}{s}\right\} \\
-&=\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-s}\right\}+\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-2 s}\right\}-\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-3 s}\right\}-\mathcal{L}^{-1}\left\{\frac{1}{s} e^{-4 s}\right\} \\
-&=(t-1)^{0} H(t-1)+(t-2)^{0} H(t-2)-(t-3)^{0} H(t-3)-(t-4)^{0} H(t-4) \\
-&=H(t-1)+H(t-2)-H(t-3)-H(t-4) \\
-&=u_{1}(t)+u_{2}(t)-u_{3}(t)-u_{4}(t)
-\end{aligned}
-</div>
-</div>
-</div>
-
-<div id="outline-container-org674ec59" class="outline-3">
-<h3 id="org674ec59">Problem 20</h3>
-<div class="outline-text-3" id="text-org674ec59">
-</div>
-<div id="outline-container-org0b8f829" class="outline-4">
-<h4 id="org0b8f829">Statement</h4>
-<div class="outline-text-4" id="text-org0b8f829">
-    \begin{equation*}
-F(s)=\frac{1}{9 s^{2}-12 s+3}
-\end{equation*}
-</div>
-</div>
-
-<div id="outline-container-org2d4ce1c" class="outline-4">
-<h4 id="org2d4ce1c">Solution</h4>
-<div class="outline-text-4" id="text-org2d4ce1c">
-<p>
-    Observe that the denominator can be written in terms of \(3 s\).
-\[
-F(s)=\frac{1}{(3 s)^{2}-4(3 s)+3}
-\]
-Factor the denominator.
-\[
-F(s)=\frac{1}{[(3 s)-1][(3 s)-3]}
-\]
-Partially decompose the fraction.
-\[
-F(s)=\frac{-\frac{1}{2}}{(3 s)-1}+\frac{\frac{1}{2}}{(3 s)-3}
-\]
-Apply the two transforms,
-\[
-\mathcal{L}\left\{e^{a t}\right\}=\frac{1}{s-a} \quad \text { and } \quad F(k s)=\mathcal{L}\left\{\frac{1}{k} f\left(\frac{t}{k}\right)\right\},
-\]
-together to get \(f(t)\)
-</p>
-
-\begin{aligned}
-f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
-&=-\frac{1}{2}\left(\frac{1}{3} e^{t / 3}\right)+\frac{1}{2}\left(\frac{1}{3} e^{3 t / 3}\right) \\
-&=-\frac{1}{6} e^{t / 3}+\frac{1}{6} e^{t} \\
-&=\frac{1}{6}\left(e^{t}-e^{t / 3}\right)
-\end{aligned}
-</div>
-</div>
 </div>
 </div>
 
-<div id="outline-container-org0035582" class="outline-2">
-<h2 id="org0035582">Section 6.4</h2>
-<div class="outline-text-2" id="text-org0035582">
-</div>
-<div id="outline-container-orgf97d578" class="outline-3">
-<h3 id="orgf97d578">Problem 1 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-orgf97d578">
-</div>
-<div id="outline-container-org0717486" class="outline-4">
-<h4 id="org0717486">Statement</h4>
-<div class="outline-text-4" id="text-org0717486">
-    \begin{equation*}
-y^{\prime \prime}+y=f(t) ; \quad y(0)=0, \quad y^{\prime}(0)=1 ; \quad f(t)=\left\{\begin{array}{ll}
-1, & 0 \leq t<3 \pi \\
-0, & 3 \pi \leq t<\infty
-\end{array}\right.
-\end{equation*}
-</div>
-</div>
-
-<div id="outline-container-org38b7ca1" class="outline-4">
-<h4 id="org38b7ca1">Solution</h4>
-<div class="outline-text-4" id="text-org38b7ca1">
-<p>
-    Because the ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function \(y(t)\) is defined here as
-\[
-Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t
-\]
-Consequently, the first and second derivatives transform as follows.
-Apply the Laplace transform to both sides of the ODE.
-\[
-\mathcal{L}\left\{y^{\prime \prime}+y\right\}=\mathcal{L}\{f(t)\}
-\]
-Use the fact that the transform is a linear operator.
-</p>
-
-\begin{array}{c}
-\mathcal{L}\left\{y^{\prime \prime}\right\}+\mathcal{L}\{y\}=\mathcal{L}\{f(t)\} \\
-{\left[s^{2} Y(s)-s y(0)-y^{\prime}(0)\right]+Y(s)=\int_{0}^{3 \pi} e^{-s t}(1) d t+\int_{3 \pi}^{\infty} e^{-s t}(0) d t}
-\end{array}
-
-<p>
-Plug in the initial conditions, \(y(0)=0\) and \(y^{\prime}(0)=1\).
-\[
-\left[s^{2} Y(s)-1\right]+Y(s)=\int_{0}^{3 \pi} e^{-s t} d t
-\]
-</p>
-
-<p>
-As a result of applying the Laplace transform, the ODE has reduced to an algebraic equation for \(Y\), the transformed solution.
-</p>
-
-\begin{array}{c}
-\left(s^{2}+1\right) Y(s)-1=\left.\left(-\frac{1}{s} e^{-s t}\right)\right|_{0} ^{3 \pi} \\
-\left(s^{2}+1\right) Y(s)=\frac{1}{s}-\frac{1}{s} e^{-3 \pi s}+1 \\
-Y(s)=\frac{1}{s\left(s^{2}+1\right)}-\frac{1}{s\left(s^{2}+1\right)} e^{-3 \pi s}+\frac{1}{s^{2}+1} \\
-=\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right)-\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right) e^{-3 \pi s}+\frac{1}{s^{2}+1}
-\end{array}
-
-<p>
-Take the inverse Laplace transform of \(Y(s)\) now to get \(y(t)\).
-</p>
-
-\begin{aligned}
-y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
-&=\mathcal{L}^{-1}\left\{\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right)-\left(\frac{1}{s}-\frac{s}{s^{2}+1}\right) e^{-3 \pi s}+\frac{1}{s^{2}+1}\right\} \\
-&=(1-\cos t)-[1-\cos (t-3 \pi)] H(t-3 \pi)+\sin t \\
-&=1+\sin t-\cos t-[1-\cos (t-\pi)] H(t-3 \pi) \\
-&=1+\sin t-\cos t-(1+\cos t) H(t-3 \pi) \\
-&=1+\sin t-\cos t-(1+\cos t) u_{3 \pi}(t)
-\end{aligned}
-</div>
-</div>
-</div>
-
-
-
-<div id="outline-container-orga99b25c" class="outline-3">
-<h3 id="orga99b25c">Problem 2</h3>
-<div class="outline-text-3" id="text-orga99b25c">
-</div>
-<div id="outline-container-org3537b12" class="outline-4">
-<h4 id="org3537b12">Solution</h4>
-<div class="outline-text-4" id="text-org3537b12">
-<p>
-Evaluate the inverse Laplace transforms.
-</p>
-
-<p>
-In order to write \(Y(s)\) in terms of known transforms, use partial fraction decomposition.
-\[
-\frac{1}{s\left(s^{2}+2 s+2\right)}=\frac{A}{s}+\frac{B s+C}{s^{2}+2 s+2}
-\]
-Multiply both sides by \(s\left(s^{2}+2 s+2\right)\).
-\[
-1=A\left(s^{2}+2 s+2\right)+(B s+C) s
-\]
-Plug in three random values of \(s\) to get a system of three equations for \(A, B\), and $C .$
-</p>
-
-\begin{array}{ll}
-s=0: & 1=2 A \\
-s=1: & 1=5 A+B+C \\
-s=2: & 1=10 A+4 B+2 C
-\end{array}
-
-<p>
-Solving this system yields \(A=1 / 2, B=-1 / 2\), and \(C=-1\).
-\[
-Y(s)=\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+2}\right) e^{-\pi s}-\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+2}\right) e^{-2 \pi s}+\frac{1}{s^{2}+2 s+2}
-\]
-Complete the square in the denominators.
-</p>
-
-\begin{aligned}
-Y(s) &=\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+1+2-1}\right) e^{-\pi s}-\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+1+2-1}\right) e^{-2 \pi s}+\frac{1}{s^{2}+2 s+1+2-1} \\
-&=\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{(s+1)^{2}+1}\right] e^{-\pi s}-\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}
-\end{aligned}
-
-<p>
-Make it so that \(s+1\) appears in the numerators.
-</p>
-
-\begin{aligned}
-Y(s)=&\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2}(s+1)-\frac{1}{2}}{(s+1)^{2}+1}\right] e^{-\pi s}-\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2}(s+1)-\frac{1}{2}}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1} \\
-=&\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s} \\
-&-\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}
-\end{aligned}
-
-<p>
-Take the inverse Laplace transform of \(Y(s)\) now to get \(y(t)\).
-\[
-y(t)=\mathcal{L}^{-1}\{Y(s)\}
-\]
-</p>
-
-
-\begin{aligned}
-=\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}\right.\right.&\left.-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s} \\
-&\left.-\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}\right\} \\
-=\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}-\right.\right.&\left.\left.\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s}\right\} \\
-&-\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}\right\}+\mathcal{L}^{-1}\left\{\frac{1}{(s+1)^{2}+1}\right\}
-\end{aligned}
-
-\begin{aligned}
-y(t)=&\left[\frac{1}{2}-\frac{1}{2} e^{-(t-\pi)} \cos (t-\pi)-\frac{1}{2} e^{-(t-\pi)} \sin (t-\pi)\right] H(t-\pi) \\
--\left[\frac{1}{2}-\frac{1}{2} e^{-(t-2 \pi)} \cos (t-2 \pi)-\frac{1}{2} e^{-(t-2 \pi)} \sin (t-2 \pi)\right] H(t-2 \pi)+e^{-t} \sin t \\
-=&\left(\frac{1}{2}+\frac{1}{2} e^{\pi-t} \cos t+\frac{1}{2} e^{\pi-t} \sin t\right) H(t-\pi) \\
-\quad-\left(\frac{1}{2}-\frac{1}{2} e^{2 \pi-t} \cos t-\frac{1}{2} e^{2 \pi-t} \sin t\right) H(t-2 \pi)+e^{-t} \sin t \\
-=\frac{1}{2}\left(1+e^{\pi-t} \cos t+e^{\pi-t} \sin t\right) H(t-\pi) \\
--\frac{1}{2}\left(1-e^{2 \pi-t} \cos t-e^{2 \pi-t} \sin t\right) H(t-2 \pi)+e^{-t} \sin t
-\end{aligned}
-
-<p>
-Therefore,
-\[
-y(t)=\frac{1}{2}\left(1+e^{\pi-t} \cos t+e^{\pi-t} \sin t\right) u_{\pi}(t)-\frac{1}{2}\left(1-e^{2 \pi-t} \cos t-e^{2 \pi-t} \sin t\right) u_{2 \pi}(t)+e^{-t} \sin t
-\]  
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Date: 128; 12021 H.E.</p>
-<p class="author">Author: Sandy Urazayev</p>
-<p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
-<p class="date">Created: 2021-05-16 Sun 20:54</p>
-</div>
 </body>
 </html>

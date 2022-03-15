@@ -13,15 +13,19 @@
 #+date: 52; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+* Ordinary Differential Equations
+
 Go to [[https://sandyuraz.com][Sandy's Website 🚀]]
 
-* Course Description
-  Taught by [[https://erikvv.ku.edu][Professor Van Vleck]]. This webpage is created for the course by its
-  grader, Sandy Urazayev to provide solution sets for homework assignments. 
-* Book
-  /Elementary Differential Equations and Boundary Value Problems/ by Boyce,
-  DiPrima, and Meade *(11th Edition)*.
-* Homework Oracles
+** Course Description
+Taught by [[https://erikvv.ku.edu][Professor Van Vleck]]. This webpage is created for the course by its
+grader, Sandy Urazayev to provide solution sets for homework assignments. 
+
+** Book
+/Elementary Differential Equations and Boundary Value Problems/ by Boyce,
+DiPrima, and Meade *(11th Edition)*.
+  
+** Homework Oracles
   - [[./oracles/hw1][Homework 1]]
   - [[./oracles/hw2][Homework 2]]
   - [[./oracles/hw3][Homework 3]]

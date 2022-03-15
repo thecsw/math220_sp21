@@ -1,501 +1,247 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2021-05-12 Wed 14:45 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Homework 1 Oracle</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Sandy Urazayev" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
+<link rel="canonical" href="https://sandyuraz.com/math220_sp21/oracles/hw1" type=""/>
+<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type=""/>
 
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" property="generator" content="Darkness">
+<meta name="author" property="author" content="email">
+<meta name="theme-color" property="theme-color" content="#fffff4">
+<meta name="description" property="description" content="Go back to the [[../../][home page]]...">
+<meta name="og:title" property="og:title" content="Find the time $T$ it takes the object to fall 300m.">
+<meta name="og:site_name" property="og:site_name" content="Ordinary Differential Equations">
+<meta name="og:url" property="og:url" content="https://sandyuraz.com/math220_sp21/oracles/hw1">
+<meta name="og:locale" property="og:locale" content="en_GB">
+<meta name="og:type" property="og:type" content="website">
+<meta name="og:image" property="og:image" content="https://sandyuraz.com/math220_sp21/oracles/hw1/preview.png">
+<meta name="og:image:alt" property="og:image:alt" content="Preview">
+<meta name="og:image:type" property="og:image:type" content="image/png">
+<meta name="og:image:width" property="og:image:width" content="1280">
+<meta name="og:image:height" property="og:image:height" content="640">
+<meta name="og:description" property="og:description" content="Go back to the [[../../][home page]]...">
+<meta name="twitter:card" property="twitter:card" content="summary_large_image">
+<meta name="twitter:site" property="twitter:site" content="Ordinary Differential Equations">
+<meta name="twitter:creator" property="twitter:creator" content="@sandyuraz">
+<meta name="twitter:image:src" property="twitter:image:src" content="https://sandyuraz.com/math220_sp21/oracles/hw1/preview.png">
+<meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw1">
+<meta name="twitter:title" property="twitter:title" content="Find the time $T$ it takes the object to fall 300m.">
+<meta name="twitter:description" property="twitter:description" content="Go back to the [[../../][home page]]...">
 
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
+<script async src="https://sandyuraz.com/scripts/time.js"></script>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: true},
+              {left: '\\[', right: '\\]', display: false},
+              {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+              {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+              {left: "\\begin{align}", right: "\\end{align}", display: true},
+              {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+              {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+              {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+              {left: "\\begin{CD}", right: "\\end{CD}", display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<title>Find the time \(T\) it takes the object to fall 300m.</title>
 </head>
-<body>
+<link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/web.css">
+
+<body class="article">
+
+<div id="header">
+<h1><img id="myface" src="https://sandyuraz.com/math220_sp21/rei.png" width="112" height="112">Find the time \(T\) it takes the object to fall 300m.</h1>
+<div class="details">
+<span id="author" class="author">email</span><br>
+<span id="email" class="email">ctu [at] ku [dot] edu</span><br>
+<span id="revdate">
+<a href="https://sandyuraz.com/math220_sp21/">Home 🏠</a></span>
+</div>
+<div id="hetime" class="details"></div>
+</div>
 <div id="content">
-<h1 class="title">Homework 1 Oracle
-<br />
-<span class="subtitle">MATH 220 Spring 2021</span>
-</h1>
-<p>
-Go back to the <a href="../../">home page</a>
-</p>
 
-<p>
-<a href="./index.pdf">[View the PDF version]​</a>
-</p>
-
-<div id="outline-container-org60e94e5" class="outline-2">
-<h2 id="org60e94e5">Chapter 1.1</h2>
-<div class="outline-text-2" id="text-org60e94e5">
+<div class="paragraph">
+<p>Go back to the <a href="../../">home page</a> </p>
 </div>
-<div id="outline-container-orgbc7fb82" class="outline-3">
-<h3 id="orgbc7fb82">Problem 7</h3>
-<div class="outline-text-3" id="text-orgbc7fb82">
-
-<div id="orgfa94a5b" class="figure">
-<p><img src="./7.jpg" alt="7.jpg" width="90%" />
-</p>
+<a href="./index.pdf">View the PDF version​</a>
+<div class="sect1">
+<h2 id="_chapter_1_1">Chapter 1.1</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_7">Problem 7</h3>
+<div class="sectionbody">
+<hr>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="./7.jpg"><img src="./7.jpg" alt="image"></a>
 </div>
+<div class="title">image</div>
 </div>
+<hr></div>
 </div>
-<div id="outline-container-org4ce8d99" class="outline-3">
-<h3 id="org4ce8d99">Problem 10</h3>
-<div class="outline-text-3" id="text-org4ce8d99">
-
-<div id="org3567fca" class="figure">
-<p><img src="./10.jpg" alt="10.jpg" width="90%" />
-</p>
+<div class="sect2">
+<h3 id="_problem_10">Problem 10</h3>
+<div class="sectionbody">
+<hr>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="./10.jpg"><img src="./10.jpg" alt="image"></a>
 </div>
+<div class="title">image</div>
 </div>
+<hr></div>
 </div>
-<div id="outline-container-orga286b67" class="outline-3">
-<h3 id="orga286b67">Problem 15 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-orga286b67">
-<p>
-We can see that the direction field results in constant rate of change of
-zero at level where \(y=0\) and \(y=3\). Then we can also see that the direction
-of the graph decreases when \(y<0\) and \(y>3\), while also increasing in section
-of \(y>0\) and \(y<3\). That means, we are looking for a separate \(y\) to get
-constant change at \(0\) and \((3-y)\) term, so that the constraints above are
-satisfied. \(\therefore y' = y(3-y)\). Answer is <code>h</code>.
-</p>
+<div class="sect2">
+<h3 id="_problem_15__for_grade_">Problem 15 [FOR GRADE]</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We can see that the direction field results in constant rate of change of zero at level where $y=0$ and $y=3$. Then we can also see that the direction of the graph decreases when $y&lt;0$ and $y&gt;3$, while also increasing in section of $y&gt;0$ and $y&lt;3$. That means, we are looking for a separate $y$ to get constant change at $0$ and $(3-y)$ term, so that the constraints above are satisfied. $\therefore y’ = y(3-y)$. Answer is <code>h</code>. </p>
+</div></div>
 </div>
+<div class="sect1">
+<h2 id="_chapter_1_2">Chapter 1.2</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_7__for_grade_">Problem 7 [FOR GRADE]</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Our differential equation is as given \begin{equation*} \frac{dp}{dt} = \frac{p}{2} - 450 \end{equation*} </p>
 </div>
+<div class="paragraph">
+<p><strong>a</strong>. Find the time at which the population becomes extinct if $p(0)=850$ </p>
 </div>
-<div id="outline-container-orgc92b523" class="outline-2">
-<h2 id="orgc92b523">Chapter 1.2</h2>
-<div class="outline-text-2" id="text-orgc92b523">
+<div class="paragraph">
+<p>We find that $\mu(t) = e^{\int -\frac{1}{2} dt} = e^{-\frac{1}{2}t}$. Then </p>
 </div>
-<div id="outline-container-org4d59abb" class="outline-3">
-<h3 id="org4d59abb">Problem 7 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-org4d59abb">
-<p>
-Our differential equation is as given
-</p>
-\begin{equation*}
-        \frac{dp}{dt} = \frac{p}{2} - 450
-\end{equation*}
-
-<p>
-<b>a</b>. Find the time at which the population becomes extinct if \(p(0)=850\)
-</p>
-
-<p>
-We find that \(\mu(t) = e^{\int -\frac{1}{2} dt} = e^{-\frac{1}{2}t}\). Then
-</p>
-
-\begin{align*}
-        \frac{d}{dt}(\mu(t)p) = -450 \mu(t)                                                 \\
-        \implies p(t) & = \frac{\int -450\mu(t) dt}{\mu(t)}                                 \\
-                      & = \frac{\int -450 e^{-\frac{1}{2}t}dt}{e^{-\frac{1}{2}t}}         \\
-                      & = \frac{-450 \times (-2e^{-\frac{1}{2}t}) + C}{e^{-\frac{1}{2}t}} \\
-                      & = 900 + C e^{\frac{1}{2}t}
-\end{align*}
-
-<p>
-Then by using \(p(0)=850\), we find the constant \(C\) to be \(-50\). We need to
-find the time \(t_e\), at which \(p(t_e)=0\). We simply solve the equation
-\(0 = 900 - 50 e^{\frac{1}{2}t_e}\), where we find \(t_e = \ln(324) \approx 5.78\). 
-</p>
-
-<p>
-<b>b.</b> Find the time of extinction if \(p(0)=p_0\), where \(0<p_0<900\)
-</p>
-
-<p>
-Using the above, we find that \(t_e = 2 \ln(\frac{900}{900-p_0})\)
-</p>
-
-<p>
-<b>c.</b> Find the initial population \(p_0\) if the population is to become extinct in
-1 year.
-</p>
-
-<p>
-Recall from Example 1 that \(t\) is measured in months. So we simply solve
-</p>
-\begin{equation*}
-        0 = 900 - (900-p_0)e^{6} \implies p_0 = 900 - \frac{900}{e^6} \approx 897.77
-\end{equation*}
+<div class="paragraph">
+<p>\begin{align*} \frac{d}{dt}(\mu(t)p) = -450 \mu(t)                                                 \\ \implies p(t) &amp; = \frac{\int -450\mu(t) dt}{\mu(t)}                                 \\ &amp; = \frac{\int -450 e^{-\frac{1}{2}t}dt}{e^{-\frac{1}{2}t}}         \\ &amp; = \frac{-450 \times (-2e^{-\frac{1}{2}t}) + C}{e^{-\frac{1}{2}t}} \\ &amp; = 900 + C e^{\frac{1}{2}t} \end{align*} </p>
 </div>
+<div class="paragraph">
+<p>Then by using $p(0)=850$, we find the constant $C$ to be $-50$. We need to find the time $t_e$, at which $p(t_e)=0$. We simply solve the equation $0 = 900 - 50 e^{\frac{1}{2}t_e}$, where we find $t_e = \ln(324) \approx 5.78$. </p>
 </div>
-<div id="outline-container-org513b36f" class="outline-3">
-<h3 id="org513b36f">Problem 9</h3>
-<div class="outline-text-3" id="text-org513b36f">
-<p>
-<b>a.</b> If the limiting velocity is 49m/s (the same as in Example 2), show that
- the equation of motion can be written as
-</p>
-\begin{equation*}
-  \frac{dv}{dt} = \frac{1}{245}(49^2-v^2)
-\end{equation*}
-
-<p>
-Recall the base equation from Example 2, by using the given, we have
-</p>
-\begin{equation*}
-  0 = 9.8 - C (49^2) \implies C = \frac{9.8}{49^2} = \frac{1}{245}\\
-  \implies \frac{dv}{dt} = \frac{1}{245}(49^2-v^2)
-\end{equation*}
-
-<p>
-<b>b.</b> If \(v(0) = 0\), find an expression for \(v(t)\) at any time.
-</p>
-
-<p>
-We can view this problem as a first-order separable equation and rewrite it
-as
-</p>
-\begin{equation*}
-        \int{\frac{dv}{49^2-v^2}} = \int{\frac{dt}{245}}
-\end{equation*}
-<p>
-After some computations, the expression for \(v(t)\) is
-\(49\tanh(\frac{t}{5})\)
-</p>
-
-<p>
-<b>c.</b> Plot your solution from part b and the solution (26) from Example 2 on
-the same axes.
-</p>
-
-
-<div id="org5aa05a7" class="figure">
-<p><img src="./tanh.png" alt="tanh.png" width="95%" />
-</p>
+<div class="paragraph">
+<p>Using the above, we find that $t_e = 2 \ln(\frac{900}{900-p_0})$ </p>
 </div>
-
-<p>
-<b>d.</b> Based on your plots in part <b>c</b>, compare the effect of a quadratic drag
-force with that of a linear drag force. 
-</p>
-
-<p>
-The quadratic drag damps the speed faster and has a bigger effect on the
-speed than the linear dependance.
-</p>
-
-<p>
-<b>e.</b> Find the distance \(x(t)\) that the object falls in time \(t\).
-</p>
-
-<p>
-We know that \(\frac{dx}{dt} = v(t) = 49\tanh(\frac{t}{5})\) so then
-\(x(t) = 245\ln(\cosh(\frac{t}{5})) + C\). If \(x(0) = 0\), then \(C = 0\).
-</p>
-
-<p>
-<b>f.</b> Find the time \(T\) it takes the object to fall 300m.
-</p>
-
-<p>
-Simply solve \(300 = 245 \ln(\cosh(\frac{t}{5}))\), it will be something like
-    \(t = 5\cosh^{-1}(e^{\frac{60}{49}}) \approx 9.477\)
-</p>
+<div class="paragraph">
+<p>1 year. </p>
+</div>
+<div class="paragraph">
+<p>Recall from Example 1 that $t$ is measured in months. So we simply solve \begin{equation*} 0 = 900 - (900-p_0)e^{6} \implies p_0 = 900 - \frac{900}{e^6} \approx 897.77 \end{equation*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_9">Problem 9</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>the equation of motion can be written as \begin{equation*} \frac{dv}{dt} = \frac{1}{245}(49^2-v^2) \end{equation*} </p>
+</div>
+<div class="paragraph">
+<p>Recall the base equation from Example 2, by using the given, we have \begin{equation*} 0 = 9.8 - C (49^2) \implies C = \frac{9.8}{49^2} = \frac{1}{245}\\ \implies \frac{dv}{dt} = \frac{1}{245}(49^2-v^2) \end{equation*} </p>
+</div>
+<div class="paragraph">
+<p>We can view this problem as a first-order separable equation and rewrite it as \begin{equation*} \int{\frac{dv}{49^2-v^2}} = \int{\frac{dt}{245}} \end{equation*} After some computations, the expression for $v(t)$ is $49\tanh(\frac{t}{5})$ </p>
+</div>
+<div class="paragraph">
+<p>the same axes. </p>
+</div>
+<hr>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="./tanh.png"><img src="./tanh.png" alt="image"></a>
+</div>
+<div class="title">image</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>force with that of a linear drag force. </p>
+</div>
+<div class="paragraph">
+<p>The quadratic drag damps the speed faster and has a bigger effect on the speed than the linear dependance. </p>
+</div>
+<div class="paragraph">
+<p>We know that $\frac{dx}{dt} = v(t) = 49\tanh(\frac{t}{5})$ so then $x(t) = 245\ln(\cosh(\frac{t}{5})) + C$. If $x(0) = 0$, then $C = 0$. </p>
+</div>
+<div class="paragraph">
+<p>Simply solve $300 = 245 \ln(\cosh(\frac{t}{5}))$, it will be something like $t = 5\cosh^{-1}(e^{\frac{60}{49}}) \approx 9.477$ </p>
+</div></div>
+</div>
+<div class="sect1">
+<h2 id="_chapter_1_3">Chapter 1.3</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_1">Problem 1</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>2nd order and linear. </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_3">Problem 3</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>4th order and linear. </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_5">Problem 5</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Plug them both in. They are solutions. </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_9">Problem 9</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Plug them both in. They are solutions. </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_11__for_grade_">Problem 11 [FOR GRADE]</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>$y’+2y=0$ form yields solutions for $r=-2$. You can solve a characteristic polynomial of this equation to get it. <em>I guess you guys aren’t ready for that yet. But your kids are gonna love it</em> </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_16">Problem 16</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>$u_{xx} + u_{yy} + u_{zz} = 0$ is linear and second order. </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_20">Problem 20</h3>
+<div class="sectionbody">
+</div>
+<div class="paragraph">
+<p>Plug them both in. They are solutions. </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5f09785" class="outline-2">
-<h2 id="org5f09785">Chapter 1.3</h2>
-<div class="outline-text-2" id="text-org5f09785">
-</div>
-<div id="outline-container-org59ecbee" class="outline-3">
-<h3 id="org59ecbee">Problem 1</h3>
-<div class="outline-text-3" id="text-org59ecbee">
-<p>
-2nd order and linear.
-</p>
-</div>
-</div>
-<div id="outline-container-org4544bcd" class="outline-3">
-<h3 id="org4544bcd">Problem 3</h3>
-<div class="outline-text-3" id="text-org4544bcd">
-<p>
-4th order and linear.
-</p>
-</div>
-</div>
-<div id="outline-container-org89f7f1f" class="outline-3">
-<h3 id="org89f7f1f">Problem 5</h3>
-<div class="outline-text-3" id="text-org89f7f1f">
-<p>
-Plug them both in. They are solutions.
-</p>
-</div>
-</div>
-<div id="outline-container-orgf094131" class="outline-3">
-<h3 id="orgf094131">Problem 9</h3>
-<div class="outline-text-3" id="text-orgf094131">
-<p>
-Plug them both in. They are solutions.
-</p>
-</div>
-</div>
-<div id="outline-container-orgc17b1ee" class="outline-3">
-<h3 id="orgc17b1ee">Problem 11 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-orgc17b1ee">
-<p>
-\(y'+2y=0\) form yields solutions for \(r=-2\). You can solve a characteristic
-polynomial of this equation to get it.
-<i>I guess you guys aren't ready for that yet. But your kids are gonna love it</i>
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgbe00a93" class="outline-3">
-<h3 id="orgbe00a93">Problem 16</h3>
-<div class="outline-text-3" id="text-orgbe00a93">
-<p>
-\(u_{xx} + u_{yy} + u_{zz} = 0\) is linear and second order.  
-</p>
-</div>
-</div>
-
-<div id="outline-container-org18a3873" class="outline-3">
-<h3 id="org18a3873">Problem 20</h3>
-<div class="outline-text-3" id="text-org18a3873">
-<p>
-Plug them both in. They are solutions.
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Date: 44; 12021 H.E.</p>
-<p class="author">Author: Sandy Urazayev</p>
-<p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
-<p class="date">Created: 2021-05-12 Wed 14:45</p>
-</div>
 </body>
 </html>

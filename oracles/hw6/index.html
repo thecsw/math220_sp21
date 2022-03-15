@@ -1,523 +1,169 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2021-05-12 Wed 14:45 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://sandyuraz.com/math220_sp21/oracles/hw6" type=""/>
+<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type=""/>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" property="generator" content="Darkness">
+<meta name="author" property="author" content="email">
+<meta name="theme-color" property="theme-color" content="#fffff4">
+<meta name="description" property="description" content="Go back to the [[../../][home page]]...">
+<meta name="og:title" property="og:title" content="Homework 6 Oracle">
+<meta name="og:site_name" property="og:site_name" content="Ordinary Differential Equations">
+<meta name="og:url" property="og:url" content="https://sandyuraz.com/math220_sp21/oracles/hw6">
+<meta name="og:locale" property="og:locale" content="en_GB">
+<meta name="og:type" property="og:type" content="website">
+<meta name="og:image" property="og:image" content="https://sandyuraz.com/math220_sp21/oracles/hw6/preview.png">
+<meta name="og:image:alt" property="og:image:alt" content="Preview">
+<meta name="og:image:type" property="og:image:type" content="image/png">
+<meta name="og:image:width" property="og:image:width" content="1280">
+<meta name="og:image:height" property="og:image:height" content="640">
+<meta name="og:description" property="og:description" content="Go back to the [[../../][home page]]...">
+<meta name="twitter:card" property="twitter:card" content="summary_large_image">
+<meta name="twitter:site" property="twitter:site" content="Ordinary Differential Equations">
+<meta name="twitter:creator" property="twitter:creator" content="@sandyuraz">
+<meta name="twitter:image:src" property="twitter:image:src" content="https://sandyuraz.com/math220_sp21/oracles/hw6/preview.png">
+<meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw6">
+<meta name="twitter:title" property="twitter:title" content="Homework 6 Oracle">
+<meta name="twitter:description" property="twitter:description" content="Go back to the [[../../][home page]]...">
+
+<script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
+<script async src="https://sandyuraz.com/scripts/time.js"></script>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: true},
+              {left: '\\[', right: '\\]', display: false},
+              {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+              {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+              {left: "\\begin{align}", right: "\\end{align}", display: true},
+              {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+              {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+              {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+              {left: "\\begin{CD}", right: "\\end{CD}", display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
 <title>Homework 6 Oracle</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Sandy Urazayev" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
-<body>
+<link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/web.css">
+
+<body class="article">
+
+<div id="header">
+<h1><img id="myface" src="https://sandyuraz.com/math220_sp21/rei.png" width="112" height="112">Homework 6 Oracle</h1>
+<div class="details">
+<span id="author" class="author">email</span><br>
+<span id="email" class="email">ctu [at] ku [dot] edu</span><br>
+<span id="revdate">
+<a href="https://sandyuraz.com/math220_sp21/">Home 🏠</a></span>
+</div>
+<div id="hetime" class="details"></div>
+</div>
 <div id="content">
-<h1 class="title">Homework 6 Oracle
-<br />
-<span class="subtitle">MATH 220 Spring 2021</span>
-</h1>
-<p>
-Go back to the <a href="../../">home page</a>
-</p>
 
-<p>
-<a href="./index.pdf">[View the PDF version]​</a>
-</p>
-
-<div id="outline-container-org3b4f61b" class="outline-2">
-<h2 id="org3b4f61b">Section 3.3</h2>
-<div class="outline-text-2" id="text-org3b4f61b">
+<div class="paragraph">
+<p>Go back to the <a href="../../">home page</a> </p>
 </div>
-<div id="outline-container-org9bdc7e5" class="outline-3">
-<h3 id="org9bdc7e5">Problem 7</h3>
-<div class="outline-text-3" id="text-org9bdc7e5">
-\begin{align*}
-  y'' + 2y' + 2y = 0
-\end{align*}
-<p>
-Find that \(r = \{-1 - i, -1 + i\}\). Then
-</p>
-\begin{align*}
-  y(t) = C_1 e^{-t} \cos (t) + C_2 e^{-t} \sin (t)
-\end{align*}
+<a href="./index.pdf">View the PDF version​</a>
+<div class="sect1">
+<h2 id="_section_3_3">Section 3.3</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_7">Problem 7</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{align*} y’’ + 2y’ + 2y = 0 \end{align*} Find that $r = \{-1 - i, -1 + i\}$. Then \begin{align*} y(t) = C_1 e^{-t} \cos (t) + C_2 e^{-t} \sin (t) \end{align*} </p>
+</div></div>
 </div>
+<div class="sect2">
+<h3 id="_problem_13__for_grade_">Problem 13 [FOR GRADE]</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{align*} y’’ - 2y’ + 5y = 0, \quad y(\pi/2) = 0, \quad y’(\pi / 2) = 2 \end{align*} Find that $r = \{1+2i,1-2i\}$. Then \begin{align*} y(t) = C_1 e^t \cos (2t) + C_2 e^t \sin (2t) \end{align*} Let us apply the initial conditions \begin{align*} \begin{cases} y(\pi/2)=0\\ y’(\pi/2)=2 \end{cases} \implies \begin{cases} C_1 = 0\\ C_2 = -\frac{1}{e^{\pi/2}} \end{cases} \end{align*} Finally, \begin{align*} y(t) = -\frac{1}{e^{\pi/2}} e^t \sin (2t) \end{align*} </p>
+</div></div>
 </div>
-<div id="outline-container-org2a6816a" class="outline-3">
-<h3 id="org2a6816a">Problem 13 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-org2a6816a">
-\begin{align*}
-  y'' - 2y' + 5y = 0, \quad y(\pi/2) = 0, \quad y'(\pi / 2) = 2
-\end{align*}
-<p>
-Find that \(r = \{1+2i,1-2i\}\). Then
-</p>
-\begin{align*}
-  y(t) = C_1 e^t \cos (2t) + C_2 e^t \sin (2t)
-\end{align*}
-<p>
-Let us apply the initial conditions
-</p>
-\begin{align*}
-  \begin{cases}
-    y(\pi/2)=0\\
-    y'(\pi/2)=2
-    \end{cases} \implies
-  \begin{cases}
-    C_1 = 0\\
-    C_2 = -\frac{1}{e^{\pi/2}}
-    \end{cases}
-\end{align*}
-<p>
-Finally,
-</p>
-\begin{align*}
-  y(t) = -\frac{1}{e^{\pi/2}} e^t \sin (2t)
-\end{align*}
+<div class="sect2">
+<h3 id="_problem_17">Problem 17</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{align*} 5u’’ + 2u’ + 7u = 0, \quad u(0) = 2, \quad u’(0) = 1 \end{align*} </p>
+</div></div>
+<div class="sect3">
+<h4 id="_part__a_">Part (a)</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Find that $r = \{-\frac{1}{5} - i\frac{\sqrt{34}}{5}, -\frac{1}{5} + i\frac{\sqrt{34}}{5}\}$. Then \begin{align*} \begin{cases} u(0) = 2\\ u’(0) = 1 \end{cases} \implies \begin{cases} C_1 = 2\\ C_2 = \frac{7}{\sqrt{34}} \end{cases} \end{align*} Finally, \begin{align*} u(t) = 2 e^{-t/5} \cos\left(\frac{\sqrt{34}t}{5}\right) + \frac{7}{\sqrt{34}} e^{-t/5} \sin\left(\frac{\sqrt{34}t}{5}\right) \end{align*} </p>
+</div></div>
 </div>
+<div class="sect3">
+<h4 id="_part__b_">Part (b)</h4>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{align*} T \approx 14.512 \end{align*} </p>
+</div></div>
 </div>
-<div id="outline-container-org8433d6d" class="outline-3">
-<h3 id="org8433d6d">Problem 17</h3>
-<div class="outline-text-3" id="text-org8433d6d">
-\begin{align*}
-  5u'' + 2u' + 7u = 0, \quad u(0) = 2, \quad u'(0) = 1
-\end{align*}
+<div class="sect2">
+<h3 id="_problem_19">Problem 19</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{aligned} W\left(e^{\lambda t} \cos \mu t, e^{\lambda t} \sin \mu t\right) &amp; =\left|\begin{array}{cc}e^{\lambda t} \cos \mu t &amp; e^{\lambda t} \sin \mu t                                   \\ \frac{d}{d t}\left(e^{\lambda t} \cos \mu t\right) &amp; \frac{d}{d t}\left(e^{\lambda t} \sin \mu t\right)\end{array}\right| \\ &amp;=\left|\begin{array}{cc}e^{\lambda t} \cos \mu t &amp; e^{\lambda t} \sin \mu t                                                     \\ \lambda e^{\lambda t} \cos \mu t-\mu e^{\lambda t} \sin \mu t \quad \lambda e^{\lambda t} \sin \mu t+\mu e^{\lambda t} \cos \mu t\end{array}\right| \\ &amp;=e^{\lambda t} \cos \mu t\left(\lambda e^{\lambda t} \sin \mu t+\mu e^{\lambda t} \cos \mu t\right)-e^{\lambda t} \sin \mu t\left(\lambda e^{\lambda t} \cos \mu t-\mu e^{\lambda t} \sin \mu t\right) \\ &amp;=\lambda e^{2 \lambda t} \cos \mu t \sin \mu t+\mu e^{2 \lambda t} \cos ^{2} \mu t\lambda e^{2 \lambda t} \cos \mu t \sin \mu t+\mu e^{2 \lambda t} \sin ^{2} \mu t     \\ &amp;=\mu e^{2 \lambda t}\left(\cos ^{2} \mu t+\sin ^{2} \mu t\right)     \\ &amp;=\mu e^{2 \lambda t} \end{aligned} </p>
+</div></div>
 </div>
-<div id="outline-container-org8f8f08f" class="outline-4">
-<h4 id="org8f8f08f">Part (a)</h4>
-<div class="outline-text-4" id="text-org8f8f08f">
-<p>
-Find that
-\(r = \{-\frac{1}{5} - i\frac{\sqrt{34}}{5}, -\frac{1}{5} +
-    i\frac{\sqrt{34}}{5}\}\). Then
-</p>
-\begin{align*}
-  \begin{cases}
-    u(0) = 2\\
-    u'(0) = 1
-  \end{cases} \implies
-  \begin{cases}
-    C_1 = 2\\
-    C_2 = \frac{7}{\sqrt{34}}
-  \end{cases}
-\end{align*}
-<p>
-Finally,
-</p>
-\begin{align*}
-  u(t) = 2 e^{-t/5} \cos\left(\frac{\sqrt{34}t}{5}\right) + \frac{7}{\sqrt{34}} e^{-t/5} \sin\left(\frac{\sqrt{34}t}{5}\right)
-\end{align*}
+<div class="sect1">
+<h2 id="_section_3_4">Section 3.4</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_1">Problem 1</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{align*} y’’ - 2y’ + y = 0 \end{align*} Then \begin{align*} r^2 - 2r + 1 = 0 \end{align*} So $r = 1$, finally \begin{align*} y(t) = C_1 e^t + C_2 t e^t \end{align*} </p>
+</div></div>
 </div>
+<div class="sect2">
+<h3 id="_problem_8__for_grade_">Problem 8 [FOR GRADE]</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{align*} 2y’’ + 2y’ + y = 0 \end{align*} Then \begin{align*} 2r^2 + 2r + 1 = 0 \end{align*} So $r = \{-1/2 - 1/2i, -1/2 + 1/2i\}$. Finally, \begin{align*} y(t) = C_1 e^{-t/2} \cos \left(\frac{1}{2}t\right) + C_2 e^{-t/2} \sin \left(\frac{1}{2}t\right) \end{align*} </p>
+</div></div>
 </div>
-<div id="outline-container-orgf1398f7" class="outline-4">
-<h4 id="orgf1398f7">Part (b)</h4>
-<div class="outline-text-4" id="text-orgf1398f7">
-\begin{align*}
-  T \approx 14.512
-\end{align*}
+<div class="sect2">
+<h3 id="_problem_11">Problem 11</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>\begin{align*} y’’ + 4y’ + 4y = 0, \quad y(-1)=2, \quad y’(-1) = 1 \end{align*} Then $r=\{-2\}$. So \begin{align*} y(t) = C_1 e^{-2t} + C_2 t e^{-2t} \end{align*} Taking the derivative \begin{align*} y’(t) = C_1 e^{-2t} - 2 C_1t e^{-2t} - 2 C_2 e^{-2t} \end{align*} Applying the initial conditions \begin{align*} \begin{cases} y(-1) = -C_1e^2 + C_2 e^2 = 2\\ y’(-1) = C_1 e^2 + 2 C_1 e^2 - 2 C_2 e^2 = 1 \end{cases} \implies \begin{cases} C_1 = \frac{5}{e^2}\\ C_2 = \frac{7}{e^2} \end{cases} \end{align*} Therefore \begin{align*} y(t) = \frac{5}{e^2}te^{-2t} + \frac{7}{e^2}e^{-2t} \end{align*} As $t \to \infty$, $y \to 0$. </p>
+</div></div>
 </div>
+<div class="sect2">
+<h3 id="_problem_18__for_grade_">Problem 18 [FOR GRADE]</h3>
+<div class="sectionbody">
 </div>
-</div>
-<div id="outline-container-orgca2a8cb" class="outline-3">
-<h3 id="orgca2a8cb">Problem 19</h3>
-<div class="outline-text-3" id="text-orgca2a8cb">
-\begin{aligned} W\left(e^{\lambda t} \cos \mu t, e^{\lambda t} \sin \mu
-        t\right) & =\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t}
-                \sin \mu t                                   \\ \frac{d}{d t}\left(e^{\lambda t} \cos \mu t\right) & \frac{d}{d
-                        t}\left(e^{\lambda t} \sin \mu t\right)\end{array}\right|
-        \\ &=\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t} \sin \mu
-                t                                                     \\ \lambda e^{\lambda t} \cos \mu t-\mu e^{\lambda t} \sin \mu t \quad
-                \lambda e^{\lambda t} \sin \mu t+\mu e^{\lambda t} \cos \mu
-                t\end{array}\right| \\ &=e^{\lambda t} \cos \mu t\left(\lambda e^{\lambda t}
-        \sin \mu t+\mu e^{\lambda t} \cos \mu t\right)-e^{\lambda t} \sin \mu
-        t\left(\lambda e^{\lambda t} \cos \mu t-\mu e^{\lambda t} \sin \mu t\right)
-        \\ &=\lambda e^{2 \lambda t} \cos \mu t \sin \mu t+\mu e^{2
-                        \lambda t} \cos ^{2} \mu t\lambda e^{2 \lambda t} \cos \mu t
-        \sin \mu t+\mu e^{2 \lambda t} \sin ^{2} \mu t     \\ &=\mu e^{2 \lambda
-        t}\left(\cos ^{2} \mu t+\sin ^{2} \mu t\right)     \\ &=\mu e^{2 \lambda t}
-\end{aligned}
+<div class="paragraph">
+<p>\begin{align*} t^2 y’’ - 4 t y’ + 6 y = 0, \quad t &gt; 0; \quad y_1(t) = t^2 \end{align*} Let us apply the method of reduction Let the general solution be of the form \begin{align*} y(t) = v(t) y_1(t) = t^2v(t) \end{align*} Let us find the derivatives \begin{align*} y_2’(t) &amp;= t^2v’(t) + 2tv(t)\\ y_2’’(t) &amp;= t^2v’’(t) + 2tv’(t) + 2tv’(t) + 2v(t) \end{align*} Let us substitute the above into our original ODE \begin{align*} t^2 (t^2v’’(t) + 2tv’(t) + 2tv’(t) + 2v(t)) -4t (t^2v’(t) + 2tv(t)) + 6(t^2v(t)) = 0 \end{align*} Simplifying yields \begin{align*} t^4 v’’(t) + 3t^3v’(t) + t^2v(t) - 4t^3v’(t) -8t^2v(t) + 6t^2v(t) = 0\\ t^4v’’(t) = 0 \end{align*} Then \begin{align*} v’’(t) = 0 \end{align*} Integrate both sides \begin{align*} v’(t) = C_1\\ v(t)  = C_1 t + C_2 \end{align*} Finally, the general solution is \begin{align*} y(t) = (C_1t + C_2)t^2 = C_1t^3 + C_2t^2 = C_1 y_1(t) + C_2 y_2(t) \end{align*} and the second solution is $y_2(t) = t^3$. </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org94617e0" class="outline-2">
-<h2 id="org94617e0">Section 3.4</h2>
-<div class="outline-text-2" id="text-org94617e0">
-</div>
-<div id="outline-container-orge2ce74f" class="outline-3">
-<h3 id="orge2ce74f">Problem 1</h3>
-<div class="outline-text-3" id="text-orge2ce74f">
-\begin{align*}
-  y'' - 2y' + y = 0
-\end{align*}
-<p>
-Then
-</p>
-\begin{align*}
-  r^2 - 2r + 1 = 0
-\end{align*}
-<p>
-So \(r = 1\), finally
-</p>
-\begin{align*}
-  y(t) = C_1 e^t + C_2 t e^t
-\end{align*}
-</div>
-</div>
-<div id="outline-container-orge568194" class="outline-3">
-<h3 id="orge568194">Problem 8 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-orge568194">
-\begin{align*}
-  2y'' + 2y' + y = 0
-\end{align*}
-<p>
-Then
-</p>
-\begin{align*}
-  2r^2 + 2r + 1 = 0
-\end{align*}
-<p>
-So \(r = \{-1/2 - 1/2i, -1/2 + 1/2i\}\). Finally,
-</p>
-\begin{align*}
-  y(t) = C_1 e^{-t/2} \cos \left(\frac{1}{2}t\right) + C_2 e^{-t/2} \sin \left(\frac{1}{2}t\right)
-\end{align*}
-</div>
-</div>
-<div id="outline-container-org38972d2" class="outline-3">
-<h3 id="org38972d2">Problem 11</h3>
-<div class="outline-text-3" id="text-org38972d2">
-\begin{align*}
-  y'' + 4y' + 4y = 0, \quad y(-1)=2, \quad y'(-1) = 1
-\end{align*}
-<p>
-Then \(r=\{-2\}\). So
-</p>
-\begin{align*}
-  y(t) = C_1 e^{-2t} + C_2 t e^{-2t}
-\end{align*}
-<p>
-Taking the derivative
-</p>
-\begin{align*}
-  y'(t) = C_1 e^{-2t} - 2 C_1t e^{-2t} - 2 C_2 e^{-2t}
-\end{align*}
-<p>
-Applying the initial conditions
-</p>
-\begin{align*}
-  \begin{cases}
-    y(-1) = -C_1e^2 + C_2 e^2 = 2\\
-    y'(-1) = C_1 e^2 + 2 C_1 e^2 - 2 C_2 e^2 = 1
-  \end{cases} \implies
-  \begin{cases}
-    C_1 = \frac{5}{e^2}\\
-    C_2 = \frac{7}{e^2}
-  \end{cases}
-\end{align*}
-<p>
-Therefore
-</p>
-\begin{align*}
-  y(t) = \frac{5}{e^2}te^{-2t} + \frac{7}{e^2}e^{-2t}
-\end{align*}
-<p>
-As \(t \to \infty\), \(y \to 0\).
-</p>
-</div>
-</div>
-<div id="outline-container-orge05f989" class="outline-3">
-<h3 id="orge05f989">Problem 18 [FOR GRADE]</h3>
-<div class="outline-text-3" id="text-orge05f989">
-\begin{align*}
-  t^2 y'' - 4 t y' + 6 y = 0, \quad t > 0; \quad y_1(t) = t^2
-\end{align*}
-<p>
-Let us apply the method of reduction
-Let the general solution be of the form
-</p>
-\begin{align*}
-  y(t) = v(t) y_1(t) = t^2v(t)
-\end{align*}
-<p>
-Let us find the derivatives
-</p>
-\begin{align*}
-  y_2'(t) &= t^2v'(t) + 2tv(t)\\
-  y_2''(t) &= t^2v''(t) + 2tv'(t) + 2tv'(t) + 2v(t)
-\end{align*}
-<p>
-Let us substitute the above into our original ODE
-</p>
-\begin{align*}
-  t^2 (t^2v''(t) + 2tv'(t) + 2tv'(t) + 2v(t)) -4t (t^2v'(t) + 2tv(t)) + 6(t^2v(t)) = 0
-\end{align*}
-<p>
-Simplifying yields
-</p>
-\begin{align*}
-  t^4 v''(t) + 3t^3v'(t) + t^2v(t) - 4t^3v'(t) -8t^2v(t) + 6t^2v(t) = 0\\
-  t^4v''(t) = 0
-\end{align*}
-<p>
-Then
-</p>
-\begin{align*}
-  v''(t) = 0
-\end{align*}
-<p>
-Integrate both sides
-</p>
-\begin{align*}
-  v'(t) = C_1\\
-  v(t)  = C_1 t + C_2
-\end{align*}
-<p>
-Finally, the general solution is
-</p>
-\begin{align*}
-  y(t) = (C_1t + C_2)t^2 = C_1t^3 + C_2t^2 = C_1 y_1(t) + C_2 y_2(t)
-\end{align*}
-<p>
-and the second solution is \(y_2(t) = t^3\).
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Date: 93; 12021 H.E.</p>
-<p class="author">Author: Sandy Urazayev</p>
-<p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
-<p class="date">Created: 2021-05-12 Wed 14:45</p>
-</div>
 </body>
 </html>

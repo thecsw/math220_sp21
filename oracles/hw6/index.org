@@ -13,12 +13,14 @@
 #+date: 93; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+* Homework 6 Oracle
+
 Go back to the [[../../][home page]]
 
-[[./index.pdf][[View the PDF version]​]]
+[[./index.pdf][View the PDF version​]]
 
-* Section 3.3
-** Problem 7
+** Section 3.3
+*** Problem 7
    \begin{align*}
      y'' + 2y' + 2y = 0
    \end{align*}
@@ -26,7 +28,7 @@ Go back to the [[../../][home page]]
    \begin{align*}
      y(t) = C_1 e^{-t} \cos (t) + C_2 e^{-t} \sin (t)
    \end{align*}
-** Problem 13 [FOR GRADE]
+*** Problem 13 [FOR GRADE]
    \begin{align*}
      y'' - 2y' + 5y = 0, \quad y(\pi/2) = 0, \quad y'(\pi / 2) = 2
    \end{align*}
@@ -49,11 +51,11 @@ Go back to the [[../../][home page]]
    \begin{align*}
      y(t) = -\frac{1}{e^{\pi/2}} e^t \sin (2t)
    \end{align*}
-** Problem 17
+*** Problem 17
    \begin{align*}
      5u'' + 2u' + 7u = 0, \quad u(0) = 2, \quad u'(0) = 1
    \end{align*}
-*** Part (a)
+**** Part (a)
     Find that
     $r = \{-\frac{1}{5} - i\frac{\sqrt{34}}{5}, -\frac{1}{5} +
     i\frac{\sqrt{34}}{5}\}$. Then
@@ -71,11 +73,11 @@ Go back to the [[../../][home page]]
     \begin{align*}
       u(t) = 2 e^{-t/5} \cos\left(\frac{\sqrt{34}t}{5}\right) + \frac{7}{\sqrt{34}} e^{-t/5} \sin\left(\frac{\sqrt{34}t}{5}\right)
     \end{align*}
-*** Part (b)
+**** Part (b)
     \begin{align*}
       T \approx 14.512
     \end{align*}
-** Problem 19
+*** Problem 19
       \begin{aligned} W\left(e^{\lambda t} \cos \mu t, e^{\lambda t} \sin \mu
               t\right) & =\left|\begin{array}{cc}e^{\lambda t} \cos \mu t & e^{\lambda t}
                       \sin \mu t                                   \\ \frac{d}{d t}\left(e^{\lambda t} \cos \mu t\right) & \frac{d}{d
@@ -92,8 +94,8 @@ Go back to the [[../../][home page]]
               t}\left(\cos ^{2} \mu t+\sin ^{2} \mu t\right)     \\ &=\mu e^{2 \lambda t}
       \end{aligned}
    
-* Section 3.4
-** Problem 1
+** Section 3.4
+*** Problem 1
    \begin{align*}
      y'' - 2y' + y = 0
    \end{align*}
@@ -105,7 +107,7 @@ Go back to the [[../../][home page]]
    \begin{align*}
      y(t) = C_1 e^t + C_2 t e^t
    \end{align*}
-** Problem 8 [FOR GRADE]
+*** Problem 8 [FOR GRADE]
    \begin{align*}
      2y'' + 2y' + y = 0
    \end{align*}
@@ -117,7 +119,7 @@ Go back to the [[../../][home page]]
    \begin{align*}
      y(t) = C_1 e^{-t/2} \cos \left(\frac{1}{2}t\right) + C_2 e^{-t/2} \sin \left(\frac{1}{2}t\right)
    \end{align*}
-** Problem 11
+*** Problem 11
    \begin{align*}
      y'' + 4y' + 4y = 0, \quad y(-1)=2, \quad y'(-1) = 1
    \end{align*}
@@ -145,7 +147,7 @@ Go back to the [[../../][home page]]
      y(t) = \frac{5}{e^2}te^{-2t} + \frac{7}{e^2}e^{-2t}
    \end{align*}
    As $t \to \infty$, $y \to 0$.
-** Problem 18 [FOR GRADE]
+*** Problem 18 [FOR GRADE]
    \begin{align*}
      t^2 y'' - 4 t y' + 6 y = 0, \quad t > 0; \quad y_1(t) = t^2
    \end{align*}

@@ -13,22 +13,24 @@
 #+date: 128; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+* Homework 11 Oracle
+
 Go back to the [[../../][home page]]
 
-[[./index.pdf][[View the PDF version]​]]
+[[./index.pdf][View the PDF version​]]
 
 Solution to these problems are provided by STEM Jock.
 
-* Section 6.2
+** Section 6.2
   
-** Problem 3
+*** Problem 3
    
-*** Statement
+**** Statement
     \begin{equation*}
  F(s)=\frac{2}{s^{2}+3 s-4}
  \end{equation*}
 
-*** Solution
+**** Solution
     Factor the denominator.
 
     \begin{aligned}
@@ -43,14 +45,14 @@ $$
 f(t)=\frac{2}{5} e^{t}-\frac{2}{5} e^{-4 t}
 $$
 
-** Problem 11 [FOR GRADE]
+*** Problem 11 [FOR GRADE]
    
-*** Statement
+**** Statement
  $$
     y^{\prime \prime}-2 y^{\prime}+4 y=0 ; \quad y(0)=2, \quad y^{\prime}(0)=0
  $$
    
-*** Solution
+**** Solution
     Because the ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function $y(t)$ is defined here as
 $$
 Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t
@@ -110,9 +112,9 @@ y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
 &=2 e^{t} \cos \sqrt{3} t-\frac{2}{\sqrt{3}} e^{t} \sin \sqrt{3} t
 \end{aligned}
 
-** Problem 19
+*** Problem 19
 
-*** Statement
+**** Statement
     \begin{equation*}
 y^{\prime \prime}+y=\left\{\begin{array}{ll}
 t, & 0 \leq t<1 \\
@@ -121,7 +123,7 @@ t, & 0 \leq t<1 \\
 \end{array} \quad y(0)=0, \quad y^{\prime}(0)=0\right.
 \end{equation*}
 
-*** Solution
+**** Solution
     Let $f(t)$ represent the piecewise function on the right side.
 $$
 y^{\prime \prime}+y=f(t)=\left\{\begin{array}{ll}
@@ -179,14 +181,14 @@ y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
 &=(t-\sin t)+[(t-2)-\sin (t-2)] H(t-2)-2[(t-1)-\sin (t-1)] H(t-1)
 \end{aligned}
 
-** Problem 22
+*** Problem 22
    
-*** Statement
+**** Statement
     \begin{equation}
 f(t)=t e^{a t}
 \end{equation}
 
-*** Solution
+**** Solution
     The Laplace transform of a function $f(t)$ is defined here as
 $$
 F(s)=\mathcal{L}\{f(t)\}=\int_{0}^{\infty} e^{-s t} f(t) d t
@@ -205,11 +207,11 @@ F(s) &=\int_{0}^{\infty} e^{-s t} t e^{a t} d t \\
 &=\frac{1}{(s-a)^{2}}
 \end{aligned}
 
-* Section 6.3
+** Section 6.3
   
-** Problem 7
+*** Problem 7
 
-*** Statement
+**** Statement
     \begin{equation*}
  f(t)=\left\{\begin{array}{ll}
  1, & 0 \leq t<2 \\
@@ -217,7 +219,7 @@ F(s) &=\int_{0}^{\infty} e^{-s t} t e^{a t} d t \\
  \end{array}\right.
  \end{equation*}
 
-*** Solution
+**** Solution
     Write $f(t)$ in terms of the Heaviside function, $H(t)$, which is defined to be 1 if $t>0$ and 0 if $t<0$.
 
 \begin{aligned}
@@ -226,14 +228,14 @@ f(t) &=1[H(t)-H(t-2)]+e^{-(t-2)} H(t-2) \\
 &=u_{0}(t)+\left[e^{-(t-2)}-1\right] u_{2}(t)
 \end{aligned}
 
-** Problem 13 [FOR GRADE]
+*** Problem 13 [FOR GRADE]
    
-*** Statement
+**** Statement
     \begin{equation*}
 F(s)=\frac{3 !}{(s-2)^{4}}
 \end{equation*}
 
-*** Solution
+**** Solution
     Apply the two transforms,
 $$
 \mathcal{L}\left\{t^{n}\right\}=\frac{n !}{s^{n+1}} \quad \text { and } \quad \mathcal{L}\left\{e^{c t} f(t)\right\}=F(s-c),
@@ -246,14 +248,14 @@ f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
 &=t^{3} e^{2 t}
 \end{aligned}
 
-** Problem 16
+*** Problem 16
    
-*** Statement
+**** Statement
     \begin{equation*}
 F(s)=\frac{e^{-s}+e^{-2 s}-e^{-3 s}-e^{-4 s}}{s}
 \end{equation*}
 
-*** Solution
+**** Solution
     Apply the two transforms,
 $$
 \mathcal{L}\left\{t^{n}\right\}=\frac{n !}{s^{n+1}} \quad \text { and } \quad \mathcal{L}\{f(t-c) H(t-c)\}=F(s) e^{-c s}
@@ -269,14 +271,14 @@ f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
 &=u_{1}(t)+u_{2}(t)-u_{3}(t)-u_{4}(t)
 \end{aligned}
 
-** Problem 20
+*** Problem 20
    
-*** Statement
+**** Statement
     \begin{equation*}
 F(s)=\frac{1}{9 s^{2}-12 s+3}
 \end{equation*}
 
-*** Solution
+**** Solution
     Observe that the denominator can be written in terms of $3 s$.
 $$
 F(s)=\frac{1}{(3 s)^{2}-4(3 s)+3}
@@ -302,11 +304,11 @@ f(t) &=\mathcal{L}^{-1}\{F(s)\} \\
 &=\frac{1}{6}\left(e^{t}-e^{t / 3}\right)
 \end{aligned}
 
-* Section 6.4
+** Section 6.4
   
-** Problem 1 [FOR GRADE]
+*** Problem 1 [FOR GRADE]
 
-*** Statement
+**** Statement
     \begin{equation*}
 y^{\prime \prime}+y=f(t) ; \quad y(0)=0, \quad y^{\prime}(0)=1 ; \quad f(t)=\left\{\begin{array}{ll}
 1, & 0 \leq t<3 \pi \\
@@ -314,7 +316,7 @@ y^{\prime \prime}+y=f(t) ; \quad y(0)=0, \quad y^{\prime}(0)=1 ; \quad f(t)=\lef
 \end{array}\right.
 \end{equation*}
 
-*** Solution
+**** Solution
     Because the ODE is linear, the Laplace transform can be applied to solve it. The Laplace transform of a function $y(t)$ is defined here as
 $$
 Y(s)=\mathcal{L}\{y(t)\}=\int_{0}^{\infty} e^{-s t} y(t) d t
@@ -358,9 +360,9 @@ y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
 
 
 
-** Problem 2
+*** Problem 2
 
-*** Solution
+**** Solution
 
   Evaluate the inverse Laplace transforms.
 

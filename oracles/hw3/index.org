@@ -13,12 +13,14 @@
 #+date: 67; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+* Homework 3 Oracle
+
 Go back to the [[../../][home page]]
 
-[[./index.pdf][[View the PDF version]​]]
+[[./index.pdf][View the PDF version​]]
 
-* Section 2.3
-** Problem 1 [FOR GRADE]
+** Section 2.3
+*** Problem 1 [FOR GRADE]
    We model the tank problem the following way of
    \begin{equation*}
      \frac{dx}{dt}=R_{in}-R_{out}
@@ -41,14 +43,16 @@ Go back to the [[../../][home page]]
    \begin{equation*}
      \frac{x(t)}{x(0)} = 0.01 \implies 0.01 = e^{-\frac{t}{100}}
    \end{equation*}
-   Solving for $t$ returns that $t = 100 \ln 100$ min $\approx 460.5$ min. 
-** Problem 4
-*** Part (a)
+   Solving for $t$ returns that $t = 100 \ln 100$ min $\approx 460.5$ min.
+   
+*** Problem 4
+**** Part (a)
     So our kinetic and potential energies are equal. Then
     \begin{equation*}
       mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh}
     \end{equation*}
-*** Part (b)
+    
+**** Part (b)
     Recall 
     \begin{equation*}
       \frac{dv}{dt} = A(h) \frac{dh}{dt} \quad\text{and}\quad \frac{dv}{dt} = av
@@ -57,7 +61,7 @@ Go back to the [[../../][home page]]
     \begin{equation*}
       A(h)\frac{dh}{dt} = -\alpha a \sqrt{2gh}
     \end{equation*}
-*** Part (c)
+**** Part (c)
     Recall $A(r) = \pi r^2$. Let $h=3$ and $\alpha = 0.6$. Then solving for
     radius of 1m and the circular outlet radius of 0.1m, we get an equation
         \begin{equation*}
@@ -66,8 +70,8 @@ Go back to the [[../../][home page]]
           \implies \frac{dh}{dt} = -0.006 \sqrt{2gh}\\
         \end{equation*}
     Solving for $t$ yields $\approx 130.41$. 
-** Problem 9 [FOR GRADE]
-*** Part (a)
+*** Problem 9 [FOR GRADE]
+**** Part (a)
     See that
     \begin{equation*}
       \frac{Q(5730)}{Q_0} = 0.5\\
@@ -75,22 +79,22 @@ Go back to the [[../../][home page]]
       \implies e^{-r(5730)} = 0.5\\
     \end{equation*}
     Solve for $r$ to get $r = 0.00012097 yr^{-1}$ 
-*** Part (b)
+**** Part (b)
     Trivially, it would be $Q_0 \exp{(-0.00012097t)}$, where $t$ is measured in
     years. 
-*** Part (c)
+**** Part (c)
     Solve $e^{-rt} = 0.2$ to get $13,305yr$. 
-* Section 2.5
-** Problem 3
+** Section 2.5
+*** Problem 3
    #+attr_html: :width 90%
-   [[./d3.png]]
-** Problem 5
+   [[./d3.png][image]]
+*** Problem 5
    #+attr_html: :width 90%
-   [[./d5.png]]
-** Problem 9 [FOR GRADE]
+   [[./d5.png][image]]
+*** Problem 9 [FOR GRADE]
    #+attr_html: :width 90%
-   [[./d9.png]]
-** Problem 13
+   [[./d9.png][image]]
+*** Problem 13
    \begin{equation*}
      y_{1,2} = \frac{K + T \pm \sqrt{K^2 - KT + T^3}}{3}
    \end{equation*}

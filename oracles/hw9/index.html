@@ -1,446 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2021-05-12 Wed 14:46 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://sandyuraz.com/math220_sp21/oracles/hw9" type=""/>
+<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type=""/>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" property="generator" content="Darkness">
+<meta name="author" property="author" content="email">
+<meta name="theme-color" property="theme-color" content="#fffff4">
+<meta name="description" property="description" content="Go back to the [[../../][home page]]...">
+<meta name="og:title" property="og:title" content="Homework 9 Oracle">
+<meta name="og:site_name" property="og:site_name" content="Ordinary Differential Equations">
+<meta name="og:url" property="og:url" content="https://sandyuraz.com/math220_sp21/oracles/hw9">
+<meta name="og:locale" property="og:locale" content="en_GB">
+<meta name="og:type" property="og:type" content="website">
+<meta name="og:image" property="og:image" content="https://sandyuraz.com/math220_sp21/oracles/hw9/preview.png">
+<meta name="og:image:alt" property="og:image:alt" content="Preview">
+<meta name="og:image:type" property="og:image:type" content="image/png">
+<meta name="og:image:width" property="og:image:width" content="1280">
+<meta name="og:image:height" property="og:image:height" content="640">
+<meta name="og:description" property="og:description" content="Go back to the [[../../][home page]]...">
+<meta name="twitter:card" property="twitter:card" content="summary_large_image">
+<meta name="twitter:site" property="twitter:site" content="Ordinary Differential Equations">
+<meta name="twitter:creator" property="twitter:creator" content="@sandyuraz">
+<meta name="twitter:image:src" property="twitter:image:src" content="https://sandyuraz.com/math220_sp21/oracles/hw9/preview.png">
+<meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw9">
+<meta name="twitter:title" property="twitter:title" content="Homework 9 Oracle">
+<meta name="twitter:description" property="twitter:description" content="Go back to the [[../../][home page]]...">
+
+<script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
+<script async src="https://sandyuraz.com/scripts/time.js"></script>
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: true},
+              {left: '\\[', right: '\\]', display: false},
+              {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+              {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+              {left: "\\begin{align}", right: "\\end{align}", display: true},
+              {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+              {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+              {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+              {left: "\\begin{CD}", right: "\\end{CD}", display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
 <title>Homework 9 Oracle</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="Sandy Urazayev" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
-<body>
+<link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/web.css">
+
+<body class="article">
+
+<div id="header">
+<h1><img id="myface" src="https://sandyuraz.com/math220_sp21/rei.png" width="112" height="112">Homework 9 Oracle</h1>
+<div class="details">
+<span id="author" class="author">email</span><br>
+<span id="email" class="email">ctu [at] ku [dot] edu</span><br>
+<span id="revdate">
+<a href="https://sandyuraz.com/math220_sp21/">Home 🏠</a></span>
+</div>
+<div id="hetime" class="details"></div>
+</div>
 <div id="content">
-<h1 class="title">Homework 9 Oracle
-<br />
-<span class="subtitle">MATH 220 Spring 2021</span>
-</h1>
-<p>
-Go back to the <a href="../../">home page</a>
-</p>
 
-<p>
-<a href="./index.pdf">[View the PDF version]​</a>
-</p>
+<div class="paragraph">
+<p>Go back to the <a href="../../">home page</a> </p>
+</div>
+<a href="./index.pdf">View the PDF version​</a>
+<div class="sect1">
+<h2 id="_section_7_5">Section 7.5</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_9__this_is_graded_">Problem 9 (this is graded)</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let us solve the following system of ODEs \begin{align*} \mathbf{x}’ = \begin{pmatrix} 1 &amp; -1 &amp; 4  \\ 3 &amp; 2  &amp; -1 \\ 2 &amp; 1  &amp; -1 \end{pmatrix} \mathbf{x} \end{align*} </p>
+</div>
+<div class="paragraph">
+<p>_Solution_ Let $\mathbf{A}$ be the matrix above, so let us find the characteristic polynomial of our system \begin{align*} \det (\mathbf{A} - \lambda \mathbf{I}_3) = \det \begin{pmatrix} 1 - \lambda &amp; -1          &amp; 4            \\ 3           &amp; 2 - \lambda &amp; -1           \\ 2           &amp; 1           &amp; -1 - \lambda \end{pmatrix} &amp; = - \lambda^3 + 2 \lambda^2 + 5\lambda -6 = 0                                                                                        \\ ∆ &amp; \implies \lambda_1 = 1 \quad \text{and} \quad \lambda_2 = -2 \quad \text{and} \quad \lambda_3 = 3 \end{align*} Substitute the eigenvalues above to find the corresponding eigenvectors $\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}$ \begin{align*} \lambda = \lambda_1 \implies \begin{pmatrix} 1 - \lambda_1 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_1 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_1 \end{pmatrix} \mathbf{v}_1 \implies \mathbf{v}_1 = \begin{pmatrix} -1 \\ 4 \\ 1 \end{pmatrix} \end{align*} \begin{align*} \lambda = \lambda_2 \implies \begin{pmatrix} 1 - \lambda_2 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_2 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_2 \end{pmatrix} \mathbf{v}_2 \implies \mathbf{v}_2 = \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} \end{align*} \begin{align*} \lambda = \lambda_3 \implies \begin{pmatrix} 1 - \lambda_3 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_3 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_3 \end{pmatrix} \mathbf{v}_3 \implies \mathbf{v}_3 = \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} \end{align*} Therefore the final solution has the form \begin{align*} \mathbf{x}(t) &amp; = C_1 e^{\lambda_1 t} \mathbf{v_1} + C_2 e^{\lambda_2 t} \mathbf{v_2} + C_3 e^{\lambda_3 t} \mathbf{v_3}\\ &amp; = C_1 e^{t} \begin{pmatrix} -1 \\ 4 \\ 1 \end{pmatrix} + C_2 e^{-2t} \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} + C_3 e^{3t} \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} \end{align*} where $C_1$ and $C_2$ and $C_3$ are arbitrary constants. </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_10">Problem 10</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The solution strategy is the same as <strong>Problem 9</strong>. We find that eigenvalues are $\lambda_1 = 4$ and $\lambda_2 = 2$ with their corresponding eigenvectors $\mathbf{v}_1 = \begin{pmatrix}1 \\ 1 \end{pmatrix}$ and $\mathbf{v}_2 = \begin{pmatrix}1 \\ 3 \end{pmatrix}$, such that the solution is \begin{align*} \mathbf{x}(t) = C_1 e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} + C_2 e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix} \end{align*} By knowing the initial value $\mathbf{x}(0) = \begin{pmatrix} 2 \\ -1 \end{pmatrix}$, we solve the system \begin{align*} \begin{cases} C_1 + C_2 = 2 \\ C_1 + 3 C_2 = -1 \end{cases} \implies \begin{cases} C_1 = \frac{7}{2} \\ C_2 = -\frac{3}{2} \end{cases} \end{align*} Finally, the solution to the initial value problem is \begin{align*} \mathbf{x}(t) = \frac{7}{2} e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} + - \frac{3}{2} e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix} ∆ \end{align*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_15__this_is_graded_">Problem 15 (this is graded)</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Recall the eigenvalues and their eigenvectors we found in <strong>Problem 10</strong>. Applying <strong>Problem 13</strong>, the solution is \begin{align*} \mathbf{x}(t) = C_1 t^4 \begin{pmatrix} 1\\ 1\end{pmatrix} + C_2 t^2 \begin{pmatrix} 1\\ 3\end{pmatrix} \end{align*} </p>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_problem_16">Problem 16</h3>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Similarly to all problems above, we find eigenvalues $\lambda_1 = 0$ and $\lambda_2 = -2$, where their respective eigenvectors are $\mathbf{v}_1 = \begin{pmatrix} 3 \\ 4\end{pmatrix}$ and $\mathbf{v}_2 = \begin{pmatrix} 1 \\ 2\end{pmatrix}$. Applying <strong>Problem 13</strong>, we have the solution \begin{align*} \mathbf{x}(t) = C_1 \begin{pmatrix} 3\\ 4\end{pmatrix} + C_2 t^{-2} \begin{pmatrix} 1\\ 2\end{pmatrix} \end{align*} </p>
+</div></div>
+</div>
+<div class="sect1">
+<h2 id="_section_7_6">Section 7.6</h2>
+<div class="sectionbody"></div>
+<div class="sect2">
+<h3 id="_problem_9_and_10">Problem 9 and 10</h3>
+<div class="sectionbody">
+</div>
+<div class="paragraph">
+<p>Solutions are omitted for the sake of expediting the grading before Midterm II. </p>
+</div>
+</div>
+</div>
 
-<div id="outline-container-org3b0dd7f" class="outline-2">
-<h2 id="org3b0dd7f">Section 7.5</h2>
-<div class="outline-text-2" id="text-org3b0dd7f">
-</div>
-<div id="outline-container-org0a46ee8" class="outline-3">
-<h3 id="org0a46ee8">Problem 9 (this is graded)</h3>
-<div class="outline-text-3" id="text-org0a46ee8">
-<p>
-Let us solve the following system of ODEs
-</p>
-\begin{align*}
-        \mathbf{x}' =
-        \begin{pmatrix}
-                1 & -1 & 4  \\
-                3 & 2  & -1 \\
-                2 & 1  & -1
-        \end{pmatrix} \mathbf{x}
-\end{align*}
-
-<p>
-<span class="underline">Solution</span>
-Let \(\mathbf{A}\) be the matrix above, so let us find the characteristic
-polynomial of our system
-</p>
-\begin{align*}
-        \det (\mathbf{A} - \lambda \mathbf{I}_3) =
-        \det \begin{pmatrix}
-                1 - \lambda & -1          & 4            \\
-                3           & 2 - \lambda & -1           \\
-                2           & 1           & -1 - \lambda
-        \end{pmatrix} & =
-        - \lambda^3 + 2 \lambda^2 + 5\lambda -6 = 0                                                                                        \\
-                                       & \implies \lambda_1 = 1 \quad \text{and} \quad \lambda_2 = -2 \quad \text{and} \quad \lambda_3 = 3
-\end{align*}
-<p>
-Substitute the eigenvalues above to find the corresponding eigenvectors
-\(\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}\)
-</p>
-\begin{align*}
-        \lambda = \lambda_1
-        \implies
-        \begin{pmatrix}
-                1 - \lambda_1 & -1            & 4              \\
-                3             & 2 - \lambda_1 & -1             \\
-                2             & 1             & -1 - \lambda_1
-        \end{pmatrix} \mathbf{v}_1
-        \implies
-        \mathbf{v}_1 =
-        \begin{pmatrix}
-                -1 \\ 4 \\ 1
-        \end{pmatrix}
-\end{align*}
-\begin{align*}
-        \lambda = \lambda_2
-        \implies
-        \begin{pmatrix}
-                1 - \lambda_2 & -1            & 4              \\
-                3             & 2 - \lambda_2 & -1             \\
-                2             & 1             & -1 - \lambda_2
-        \end{pmatrix} \mathbf{v}_2
-        \implies
-        \mathbf{v}_2 =
-        \begin{pmatrix}
-                -1 \\ 1 \\ 1
-        \end{pmatrix}
-\end{align*}
- \begin{align*}
-        \lambda = \lambda_3
-        \implies
-        \begin{pmatrix}
-                1 - \lambda_3 & -1            & 4              \\
-                3             & 2 - \lambda_3 & -1             \\
-                2             & 1             & -1 - \lambda_3
-        \end{pmatrix} \mathbf{v}_3
-        \implies
-        \mathbf{v}_3 =
-        \begin{pmatrix}
-                1 \\ 2 \\ 1
-        \end{pmatrix}
-\end{align*}
-<p>
-Therefore the final solution has the form
-</p>
-\begin{align*}
-        \mathbf{x}(t) & = C_1 e^{\lambda_1 t} \mathbf{v_1} + C_2 e^{\lambda_2 t} \mathbf{v_2} + C_3 e^{\lambda_3 t} \mathbf{v_3}\\
-                   & = C_1 e^{t} \begin{pmatrix}
-                -1 \\ 4 \\ 1
-        \end{pmatrix}
-        + C_2 e^{-2t} \begin{pmatrix}
-                -1 \\ 1 \\ 1
-        \end{pmatrix}
-        + C_3 e^{3t} \begin{pmatrix}
-                1 \\ 2 \\ 1
-        \end{pmatrix}
-\end{align*}
-<p>
-where \(C_1\) and \(C_2\) and \(C_3\) are arbitrary constants.
-</p>
-</div>
-</div>
-<div id="outline-container-orgb3908f7" class="outline-3">
-<h3 id="orgb3908f7">Problem 10</h3>
-<div class="outline-text-3" id="text-orgb3908f7">
-<p>
-The solution strategy is the same as <b>Problem 9</b>. We find that eigenvalues are
-\(\lambda_1 = 4\) and \(\lambda_2 = 2\) with their corresponding eigenvectors
-\(\mathbf{v}_1 = \begin{pmatrix}1 \\ 1 \end{pmatrix}\) and
-\(\mathbf{v}_2 = \begin{pmatrix}1 \\ 3 \end{pmatrix}\), such that the solution
-is
-</p>
-\begin{align*}
-        \mathbf{x}(t) = C_1 e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +
-        C_2 e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
-\end{align*}
-<p>
-By knowing the initial value
-\(\mathbf{x}(0) = \begin{pmatrix} 2 \\ -1 \end{pmatrix}\), we solve the system
-</p>
-\begin{align*}
-        \begin{cases}
-                C_1 + C_2 = 2 \\
-                C_1 + 3 C_2 = -1
-        \end{cases}
-        \implies
-        \begin{cases}
-                C_1 = \frac{7}{2} \\
-                C_2 = -\frac{3}{2}
-        \end{cases}
-\end{align*}
-<p>
-Finally, the solution to the initial value problem is
-</p>
-\begin{align*}
-        \mathbf{x}(t) = \frac{7}{2} e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +
-        - \frac{3}{2} e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
-\end{align*}
-</div>
-</div>
-<div id="outline-container-org9d58716" class="outline-3">
-<h3 id="org9d58716">Problem 15 (this is graded)</h3>
-<div class="outline-text-3" id="text-org9d58716">
-<p>
-Recall the eigenvalues and their eigenvectors we found in <b>Problem
-10</b>. Applying <b>Problem 13</b>, the solution is
-</p>
-\begin{align*}
-        \mathbf{x}(t) = C_1 t^4 \begin{pmatrix} 1\\ 1\end{pmatrix}
-        + C_2 t^2 \begin{pmatrix} 1\\ 3\end{pmatrix}
-\end{align*}
-</div>
-</div>
-<div id="outline-container-org0d25c24" class="outline-3">
-<h3 id="org0d25c24">Problem 16</h3>
-<div class="outline-text-3" id="text-org0d25c24">
-<p>
-Similarly to all problems above, we find eigenvalues
-\(\lambda_1 = 0\) and \(\lambda_2 = -2\), where their respective eigenvectors are
-\(\mathbf{v}_1 = \begin{pmatrix} 3 \\ 4\end{pmatrix}\) and
-\(\mathbf{v}_2 = \begin{pmatrix} 1 \\ 2\end{pmatrix}\). Applying <b>Problem 13</b>, we
-have the solution
-</p>
-\begin{align*}
-        \mathbf{x}(t) = C_1 \begin{pmatrix} 3\\ 4\end{pmatrix} +
-        C_2 t^{-2} \begin{pmatrix} 1\\ 2\end{pmatrix}
-\end{align*}
-</div>
-</div>
-</div>
-<div id="outline-container-orga7ed321" class="outline-2">
-<h2 id="orga7ed321">Section 7.6</h2>
-<div class="outline-text-2" id="text-orga7ed321">
-</div>
-<div id="outline-container-orgb19df2d" class="outline-3">
-<h3 id="orgb19df2d">Problem 9 and 10</h3>
-<div class="outline-text-3" id="text-orgb19df2d">
-<p>
-Solutions are omitted for the sake of expediting the grading before Midterm
-II. 
-</p>
-</div>
-</div>
-</div>
-</div>
-<div id="postamble" class="status">
-<p class="date">Date: 109; 12021 H.E.</p>
-<p class="author">Author: Sandy Urazayev</p>
-<p class="email">Email: <a href="mailto:University of Kansas (ctu@ku.edu)">University of Kansas (ctu@ku.edu)</a></p>
-<p class="date">Created: 2021-05-12 Wed 14:46</p>
-</div>
 </body>
 </html>

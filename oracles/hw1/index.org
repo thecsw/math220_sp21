@@ -13,26 +13,28 @@
 #+date: 44; 12021 H.E.
 #+email: University of Kansas (ctu@ku.edu)
 
+* Homework 1 Oracle
+
 Go back to the [[../../][home page]]
 
-[[./index.pdf][[View the PDF version]​]]
+[[./index.pdf][View the PDF version​]]
 
-* Chapter 1.1
-** Problem 7
+** Chapter 1.1
+*** Problem 7
    #+attr_html: :width 90%
-   [[./7.jpg]]
-** Problem 10
+   [[./7.jpg][image]]
+*** Problem 10
    #+attr_html: :width 90%
-   [[./10.jpg]]
-** Problem 15 [FOR GRADE]
+   [[./10.jpg][image]]
+*** Problem 15 [FOR GRADE]
    We can see that the direction field results in constant rate of change of
    zero at level where $y=0$ and $y=3$. Then we can also see that the direction
    of the graph decreases when $y<0$ and $y>3$, while also increasing in section
    of $y>0$ and $y<3$. That means, we are looking for a separate $y$ to get
    constant change at $0$ and $(3-y)$ term, so that the constraints above are
    satisfied. $\therefore y' = y(3-y)$. Answer is =h=.
-* Chapter 1.2
-** Problem 7 [FOR GRADE]
+** Chapter 1.2
+*** Problem 7 [FOR GRADE]
    Our differential equation is as given
    \begin{equation*}
            \frac{dp}{dt} = \frac{p}{2} - 450
@@ -65,7 +67,7 @@ Go back to the [[../../][home page]]
    \begin{equation*}
            0 = 900 - (900-p_0)e^{6} \implies p_0 = 900 - \frac{900}{e^6} \approx 897.77
    \end{equation*}
-** Problem 9
+*** Problem 9
    *a.* If the limiting velocity is 49m/s (the same as in Example 2), show that
     the equation of motion can be written as
     \begin{equation*}
@@ -92,7 +94,7 @@ Go back to the [[../../][home page]]
     the same axes.
 
     #+attr_html: :width 95%
-    [[./tanh.png]]
+    [[./tanh.png][image]]
 
     *d.* Based on your plots in part *c*, compare the effect of a quadratic drag
     force with that of a linear drag force. 
@@ -110,22 +112,22 @@ Go back to the [[../../][home page]]
     Simply solve $300 = 245 \ln(\cosh(\frac{t}{5}))$, it will be something like
         $t = 5\cosh^{-1}(e^{\frac{60}{49}}) \approx 9.477$
     
-* Chapter 1.3
-** Problem 1
+** Chapter 1.3
+*** Problem 1
    2nd order and linear.
-** Problem 3
+*** Problem 3
    4th order and linear.
-** Problem 5
+*** Problem 5
    Plug them both in. They are solutions.
-** Problem 9
+*** Problem 9
    Plug them both in. They are solutions.
-** Problem 11 [FOR GRADE]
+*** Problem 11 [FOR GRADE]
    $y'+2y=0$ form yields solutions for $r=-2$. You can solve a characteristic
    polynomial of this equation to get it.
    /I guess you guys aren't ready for that yet. But your kids are gonna love it/
    
-** Problem 16
+*** Problem 16
    $u_{xx} + u_{yy} + u_{zz} = 0$ is linear and second order.  
    
-** Problem 20
+*** Problem 20
    Plug them both in. They are solutions.
