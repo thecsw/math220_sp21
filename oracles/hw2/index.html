@@ -1,16 +1,32 @@
+<!--
+                 ,ae,
+                ,88888e
+ _____   ,a888b.9888888i   _____              _
+(_____)  888888888888888  (____ \            | |
+   _     88888888888888Y   _   \ \ ____  ____| |  _ ____   ____  ___  ___
+  | |    '8888888888888'  | |   | / _  |/ ___) | / )  _ \ / _  )/___)/___)
+ _| |_     "S888888888"   | |__/ ( ( | | |   | |< (| | | ( (/ /|___ |___ |
+(_____)      "7888888Y    |_____/ \_||_|_|   |_| \_)_| |_|\____|___/(___/
+                "e88j
+                  "Y
 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Links -->
 <link rel="canonical" href="https://sandyuraz.com/math220_sp21/oracles/hw2" type=""/>
-<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type="image/x-icon"/>
-<link rel="icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type=""/>
-
+<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/assets/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="https://sandyuraz.com/math220_sp21/assets/apple-touch-icon.png" type="image/png"/>
+<link rel="image_src" href="https://sandyuraz.com/math220_sp21/assets/android-chrome-512x512.png" type="image/png"/>
+<link rel="icon" href="https://sandyuraz.com/math220_sp21/assets/favicon.ico" type=""/>
+<!-- Meta -->
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" property="generator" content="Darkness">
 <meta name="author" property="author" content="email">
+<meta name="date" property="date" content="52; 12021 H.E.">
 <meta name="theme-color" property="theme-color" content="#fffff4">
 <meta name="description" property="description" content="Go back to the [[../../][home page]]...">
 <meta name="og:title" property="og:title" content="Homework 2 Oracle">
@@ -31,7 +47,7 @@
 <meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw2">
 <meta name="twitter:title" property="twitter:title" content="Homework 2 Oracle">
 <meta name="twitter:description" property="twitter:description" content="Go back to the [[../../][home page]]...">
-
+<!-- Scripts -->
 <script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
 <script async src="https://sandyuraz.com/scripts/time.js"></script>
 
@@ -67,212 +83,188 @@
     });
 </script>
 
+<!-- Extra -->
+
+<!-- Title -->
 <title>Homework 2 Oracle</title>
 </head>
+<!-- Styling -->
 <link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/web.css">
 
 <body class="article">
+<!-- Header -->
 
-<div id="header">
-<h1><img id="myface" src="https://sandyuraz.com/math220_sp21/rei.png" width="112" height="112">Homework 2 Oracle</h1>
-<div class="details">
+<div class="header">
+<h1 class="section-1">Homework 2 Oracle</h1>
+<div class="menu">
 <span id="author" class="author">email</span><br>
 <span id="email" class="email">ctu [at] ku [dot] edu</span><br>
 <span id="revdate">
 <a href="https://sandyuraz.com/math220_sp21/">Home 🏠</a></span>
 </div>
-<div id="hetime" class="details"></div>
+<div id="hetime" class="menu"></div>
 </div>
-<div id="content">
+<!-- Content -->
+<div class="writing">
 
 <div class="paragraph">
-<p>Go back to the <a href="../../">home page</a> </p>
-</div>
-<a href="./index.pdf">View the PDF version​</a>
-<div class="sect1">
-<h2 id="_chapter_2_1">Chapter 2.1</h2>
-<div class="sectionbody"></div>
-<div class="sect2">
-<h3 id="_problem_13">Problem 13</h3>
-<div class="sectionbody">
-<hr>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="./13.png"><img src="./13.png" alt="image"></a>
-</div>
+<p>
+Go back to the <a href="../../">home page</a>
+</p>
+</div><a href="./index.pdf">View the PDF version​</a>
+<h1 id="chapter-2-1" class="section-2">Chapter 2.1</h1>
+<h2 id="problem-13" class="section-3">Problem 13</h2></div>
+
+<div class="media">
+<a class="image" href="./13.png"><img class="image" src="./13.png" alt="image"></a>
 <div class="title">image</div>
+<hr>
+</div><div class="writing">
+
+<h3 id="part-a" class="section-4">Part a</h3>
+<div class="paragraph">
+<p>
+As \(t\) gets infinitely large, it simply oscillates in an inverse cosine fashion. \(a\) does give the function an initial starting point, to which it starts oscillating from. That would probably be \(a + \pi\) because \(2cos(t)\) changes its behaviour every \(\pi\) revolution.
+</p>
 </div>
-<hr></div>
-<div class="sect3">
-<h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
+<h3 id="part-b" class="section-4">Part b</h3>
 <div class="paragraph">
-<p>As $t$ gets infinitely large, it simply oscillates in an inverse cosine fashion. $a$ does give the function an initial starting point, to which it starts oscillating from. That would probably be $a + \pi$ because $2cos(t)$ changes its behaviour every $\pi$ revolution. </p>
-</div></div>
+<p>
+This is a first-order linear differential equation of the form \(y&#39; + p(t) y = q(t)\). Find \(\mu(t) = e^{\int{-\frac{1}{2}}}\) and then solve \(\frac{d}{dt}(\mu(t)y) = q(t) \mu(t)\) \(\implies y = \frac{\int q(t) \mu(t) dt}{\mu(t)}\). You should get \begin{equation*} y(t) = ce^{t/2}+\frac{8}{5}\sin(t)-\frac{4}{5}\cos(t) \end{equation*} Then solving for \(y(0)\) and \(c\), we have the full solution to be \begin{equation*} y(t) = (a+\frac{4}{5}e^{t/2})+\frac{8}{5}\sin(t)-\frac{4}{5}\cos(t) \end{equation*}
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_b">Part b</h4>
-<div class="sectionbody">
+<h3 id="part-c" class="section-4">Part c</h3>
 <div class="paragraph">
-<p>This is a first-order linear differential equation of the form $y’ + p(t) y = q(t)$. Find $\mu(t) = e^{\int{-\frac{1}{2}}}$ and then solve $\frac{d}{dt}(\mu(t)y) = q(t) \mu(t)$ $\implies y = \frac{\int q(t) \mu(t) dt}{\mu(t)}$. You should get \begin{equation*} y(t) = ce^{t/2}+\frac{8}{5}\sin(t)-\frac{4}{5}\cos(t) \end{equation*} Then solving for $y(0)$ and $c$, we have the full solution to be \begin{equation*} y(t) = (a+\frac{4}{5}e^{t/2})+\frac{8}{5}\sin(t)-\frac{4}{5}\cos(t) \end{equation*} </p>
-</div></div>
+<p>
+\(y\) oscillates for \(a=a_0\)
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_c">Part c</h4>
-<div class="sectionbody">
+<h2 id="problem-15--for-grade" class="section-3">Problem 15 [FOR GRADE]</h2>
+<h3 id="part-a" class="section-4">Part a</h3>
 <div class="paragraph">
-<p>$y$ oscillates for $a=a_0$ </p>
-</div></div>
+<p>
+This is again, a first-order linear differential equation, so we do our \(\mu\) and integration from both sides trick. Recognize that we have to divide everything by \(t\), so that our lead \(y&#39;\) doesn’t have a coefficient and the method for solving this type of equations is applicable. \begin{equation*} ty&#39;+(t+1)y = 2 t e^{-t} \iff y&#39; + (\frac{t+1}{t})y = 2 e^{-t} \end{equation*} After cleaning it up, the actual solution process becomes more or less trivial, \(\mu(t) = e^{\int{\frac{t+1}{t}}} = te^t\). Then we find for \(t&gt;0\) \begin{equation*} y(t) = \frac{ce^{-t}}{t} + e^{-t}t \end{equation*} Applying \(y(1) = a\), then we get \begin{equation*} y(t) = te^{-t} + \frac{(ea-1)e^{-t}}{t} \end{equation*} We need \(ea-1\) to be equal to zero, then \(a_0 = \frac{1}{e}\)
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_15__for_grade_">Problem 15 [FOR GRADE]</h3>
-<div class="sectionbody"></div>
-<div class="sect3">
-<h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
+<h3 id="part-c" class="section-4">Part c</h3>
 <div class="paragraph">
-<p>This is again, a first-order linear differential equation, so we do our $\mu$ and integration from both sides trick. Recognize that we have to divide everything by $t$, so that our lead $y’$ doesn’t have a coefficient and the method for solving this type of equations is applicable. \begin{equation*} ty’+(t+1)y = 2 t e^{-t} \iff y’ + (\frac{t+1}{t})y = 2 e^{-t} \end{equation*} After cleaning it up, the actual solution process becomes more or less trivial, $\mu(t) = e^{\int{\frac{t+1}{t}}} = te^t$. Then we find for $t&gt;0$ \begin{equation*} y(t) = \frac{ce^{-t}}{t} + e^{-t}t \end{equation*} Applying $y(1) = a$, then we get \begin{equation*} y(t) = te^{-t} + \frac{(ea-1)e^{-t}}{t} \end{equation*} We need $ea-1$ to be equal to zero, then $a_0 = \frac{1}{e}$ </p>
-</div></div>
+<p>
+As \(t \to 0\), then \(y \to 0\).
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_c">Part c</h4>
-<div class="sectionbody">
+<h2 id="problem-17--for-grade" class="section-3">Problem 17 [FOR GRADE]</h2>
 <div class="paragraph">
-<p>As $t \to 0$, then $y \to 0$. </p>
-</div></div>
+<p>
+Recall the solution to Problem 13. We need to swap the sign on \(p(t)\) and update the initial value constant solution. We will get \begin{equation*} y(t) = -\frac{9}{5}e^{t/2}+\frac{8}{5}\sin(t)+\frac{4}{5}\cos(t) \end{equation*} Set the derivative of \(y\) to \(0\) and solve for \(t\). \begin{equation*} 0 = -\frac{9}{5}\times (-\frac{1}{2}) \times e^{t/2}+\frac{8}{5}\cos(t)-\frac{4}{5}\sin(t) \end{equation*} You can check the nature of the point by taking \(y”\). Finally, we find that the local maximum is at \((t, y) = (1.36, 0.82)\). Better approximated values are accepted.
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_17__for_grade_">Problem 17 [FOR GRADE]</h3>
-<div class="sectionbody">
+<h2 id="problem-20" class="section-3">Problem 20</h2>
 <div class="paragraph">
-<p>Recall the solution to Problem 13. We need to swap the sign on $p(t)$ and update the initial value constant solution. We will get \begin{equation*} y(t) = -\frac{9}{5}e^{t/2}+\frac{8}{5}\sin(t)+\frac{4}{5}\cos(t) \end{equation*} Set the derivative of $y$ to $0$ and solve for $t$. \begin{equation*} 0 = -\frac{9}{5}\times (-\frac{1}{2}) \times e^{t/2}+\frac{8}{5}\cos(t)-\frac{4}{5}\sin(t) \end{equation*} You can check the nature of the point by taking $y’’$. Finally, we find that the local maximum is at $(t, y) = (1.36, 0.82)$. Better approximated values are accepted. </p>
-</div></div>
+<p>
+The solution process is similar to the problem of 17, you should get a general solution for \(y\): \begin{equation*} y = -1 - \frac{3}{2}(\sin t + \cos t) + C e^t \end{equation*} where \(C\) is a constant. Solving \(y(0) = y_0\) for \(y_0\) yields that \(C = y_0 + \frac{5}{2}\) so then the solution is \(y_0 = -\frac{5}{2}\).
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_20">Problem 20</h3>
-<div class="sectionbody">
+<h2 id="problem-28" class="section-3">Problem 28</h2>
+<h3 id="part-a" class="section-4">Part a</h3>
 <div class="paragraph">
-<p>The solution process is similar to the problem of 17, you should get a general solution for $y$: \begin{equation*} y = -1 - \frac{3}{2}(\sin t + \cos t) + C e^t \end{equation*} where $C$ is a constant. Solving $y(0) = y_0$ for $y_0$ yields that $C = y_0 + \frac{5}{2}$ so then the solution is $y_0 = -\frac{5}{2}$. </p>
-</div></div>
+<p>
+Recall the form \(y&#39; + p(t) y = g(t)\) and solution form of \begin{equation*} \frac{d}{dt}(\mu(t)y) = g(t) \mu(t) \end{equation*} Then if \(g(t)=0\), solution is \(y = A e^{-\int{p(t)dt}}\)
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_28">Problem 28</h3>
-<div class="sectionbody"></div>
-<div class="sect3">
-<h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
+<h3 id="part-b" class="section-4">Part b</h3>
 <div class="paragraph">
-<p>Recall the form $y’ + p(t) y = g(t)$ and solution form of \begin{equation*} \frac{d}{dt}(\mu(t)y) = g(t) \mu(t) \end{equation*} Then if $g(t)=0$, solution is $y = A e^{-\int{p(t)dt}}$ </p>
-</div></div>
+<p>
+Simply substitute (50) into (48), perform some trivial Chain Rule and confirm that \begin{equation*} A&#39;(t) = g(t) \exp\left(\int p(t) dt\right) \end{equation*}
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_b">Part b</h4>
-<div class="sectionbody">
+<h3 id="part-c" class="section-4">Part c</h3>
 <div class="paragraph">
-<p>Simply substitute (50) into (48), perform some trivial Chain Rule and confirm that \begin{equation*} A’(t) = g(t) \exp\left(\int p(t) dt\right) \end{equation*} </p>
-</div></div>
+<p>
+Substitution is mechanical. Prove that variation of parameters works.
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_c">Part c</h4>
-<div class="sectionbody">
+<h1 id="chapter-2-2" class="section-2">Chapter 2.2</h1>
+<h2 id="problem-1" class="section-3">Problem 1</h2>
 <div class="paragraph">
-<p>Substitution is mechanical. Prove that variation of parameters works. </p>
-</div></div>
+<p>
+\begin{equation*} \frac{dy}{dx} = \frac{x^2}{y} \end{equation*} then \begin{equation*} \int y dy = \int x^2 dx \end{equation*} So the solution is \begin{equation*} 3y^2-2x^3=C \end{equation*} It’s OK to leave the solution implicitly here, otherwise, the explicit solution for \(y\) can be very nasty.
+</p>
 </div>
-<div class="sect1">
-<h2 id="_chapter_2_2">Chapter 2.2</h2>
-<div class="sectionbody"></div>
-<div class="sect2">
-<h3 id="_problem_1">Problem 1</h3>
-<div class="sectionbody">
+<h2 id="problem-7" class="section-3">Problem 7</h2>
 <div class="paragraph">
-<p>\begin{equation*} \frac{dy}{dx} = \frac{x^2}{y} \end{equation*} then \begin{equation*} \int y dy = \int x^2 dx \end{equation*} So the solution is \begin{equation*} 3y^2-2x^3=C \end{equation*} It’s OK to leave the solution implicitly here, otherwise, the explicit solution for $y$ can be very nasty. </p>
-</div></div>
+<p>
+\begin{equation*} \frac{dy}{dx} = \frac{y}{x} \end{equation*} then \begin{equation*} \int \frac{dy}{y} = \int \frac{dx}{x} \end{equation*} Then \begin{equation*} \ln(y) = ln(x) + ln(C) = ln(C\times x) \end{equation*} \(C\) is any constant, then \(\ln(C)\) is also a constant. Finally, \(y = Cx\)
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_7">Problem 7</h3>
-<div class="sectionbody">
+<h2 id="problem-8--for-grade" class="section-3">Problem 8 [FOR GRADE]</h2>
 <div class="paragraph">
-<p>\begin{equation*} \frac{dy}{dx} = \frac{y}{x} \end{equation*} then \begin{equation*} \int \frac{dy}{y} = \int \frac{dx}{x} \end{equation*} Then \begin{equation*} \ln(y) = ln(x) + ln(C) = ln(C\times x) \end{equation*} $C$ is any constant, then $\ln(C)$ is also a constant. Finally, $y = Cx$ </p>
-</div></div>
+<p>
+\begin{equation*} \frac{dy}{dx} = \frac{-x}{y} \end{equation*} then \begin{equation*} \int y dy = - \int x dx \end{equation*} Therefore \begin{equation*} y^2 + x^2 = C \end{equation*} It’s fine if you wrote \(y = \pm \sqrt{C - x^2}\)
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_8__for_grade_">Problem 8 [FOR GRADE]</h3>
-<div class="sectionbody">
+<h2 id="problem-21" class="section-3">Problem 21</h2>
 <div class="paragraph">
-<p>\begin{equation*} \frac{dy}{dx} = \frac{-x}{y} \end{equation*} then \begin{equation*} \int y dy = - \int x dx \end{equation*} Therefore \begin{equation*} y^2 + x^2 = C \end{equation*} It’s fine if you wrote $y = \pm \sqrt{C - x^2}$ </p>
-</div></div>
+<p>
+\begin{equation*} y&#39; = \frac{ty(4-y)}{3}, \quad y(0) = y_0 \end{equation*}
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_21">Problem 21</h3>
-<div class="sectionbody">
+<h3 id="part-a" class="section-4">Part a</h3>
 <div class="paragraph">
-<p>\begin{equation*} y’ = \frac{ty(4-y)}{3}, \quad y(0) = y_0 \end{equation*} </p>
-</div></div>
-<div class="sect3">
-<h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As $t \to \infty$, then $y \to 4$ </p>
-</div></div>
+<p>
+As \(t \to \infty\), then \(y \to 4\)
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_b">Part b</h4>
-<div class="sectionbody">
+<h3 id="part-b" class="section-4">Part b</h3>
 <div class="paragraph">
-<p>First, you will have to solve the system, which is a first-order separable ordinary differential equation.  The implicit solution is \begin{equation*} \frac{3}{4} \ln(\frac{4}{4-5}) = \frac{t^2}{2} + C \end{equation*} where $C = \frac{3}{4} \ln(\frac{y_0}{4-y_0})$. </p>
+<p>
+First, you will have to solve the system, which is a first-order separable ordinary differential equation.  The implicit solution is \begin{equation*} \frac{3}{4} \ln(\frac{4}{4-5}) = \frac{t^2}{2} + C \end{equation*} where \(C = \frac{3}{4} \ln(\frac{y_0}{4-y_0})\).
+</p>
 </div>
 <div class="paragraph">
-<p>Solve for $t$, so \begin{equation*} t = \sqrt{\frac{3}{2} \ln\left(\frac{y(4-y_0)}{y_0(4-y)}\right)} \end{equation*} Use $y = 3.98$ and $y_0 = 0.5$, then $t \approx 3.29527$. </p>
-</div></div>
+<p>
+Solve for \(t\), so \begin{equation*} t = \sqrt{\frac{3}{2} \ln\left(\frac{y(4-y_0)}{y_0(4-y)}\right)} \end{equation*} Use \(y = 3.98\) and \(y_0 = 0.5\), then \(t \approx 3.29527\).
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_25">Problem 25</h3>
-<div class="sectionbody"></div>
-<div class="sect3">
-<h4 id="_part_a">Part a</h4>
-<div class="sectionbody">
+<h2 id="problem-25" class="section-3">Problem 25</h2>
+<h3 id="part-a" class="section-4">Part a</h3>
 <div class="paragraph">
-<p>Simple divide both the numerator and the denominator by $x$. </p>
-</div></div>
+<p>
+Simple divide both the numerator and the denominator by \(x\).
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_b">Part b</h4>
-<div class="sectionbody">
+<h3 id="part-b" class="section-4">Part b</h3>
 <div class="paragraph">
-<p>You should get \begin{equation*} \frac{dy}{dx} = v + x \frac{dv}{dx} \end{equation*} </p>
-</div></div>
+<p>
+You should get \begin{equation*} \frac{dy}{dx} = v + x \frac{dv}{dx} \end{equation*}
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_c">Part c</h4>
-<div class="sectionbody">
+<h3 id="part-c" class="section-4">Part c</h3>
 <div class="paragraph">
-<p>This is simply to show. </p>
-</div></div>
+<p>
+This is simply to show.
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_d">Part d</h4>
-<div class="sectionbody">
+<h3 id="part-d" class="section-4">Part d</h3>
 <div class="paragraph">
-<p>Yet another separable equation, you should get the implicit solution \begin{equation*} x^4 \left| 2 - v \right| \left| v + 2 \right|^3 = C \end{equation*} </p>
-</div></div>
+<p>
+Yet another separable equation, you should get the implicit solution \begin{equation*} x^4 \left| 2 - v \right| \left| v + 2 \right|^3 = C \end{equation*}
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_e">Part e</h4>
-<div class="sectionbody">
+<h3 id="part-e" class="section-4">Part e</h3>
 <div class="paragraph">
-<p>Rearrange to get \begin{equation*} |y+2x|^3 |2x-y| = C \end{equation*} </p>
-</div></div>
+<p>
+Rearrange to get \begin{equation*} |y+2x|^3 |2x-y| = C \end{equation*}
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part_f">Part f</h4>
-<div class="sectionbody">
-</div>
+<h3 id="part-f" class="section-4">Part f</h3>
 <div class="paragraph">
-<p>It’s like a 1/x star. </p>
+<p>
+It’s like a 1/x star.
+</p>
 </div>
 </div>
-</div>
+
+<!-- Footnotes -->
 
 </body>
 </html>

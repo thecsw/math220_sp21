@@ -1,16 +1,32 @@
+<!--
+                 ,ae,
+                ,88888e
+ _____   ,a888b.9888888i   _____              _
+(_____)  888888888888888  (____ \            | |
+   _     88888888888888Y   _   \ \ ____  ____| |  _ ____   ____  ___  ___
+  | |    '8888888888888'  | |   | / _  |/ ___) | / )  _ \ / _  )/___)/___)
+ _| |_     "S888888888"   | |__/ ( ( | | |   | |< (| | | ( (/ /|___ |___ |
+(_____)      "7888888Y    |_____/ \_||_|_|   |_| \_)_| |_|\____|___/(___/
+                "e88j
+                  "Y
 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Links -->
 <link rel="canonical" href="https://sandyuraz.com/math220_sp21/oracles/hw3" type=""/>
-<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type="image/x-icon"/>
-<link rel="icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type=""/>
-
+<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/assets/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="https://sandyuraz.com/math220_sp21/assets/apple-touch-icon.png" type="image/png"/>
+<link rel="image_src" href="https://sandyuraz.com/math220_sp21/assets/android-chrome-512x512.png" type="image/png"/>
+<link rel="icon" href="https://sandyuraz.com/math220_sp21/assets/favicon.ico" type=""/>
+<!-- Meta -->
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" property="generator" content="Darkness">
 <meta name="author" property="author" content="email">
+<meta name="date" property="date" content="67; 12021 H.E.">
 <meta name="theme-color" property="theme-color" content="#fffff4">
 <meta name="description" property="description" content="Go back to the [[../../][home page]]...">
 <meta name="og:title" property="og:title" content="Homework 3 Oracle">
@@ -31,7 +47,7 @@
 <meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw3">
 <meta name="twitter:title" property="twitter:title" content="Homework 3 Oracle">
 <meta name="twitter:description" property="twitter:description" content="Go back to the [[../../][home page]]...">
-
+<!-- Scripts -->
 <script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
 <script async src="https://sandyuraz.com/scripts/time.js"></script>
 
@@ -67,134 +83,114 @@
     });
 </script>
 
+<!-- Extra -->
+
+<!-- Title -->
 <title>Homework 3 Oracle</title>
 </head>
+<!-- Styling -->
 <link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/web.css">
 
 <body class="article">
+<!-- Header -->
 
-<div id="header">
-<h1><img id="myface" src="https://sandyuraz.com/math220_sp21/rei.png" width="112" height="112">Homework 3 Oracle</h1>
-<div class="details">
+<div class="header">
+<h1 class="section-1">Homework 3 Oracle</h1>
+<div class="menu">
 <span id="author" class="author">email</span><br>
 <span id="email" class="email">ctu [at] ku [dot] edu</span><br>
 <span id="revdate">
 <a href="https://sandyuraz.com/math220_sp21/">Home 🏠</a></span>
 </div>
-<div id="hetime" class="details"></div>
+<div id="hetime" class="menu"></div>
 </div>
-<div id="content">
+<!-- Content -->
+<div class="writing">
 
 <div class="paragraph">
-<p>Go back to the <a href="../../">home page</a> </p>
-</div>
-<a href="./index.pdf">View the PDF version​</a>
-<div class="sect1">
-<h2 id="_section_2_3">Section 2.3</h2>
-<div class="sectionbody"></div>
-<div class="sect2">
-<h3 id="_problem_1__for_grade_">Problem 1 [FOR GRADE]</h3>
-<div class="sectionbody">
+<p>
+Go back to the <a href="../../">home page</a>
+</p>
+</div><a href="./index.pdf">View the PDF version​</a>
+<h1 id="section-2-3" class="section-2">Section 2.3</h1>
+<h2 id="problem-1--for-grade" class="section-3">Problem 1 [FOR GRADE]</h2>
 <div class="paragraph">
-<p>We model the tank problem the following way of \begin{equation*} \frac{dx}{dt}=R_{in}-R_{out} \end{equation*} Then \begin{equation*} \frac{dx}{dt}=-\frac{2x}{200}=-\frac{x}{100} \end{equation*} We know the original concentration of $1g/L$, then apply the separable equations method \begin{equation*} \int \frac{100}{x} dx = \int -1 dt \end{equation*} Solving it yields \begin{equation*} x = 200 e^{-\frac{t}{100}} \end{equation*} We need to find the time that will elapse before the concentration of dye in the tank reaches $1\%$. So \begin{equation*} \frac{x(t)}{x(0)} = 0.01 \implies 0.01 = e^{-\frac{t}{100}} \end{equation*} Solving for $t$ returns that $t = 100 \ln 100$ min $\approx 460.5$ min. </p>
-</div></div>
+<p>
+We model the tank problem the following way of \begin{equation*} \frac{dx}{dt}=R_{in}-R_{out} \end{equation*} Then \begin{equation*} \frac{dx}{dt}=-\frac{2x}{200}=-\frac{x}{100} \end{equation*} We know the original concentration of \(1g/L\), then apply the separable equations method \begin{equation*} \int \frac{100}{x} dx = \int -1 dt \end{equation*} Solving it yields \begin{equation*} x = 200 e^{-\frac{t}{100}} \end{equation*} We need to find the time that will elapse before the concentration of dye in the tank reaches \(1\%\). So \begin{equation*} \frac{x(t)}{x(0)} = 0.01 \implies 0.01 = e^{-\frac{t}{100}} \end{equation*} Solving for \(t\) returns that \(t = 100 \ln 100\) min \(\approx 460.5\) min.
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_4">Problem 4</h3>
-<div class="sectionbody"></div>
-<div class="sect3">
-<h4 id="_part__a_">Part (a)</h4>
-<div class="sectionbody">
+<h2 id="problem-4" class="section-3">Problem 4</h2>
+<h3 id="part--a" class="section-4">Part (a)</h3>
 <div class="paragraph">
-<p>So our kinetic and potential energies are equal. Then \begin{equation*} mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh} \end{equation*} </p>
-</div></div>
+<p>
+So our kinetic and potential energies are equal. Then \begin{equation*} mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh} \end{equation*}
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part__b_">Part (b)</h4>
-<div class="sectionbody">
+<h3 id="part--b" class="section-4">Part (b)</h3>
 <div class="paragraph">
-<p>Recall \begin{equation*} \frac{dv}{dt} = A(h) \frac{dh}{dt} \quad\text{and}\quad \frac{dv}{dt} = av \end{equation*} So then because constant $\alpha$ is contracting, the change is negative \begin{equation*} A(h)\frac{dh}{dt} = -\alpha a \sqrt{2gh} \end{equation*} </p>
-</div></div>
+<p>
+Recall \begin{equation*} \frac{dv}{dt} = A(h) \frac{dh}{dt} \quad\text{and}\quad \frac{dv}{dt} = av \end{equation*} So then because constant \(\alpha\) is contracting, the change is negative \begin{equation*} A(h)\frac{dh}{dt} = -\alpha a \sqrt{2gh} \end{equation*}
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part__c_">Part (c)</h4>
-<div class="sectionbody">
+<h3 id="part--c" class="section-4">Part (c)</h3>
 <div class="paragraph">
-<p>Recall $A(r) = \pi r^2$. Let $h=3$ and $\alpha = 0.6$. Then solving for radius of 1m and the circular outlet radius of 0.1m, we get an equation \begin{equation*} A(1)\frac{dh}{dt} = -(0.6) \times A(0.1) \sqrt{2gh}\\ \implies \pi\frac{dh}{dt} = -0.006 \pi \sqrt{2gh}\\ \implies \frac{dh}{dt} = -0.006 \sqrt{2gh}\\ \end{equation*} Solving for $t$ yields $\approx 130.41$. </p>
-</div></div>
+<p>
+Recall \(A(r) = \pi r^2\). Let \(h=3\) and \(\alpha = 0.6\). Then solving for radius of 1m and the circular outlet radius of 0.1m, we get an equation \begin{equation*} A(1)\frac{dh}{dt} = -(0.6) \times A(0.1) \sqrt{2gh}\\ \implies \pi\frac{dh}{dt} = -0.006 \pi \sqrt{2gh}\\ \implies \frac{dh}{dt} = -0.006 \sqrt{2gh}\\ \end{equation*} Solving for \(t\) yields \(\approx 130.41\).
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_9__for_grade_">Problem 9 [FOR GRADE]</h3>
-<div class="sectionbody"></div>
-<div class="sect3">
-<h4 id="_part__a_">Part (a)</h4>
-<div class="sectionbody">
+<h2 id="problem-9--for-grade" class="section-3">Problem 9 [FOR GRADE]</h2>
+<h3 id="part--a" class="section-4">Part (a)</h3>
 <div class="paragraph">
-<p>See that \begin{equation*} \frac{Q(5730)}{Q_0} = 0.5\\ \implies \frac{Q_0 e^{-r(5730)}}{Q_0} = 0.5\\ \implies e^{-r(5730)} = 0.5\\ \end{equation*} Solve for $r$ to get $r = 0.00012097 yr^{-1}$ </p>
-</div></div>
+<p>
+See that \begin{equation*} \frac{Q(5730)}{Q_0} = 0.5\\ \implies \frac{Q_0 e^{-r(5730)}}{Q_0} = 0.5\\ \implies e^{-r(5730)} = 0.5\\ \end{equation*} Solve for \(r\) to get \(r = 0.00012097 yr^{-1}\)
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part__b_">Part (b)</h4>
-<div class="sectionbody">
+<h3 id="part--b" class="section-4">Part (b)</h3>
 <div class="paragraph">
-<p>Trivially, it would be $Q_0 \exp{(-0.00012097t)}$, where $t$ is measured in years. </p>
-</div></div>
+<p>
+Trivially, it would be \(Q_0 \exp{(-0.00012097t)}\), where \(t\) is measured in years.
+</p>
 </div>
-<div class="sect3">
-<h4 id="_part__c_">Part (c)</h4>
-<div class="sectionbody">
+<h3 id="part--c" class="section-4">Part (c)</h3>
 <div class="paragraph">
-<p>Solve $e^{-rt} = 0.2$ to get $13,305yr$. </p>
-</div></div>
+<p>
+Solve \(e^{-rt} = 0.2\) to get \(13,305yr\).
+</p>
 </div>
-<div class="sect1">
-<h2 id="_section_2_5">Section 2.5</h2>
-<div class="sectionbody"></div>
-<div class="sect2">
-<h3 id="_problem_3">Problem 3</h3>
-<div class="sectionbody">
-<hr>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="./d3.png"><img src="./d3.png" alt="image"></a>
-</div>
+<h1 id="section-2-5" class="section-2">Section 2.5</h1>
+<h2 id="problem-3" class="section-3">Problem 3</h2></div>
+
+<div class="media">
+<a class="image" href="./d3.png"><img class="image" src="./d3.png" alt="image"></a>
 <div class="title">image</div>
-</div>
-<hr></div>
-</div>
-<div class="sect2">
-<h3 id="_problem_5">Problem 5</h3>
-<div class="sectionbody">
 <hr>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="./d5.png"><img src="./d5.png" alt="image"></a>
-</div>
+</div><div class="writing">
+
+<h2 id="problem-5" class="section-3">Problem 5</h2></div>
+
+<div class="media">
+<a class="image" href="./d5.png"><img class="image" src="./d5.png" alt="image"></a>
 <div class="title">image</div>
-</div>
-<hr></div>
-</div>
-<div class="sect2">
-<h3 id="_problem_9__for_grade_">Problem 9 [FOR GRADE]</h3>
-<div class="sectionbody">
 <hr>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="./d9.png"><img src="./d9.png" alt="image"></a>
-</div>
+</div><div class="writing">
+
+<h2 id="problem-9--for-grade" class="section-3">Problem 9 [FOR GRADE]</h2></div>
+
+<div class="media">
+<a class="image" href="./d9.png"><img class="image" src="./d9.png" alt="image"></a>
 <div class="title">image</div>
-</div>
-<hr></div>
-</div>
-<div class="sect2">
-<h3 id="_problem_13">Problem 13</h3>
-<div class="sectionbody">
-</div>
+<hr>
+</div><div class="writing">
+
+<h2 id="problem-13" class="section-3">Problem 13</h2>
 <div class="paragraph">
-<p>\begin{equation*} y_{1,2} = \frac{K + T \pm \sqrt{K^2 - KT + T^3}}{3} \end{equation*} </p>
+<p>
+\begin{equation*} y_{1,2} = \frac{K + T \pm \sqrt{K^2 - KT + T^3}}{3} \end{equation*}
+</p>
 </div>
 </div>
-</div>
+
+<!-- Footnotes -->
 
 </body>
 </html>

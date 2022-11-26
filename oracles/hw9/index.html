@@ -1,16 +1,32 @@
+<!--
+                 ,ae,
+                ,88888e
+ _____   ,a888b.9888888i   _____              _
+(_____)  888888888888888  (____ \            | |
+   _     88888888888888Y   _   \ \ ____  ____| |  _ ____   ____  ___  ___
+  | |    '8888888888888'  | |   | / _  |/ ___) | / )  _ \ / _  )/___)/___)
+ _| |_     "S888888888"   | |__/ ( ( | | |   | |< (| | | ( (/ /|___ |___ |
+(_____)      "7888888Y    |_____/ \_||_|_|   |_| \_)_| |_|\____|___/(___/
+                "e88j
+                  "Y
 
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Links -->
 <link rel="canonical" href="https://sandyuraz.com/math220_sp21/oracles/hw9" type=""/>
-<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type="image/x-icon"/>
-<link rel="icon" href="https://sandyuraz.com/math220_sp21/favicon.ico" type=""/>
-
+<link rel="shortcut icon" href="https://sandyuraz.com/math220_sp21/assets/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="https://sandyuraz.com/math220_sp21/assets/apple-touch-icon.png" type="image/png"/>
+<link rel="image_src" href="https://sandyuraz.com/math220_sp21/assets/android-chrome-512x512.png" type="image/png"/>
+<link rel="icon" href="https://sandyuraz.com/math220_sp21/assets/favicon.ico" type=""/>
+<!-- Meta -->
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" property="generator" content="Darkness">
 <meta name="author" property="author" content="email">
+<meta name="date" property="date" content="109; 12021 H.E.">
 <meta name="theme-color" property="theme-color" content="#fffff4">
 <meta name="description" property="description" content="Go back to the [[../../][home page]]...">
 <meta name="og:title" property="og:title" content="Homework 9 Oracle">
@@ -31,7 +47,7 @@
 <meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw9">
 <meta name="twitter:title" property="twitter:title" content="Homework 9 Oracle">
 <meta name="twitter:description" property="twitter:description" content="Go back to the [[../../][home page]]...">
-
+<!-- Scripts -->
 <script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
 <script async src="https://sandyuraz.com/scripts/time.js"></script>
 
@@ -67,74 +83,87 @@
     });
 </script>
 
+<!-- Extra -->
+
+<!-- Title -->
 <title>Homework 9 Oracle</title>
 </head>
+<!-- Styling -->
 <link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/web.css">
 
 <body class="article">
+<!-- Header -->
 
-<div id="header">
-<h1><img id="myface" src="https://sandyuraz.com/math220_sp21/rei.png" width="112" height="112">Homework 9 Oracle</h1>
-<div class="details">
+<div class="header">
+<h1 class="section-1">Homework 9 Oracle</h1>
+<div class="menu">
 <span id="author" class="author">email</span><br>
 <span id="email" class="email">ctu [at] ku [dot] edu</span><br>
 <span id="revdate">
 <a href="https://sandyuraz.com/math220_sp21/">Home 🏠</a></span>
 </div>
-<div id="hetime" class="details"></div>
+<div id="hetime" class="menu"></div>
 </div>
-<div id="content">
+<!-- Content -->
+<div class="writing">
 
 <div class="paragraph">
-<p>Go back to the <a href="../../">home page</a> </p>
-</div>
-<a href="./index.pdf">View the PDF version​</a>
-<div class="sect1">
-<h2 id="_section_7_5">Section 7.5</h2>
-<div class="sectionbody"></div>
-<div class="sect2">
-<h3 id="_problem_9__this_is_graded_">Problem 9 (this is graded)</h3>
-<div class="sectionbody">
+<p>
+Go back to the <a href="../../">home page</a>
+</p>
+</div><a href="./index.pdf">View the PDF version​</a>
+<h1 id="section-7-5" class="section-2">Section 7.5</h1>
+<h2 id="problem-9--this-is-graded" class="section-3">Problem 9 (this is graded)</h2>
 <div class="paragraph">
-<p>Let us solve the following system of ODEs \begin{align*} \mathbf{x}’ = \begin{pmatrix} 1 &amp; -1 &amp; 4  \\ 3 &amp; 2  &amp; -1 \\ 2 &amp; 1  &amp; -1 \end{pmatrix} \mathbf{x} \end{align*} </p>
+<p>
+Let us solve the following system of ODEs \begin{align*} \mathbf{x}&#39; = \begin{pmatrix} 1 &amp; -1 &amp; 4  \\ 3 &amp; 2  &amp; -1 \\ 2 &amp; 1  &amp; -1 \end{pmatrix} \mathbf{x} \end{align*}
+</p>
 </div>
+<div class="ulist">
+<ul>
+
+<li>
+<p>
+\lambda^3 + 2 \lambda^2 + 5\lambda -6 = 0                                                                                        \\ &amp; \implies \lambda_1 = 1 \quad \text{and} \quad \lambda_2 = -2 \quad \text{and} \quad \lambda_3 = 3 \end{align*} Substitute the eigenvalues above to find the corresponding eigenvectors \(\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}\) \begin{align*} \lambda = \lambda_1 \implies \begin{pmatrix} 1 - \lambda_1 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_1 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_1 \end{pmatrix} \mathbf{v}_1 \implies \mathbf{v}_1 = \begin{pmatrix} -1 \\ 4 \\ 1 \end{pmatrix} \end{align*} \begin{align*} \lambda = \lambda_2 \implies \begin{pmatrix} 1 - \lambda_2 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_2 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_2 \end{pmatrix} \mathbf{v}_2 \implies \mathbf{v}_2 = \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} \end{align*} \begin{align*} \lambda = \lambda_3 \implies \begin{pmatrix} 1 - \lambda_3 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_3 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_3 \end{pmatrix} \mathbf{v}_3 \implies \mathbf{v}_3 = \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} \end{align*} Therefore the final solution has the form \begin{align*} \mathbf{x}(t) &amp; = C_1 e^{\lambda_1 t} \mathbf{v_1} + C_2 e^{\lambda_2 t} \mathbf{v_2} + C_3 e^{\lambda_3 t} \mathbf{v_3}\\ &amp; = C_1 e^{t} \begin{pmatrix} -1 \\ 4 \\ 1 \end{pmatrix} + C_2 e^{-2t} \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} + C_3 e^{3t} \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} \end{align*} where \(C_1\) and \(C_2\) and \(C_3\) are arbitrary constants.
+</p>
+</li>
+</ul>
+</div>
+
+<h2 id="problem-10" class="section-3">Problem 10</h2>
+<div class="ulist">
+<ul>
+
+<li>
+<p>
+\frac{3}{2} e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix} \end{align*}
+</p>
+</li>
+</ul>
+</div>
+
+<h2 id="problem-15--this-is-graded" class="section-3">Problem 15 (this is graded)</h2>
 <div class="paragraph">
-<p>_Solution_ Let $\mathbf{A}$ be the matrix above, so let us find the characteristic polynomial of our system \begin{align*} \det (\mathbf{A} - \lambda \mathbf{I}_3) = \det \begin{pmatrix} 1 - \lambda &amp; -1          &amp; 4            \\ 3           &amp; 2 - \lambda &amp; -1           \\ 2           &amp; 1           &amp; -1 - \lambda \end{pmatrix} &amp; = - \lambda^3 + 2 \lambda^2 + 5\lambda -6 = 0                                                                                        \\ ∆ &amp; \implies \lambda_1 = 1 \quad \text{and} \quad \lambda_2 = -2 \quad \text{and} \quad \lambda_3 = 3 \end{align*} Substitute the eigenvalues above to find the corresponding eigenvectors $\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}$ \begin{align*} \lambda = \lambda_1 \implies \begin{pmatrix} 1 - \lambda_1 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_1 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_1 \end{pmatrix} \mathbf{v}_1 \implies \mathbf{v}_1 = \begin{pmatrix} -1 \\ 4 \\ 1 \end{pmatrix} \end{align*} \begin{align*} \lambda = \lambda_2 \implies \begin{pmatrix} 1 - \lambda_2 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_2 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_2 \end{pmatrix} \mathbf{v}_2 \implies \mathbf{v}_2 = \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} \end{align*} \begin{align*} \lambda = \lambda_3 \implies \begin{pmatrix} 1 - \lambda_3 &amp; -1            &amp; 4              \\ 3             &amp; 2 - \lambda_3 &amp; -1             \\ 2             &amp; 1             &amp; -1 - \lambda_3 \end{pmatrix} \mathbf{v}_3 \implies \mathbf{v}_3 = \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} \end{align*} Therefore the final solution has the form \begin{align*} \mathbf{x}(t) &amp; = C_1 e^{\lambda_1 t} \mathbf{v_1} + C_2 e^{\lambda_2 t} \mathbf{v_2} + C_3 e^{\lambda_3 t} \mathbf{v_3}\\ &amp; = C_1 e^{t} \begin{pmatrix} -1 \\ 4 \\ 1 \end{pmatrix} + C_2 e^{-2t} \begin{pmatrix} -1 \\ 1 \\ 1 \end{pmatrix} + C_3 e^{3t} \begin{pmatrix} 1 \\ 2 \\ 1 \end{pmatrix} \end{align*} where $C_1$ and $C_2$ and $C_3$ are arbitrary constants. </p>
-</div></div>
+<p>
+Recall the eigenvalues and their eigenvectors we found in <strong>Problem 10</strong>. Applying <strong>Problem 13</strong>, the solution is \begin{align*} \mathbf{x}(t) = C_1 t^4 \begin{pmatrix} 1\\ 1\end{pmatrix} + C_2 t^2 \begin{pmatrix} 1\\ 3\end{pmatrix} \end{align*}
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_10">Problem 10</h3>
-<div class="sectionbody">
+<h2 id="problem-16" class="section-3">Problem 16</h2>
 <div class="paragraph">
-<p>The solution strategy is the same as <strong>Problem 9</strong>. We find that eigenvalues are $\lambda_1 = 4$ and $\lambda_2 = 2$ with their corresponding eigenvectors $\mathbf{v}_1 = \begin{pmatrix}1 \\ 1 \end{pmatrix}$ and $\mathbf{v}_2 = \begin{pmatrix}1 \\ 3 \end{pmatrix}$, such that the solution is \begin{align*} \mathbf{x}(t) = C_1 e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} + C_2 e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix} \end{align*} By knowing the initial value $\mathbf{x}(0) = \begin{pmatrix} 2 \\ -1 \end{pmatrix}$, we solve the system \begin{align*} \begin{cases} C_1 + C_2 = 2 \\ C_1 + 3 C_2 = -1 \end{cases} \implies \begin{cases} C_1 = \frac{7}{2} \\ C_2 = -\frac{3}{2} \end{cases} \end{align*} Finally, the solution to the initial value problem is \begin{align*} \mathbf{x}(t) = \frac{7}{2} e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} + - \frac{3}{2} e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix} ∆ \end{align*} </p>
-</div></div>
+<p>
+Similarly to all problems above, we find eigenvalues \(\lambda_1 = 0\) and \(\lambda_2 = -2\), where their respective eigenvectors are \(\mathbf{v}_1 = \begin{pmatrix} 3 \\ 4\end{pmatrix}\) and \(\mathbf{v}_2 = \begin{pmatrix} 1 \\ 2\end{pmatrix}\). Applying <strong>Problem 13</strong>, we have the solution \begin{align*} \mathbf{x}(t) = C_1 \begin{pmatrix} 3\\ 4\end{pmatrix} + C_2 t^{-2} \begin{pmatrix} 1\\ 2\end{pmatrix} \end{align*}
+</p>
 </div>
-<div class="sect2">
-<h3 id="_problem_15__this_is_graded_">Problem 15 (this is graded)</h3>
-<div class="sectionbody">
+<h1 id="section-7-6" class="section-2">Section 7.6</h1>
+<h2 id="problem-9-and-10" class="section-3">Problem 9 and 10</h2>
 <div class="paragraph">
-<p>Recall the eigenvalues and their eigenvectors we found in <strong>Problem 10</strong>. Applying <strong>Problem 13</strong>, the solution is \begin{align*} \mathbf{x}(t) = C_1 t^4 \begin{pmatrix} 1\\ 1\end{pmatrix} + C_2 t^2 \begin{pmatrix} 1\\ 3\end{pmatrix} \end{align*} </p>
-</div></div>
-</div>
-<div class="sect2">
-<h3 id="_problem_16">Problem 16</h3>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Similarly to all problems above, we find eigenvalues $\lambda_1 = 0$ and $\lambda_2 = -2$, where their respective eigenvectors are $\mathbf{v}_1 = \begin{pmatrix} 3 \\ 4\end{pmatrix}$ and $\mathbf{v}_2 = \begin{pmatrix} 1 \\ 2\end{pmatrix}$. Applying <strong>Problem 13</strong>, we have the solution \begin{align*} \mathbf{x}(t) = C_1 \begin{pmatrix} 3\\ 4\end{pmatrix} + C_2 t^{-2} \begin{pmatrix} 1\\ 2\end{pmatrix} \end{align*} </p>
-</div></div>
-</div>
-<div class="sect1">
-<h2 id="_section_7_6">Section 7.6</h2>
-<div class="sectionbody"></div>
-<div class="sect2">
-<h3 id="_problem_9_and_10">Problem 9 and 10</h3>
-<div class="sectionbody">
-</div>
-<div class="paragraph">
-<p>Solutions are omitted for the sake of expediting the grading before Midterm II. </p>
+<p>
+Solutions are omitted for the sake of expediting the grading before Midterm II.
+</p>
 </div>
 </div>
-</div>
+
+<!-- Footnotes -->
 
 </body>
 </html>
