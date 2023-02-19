@@ -21,11 +21,15 @@ Go back to the [[../../][home page]]
 
 ** Chapter 1.1
 *** Problem 7
-   #+attr_html: :width 90%
+
+#+attr_html: :width 90%
    [[./7.jpg][image]]
+   
 *** Problem 10
-   #+attr_html: :width 90%
+
+#+attr_html: :width 90%
    [[./10.jpg][image]]
+   
 *** Problem 15 [FOR GRADE]
    We can see that the direction field results in constant rate of change of
    zero at level where $y=0$ and $y=3$. Then we can also see that the direction
@@ -36,9 +40,10 @@ Go back to the [[../../][home page]]
 ** Chapter 1.2
 *** Problem 7 [FOR GRADE]
    Our differential equation is as given
-   \begin{equation*}
-           \frac{dp}{dt} = \frac{p}{2} - 450
-   \end{equation*}
+   
+\begin{align*}
+\frac{dp}{dt} = \frac{p}{2} - 450
+\end{align*}
 
    *a*. Find the time at which the population becomes extinct if $p(0)=850$
 

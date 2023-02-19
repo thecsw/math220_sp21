@@ -47,11 +47,11 @@
 <script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
 <script async src="https://sandyuraz.com/scripts/time.js"></script>
 
-<link rel="stylesheet" href="https://sandyuraz.com/math220_sp21/scripts/katex/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
 <!-- The loading of KaTeX is deferred to speed up page rendering -->
-<script defer src="https://sandyuraz.com/math220_sp21/scripts/katex/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
 <!-- To automatically render math in text elements, include the auto-render extension: -->
-<script defer src="https://sandyuraz.com/math220_sp21/scripts/katex/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -102,17 +102,17 @@ Go back to the <a href="../../" title="">home page</a>
 <h2 id="problem-7" class="section-3">Problem 7</h2>
 <div class="paragraph">
 <p>
-The three vectors are linearly dependent if there exists a nontrivial solution to \($ c_{1} \mathbf{x}^{(1)}+c_{2} \mathbf{x}^{(2)}+c_{3} \mathbf{x}^{(3)}=\mathbf{0} \)\( for \)c_{1}, c_{2}\(, and \)c_{3}$. Rewrite this equation.
+The three vectors are linearly dependent if there exists a nontrivial solution to \begin{align*} c_{1} \mathbf{x}^{(1)}+c_{2} \mathbf{x}^{(2)}+c_{3} \mathbf{x}^{(3)}=\mathbf{0} \end{align*} for \(c_{1}, c_{2}\), and \(c_{3}\). Rewrite this equation.
 </p>
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{l} c_{1}\left(\begin{array}{l} 2 \\ 1 \\ \end{array}\right)+c_{2}\left(\begin{array}{l} 0 \\ 1 \\ \end{array}\right)+c_{3}\left(\begin{array}{r} -1 \\ 2  \\ \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \\ \left(\begin{array}{llr} 2 &amp; 0 &amp; -1 \\ 1 &amp; 1 &amp; 2  \\ 0 &amp; 0 &amp; 0 \end{array}\right)\left(\begin{array}{l} c_{1} \\ c_{2} \\ c_{3} \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
+\begin{equation*} \begin{array}{l} c_{1}\left(\begin{array}{l} 2 \\ 1 \\ \end{array}\right)+c_{2}\left(\begin{array}{l} 0 \\ 1 \\ \end{array}\right)+c_{3}\left(\begin{array}{r} -1 \\ 2  \\ \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \\\\ \left(\begin{array}{llr} 2 &amp; 0 &amp; -1 \\ 1 &amp; 1 &amp; 2  \\ 0 &amp; 0 &amp; 0 \end{array}\right)\left(\begin{array}{l} c_{1} \\ c_{2} \\ c_{3} \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Calculate the determinant of the coefficient matrix. \($ \operatorname{det}\left(\begin{array}{rrr} 2 &amp; 0 &amp; -1 \\ 1 &amp; 1 &amp; 2  \\ 0 &amp; 0 &amp; 0 \end{array}\right)=0\left(\begin{array}{rr} 0 &amp; -1 \\ 1 &amp; 2 \end{array}\right)-0\left(\begin{array}{rr} 2 &amp; -1 \\ 1 &amp; 2 \end{array}\right)+0\left(\begin{array}{ll} 2 &amp; 0 \\ 1 &amp; 1 \end{array}\right)=0 \)$
+Calculate the determinant of the coefficient matrix. \begin{align*} \operatorname{det}\left(\begin{array}{rrr} 2 &amp; 0 &amp; -1 \\ 1 &amp; 1 &amp; 2  \\ 0 &amp; 0 &amp; 0 \end{array}\right)=0\left(\begin{array}{rr} 0 &amp; -1 \\ 1 &amp; 2 \end{array}\right)-0\left(\begin{array}{rr} 2 &amp; -1 \\ 1 &amp; 2 \end{array}\right)+0\left(\begin{array}{ll} 2 &amp; 0 \\ 1 &amp; 1 \end{array}\right)=0 \end{align*}
 </p>
 </div>
 <div class="paragraph">
@@ -122,12 +122,12 @@ Since it’s zero, there are infinitely many solutions for \(c_{1}, c_{2}\), and
 </div>
 <div class="paragraph">
 <p>
-\begin{array}{r} 2 c_{1}-c_{3}=0 \\ c_{1}+c_{2}+2 c_{3}=0 \end{array}
+\begin{align*} \begin{array}{r} 2 c_{1}-c_{3}=0 \\ c_{1}+c_{2}+2 c_{3}=0 \end{array} \end{align*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Solve this first equation for \(c_{3}\) \($ c_{3}=2 c_{1} \)$
+Solve this first equation for \(c_{3}\) \begin{align*} c_{3}=2 c_{1} \end{align*}
 </p>
 </div>
 <div class="paragraph">
@@ -137,29 +137,54 @@ and plug it into the second one.
 </div>
 <div class="paragraph">
 <p>
-\($ c_{1}+c_{2}+2\left(2 c_{1}\right)=0 \)$
+\begin{align*} c_{1}+c_{2}+2\left(2 c_{1}\right)=0 \end{align*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Solve for \(c_{2}\) \($ c_{2}=-5 c_{1} \)\( In terms of the free variable \)c_{1}\(, the solution to the system of equations is \)\( \left\{c_{1},-5 c_{1}, 2 c_{1}\right\} \)\( For example, choose \)c_{1}=1\(. Then \)\( \mathbf{x}^{(1)}-5 \mathbf{x}^{(2)}+2 \mathbf{x}^{(3)}=\mathbf{0} \)$ Therefore, the three given vectors are linearly dependent.
+Solve for \(c_{2}\) \begin{align*} c_{2}=-5 c_{1} \end{align*} In terms of the free variable \(c_{1}\), the solution to the system of equations is \begin{align*} \left\{c_{1},-5 c_{1}, 2 c_{1}\right\} \end{align*} For example, choose \(c_{1}=1\). Then \begin{align*} \mathbf{x}^{(1)}-5 \mathbf{x}^{(2)}+2 \mathbf{x}^{(3)}=\mathbf{0} \end{align*} Therefore, the three given vectors are linearly dependent.
 </p>
 </div>
 <h2 id="problem-16--for-grade" class="section-3">Problem 16 [FOR GRADE]</h2>
 <div class="paragraph">
 <p>
-The aim is to solve the eigenvalue problem, \($ \mathbf{A} \mathbf{x}=\lambda \mathbf{x} \)\( where \)\mathbf{A}\( is the given matrix. Bring \)\lambda \mathbf{x}\( to the left side and combine the terms. \)\( (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0} \)\( The eigenvalues satisfy \)\( \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0 \)\( Evaluate the determinant and solve for \)\lambda\(. \begin{equation*} \begin{array}{c} \operatorname{det}\left(\begin{array}{cc} -2-\lambda &amp; 1          \\ 1          &amp; -2-\lambda \end{array}\right)=0 \\ (-2-\lambda)(-2-\lambda)-1=0                               \\ \lambda^{2}+4 \lambda+3=0                                  \\ (\lambda+3)(\lambda+1)=0                                   \\ \lambda=\{-3,-1\} \end{array} \end{equation*} Therefore, the eigenvalues are \begin{equation*} \lambda_{1}=-3 \text { and } \quad \lambda_{2}=-1 \end{equation*} Substitute \)\lambda_{1}\( and \)\lambda_{2}\( back into equation (1) to determine the corresponding eigenvectors, \)\mathbf{x}_{1}\( and \)\mathbf{x}_{2}\( \begin{equation*} \begin{array}{r} \left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            &amp; \left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0}                                            \\ \left(\begin{array}{ll} 1 &amp; 1 \\ 1 &amp; 1 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \end{array}\right)=\left(\begin{array}{l} 0 \\ \end{array}\right) &amp; \left(\begin{array}{cc} -1 &amp; 1  \\ 1  &amp; -1 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \end{array}\right)=\left(\begin{array}{l} 0 \\ \end{array}\right) \\ x_{1}+x_{2}=0                                                                                                       &amp; -x_{1}+x_{2}=0                                                                                                      \\ \left.x_{1}+x_{2}=0\right\}                                                                                         &amp; x_{1}-x_{2}=0                                                                                                       \\ x_{2}=-x_{1}                                                                                                        &amp; x_{2}=x_{1}                                                                                                         \\ \mathbf{x}_{1}=\left(\begin{array}{c} x_{1} \\ -x_{1} \end{array}\right)=x_{1}\left(\begin{array}{c} 1 \\ -1 \end{array}\right)                   &amp; \mathbf{x}_{2}=\left(\begin{array}{l} x_{1} \\ x_{1} \end{array}\right)=x_{1}\left(\begin{array}{l} 1 \\ 1 \end{array}\right) \end{array} \end{equation*} Note that \)x_{1}$ is a free variable, or arbitrary constant.
+The aim is to solve the eigenvalue problem, \begin{align*} \mathbf{A} \mathbf{x}=\lambda \mathbf{x} \end{align*} where \(\mathbf{A}\) is the given matrix. Bring \(\lambda \mathbf{x}\) to the left side and combine the terms. \begin{align*} (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0} \end{align*}
+</p>
+</div>
+<div class="paragraph">
+<p>
+The eigenvalues satisfy
+</p>
+</div>
+<div class="paragraph">
+<p>
+\begin{align*} \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0 \end{align*}
+</p>
+</div>
+<div class="paragraph">
+<p>
+Evaluate the determinant and solve for \(\lambda\).
+</p>
+</div>
+<div class="paragraph">
+<p>
+\begin{align*} \begin{array}{c} \operatorname{det}\left(\begin{array}{cc} -2-\lambda &amp; 1          \\ 1          &amp; -2-\lambda \end{array}\right)=0 \\\\ (-2-\lambda)(-2-\lambda)-1=0                               \\ \lambda^{2}+4 \lambda+3=0                                  \\ (\lambda+3)(\lambda+1)=0                                   \\ \lambda=\{-3,-1\} \end{array} \end{align*}
+</p>
+</div>
+<div class="paragraph">
+<p>
+Therefore, the eigenvalues are \begin{equation*} \lambda_{1}=-3 \text { and } \quad \lambda_{2}=-1 \end{equation*} Substitute \(\lambda_{1}\) and \(\lambda_{2}\) back into equation (1) to determine the corresponding eigenvectors, \(\mathbf{x}_{1}\) and \(\mathbf{x}_{2}\) \begin{equation*} \begin{array}{r} \left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            &amp; \left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0}                                            \\ \left(\begin{array}{ll} 1 &amp; 1 \\ 1 &amp; 1 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \end{array}\right)=\left(\begin{array}{l} 0 \\ \end{array}\right) &amp; \left(\begin{array}{cc} -1 &amp; 1  \\ 1  &amp; -1 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \end{array}\right)=\left(\begin{array}{l} 0 \\ \end{array}\right) \\ x_{1}+x_{2}=0                                                                                                       &amp; -x_{1}+x_{2}=0                                                                                                      \\ \left.x_{1}+x_{2}=0\right\}                                                                                         &amp; x_{1}-x_{2}=0                                                                                                       \\ x_{2}=-x_{1}                                                                                                        &amp; x_{2}=x_{1}                                                                                                         \\ \mathbf{x}_{1}=\left(\begin{array}{c} x_{1} \\ -x_{1} \end{array}\right)=x_{1}\left(\begin{array}{c} 1 \\ -1 \end{array}\right)                   &amp; \mathbf{x}_{2}=\left(\begin{array}{l} x_{1} \\ x_{1} \end{array}\right)=x_{1}\left(\begin{array}{l} 1 \\ 1 \end{array}\right) \end{array} \end{equation*} Note that \(x_{1}\) is a free variable, or arbitrary constant.
 </p>
 </div>
 <h2 id="problem-17" class="section-3">Problem 17</h2>
 <div class="paragraph">
 <p>
-The aim is to solve the eigenvalue problem, \($ \mathbf{A x}=\lambda \mathbf{x} \)\( where \)\mathbf{A}\( is the given matrix. Bring \)\lambda \mathbf{x}\( to the left side and combine the terms. \)\( (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0} \)\( The eigenvalues satisfy \)\( \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0 \)\( Evaluate the determinant and solve for \)\lambda\(. \begin{equation*} \begin{array}{c} \operatorname{det}\left(\begin{array}{cc} 1-\lambda &amp; \sqrt{3} \\ \sqrt{3} &amp; -1-\lambda \end{array}\right)=0 \\ (1-\lambda)(-1-\lambda)-3=0 \\ \lambda^{2}-4=0 \\ (\lambda+2)(\lambda-2)=0 \\ \lambda=\{-2,2\} \end{array} \end{equation*} Therefore, the eigenvalues are \begin{equation*} \lambda_{1}=-2 \text { and } \quad \lambda_{2}=2 \end{equation*} Substitute \)\lambda_{1}\( and \)\lambda_{2}\( back into equation (1) to determine the corresponding eigenvectors, \)\mathbf{x}_{1}\( and \)\mathbf{x}_{2}$
+The aim is to solve the eigenvalue problem, \begin{align*} \mathbf{A x}=\lambda \mathbf{x} \end{align*} where \(\mathbf{A}\) is the given matrix. Bring \(\lambda \mathbf{x}\) to the left side and combine the terms. \begin{align*} (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0} \end{align*} The eigenvalues satisfy \begin{align*} \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0 \end{align*} Evaluate the determinant and solve for \(\lambda\). \begin{equation*} \begin{array}{c} \operatorname{det}\left(\begin{array}{cc} 1-\lambda &amp; \sqrt{3} \\ \sqrt{3} &amp; -1-\lambda \end{array}\right)=0 \\\\ (1-\lambda)(-1-\lambda)-3=0 \\ \lambda^{2}-4=0 \\ (\lambda+2)(\lambda-2)=0 \\ \lambda=\{-2,2\} \end{array} \end{equation*} Therefore, the eigenvalues are \begin{equation*} \lambda_{1}=-2 \text { and } \quad \lambda_{2}=2 \end{equation*} Substitute \(\lambda_{1}\) and \(\lambda_{2}\) back into equation (1) to determine the corresponding eigenvectors, \(\mathbf{x}_{1}\) and \(\mathbf{x}_{2}\)
 </p>
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0} \\ \left(\begin{array}{cc} 3        &amp; \sqrt{3} \\ \sqrt{3} &amp; 1 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \end{array}\right)=\left(\begin{array}{l} 0 \\ \end{array}\right) \end{array} \end{equation*}
+\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0} \\\\ \left(\begin{array}{cc} 3        &amp; \sqrt{3} \\ \sqrt{3} &amp; 1 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \end{array}\right)=\left(\begin{array}{l} 0 \\ \end{array}\right) \end{array} \end{equation*}
 </p>
 </div>
 <div class="paragraph">
@@ -169,7 +194,7 @@ The aim is to solve the eigenvalue problem, \($ \mathbf{A x}=\lambda \mathbf{x} 
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{r} x_{2}=-\sqrt{3} x_{1} \\ \mathbf{x}_{1}=\left(\begin{array}{c} x_{1} \\ -\sqrt{3} x_{1} \end{array}\right)=x_{1}\left(\begin{array}{c} 1 \\ -\sqrt{3} \end{array}\right) \end{array} \end{equation*}
+\begin{equation*} \begin{array}{r} x_{2}=-\sqrt{3} x_{1} \\\\ \mathbf{x}_{1}=\left(\begin{array}{c} x_{1} \\ -\sqrt{3} x_{1} \end{array}\right)=x_{1}\left(\begin{array}{c} 1 \\ -\sqrt{3} \end{array}\right) \end{array} \end{equation*}
 </p>
 </div>
 <div class="paragraph">
@@ -179,7 +204,7 @@ and
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0} \\ \left(\begin{array}{ll} -1       &amp; \sqrt{3} \\ \sqrt{3} &amp; -3 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \end{array}\right)=\left(\begin{array}{l} 0 \\ \end{array}\right) \end{array} \end{equation*}
+\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0} \\\\ \left(\begin{array}{ll} -1       &amp; \sqrt{3} \\ \sqrt{3} &amp; -3 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \end{array}\right)=\left(\begin{array}{l} 0 \\ \end{array}\right) \end{array} \end{equation*}
 </p>
 </div>
 <div class="paragraph">
@@ -189,7 +214,7 @@ and
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{c} x_{2}=\frac{1}{\sqrt{3}} x_{1} \\ \mathbf{x}_{2}=\left(\begin{array}{c} x_{1} \\ \frac{1}{\sqrt{3}} x_{1} \end{array}\right)=x_{1}\left(\begin{array}{c} 1 \\ \frac{1}{\sqrt{3}} \end{array}\right) \end{array} \end{equation*}
+\begin{equation*} \begin{array}{c} x_{2}=\frac{1}{\sqrt{3}} x_{1} \\\\ \mathbf{x}_{2}=\left(\begin{array}{c} x_{1} \\ \frac{1}{\sqrt{3}} x_{1} \end{array}\right)=x_{1}\left(\begin{array}{c} 1 \\ \frac{1}{\sqrt{3}} \end{array}\right) \end{array} \end{equation*}
 </p>
 </div>
 <div class="paragraph">
@@ -200,7 +225,42 @@ Note that \(x_{1}\) is a free variable, or arbitrary constant.
 <h2 id="problem-18" class="section-3">Problem 18</h2>
 <div class="paragraph">
 <p>
-The aim is to solve the eigenvalue problem, \($ \mathbf{A} \mathbf{x}=\lambda \mathbf{x} \)\( where \)\mathbf{A}\( is the given matrix. Bring \)\lambda \mathbf{x}\( to the left side and combine the terms. \)\( (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0} \)\( The eigenvalues satisfy \)\( \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0 \)\( Evaluate the determinant and solve for \)\lambda$. \begin{equation*} \begin{array}{c} \operatorname{det}\left(\begin{array}{ccc} 1-\lambda &amp; 0         &amp; 0         \\ 2         &amp; 1-\lambda &amp; -2        \\ 3         &amp; 2         &amp; 1-\lambda \end{array}\right)=0     \\ (1-\lambda)\left|\begin{array}{cc} 1-\lambda &amp; -2        \\ 2         &amp; 1-\lambda \end{array}\right|=0            \\ (1-\lambda)[(1-\lambda)(1-\lambda)+4]=0                        \\ 1-\lambda=0 \quad \text { or } \quad \lambda^{2}-2 \lambda+5=0 \\ \quad 5-7 \lambda+3 \lambda^{2}-\lambda^{3}=0                  \\ (1-\lambda)\left(\lambda^{2}-2 \lambda+5\right)=0              \\ \lambda=1 \quad \text { or } \quad \lambda=\frac{2 \pm \sqrt{4-20}}{2}=1 \pm 2 i \end{array} \end{equation*}
+The aim is to solve the eigenvalue problem,
+</p>
+</div>
+<div class="paragraph">
+<p>
+\begin{align*} \mathbf{A} \mathbf{x}=\lambda \mathbf{x} \end{align*}
+</p>
+</div>
+<div class="paragraph">
+<p>
+where \(\mathbf{A}\) is the given matrix. Bring \(\lambda \mathbf{x}\) to the left side and combine the terms.
+</p>
+</div>
+<div class="paragraph">
+<p>
+\begin{align*} (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0} \end{align*}
+</p>
+</div>
+<div class="paragraph">
+<p>
+The eigenvalues satisfy
+</p>
+</div>
+<div class="paragraph">
+<p>
+\begin{align*} \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0 \end{align*}
+</p>
+</div>
+<div class="paragraph">
+<p>
+Evaluate the determinant and solve for \(\lambda\).
+</p>
+</div>
+<div class="paragraph">
+<p>
+\begin{align*} \begin{array}{c} \operatorname{det}\left(\begin{array}{ccc} 1-\lambda &amp; 0         &amp; 0         \\ 2         &amp; 1-\lambda &amp; -2        \\ 3         &amp; 2         &amp; 1-\lambda \end{array}\right)=0     \\\\ (1-\lambda)\left|\begin{array}{cc} 1-\lambda &amp; -2        \\ 2         &amp; 1-\lambda \end{array}\right|=0            \\ (1-\lambda)[(1-\lambda)(1-\lambda)+4]=0                        \\ 1-\lambda=0 \quad \text { or } \quad \lambda^{2}-2 \lambda+5=0 \\ \quad 5-7 \lambda+3 \lambda^{2}-\lambda^{3}=0                  \\ (1-\lambda)\left(\lambda^{2}-2 \lambda+5\right)=0              \\ \lambda=1 \quad \text { or } \quad \lambda=\frac{2 \pm \sqrt{4-20}}{2}=1 \pm 2 i \end{array} \end{align*}
 </p>
 </div>
 <div class="paragraph">
@@ -220,7 +280,7 @@ Substitute \(\lambda_{1}\) back into equation (1) to determine the corresponding
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            \\ \left(\begin{array}{ccc} 1-(1) &amp; 0     &amp; 0     \\ 2     &amp; 1-(1) &amp; -2    \\ 3     &amp; 2     &amp; 1-(1) \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \\ \left(\begin{array}{ccc} 0 &amp; 0 &amp; 0  \\ 2 &amp; 0 &amp; -2 \\ 3 &amp; 2 &amp; 0 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
+\begin{align*} \begin{array}{c} \left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}\\\\ \left(\begin{array}{ccc} 1-(1) &amp; 0     &amp; 0     \\ 2     &amp; 1-(1) &amp; -2    \\ 3     &amp; 2     &amp; 1-(1) \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \\\\ \left(\begin{array}{ccc} 0 &amp; 0 &amp; 0  \\ 2 &amp; 0 &amp; -2 \\ 3 &amp; 2 &amp; 0 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \end{array} \end{align*}
 </p>
 </div>
 <div class="paragraph">
@@ -230,7 +290,7 @@ Write the implied system of equations.
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \left.\begin{array}{l} 2 x_{1}-2 x_{3}=0 \\ 3 x_{1}+2 x_{2}=0 \end{array}\right\} \end{equation*}
+\begin{align*} \left.\begin{array}{l} 2 x_{1}-2 x_{3}=0 \\ 3 x_{1}+2 x_{2}=0 \end{array}\right\} \end{align*}
 </p>
 </div>
 <div class="paragraph">
@@ -240,7 +300,7 @@ Solve for \(x_{2}\) and \(x_{3}\) in terms of the free variable \(x_{1}\).
 </div>
 <div class="paragraph">
 <p>
-\begin{array}{l} x_{3}=x_{1} \\ x_{2}=-\frac{3}{2} x_{1} \end{array}
+\begin{align*} \begin{array}{l} x_{3}=x_{1} \\ x_{2}=-\frac{3}{2} x_{1} \end{array} \end{align*}
 </p>
 </div>
 <div class="paragraph">
@@ -266,14 +326,38 @@ Since \(x_1\) is arbitrary, the eigenvector can be multiplied by 2 to get rid of
 <h2 id="problem-20--for-grade" class="section-3">Problem 20 [FOR GRADE]</h2>
 <div class="paragraph">
 <p>
-The aim is to solve the eigenvalue problem, \($ \mathbf{A} \mathbf{x}=\lambda \mathbf{x} \)\( where \)\mathbf{A}\( is the given matrix. Bring \)\lambda \mathbf{x}\( to the left side and combine the terms. \)\( (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0} \)\( The eigenvalues satisfy \)\( \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0 \)\( Evaluate the determinant and solve for \)\lambda$.
+The aim is to solve the eigenvalue problem, \begin{align*} \mathbf{A} \mathbf{x}=\lambda \mathbf{x} \end{align*} where \(\mathbf{A}\) is the given matrix. Bring \(\lambda \mathbf{x}\) to the left side and combine the terms. \begin{align*} (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0} \end{align*} The eigenvalues satisfy \begin{align*} \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0 \end{align*} Evaluate the determinant and solve for \(\lambda\).
 </p>
-</div>
-<div class="paragraph">
-<p>
-\begin{equation*} \begin{array}{c} \operatorname{det}\left(\begin{array}{ccc} 11 / 9-\lambda &amp; -2 / 9        &amp; 8 / 9         \\ -2 / 9         &amp; 2 / 9-\lambda &amp; 10 / 9        \\ 8 / 9          &amp; 10 / 9        &amp; 5 / 9-\lambda \end{array}\right)=0                                                                                            \\ (11 / 9-\lambda)[(2 / 9-\lambda)(5 / 9-\lambda)-100 / 81]<s>(2 / 9)[(-2 / 9)(5 / 9-\lambda)-80 / 81]                                                    \\ \quad</s>(8 / 9)[-20 / 81-(8 / 9)(2 / 9-\lambda)]=0                                                                                                      \\ (11 / 9-\lambda)\left|\begin{array}{cc} 2 / 9-\lambda &amp; 10 / 9        \\ 10 / 9        &amp; 5 / 9-\lambda \end{array}\right|-(-2 / 9)\left|\begin{array}{cc} -2 / 9 &amp; 10 / 9        \\ 8 / 9  &amp; 5 / 9-\lambda \end{array}\right|+(8 / 9)\left|\begin{array}{cc} -2 / 9 &amp; 2 / 9-\lambda \\ 8 / 9  &amp; 10 / 9 \end{array}\right|=0 \\ -2+\lambda+2 \lambda^{2}-\lambda^{3}=0                                                                                                                \\ (\lambda+1)(\lambda-1)(2-\lambda)=0 \end{array} \end{equation*}
-</p>
-</div>
+</div></div>
+
+<div class="media">
+\begin{align*}
+  \begin{array}{c}
+    \operatorname{det}\left(\begin{array}{ccc}
+11 / 9-\lambda & -2 / 9        & 8 / 9         \\
+-2 / 9         & 2 / 9-\lambda & 10 / 9        \\
+8 / 9          & 10 / 9        & 5 / 9-\lambda
+\end{array}\right)=0\\\\
+(11 / 9-\lambda)[(2 / 9-\lambda)(5 / 9-\lambda)-100 / 81] + (2 / 9)[(-2 / 9)(5 / 9-\lambda)-80 / 81]\\
+\quad + (8 / 9)[-20 / 81-(8 / 9)(2 / 9-\lambda)]=0\\\\
+(11 / 9-\lambda)\left|\begin{array}{cc}
+2 / 9-\lambda & 10 / 9        \\
+10 / 9        & 5 / 9-\lambda
+\end{array}\right|-(-2 / 9)\left|\begin{array}{cc}
+-2 / 9 & 10 / 9        \\
+8 / 9  & 5 / 9-\lambda
+\end{array}\right| + (8 / 9)\left|\begin{array}{cc}
+-2 / 9 & 2 / 9-\lambda \\
+8 / 9  & 10 / 9
+\end{array}\right|=0 \\\\
+-2 + \lambda+2 \lambda^{2}-\lambda^{3}=0\\
+(\lambda+1)(\lambda-1)(2-\lambda)=0
+\end{array}
+\end{align*}
+
+<div class="title"></div>
+</div><div class="writing">
+
 <div class="paragraph">
 <p>
 Therefore, the eigenvalues are
@@ -291,27 +375,27 @@ Substitute \(\lambda_{1}\) back into equation (1) to determine the corresponding
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            \\ \left(\begin{array}{ccc} 11 / 9-(1) &amp; -2 / 9    &amp; 8 / 9     \\ -2 / 9     &amp; 2 / 9-(1) &amp; 10 / 9    \\ 8 / 9      &amp; 10 / 9    &amp; 5 / 9-(1) \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \\ \left(\begin{array}{ccc} 2 / 9  &amp; -2 / 9 &amp; 8 / 9  \\ -2 / 9 &amp; -7 / 9 &amp; 10 / 9 \\ 8 / 9  &amp; 10 / 9 &amp; -4 / 9 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
+\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            \\\\ \left(\begin{array}{ccc} 11 / 9-(1) &amp; -2 / 9    &amp; 8 / 9     \\ -2 / 9     &amp; 2 / 9-(1) &amp; 10 / 9    \\ 8 / 9      &amp; 10 / 9    &amp; 5 / 9-(1) \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \\ \\ \left(\begin{array}{ccc} 2 / 9  &amp; -2 / 9 &amp; 8 / 9  \\ -2 / 9 &amp; -7 / 9 &amp; 10 / 9 \\ 8 / 9  &amp; 10 / 9 &amp; -4 / 9 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Write the augmented matrix. \($ \left(\begin{array}{rrr|r} 2 / 9 &amp; -2 / 9 &amp; 8 / 9 &amp; 0 \\ -2 / 9 &amp; -7 / 9 &amp; 10 / 9 &amp; 0 \\ 8 / 9 &amp; 10 / 9 &amp; -4 / 9 &amp; 0 \end{array}\right) \)\( Multiply each row by \)9\( \)\( \left(\begin{array}{rrr|r} 2 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; -7 &amp; 10 &amp; 0 \\ 8 &amp; 10 &amp; -4 &amp; 0 \end{array}\right) \)\( Multiply the first row by \)-4\( and add it to the third row. \)\( \left(\begin{array}{rrr|r} 2 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; -7 &amp; 10 &amp; 0 \\ 0 &amp; 18 &amp; -36 &amp; 0 \end{array}\right) \)\( Add the first row to the second row. \)\( \left(\begin{array}{rrr|r} 2 &amp; -2 &amp; 8 &amp; 0 \\ 0 &amp; -9 &amp; 18 &amp; 0 \\ 0 &amp; 18 &amp; -36 &amp; 0 \end{array}\right) \)$
+Write the augmented matrix. \begin{align*} \left(\begin{array}{rrr|r} 2 / 9 &amp; -2 / 9 &amp; 8 / 9 &amp; 0 \\ -2 / 9 &amp; -7 / 9 &amp; 10 / 9 &amp; 0 \\ 8 / 9 &amp; 10 / 9 &amp; -4 / 9 &amp; 0 \end{array}\right) \end{align*} Multiply each row by \(9\) \begin{align*} \left(\begin{array}{rrr|r} 2 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; -7 &amp; 10 &amp; 0 \\ 8 &amp; 10 &amp; -4 &amp; 0 \end{array}\right) \end{align*} Multiply the first row by \(-4\) and add it to the third row. \begin{align*} \left(\begin{array}{rrr|r} 2 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; -7 &amp; 10 &amp; 0 \\ 0 &amp; 18 &amp; -36 &amp; 0 \end{array}\right) \end{align*} Add the first row to the second row. \begin{align*} \left(\begin{array}{rrr|r} 2 &amp; -2 &amp; 8 &amp; 0 \\ 0 &amp; -9 &amp; 18 &amp; 0 \\ 0 &amp; 18 &amp; -36 &amp; 0 \end{array}\right) \end{align*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Write the implied system of equations and solve for \(x_{1}\) and \(x_{2}\) in terms of the free variable \(x_{3}\) \($ \left.\begin{array}{r} 2 x_{1}-2 x_{2}+8 x_{3}=0 \\ -9 x_{2}+18 x_{3}=0 \\ 18 x_{2}-36 x_{3}=0 \end{array}\right\} \quad \rightarrow \quad \begin{array}{l} x_{1}=-2 x_{3} \\ x_{2}=2 x_{3} \end{array} \)\( This means \)\( \mathbf{x}_{1}=\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} -2 x_{3} \\ 2 x_{3} \\ x_{3} \end{array}\right) \)\( Therefore, \)\( \mathbf{x}_{1}=x_{3}\left(\begin{array}{c} -2 \\ 2 \\ 1 \end{array}\right) \)\( Substitute \)\lambda_{2}\( back into equation (1) to determine the corresponding eigenvector \)\mathbf{x}_{2}$.
+Write the implied system of equations and solve for \(x_{1}\) and \(x_{2}\) in terms of the free variable \(x_{3}\) \begin{align*} \left.\begin{array}{r} 2 x_{1}-2 x_{2}+8 x_{3}=0 \\ -9 x_{2}+18 x_{3}=0 \\ 18 x_{2}-36 x_{3}=0 \end{array}\right\} \quad \rightarrow \quad \begin{array}{l} x_{1}=-2 x_{3} \\ x_{2}=2 x_{3} \end{array} \end{align*} This means \begin{align*} \mathbf{x}_{1}=\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} -2 x_{3} \\ 2 x_{3} \\ x_{3} \end{array}\right) \end{align*} Therefore, \begin{align*} \mathbf{x}_{1}=x_{3}\left(\begin{array}{c} -2 \\ 2 \\ 1 \end{array}\right) \end{align*} Substitute \(\lambda_{2}\) back into equation (1) to determine the corresponding eigenvector \(\mathbf{x}_{2}\).
 </p>
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0}                                            \\ \left(\begin{array}{ccc} 11 / 9-(2) &amp; -2 / 9    &amp; 8 / 9     \\ -2 / 9     &amp; 2 / 9-(2) &amp; 10 / 9    \\ 8 / 9      &amp; 10 / 9    &amp; 5 / 9-(2) \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \\ \left(\begin{array}{ccc} -7 / 9 &amp; -2 / 9  &amp; 8 / 9   \\ -2 / 9 &amp; -16 / 9 &amp; 10 / 9  \\ 8 / 9  &amp; 10 / 9  &amp; -13 / 9 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
+\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0}\\\\ \left(\begin{array}{ccc} 11 / 9-(2) &amp; -2 / 9    &amp; 8 / 9     \\ -2 / 9     &amp; 2 / 9-(2) &amp; 10 / 9    \\ 8 / 9      &amp; 10 / 9    &amp; 5 / 9-(2) \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \\\\ \left(\begin{array}{ccc} -7 / 9 &amp; -2 / 9  &amp; 8 / 9   \\ -2 / 9 &amp; -16 / 9 &amp; 10 / 9  \\ 8 / 9  &amp; 10 / 9  &amp; -13 / 9 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Write the augmented matrix. \($ \left(\begin{array}{rrr|r} -7 / 9 &amp; -2 / 9 &amp; 8 / 9 &amp; 0 \\ -2 / 9 &amp; -16 / 9 &amp; 10 / 9 &amp; 0 \\ 8 / 9 &amp; 10 / 9 &amp; -13 / 9 &amp; 0 \end{array}\right) \)\( Multiply each row by \)9\( \)\( \left(\begin{array}{rrr|r} -7 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; -16 &amp; 10 &amp; 0 \\ 8 &amp; 10 &amp; -13 &amp; 0 \end{array}\right) \)\( Multiply the second row by 4 and add it to the third row. \)\( \left(\begin{array}{rrr|r} -7 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; -16 &amp; 10 &amp; 0 \\ 0 &amp; -54 &amp; 27 &amp; 0 \end{array}\right) \)\( Multiply the first row by \)-8\( and add it to the second row. \)\( \left(\begin{array}{rrr|r} -7 &amp; -2 &amp; 8 &amp; 0 \\ 54 &amp; 0 &amp; -54 &amp; 0 \\ 0 &amp; -54 &amp; 27 &amp; 0 \end{array}\right) \)$
+Write the augmented matrix. \begin{align*} \left(\begin{array}{rrr|r} -7 / 9 &amp; -2 / 9 &amp; 8 / 9 &amp; 0 \\ -2 / 9 &amp; -16 / 9 &amp; 10 / 9 &amp; 0 \\ 8 / 9 &amp; 10 / 9 &amp; -13 / 9 &amp; 0 \end{array}\right) \end{align*} Multiply each row by \(9\) \begin{align*} \left(\begin{array}{rrr|r} -7 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; -16 &amp; 10 &amp; 0 \\ 8 &amp; 10 &amp; -13 &amp; 0 \end{array}\right) \end{align*} Multiply the second row by 4 and add it to the third row. \begin{align*} \left(\begin{array}{rrr|r} -7 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; -16 &amp; 10 &amp; 0 \\ 0 &amp; -54 &amp; 27 &amp; 0 \end{array}\right) \end{align*} Multiply the first row by \(-8\) and add it to the second row. \begin{align*} \left(\begin{array}{rrr|r} -7 &amp; -2 &amp; 8 &amp; 0 \\ 54 &amp; 0 &amp; -54 &amp; 0 \\ 0 &amp; -54 &amp; 27 &amp; 0 \end{array}\right) \end{align*}
 </p>
 </div>
 <div class="paragraph">
@@ -346,22 +430,22 @@ Substitute \(\lambda_{3}\) back into equation (1) to determine the corresponding
 </div>
 <div class="paragraph">
 <p>
-\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{3} \mathbf{I}\right) \mathbf{x}_{3}=\mathbf{0}                                            \\ \left(\begin{array}{ccc} 11 / 9-(-1) &amp; -2 / 9     &amp; 8 / 9      \\ -2 / 9      &amp; 2 / 9-(-1) &amp; 10 / 9     \\ 8 / 9       &amp; 10 / 9     &amp; 5 / 9-(-1) \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \\ \left(\begin{array}{ccc} 20 / 9 &amp; -2 / 9 &amp; 8 / 9  \\ -2 / 9 &amp; 11 / 9 &amp; 10 / 9 \\ 8 / 9  &amp; 10 / 9 &amp; 14 / 9 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
+\begin{equation*} \begin{array}{c} \left(\mathbf{A}-\lambda_{3} \mathbf{I}\right) \mathbf{x}_{3}=\mathbf{0}\\\\ \left(\begin{array}{ccc} 11 / 9-(-1) &amp; -2 / 9     &amp; 8 / 9      \\ -2 / 9      &amp; 2 / 9-(-1) &amp; 10 / 9     \\ 8 / 9       &amp; 10 / 9     &amp; 5 / 9-(-1) \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{l} 0 \\ 0 \\ \end{array}\right) \\\\ \left(\begin{array}{ccc} 20 / 9 &amp; -2 / 9 &amp; 8 / 9  \\ -2 / 9 &amp; 11 / 9 &amp; 10 / 9 \\ 8 / 9  &amp; 10 / 9 &amp; 14 / 9 \end{array}\right)\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} 0 \\ 0 \\ \end{array}\right) \end{array} \end{equation*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Write the augmented matrix. \($ \left(\begin{array}{rrr|r} 20 / 9 &amp; -2 / 9 &amp; 8 / 9 &amp; 0 \\ -2 / 9 &amp; 11 / 9 &amp; 10 / 9 &amp; 0 \\ 8 / 9 &amp; 10 / 9 &amp; 14 / 9 &amp; 0 \end{array}\right) \)\( Multiply each row by \)9\( \)\( \left(\begin{array}{rrr|r} 20 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; 11 &amp; 10 &amp; 0 \\ 8 &amp; 10 &amp; 14 &amp; 0 \end{array}\right) \)\( Multiply the second row by 4 and add it to the third row. \)\( \left(\begin{array}{rrr|r} 20 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; 11 &amp; 10 &amp; 0 \\ 0 &amp; 54 &amp; 54 &amp; 0 \end{array}\right) \)\( Multiply the second row by 10 and add it to the first row. \)\( \left(\begin{array}{rrr|r} 0 &amp; 108 &amp; 108 &amp; 0 \\ -2 &amp; 11 &amp; 10 &amp; 0 \\ 0 &amp; 54 &amp; 54 &amp; 0 \end{array}\right) \)$
+Write the augmented matrix. \begin{align*} \left(\begin{array}{rrr|r} 20 / 9 &amp; -2 / 9 &amp; 8 / 9 &amp; 0 \\ -2 / 9 &amp; 11 / 9 &amp; 10 / 9 &amp; 0 \\ 8 / 9 &amp; 10 / 9 &amp; 14 / 9 &amp; 0 \end{array}\right) \end{align*} Multiply each row by \(9\) \begin{align*} \left(\begin{array}{rrr|r} 20 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; 11 &amp; 10 &amp; 0 \\ 8 &amp; 10 &amp; 14 &amp; 0 \end{array}\right) \end{align*} Multiply the second row by 4 and add it to the third row. \begin{align*} \left(\begin{array}{rrr|r} 20 &amp; -2 &amp; 8 &amp; 0 \\ -2 &amp; 11 &amp; 10 &amp; 0 \\ 0 &amp; 54 &amp; 54 &amp; 0 \end{array}\right) \end{align*} Multiply the second row by 10 and add it to the first row. \begin{align*} \left(\begin{array}{rrr|r} 0 &amp; 108 &amp; 108 &amp; 0 \\ -2 &amp; 11 &amp; 10 &amp; 0 \\ 0 &amp; 54 &amp; 54 &amp; 0 \end{array}\right) \end{align*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Write the implied system of equations and solve for \(x_{1}\) and \(x_{3}\) in terms of the free variable \(x_{2}\) \($ \left.\begin{array}{r} 108 x_{2}+108 x_{3}=0 \\ -2 x_{1}+11 x_{2}+10 x_{3}=0 \\ 54 x_{2}+54 x_{3}=0 \end{array}\right\} \quad \rightarrow \quad \begin{array}{l} x_{1}=\frac{1}{2} x_{2} \\ x_{3}=-x_{2} \end{array} \)\( This means \)\( \mathbf{x}_{3}=\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} \frac{1}{2} x_{2} \\ x_{2} \\ -x_{2} \end{array}\right)=x_{2}\left(\begin{array}{c} \frac{1}{2} \\ 1 \\ -1 \end{array}\right) \)$
+Write the implied system of equations and solve for \(x_{1}\) and \(x_{3}\) in terms of the free variable \(x_{2}\) \begin{align*} \left.\begin{array}{r} 108 x_{2}+108 x_{3}=0 \\ -2 x_{1}+11 x_{2}+10 x_{3}=0 \\ 54 x_{2}+54 x_{3}=0 \end{array}\right\} \quad \rightarrow \quad \begin{array}{l} x_{1}=\frac{1}{2} x_{2} \\ x_{3}=-x_{2} \end{array} \end{align*} This means \begin{align*} \mathbf{x}_{3}=\left(\begin{array}{l} x_{1} \\ x_{2} \\ x_{3} \end{array}\right)=\left(\begin{array}{c} \frac{1}{2} x_{2} \\ x_{2} \\ -x_{2} \end{array}\right)=x_{2}\left(\begin{array}{c} \frac{1}{2} \\ 1 \\ -1 \end{array}\right) \end{align*}
 </p>
 </div>
 <div class="paragraph">
 <p>
-Since \(x_{2}\) is arbitrary, the eigenvector can be multiplied by 2 to get rid of the fraction. \($ \mathbf{x}_{3}=x_{2}^{\prime}\left(\begin{array}{c} 1 \\ 2 \\ -2 \end{array}\right) \)$
+Since \(x_{2}\) is arbitrary, the eigenvector can be multiplied by 2 to get rid of the fraction. \begin{align*} \mathbf{x}_{3}=x_{2}^{\prime}\left(\begin{array}{c} 1 \\ 2 \\ -2 \end{array}\right) \end{align*}
 </p>
 </div>
 <h1 id="section-7-4" class="section-2">Section 7.4</h1>

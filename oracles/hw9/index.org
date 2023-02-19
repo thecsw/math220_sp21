@@ -32,20 +32,25 @@ Go back to the [[../../][home page]]
    \end{align*}
 
    _Solution_
+   
    Let $\mathbf{A}$ be the matrix above, so let us find the characteristic
    polynomial of our system
+
+   #+begin_export html
    \begin{align*}
            \det (\mathbf{A} - \lambda \mathbf{I}_3) =
            \det \begin{pmatrix}
                    1 - \lambda & -1          & 4            \\
                    3           & 2 - \lambda & -1           \\
                    2           & 1           & -1 - \lambda
-           \end{pmatrix} & =
-           - \lambda^3 + 2 \lambda^2 + 5\lambda -6 = 0                                                                                        \\
+           \end{pmatrix} & = - \lambda^3 + 2 \lambda^2 + 5\lambda -6 = 0                                                                                        \\
                                           & \implies \lambda_1 = 1 \quad \text{and} \quad \lambda_2 = -2 \quad \text{and} \quad \lambda_3 = 3
    \end{align*}
+   #+end_export
+   
    Substitute the eigenvalues above to find the corresponding eigenvectors
    $\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}$
+   
    \begin{align*}
            \lambda = \lambda_1
            \implies
@@ -60,6 +65,7 @@ Go back to the [[../../][home page]]
                    -1 \\ 4 \\ 1
            \end{pmatrix}
    \end{align*}
+   
    \begin{align*}
            \lambda = \lambda_2
            \implies
@@ -74,6 +80,7 @@ Go back to the [[../../][home page]]
                    -1 \\ 1 \\ 1
            \end{pmatrix}
    \end{align*}
+   
     \begin{align*}
            \lambda = \lambda_3
            \implies
@@ -87,10 +94,12 @@ Go back to the [[../../][home page]]
            \begin{pmatrix}
                    1 \\ 2 \\ 1
            \end{pmatrix}
-   \end{align*}
+    \end{align*}
+    
    Therefore the final solution has the form
+
    \begin{align*}
-           \mathbf{x}(t) & = C_1 e^{\lambda_1 t} \mathbf{v_1} + C_2 e^{\lambda_2 t} \mathbf{v_2} + C_3 e^{\lambda_3 t} \mathbf{v_3}\\
+           \mathbf{x}(t) & = C_1 e^{\lambda_1 t} \mathbf{v_1} + C_2 e^{\lambda_2 t} \mathbf{v_2} + C_3 e^{\lambda_3 t} \mathbf{v_3}\\\\
                       & = C_1 e^{t} \begin{pmatrix}
                    -1 \\ 4 \\ 1
            \end{pmatrix}
@@ -101,19 +110,25 @@ Go back to the [[../../][home page]]
                    1 \\ 2 \\ 1
            \end{pmatrix}
    \end{align*}
+   
    where $C_1$ and $C_2$ and $C_3$ are arbitrary constants.
-*** Problem 10
+   *** Problem 10
+   
    The solution strategy is the same as *Problem 9*. We find that eigenvalues are
    $\lambda_1 = 4$ and $\lambda_2 = 2$ with their corresponding eigenvectors
    $\mathbf{v}_1 = \begin{pmatrix}1 \\ 1 \end{pmatrix}$ and
    $\mathbf{v}_2 = \begin{pmatrix}1 \\ 3 \end{pmatrix}$, such that the solution
    is
+   
    \begin{align*}
            \mathbf{x}(t) = C_1 e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +
            C_2 e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
    \end{align*}
+   
    By knowing the initial value
+
    $\mathbf{x}(0) = \begin{pmatrix} 2 \\ -1 \end{pmatrix}$, we solve the system
+
    \begin{align*}
            \begin{cases}
                    C_1 + C_2 = 2 \\
@@ -125,29 +140,38 @@ Go back to the [[../../][home page]]
                    C_2 = -\frac{3}{2}
            \end{cases}
    \end{align*}
+   
    Finally, the solution to the initial value problem is
+
    \begin{align*}
-           \mathbf{x}(t) = \frac{7}{2} e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +
-           - \frac{3}{2} e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
+           \mathbf{x}(t) = \frac{7}{2} e^{4t} \begin{pmatrix}1 \\ 1 \end{pmatrix} +        - \frac{3}{2} e^{2t} \begin{pmatrix}1 \\ 3 \end{pmatrix}
    \end{align*}
+   
 *** Problem 15 (this is graded)
    Recall the eigenvalues and their eigenvectors we found in *Problem
    10*. Applying *Problem 13*, the solution is
+   
    \begin{align*}
            \mathbf{x}(t) = C_1 t^4 \begin{pmatrix} 1\\ 1\end{pmatrix}
            + C_2 t^2 \begin{pmatrix} 1\\ 3\end{pmatrix}
    \end{align*}
+   
 *** Problem 16
-   Similarly to all problems above, we find eigenvalues
+
+Similarly to all problems above, we find eigenvalues
    $\lambda_1 = 0$ and $\lambda_2 = -2$, where their respective eigenvectors are
    $\mathbf{v}_1 = \begin{pmatrix} 3 \\ 4\end{pmatrix}$ and
    $\mathbf{v}_2 = \begin{pmatrix} 1 \\ 2\end{pmatrix}$. Applying *Problem 13*, we
    have the solution
+   
    \begin{align*}
            \mathbf{x}(t) = C_1 \begin{pmatrix} 3\\ 4\end{pmatrix} +
            C_2 t^{-2} \begin{pmatrix} 1\\ 2\end{pmatrix}
    \end{align*}
-** Section 7.6
-*** Problem 9 and 10
+   
+   ** Section 7.6
+   
+   *** Problem 9 and 10
+   
    Solutions are omitted for the sake of expediting the grading before Midterm
    II. 

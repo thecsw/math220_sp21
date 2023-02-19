@@ -90,42 +90,57 @@ Therefore,
      \text{Quasi-period}    &: \frac{\pi}{2\sqrt{6}}
    \end{align*}
 ** Section 7.1
+
 *** Problem 1 [FOR GRADE]
-   Let $u=x_{1}$.
-$$
+Let $u=x_{1}$.
+
+\begin{align*}
 x_{1}^{\prime \prime}+0.5 x_{1}^{\prime}+2 x_{1}=0
-$$
+\end{align*}
+
 Finally, let $x_{2}=x_{1}^{\prime}$.
-$$
+
+\begin{align*}
 x_{2}^{\prime}+0.5 x_{2}+2 x_{1}=0
-$$
+\end{align*}
+
 By making these substitutions, the original second-order ODE has become a system of first-order ODEs.
-$$
+
+\begin{align*}
 \left\{\begin{array}{l}
 x_{1}^{\prime}=x_{2} \\
 x_{2}^{\prime}=-2 x_{1}-0.5 x_{2}
 \end{array}\right.
-$$
+\end{align*}
+
 *** Problem 5
    Let $u=x_{1}$.
-$$
+   
+\begin{align*}
 x_{1}^{\prime \prime}+p(t) x_{1}^{\prime}+q(t) x_{1}=g(t), \quad x_{1}(0)=u_{0}, \quad x_{1}^{\prime}(0)=u_{0}^{\prime}
-$$
+\end{align*}
+
 Finally, let $x_{2}=x_{1}^{\prime}$.
-$$
+
+\begin{align*}
 x_{2}^{\prime}+p(t) x_{2}+q(t) x_{1}=g(t), \quad x_{1}(0)=u_{0}, \quad x_{2}(0)=u_{0}^{\prime}
-$$
+\end{align*}
+
 By making these substitutions, the original initial value problem has become a system of first-order ODEs,
-$$
+
+\begin{align*}
 \left\{\begin{array}{l}
 x_{1}^{\prime}=x_{2} \\
 x_{2}^{\prime}=-q(t) x_{1}-p(t) x_{2}+g(t)
 \end{array}\right.
-$$
+\end{align*}
+
 subject to the initial conditions,
-$$
+
+\begin{align*}
 x_{1}(0)=u_{0} \quad \text { and } \quad x_{2}(0)=u_{0}^{\prime} .
-$$
+\end{align*}
+
 ** Section 7.2
 *** Problem 4
    $\mathbf{A}^{T}$ is the transpose of $\mathbf{A}, \overline{\mathbf{A}}$ is
@@ -154,44 +169,47 @@ $\mathbf{A}^{*}=\overline{\mathbf{A}}^{T}$ is the adjoint of $\mathbf{A}$.
 \end{equation*}
 *** Problem 8 [FOR GRADE]
    Start by calculating the determinant.
-$$
+\begin{align*}
 \operatorname{det}\left(\begin{array}{rr}
 1 & 4 \\
 -2 & 3
 \end{array}\right)=(1)(3)-(4)(-2)=11
-$$
+\end{align*}
 Since it's not zero, an inverse for the given matrix exists.
-$$
+\begin{align*}
 \left(\begin{array}{rr|rr}
 1 & 4 & 1 & 0 \\
 -2 & 3 & 0 & 1
 \end{array}\right)
-$$
+\end{align*}
 The aim is to make the left side of the augmented matrix 1's and 0 's as the right side is now. Since the top left entry is 1 already, we move on to the bottom left entry. To make it zero, multiply both sides of the first row by 2 and add it to the second row.
-$$
+\begin{align*}
 \left(\begin{array}{cc|cc}
 1 & 4 & 1 & 0 \\
 0 & 11 & 2 & 1
 \end{array}\right)
-$$
+\end{align*}
 To make the bottom right entry 1 , divide the bottom row by 11 .
-$$
+\begin{align*}
 \left(\begin{array}{ll|ll}
 1 & 4 & 1 & 0 \\
 0 & 1 & \frac{2}{11} & \frac{1}{11}
 \end{array}\right)
-$$
+\end{align*}
 To make the top right entry 0 , multiply the bottom row by $-4$ and add it to the first row.
-$$
+
+   \begin{align*}
 \left(\begin{array}{cc|cc}
 1 & 0 & \frac{3}{11} & -\frac{4}{11} \\
 0 & 1 & \frac{2}{11} & \frac{1}{11}
 \end{array}\right)
-$$
-Therefore, the inverse matrix is
-$$
+\end{align*}
+
+   Therefore, the inverse matrix is
+
+   \begin{align*}
 \left(\begin{array}{cc}
 \frac{3}{11} & -\frac{4}{11} \\
 \frac{2}{11} & \frac{1}{11}
 \end{array}\right) .
-$$
+\end{align*}

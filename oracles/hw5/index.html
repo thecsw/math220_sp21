@@ -47,11 +47,11 @@
 <script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
 <script async src="https://sandyuraz.com/scripts/time.js"></script>
 
-<link rel="stylesheet" href="https://sandyuraz.com/math220_sp21/scripts/katex/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
 <!-- The loading of KaTeX is deferred to speed up page rendering -->
-<script defer src="https://sandyuraz.com/math220_sp21/scripts/katex/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
 <!-- To automatically render math in text elements, include the auto-render extension: -->
-<script defer src="https://sandyuraz.com/math220_sp21/scripts/katex/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -168,7 +168,7 @@ For the roots to be real, different and positive, \(b&lt;0\) and \(0 &lt; c &lt;
 <h2 id="problem-5" class="section-3">Problem 5</h2>
 <div class="paragraph">
 <p>
-The Wronskian of these two functions is \begin{align*} W &amp;=\left|\begin{array}{cc} \cos <sup>2</sup> \theta &amp; 1+\cos 2 \theta \\ \frac{d}{d \theta}\left(\cos <sup>2</sup> \theta\right) &amp; \frac{d}{d \theta}(1+\cos 2 \theta) \end{array}\right| \\ &amp;=\left|\begin{array}{cc} \cos <sup>2</sup> \theta &amp; 1+\cos 2 \theta \\ 2 \cos \theta(-\sin \theta) &amp; -2 \sin 2 \theta \end{array}\right| \\ &amp;=\cos <sup>2</sup> \theta(-2 \sin 2 \theta)-(1+\cos 2 \theta)[2 \cos \theta(-\sin \theta)] \\ &amp;=-2 \cos <sup>2</sup> \theta \sin 2 \theta+2 \sin \theta \cos \theta(1+\cos 2 \theta) \\ &amp;=-2 \cos <sup>2</sup> \theta(2 \sin \theta \cos \theta)+2 \sin \theta \cos \theta\left(1+2 \cos <sup>2</sup> \theta-1\right) \\ &amp;=-4 \cos <sup>2</sup> \theta \sin \theta \cos \theta+4 \sin \theta \cos \theta \cos <sup>2</sup> \theta \\ &amp;=0 \end{align*}
+The Wronskian of these two functions is \begin{align*} W &amp;=\left|\begin{array}{cc} \cos ^{2} \theta &amp; 1+\cos 2 \theta \\ \frac{d}{d \theta}\left(\cos ^{2} \theta\right) &amp; \frac{d}{d \theta}(1+\cos 2 \theta) \end{array}\right| \\ &amp;=\left|\begin{array}{cc} \cos ^{2} \theta &amp; 1+\cos 2 \theta \\ 2 \cos \theta(-\sin \theta) &amp; -2 \sin 2 \theta \end{array}\right| \\ &amp;=\cos ^{2} \theta(-2 \sin 2 \theta)-(1+\cos 2 \theta)[2 \cos \theta(-\sin \theta)] \\ &amp;=-2 \cos ^{2} \theta \sin 2 \theta+2 \sin \theta \cos \theta(1+\cos 2 \theta) \\ &amp;=-2 \cos ^{2} \theta(2 \sin \theta \cos \theta)+2 \sin \theta \cos \theta\left(1+2 \cos ^{2} \theta-1\right) \\ &amp;=-4 \cos ^{2} \theta \sin \theta \cos \theta+4 \sin \theta \cos \theta \cos ^{2} \theta \\ &amp;=0 \end{align*}
 </p>
 </div>
 <h2 id="problem-22--for-grade" class="section-3">Problem 22 [FOR GRADE]</h2>
@@ -289,7 +289,7 @@ Since \(W\left(y_{4}, y_{5}\right)=0, y_{4}\) and \(y_{5}\) do not form a fundam
 <h2 id="problem-31" class="section-3">Problem 31</h2>
 <div class="paragraph">
 <p>
-The equation \begin{align*} P(x) y^{\prime \prime}+Q(x) y^{\prime}+R(x) y=0 \end{align*} is said to be exact if it can be written in the form \begin{align*} \left(P(x) y^{\prime}\right)<sup>\prime}+(f(x) y)^{\prime}=0 \end{align*</sup> where \(f(x)\) is to be determined in terms of \(P(x), Q(x)\), and \(R(x)\) The latter equation can be integrated once immediately, resulting in a first-order linear equation for \(y\) that can be solved as in Section 2.1. By equating the coefficients of the preceding equations and then eliminating \(f(x)\), show that a necessary condition for exactness is \begin{align*} P^{\prime \prime}(x)-Q^{\prime}(x)+R(x)=0 \end{align*} It can be shown that this is also a sufficient condition.
+The equation \begin{align*} P(x) y^{\prime \prime}+Q(x) y^{\prime}+R(x) y=0 \end{align*} is said to be exact if it can be written in the form \begin{align*} \left(P(x) y^{\prime}\right)^{\prime}+(f(x) y)^{\prime}=0 \end{align*} where \(f(x)\) is to be determined in terms of \(P(x), Q(x)\), and \(R(x)\) The latter equation can be integrated once immediately, resulting in a first-order linear equation for \(y\) that can be solved as in Section 2.1. By equating the coefficients of the preceding equations and then eliminating \(f(x)\), show that a necessary condition for exactness is \begin{align*} P^{\prime \prime}(x)-Q^{\prime}(x)+R(x)=0 \end{align*} It can be shown that this is also a sufficient condition.
 </p>
 </div>
 </div>

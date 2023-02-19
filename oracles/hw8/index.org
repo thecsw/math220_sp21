@@ -22,9 +22,9 @@ Go back to the [[../../][home page]]
 ** Section 7.3
 *** Problem 7
    The three vectors are linearly dependent if there exists a nontrivial solution to
-$$
+\begin{align*}
 c_{1} \mathbf{x}^{(1)}+c_{2} \mathbf{x}^{(2)}+c_{3} \mathbf{x}^{(3)}=\mathbf{0}
-$$
+\end{align*}
 for $c_{1}, c_{2}$, and $c_{3}$. Rewrite this equation.
 
 \begin{equation*}
@@ -41,7 +41,7 @@ for $c_{1}, c_{2}$, and $c_{3}$. Rewrite this equation.
 			\end{array}\right)=\left(\begin{array}{l}
 				0 \\
 				0 \\
-			\end{array}\right) \\
+			\end{array}\right) \\\\
 		\left(\begin{array}{llr}
 				2 & 0 & -1 \\
 				1 & 1 & 2  \\
@@ -58,7 +58,7 @@ for $c_{1}, c_{2}$, and $c_{3}$. Rewrite this equation.
 \end{equation*}
 
 Calculate the determinant of the coefficient matrix.
-$$
+\begin{align*}
 	\operatorname{det}\left(\begin{array}{rrr}
 			2 & 0 & -1 \\
 			1 & 1 & 2  \\
@@ -73,66 +73,73 @@ $$
 			2 & 0 \\
 			1 & 1
 		\end{array}\right)=0
-$$
+\end{align*}
 
 Since it's zero, there are infinitely many solutions for $c_{1}, c_{2}$, and $c_{3}$.
 
+\begin{align*}
 \begin{array}{r}
 2 c_{1}-c_{3}=0 \\
 c_{1}+c_{2}+2 c_{3}=0
 \end{array}
+\end{align*}
 
 Solve this first equation for $c_{3}$
-$$
+\begin{align*}
 c_{3}=2 c_{1}
-$$
+\end{align*}
 
 and plug it into the second one.
 
-$$
+\begin{align*}
 c_{1}+c_{2}+2\left(2 c_{1}\right)=0
-$$
+\end{align*}
 
 Solve for $c_{2}$
-$$
+\begin{align*}
 c_{2}=-5 c_{1}
-$$
+\end{align*}
 In terms of the free variable $c_{1}$, the solution to the system of equations is
-$$
+\begin{align*}
 \left\{c_{1},-5 c_{1}, 2 c_{1}\right\}
-$$
+\end{align*}
 For example, choose $c_{1}=1$. Then
-$$
+\begin{align*}
 \mathbf{x}^{(1)}-5 \mathbf{x}^{(2)}+2 \mathbf{x}^{(3)}=\mathbf{0}
-$$
+\end{align*}
 Therefore, the three given vectors are linearly dependent.
 
 *** Problem 16 [FOR GRADE]
    The aim is to solve the eigenvalue problem,
-$$
+\begin{align*}
 \mathbf{A} \mathbf{x}=\lambda \mathbf{x}
-$$
+\end{align*}
 where $\mathbf{A}$ is the given matrix. Bring $\lambda \mathbf{x}$ to the left side and combine the terms.
-$$
+\begin{align*}
 (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0}
-$$
+\end{align*}
+
 The eigenvalues satisfy
-$$
+
+\begin{align*}
 \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0
-$$
+\end{align*}
+
 Evaluate the determinant and solve for $\lambda$.
-\begin{equation*}
-	\begin{array}{c}
-		\operatorname{det}\left(\begin{array}{cc}
-				-2-\lambda & 1          \\
-				1          & -2-\lambda
-			\end{array}\right)=0 \\
-		(-2-\lambda)(-2-\lambda)-1=0                               \\
-		\lambda^{2}+4 \lambda+3=0                                  \\
-		(\lambda+3)(\lambda+1)=0                                   \\
-		\lambda=\{-3,-1\}
-	\end{array}
-\end{equation*}
+
+\begin{align*}
+\begin{array}{c}
+\operatorname{det}\left(\begin{array}{cc}
+-2-\lambda & 1          \\
+1          & -2-\lambda
+\end{array}\right)=0 \\\\
+(-2-\lambda)(-2-\lambda)-1=0                               \\
+\lambda^{2}+4 \lambda+3=0                                  \\
+(\lambda+3)(\lambda+1)=0                                   \\
+\lambda=\{-3,-1\}
+\end{array}
+\end{align*}
+
 Therefore, the eigenvalues are
 \begin{equation*}
 \lambda_{1}=-3 \text { and } \quad \lambda_{2}=-1
@@ -180,24 +187,24 @@ the corresponding eigenvectors, $\mathbf{x}_{1}$ and $\mathbf{x}_{2}$
 Note that $x_{1}$ is a free variable, or arbitrary constant.
 *** Problem 17
    The aim is to solve the eigenvalue problem,
-$$
+\begin{align*}
 \mathbf{A x}=\lambda \mathbf{x}
-$$
+\end{align*}
 where $\mathbf{A}$ is the given matrix. Bring $\lambda \mathbf{x}$ to the left side and combine the terms.
-$$
+\begin{align*}
 (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0}
-$$
+\end{align*}
 The eigenvalues satisfy
-$$
+\begin{align*}
 \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0
-$$
+\end{align*}
 Evaluate the determinant and solve for $\lambda$.
 \begin{equation*}
   \begin{array}{c}
     \operatorname{det}\left(\begin{array}{cc}
                               1-\lambda & \sqrt{3} \\
                               \sqrt{3} & -1-\lambda
-                            \end{array}\right)=0 \\
+                            \end{array}\right)=0 \\\\
     (1-\lambda)(-1-\lambda)-3=0 \\
     \lambda^{2}-4=0 \\
     (\lambda+2)(\lambda-2)=0 \\
@@ -213,7 +220,7 @@ the corresponding eigenvectors, $\mathbf{x}_{1}$ and $\mathbf{x}_{2}$
 
 \begin{equation*}
 	\begin{array}{c}
-		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0} \\
+		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0} \\\\
 		\left(\begin{array}{cc}
 				3        & \sqrt{3} \\
 				\sqrt{3} & 1
@@ -235,7 +242,7 @@ the corresponding eigenvectors, $\mathbf{x}_{1}$ and $\mathbf{x}_{2}$
 
 \begin{equation*}
 	\begin{array}{r}
-		x_{2}=-\sqrt{3} x_{1} \\
+		x_{2}=-\sqrt{3} x_{1} \\\\
 		\mathbf{x}_{1}=\left(\begin{array}{c}
 				x_{1} \\
 				-\sqrt{3} x_{1}
@@ -250,7 +257,7 @@ and
 
 \begin{equation*}
 	\begin{array}{c}
-		\left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0} \\
+		\left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0} \\\\
 		\left(\begin{array}{ll}
 				-1       & \sqrt{3} \\
 				\sqrt{3} & -3
@@ -272,7 +279,7 @@ and
 
 \begin{equation*}
 	\begin{array}{c}
-		x_{2}=\frac{1}{\sqrt{3}} x_{1} \\
+		x_{2}=\frac{1}{\sqrt{3}} x_{1} \\\\
 		\mathbf{x}_{2}=\left(\begin{array}{c}
 				x_{1} \\
 				\frac{1}{\sqrt{3}} x_{1}
@@ -286,25 +293,32 @@ and
 Note that $x_{1}$ is a free variable, or arbitrary constant.
 *** Problem 18
    The aim is to solve the eigenvalue problem,
-$$
+
+   \begin{align*}
 \mathbf{A} \mathbf{x}=\lambda \mathbf{x}
-$$
+\end{align*}
+
 where $\mathbf{A}$ is the given matrix. Bring $\lambda \mathbf{x}$ to the left side and combine the terms.
-$$
+
+\begin{align*}
 (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0}
-$$
+\end{align*}
+
 The eigenvalues satisfy
-$$
+
+\begin{align*}
 \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0
-$$
+\end{align*}
+
 Evaluate the determinant and solve for $\lambda$.
-\begin{equation*}
+
+\begin{align*}
 	\begin{array}{c}
 		\operatorname{det}\left(\begin{array}{ccc}
 				1-\lambda & 0         & 0         \\
 				2         & 1-\lambda & -2        \\
 				3         & 2         & 1-\lambda
-			\end{array}\right)=0     \\
+			\end{array}\right)=0     \\\\
 		(1-\lambda)\left|\begin{array}{cc}
 			1-\lambda & -2        \\
 			2         & 1-\lambda
@@ -315,7 +329,7 @@ Evaluate the determinant and solve for $\lambda$.
 		(1-\lambda)\left(\lambda^{2}-2 \lambda+5\right)=0              \\
 		\lambda=1 \quad \text { or } \quad \lambda=\frac{2 \pm \sqrt{4-20}}{2}=1 \pm 2 i
 	\end{array}
-\end{equation*}
+\end{align*}
 
 Therefore, the eigenvalues are
 
@@ -328,9 +342,9 @@ Therefore, the eigenvalues are
 Substitute $\lambda_{1}$ back into equation (1) to determine the corresponding
 eigenvector $\mathbf{x}_{1}$. 
 
-\begin{equation*}
+\begin{align*}
 	\begin{array}{c}
-		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            \\
+		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}\\\\
 		\left(\begin{array}{ccc}
 				1-(1) & 0     & 0     \\
 				2     & 1-(1) & -2    \\
@@ -342,7 +356,7 @@ eigenvector $\mathbf{x}_{1}$.
 			\end{array}\right)=\left(\begin{array}{c}
 				0 \\
 				0 \\
-			\end{array}\right) \\
+			\end{array}\right) \\\\
 		\left(\begin{array}{ccc}
 				0 & 0 & 0  \\
 				2 & 0 & -2 \\
@@ -356,23 +370,25 @@ eigenvector $\mathbf{x}_{1}$.
 				0 \\
 			\end{array}\right)
 	\end{array}
-\end{equation*}
+\end{align*}
 
 Write the implied system of equations.
 
-\begin{equation*}
+\begin{align*}
 	\left.\begin{array}{l}
 		2 x_{1}-2 x_{3}=0 \\
 		3 x_{1}+2 x_{2}=0
 	\end{array}\right\}
-\end{equation*}
+\end{align*}
 
 Solve for $x_{2}$ and $x_{3}$ in terms of the free variable $x_{1}$.
 
+\begin{align*}
 \begin{array}{l}
 x_{3}=x_{1} \\
 x_{2}=-\frac{3}{2} x_{1}
 \end{array}
+  \end{align*}
 
 This means
 
@@ -405,43 +421,45 @@ fraction.
 
 *** Problem 20 [FOR GRADE]
    The aim is to solve the eigenvalue problem,
-$$
+\begin{align*}
 \mathbf{A} \mathbf{x}=\lambda \mathbf{x}
-$$
+\end{align*}
 where $\mathbf{A}$ is the given matrix. Bring $\lambda \mathbf{x}$ to the left
 side and combine the terms. 
-$$
+\begin{align*}
 (\mathbf{A}-\lambda \mathbf{I}) \mathbf{x}=\mathbf{0}
-$$
+\end{align*}
 The eigenvalues satisfy
-$$
+\begin{align*}
 \operatorname{det}(\mathbf{A}-\lambda \mathbf{I})=0
-$$
+\end{align*}
 Evaluate the determinant and solve for $\lambda$.
 
-\begin{equation*}
-	\begin{array}{c}
-		\operatorname{det}\left(\begin{array}{ccc}
-				11 / 9-\lambda & -2 / 9        & 8 / 9         \\
-				-2 / 9         & 2 / 9-\lambda & 10 / 9        \\
-				8 / 9          & 10 / 9        & 5 / 9-\lambda
-			\end{array}\right)=0                                                                                            \\
-		(11 / 9-\lambda)[(2 / 9-\lambda)(5 / 9-\lambda)-100 / 81]+(2 / 9)[(-2 / 9)(5 / 9-\lambda)-80 / 81]                                                    \\
-		\quad+(8 / 9)[-20 / 81-(8 / 9)(2 / 9-\lambda)]=0                                                                                                      \\
-		(11 / 9-\lambda)\left|\begin{array}{cc}
-			2 / 9-\lambda & 10 / 9        \\
-			10 / 9        & 5 / 9-\lambda
-		\end{array}\right|-(-2 / 9)\left|\begin{array}{cc}
-			-2 / 9 & 10 / 9        \\
-			8 / 9  & 5 / 9-\lambda
-		\end{array}\right|+(8 / 9)\left|\begin{array}{cc}
-			-2 / 9 & 2 / 9-\lambda \\
-			8 / 9  & 10 / 9
-		\end{array}\right|=0 \\
-		-2+\lambda+2 \lambda^{2}-\lambda^{3}=0                                                                                                                \\
-		(\lambda+1)(\lambda-1)(2-\lambda)=0
-	\end{array}
-\end{equation*}
+#+begin_export html
+\begin{align*}
+  \begin{array}{c}
+    \operatorname{det}\left(\begin{array}{ccc}
+11 / 9-\lambda & -2 / 9        & 8 / 9         \\
+-2 / 9         & 2 / 9-\lambda & 10 / 9        \\
+8 / 9          & 10 / 9        & 5 / 9-\lambda
+\end{array}\right)=0\\\\
+(11 / 9-\lambda)[(2 / 9-\lambda)(5 / 9-\lambda)-100 / 81] + (2 / 9)[(-2 / 9)(5 / 9-\lambda)-80 / 81]\\
+\quad + (8 / 9)[-20 / 81-(8 / 9)(2 / 9-\lambda)]=0\\\\
+(11 / 9-\lambda)\left|\begin{array}{cc}
+2 / 9-\lambda & 10 / 9        \\
+10 / 9        & 5 / 9-\lambda
+\end{array}\right|-(-2 / 9)\left|\begin{array}{cc}
+-2 / 9 & 10 / 9        \\
+8 / 9  & 5 / 9-\lambda
+\end{array}\right| + (8 / 9)\left|\begin{array}{cc}
+-2 / 9 & 2 / 9-\lambda \\
+8 / 9  & 10 / 9
+\end{array}\right|=0 \\\\
+-2 + \lambda+2 \lambda^{2}-\lambda^{3}=0\\
+(\lambda+1)(\lambda-1)(2-\lambda)=0
+\end{array}
+\end{align*}
+#+end_export
 
 Therefore, the eigenvalues are
 
@@ -456,7 +474,7 @@ eigenvector $\mathbf{x}_{1}$.
 
 \begin{equation*}
 	\begin{array}{c}
-		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            \\
+		\left(\mathbf{A}-\lambda_{1} \mathbf{I}\right) \mathbf{x}_{1}=\mathbf{0}                                            \\\\
 		\left(\begin{array}{ccc}
 				11 / 9-(1) & -2 / 9    & 8 / 9     \\
 				-2 / 9     & 2 / 9-(1) & 10 / 9    \\
@@ -468,7 +486,8 @@ eigenvector $\mathbf{x}_{1}$.
 			\end{array}\right)=\left(\begin{array}{c}
 				0 \\
 				0 \\
-			\end{array}\right) \\
+                                                 \end{array}\right) \\
+          \\
 		\left(\begin{array}{ccc}
 				2 / 9  & -2 / 9 & 8 / 9  \\
 				-2 / 9 & -7 / 9 & 10 / 9 \\
@@ -485,41 +504,41 @@ eigenvector $\mathbf{x}_{1}$.
 \end{equation*}
 
 Write the augmented matrix.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 2 / 9 & -2 / 9 & 8 / 9 & 0 \\
 -2 / 9 & -7 / 9 & 10 / 9 & 0 \\
 8 / 9 & 10 / 9 & -4 / 9 & 0
 \end{array}\right)
-$$
+\end{align*}
 Multiply each row by $9$
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 2 & -2 & 8 & 0 \\
 -2 & -7 & 10 & 0 \\
 8 & 10 & -4 & 0
 \end{array}\right)
-$$
+\end{align*}
 Multiply the first row by $-4$ and add it to the third row.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 2 & -2 & 8 & 0 \\
 -2 & -7 & 10 & 0 \\
 0 & 18 & -36 & 0
 \end{array}\right)
-$$
+\end{align*}
 Add the first row to the second row.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 2 & -2 & 8 & 0 \\
 0 & -9 & 18 & 0 \\
 0 & 18 & -36 & 0
 \end{array}\right)
-$$
+\end{align*}
 
 Write the implied system of equations and solve for $x_{1}$ and $x_{2}$ in terms
 of the free variable $x_{3}$ 
-$$
+\begin{align*}
 \left.\begin{array}{r}
 2 x_{1}-2 x_{2}+8 x_{3}=0 \\
 -9 x_{2}+18 x_{3}=0 \\
@@ -528,9 +547,9 @@ $$
 x_{1}=-2 x_{3} \\
 x_{2}=2 x_{3}
 \end{array}
-$$
+\end{align*}
 This means
-$$
+\begin{align*}
 \mathbf{x}_{1}=\left(\begin{array}{l}
 x_{1} \\
 x_{2} \\
@@ -540,20 +559,20 @@ x_{3}
 2 x_{3} \\
 x_{3}
 \end{array}\right)
-$$
+\end{align*}
 Therefore,
-$$
+\begin{align*}
 \mathbf{x}_{1}=x_{3}\left(\begin{array}{c}
 -2 \\
 2 \\
 1
 \end{array}\right)
-$$
+\end{align*}
 Substitute $\lambda_{2}$ back into equation (1) to determine the corresponding eigenvector $\mathbf{x}_{2}$.
 
 \begin{equation*}
 	\begin{array}{c}
-		\left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0}                                            \\
+		\left(\mathbf{A}-\lambda_{2} \mathbf{I}\right) \mathbf{x}_{2}=\mathbf{0}\\\\
 		\left(\begin{array}{ccc}
 				11 / 9-(2) & -2 / 9    & 8 / 9     \\
 				-2 / 9     & 2 / 9-(2) & 10 / 9    \\
@@ -565,7 +584,7 @@ Substitute $\lambda_{2}$ back into equation (1) to determine the corresponding e
 			\end{array}\right)=\left(\begin{array}{c}
 				0 \\
 				0 \\
-			\end{array}\right) \\
+			\end{array}\right) \\\\
 		\left(\begin{array}{ccc}
 				-7 / 9 & -2 / 9  & 8 / 9   \\
 				-2 / 9 & -16 / 9 & 10 / 9  \\
@@ -582,37 +601,37 @@ Substitute $\lambda_{2}$ back into equation (1) to determine the corresponding e
 \end{equation*}
 
 Write the augmented matrix.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 -7 / 9 & -2 / 9 & 8 / 9 & 0 \\
 -2 / 9 & -16 / 9 & 10 / 9 & 0 \\
 8 / 9 & 10 / 9 & -13 / 9 & 0
 \end{array}\right)
-$$
+\end{align*}
 Multiply each row by $9$
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 -7 & -2 & 8 & 0 \\
 -2 & -16 & 10 & 0 \\
 8 & 10 & -13 & 0
 \end{array}\right)
-$$
+\end{align*}
 Multiply the second row by 4 and add it to the third row.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 -7 & -2 & 8 & 0 \\
 -2 & -16 & 10 & 0 \\
 0 & -54 & 27 & 0
 \end{array}\right)
-$$
+\end{align*}
 Multiply the first row by $-8$ and add it to the second row.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 -7 & -2 & 8 & 0 \\
 54 & 0 & -54 & 0 \\
 0 & -54 & 27 & 0
 \end{array}\right)
-$$
+\end{align*}
 
 Write the implied system of equations and
 solve for $x_1$ and $x_2$ in terms of the free variable $x_3$
@@ -655,7 +674,7 @@ eigenvector $\mathbf{x}_{3}$.
 
 \begin{equation*}
 	\begin{array}{c}
-		\left(\mathbf{A}-\lambda_{3} \mathbf{I}\right) \mathbf{x}_{3}=\mathbf{0}                                            \\
+		\left(\mathbf{A}-\lambda_{3} \mathbf{I}\right) \mathbf{x}_{3}=\mathbf{0}\\\\
 		\left(\begin{array}{ccc}
 				11 / 9-(-1) & -2 / 9     & 8 / 9      \\
 				-2 / 9      & 2 / 9-(-1) & 10 / 9     \\
@@ -667,7 +686,7 @@ eigenvector $\mathbf{x}_{3}$.
 			\end{array}\right)=\left(\begin{array}{l}
 				0 \\
 				0 \\
-			\end{array}\right) \\
+			\end{array}\right) \\\\
 		\left(\begin{array}{ccc}
 				20 / 9 & -2 / 9 & 8 / 9  \\
 				-2 / 9 & 11 / 9 & 10 / 9 \\
@@ -684,41 +703,41 @@ eigenvector $\mathbf{x}_{3}$.
 \end{equation*}
 
 Write the augmented matrix.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 20 / 9 & -2 / 9 & 8 / 9 & 0 \\
 -2 / 9 & 11 / 9 & 10 / 9 & 0 \\
 8 / 9 & 10 / 9 & 14 / 9 & 0
 \end{array}\right)
-$$
+\end{align*}
 Multiply each row by $9$
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 20 & -2 & 8 & 0 \\
 -2 & 11 & 10 & 0 \\
 8 & 10 & 14 & 0
 \end{array}\right)
-$$
+\end{align*}
 Multiply the second row by 4 and add it to the third row.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 20 & -2 & 8 & 0 \\
 -2 & 11 & 10 & 0 \\
 0 & 54 & 54 & 0
 \end{array}\right)
-$$
+\end{align*}
 Multiply the second row by 10 and add it to the first row.
-$$
+\begin{align*}
 \left(\begin{array}{rrr|r}
 0 & 108 & 108 & 0 \\
 -2 & 11 & 10 & 0 \\
 0 & 54 & 54 & 0
 \end{array}\right)
-$$
+\end{align*}
 
 Write the implied system of equations and solve for $x_{1}$ and $x_{3}$ in terms
 of the free variable $x_{2}$ 
-$$
+\begin{align*}
 \left.\begin{array}{r}
 108 x_{2}+108 x_{3}=0 \\
 -2 x_{1}+11 x_{2}+10 x_{3}=0 \\
@@ -727,9 +746,9 @@ $$
 x_{1}=\frac{1}{2} x_{2} \\
 x_{3}=-x_{2}
 \end{array}
-$$
+\end{align*}
 This means
-$$
+\begin{align*}
 \mathbf{x}_{3}=\left(\begin{array}{l}
 x_{1} \\
 x_{2} \\
@@ -743,17 +762,17 @@ x_{2} \\
 1 \\
 -1
 \end{array}\right)
-$$
+\end{align*}
 
 Since $x_{2}$ is arbitrary, the eigenvector can be multiplied by 2 to get rid of
 the fraction. 
-$$
+\begin{align*}
 \mathbf{x}_{3}=x_{2}^{\prime}\left(\begin{array}{c}
 1 \\
 2 \\
 -2
 \end{array}\right)
-$$
+\end{align*}
 
 ** Section 7.4
 *** Problem 5(a)
