@@ -6,7 +6,7 @@ url = "https://sandyuraz.com/math220_sp21"
 locale = "en_GB"
 color = "#fffff4"
 twitter = "@sandyuraz"
-styles = ["https://sandyuraz.com/css/darkness.css"]
+styles = ["darkness.css"]
 tombs = []
 
 [author]

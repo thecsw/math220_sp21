@@ -25,7 +25,7 @@
 <meta name="author" property="author" content="email">
 <meta name="date" property="date" content="128; 12021 H.E.">
 <meta name="theme-color" property="theme-color" content="#fffff4">
-<meta name="description" property="description" content="Go back to the home page (../../)...">
+<meta name="description" property="description" content="Go back to the home page...">
 <meta name="og:title" property="og:title" content="Homework 11 Oracle">
 <meta name="og:site_name" property="og:site_name" content="Ordinary Differential Equations">
 <meta name="og:url" property="og:url" content="https://sandyuraz.com/math220_sp21/oracles/hw11">
@@ -34,16 +34,16 @@
 <meta name="og:image" property="og:image" content="https://sandyuraz.com/math220_sp21/oracles/hw11/preview.png">
 <meta name="og:image:alt" property="og:image:alt" content="Preview">
 <meta name="og:image:type" property="og:image:type" content="image/png">
-<meta name="og:image:width" property="og:image:width" content="1280">
-<meta name="og:image:height" property="og:image:height" content="640">
-<meta name="og:description" property="og:description" content="Go back to the home page (../../)...">
+<meta name="og:image:width" property="og:image:width" content="1200">
+<meta name="og:image:height" property="og:image:height" content="700">
+<meta name="og:description" property="og:description" content="Go back to the home page...">
 <meta name="twitter:card" property="twitter:card" content="summary_large_image">
 <meta name="twitter:site" property="twitter:site" content="Ordinary Differential Equations">
 <meta name="twitter:creator" property="twitter:creator" content="@sandyuraz">
 <meta name="twitter:image:src" property="twitter:image:src" content="https://sandyuraz.com/math220_sp21/oracles/hw11/preview.png">
 <meta name="twitter:url" property="twitter:url" content="https://sandyuraz.com/math220_sp21/oracles/hw11">
 <meta name="twitter:title" property="twitter:title" content="Homework 11 Oracle">
-<meta name="twitter:description" property="twitter:description" content="Go back to the home page (../../)..."><link rel="stylesheet" type="text/css" href="https://sandyuraz.com/css/darkness.css">
+<meta name="twitter:description" property="twitter:description" content="Go back to the home page..."><link rel="stylesheet" type="text/css" href="https://sandyuraz.com/math220_sp21/darkness.css">
 <script type="module">document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
 <script async src="https://sandyuraz.com/scripts/time.js"></script>
 
@@ -78,7 +78,8 @@
         });
     });
 </script>
-<link rel="stylesheet" href="https://sandyuraz.com/styles/org.min.css">
+
+
 <title>Homework 11 Oracle</title>
 </head>
 <body class="article">
@@ -274,7 +275,7 @@ Plug in the initial conditions, \(y(0)=0\) and \(y^{\prime}(0)=0\), and \(f(t)\)
 </p>
 </div></div>
 
-<div class="media">
+<div class="media" >
 \begin{aligned}
 \left[s^{2} Y(s)\right] &+Y(s)=\int_{0}^{1} e^{-s t}(t) d t+\int_{1}^{2} e^{-s t}(2-t) d t+\int_{2}^{\infty} e^{-s t}(0) d t \\
 \left(s^{2}+1\right) Y(s) &=\int_{0}^{1} t e^{-s t} d t+2 \int_{1}^{2} e^{-s t} d t-\int_{1}^{2} t e^{-s t} d t \\
@@ -301,7 +302,7 @@ Take the inverse Laplace transform of \(Y(s)\) now to recover \(y(t)\). Note tha
 </p>
 </div></div>
 
-<div class="media">
+<div class="media" >
 \begin{aligned}
 y(t) &=\mathcal{L}^{-1}\{Y(s)\} \\
 &=\mathcal{L}^{-1}\left\{\frac{1}{s^{2}}-\frac{1}{s^{2}+1}+\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-2 s}-2\left(\frac{1}{s^{2}}-\frac{1}{s^{2}+1}\right) e^{-s}\right\} \\
@@ -555,7 +556,7 @@ Solving this system yields \(A=1 / 2, B=-1 / 2\), and \(C=-1\).
 </p>
 </div></div>
 
-<div class="media">
+<div class="media" >
 \begin{align*}
 Y(s)=\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+2}\right) e^{-\pi s}-\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+2}\right) e^{-2 \pi s}+\frac{1}{s^{2}+2 s+2}
 \end{align*}
@@ -569,7 +570,7 @@ Complete the square in the denominators.
 </p>
 </div></div>
 
-<div class="media">
+<div class="media" >
 \begin{aligned}
 Y(s) &=\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+1+2-1}\right) e^{-\pi s}-\left(\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{s^{2}+2 s+1+2-1}\right) e^{-2 \pi s}+\frac{1}{s^{2}+2 s+1+2-1} \\
 &=\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{(s+1)^{2}+1}\right] e^{-\pi s}-\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2} s-1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}
@@ -584,7 +585,7 @@ Make it so that \(s+1\) appears in the numerators.
 </p>
 </div></div>
 
-<div class="media">
+<div class="media" >
 \begin{aligned}
 Y(s)=&\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2}(s+1)-\frac{1}{2}}{(s+1)^{2}+1}\right] e^{-\pi s}-\left[\frac{1 / 2}{s}+\frac{-\frac{1}{2}(s+1)-\frac{1}{2}}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1} \\
 =&\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s} \\
@@ -605,7 +606,7 @@ Take the inverse Laplace transform of \(Y(s)\) now to get \(y(t)\).
 </p>
 </div></div>
 
-<div class="media">
+<div class="media" >
 \begin{aligned}
 =\mathcal{L}^{-1}\left\{\left[\frac{1 / 2}{s}\right.\right.&\left.-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-\pi s} \\
 &\left.-\left[\frac{1 / 2}{s}-\frac{1}{2} \frac{s+1}{(s+1)^{2}+1}-\frac{1}{2} \frac{1}{(s+1)^{2}+1}\right] e^{-2 \pi s}+\frac{1}{(s+1)^{2}+1}\right\} \\
@@ -615,7 +616,7 @@ Take the inverse Laplace transform of \(Y(s)\) now to get \(y(t)\).
 
 <div class="title"></div>
 </div>
-<div class="media">
+<div class="media" >
 \begin{aligned}
 y(t)=&\left[\frac{1}{2}-\frac{1}{2} e^{-(t-\pi)} \cos (t-\pi)-\frac{1}{2} e^{-(t-\pi)} \sin (t-\pi)\right] H(t-\pi) \\
 -\left[\frac{1}{2}-\frac{1}{2} e^{-(t-2 \pi)} \cos (t-2 \pi)-\frac{1}{2} e^{-(t-2 \pi)} \sin (t-2 \pi)\right] H(t-2 \pi)+e^{-t} \sin t \\
@@ -634,7 +635,7 @@ Therefore,
 </p>
 </div></div>
 
-<div class="media">
+<div class="media" >
 \begin{align*}
 y(t)=\frac{1}{2}\left(1+e^{\pi-t} \cos t+e^{\pi-t} \sin t\right) u_{\pi}(t)-\frac{1}{2}\left(1-e^{2 \pi-t} \cos t-e^{2 \pi-t} \sin t\right) u_{2 \pi}(t)+e^{-t} \sin t
 \end{align*}  
